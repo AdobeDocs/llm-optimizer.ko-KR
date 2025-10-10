@@ -1,9 +1,9 @@
 ---
 title: URL 검사기
-description: 문서 개요입니다.
-source-git-commit: e35ddb9b055d2f974fd94b3a21e13e92d05c8799
+description: URL 관리자를 사용하여 도메인의 특정 페이지가 AI 검색에서 어떻게 작동하는지 분석하는 방법에 대해 알아봅니다.
+source-git-commit: e8ea9ae0d6592ea3d1e9945ec117f852112ba9d7
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---

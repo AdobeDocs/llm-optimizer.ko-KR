@@ -1,9 +1,9 @@
 ---
 title: 브랜드 유무
-description: 문서 개요입니다.
-source-git-commit: 601c17b07ed102322b674f685c65326f1ed36995
+description: 브랜드 유무 대시보드를 사용하여 브랜드가 AI에서 생성한 응답 수준에서 어떻게 인식되는지 이해하는 방법에 대해 알아봅니다.
+source-git-commit: e8ea9ae0d6592ea3d1e9945ec117f852112ba9d7
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1174'
 ht-degree: 0%
 
 ---

@@ -1,9 +1,9 @@
 ---
 title: 무형성 트래픽
-description: 문서 개요입니다.
-source-git-commit: f92ca3eaa81d05135c65df60267280314c6e2d6f
+description: AI 에이전트가 사이트와 상호 작용하는 방법을 확인하기 위해 에이전트 트래픽 대시보드를 사용하는 방법을 알아봅니다.
+source-git-commit: e8ea9ae0d6592ea3d1e9945ec117f852112ba9d7
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---

@@ -1,9 +1,9 @@
 ---
 title: 최적화 기회
-description: 문서 개요입니다.
-source-git-commit: ea8434daef2402f0dc9ac2d4f6060c38c9137fe6
+description: Opportunities 대시보드를 사용하여 브랜드 가시성을 높이기 위해 사이트를 개선할 수 있는 방법을 자동으로 감지하는 방법에 대해 알아봅니다.
+source-git-commit: e8ea9ae0d6592ea3d1e9945ec117f852112ba9d7
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
