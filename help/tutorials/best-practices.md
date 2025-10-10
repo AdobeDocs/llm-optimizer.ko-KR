@@ -1,21 +1,163 @@
 ---
 title: 모범 사례 안내서
 description: 문서 개요입니다. SEO 분석가 및 PR 및 커뮤니케이션 관리자 포함
-source-git-commit: 01fd7b646300fbbff80a2f3cda3cec68656c0047
+source-git-commit: c5f99f6665ab44ca23cd4a41f9d4b3ccf2e4007e
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '1335'
 ht-degree: 0%
 
 ---
 
 
-# GEO(생성 엔진 최적화)에 대한 마케터의 안내서
+# 모범 사례
 
-AEO(Answer Engine Optimization)라고도 하는 GEO(Generative Engine Optimization)는 ChatGPT, Perplexity, Copilot, Gemini 및 기타 LLM 기반 도우미에 걸쳐 AI가 생성한 답변 내에서 브랜드와 콘텐츠를 보고 신뢰할 수 있으며 검색할 수 있도록 하는 방법입니다.
+## LLM 브랜드 가시성 잠금 해제
 
-기존의 SEO가 1페이지 등급 획득에 도움이 되었다면, GEO는 답변 엔진 내에서 AI 인용과 가시성을 획득하는 데 도움이 됩니다. Adobe LLM Optimizer을 사용하면 브랜드와 콘텐츠가 그러한 응답 엔진 내에 표시되는 방식을 측정할 수 있습니다.
+LLM(대규모 언어 모델) 최적화는 AI 기반 환경에서 브랜드를 검색하고 참조하는 방법을 전환하고 있습니다. Adobe의 LLM Optimizer은 브랜드 가시성을 향상시키는 구조화된 접근 방식을 제공합니다.
 
-이 문서에서는 SEO 분석가/전문가, 홍보(PR) 또는 커뮤니케이션 전략가, 마케팅 관리자 등 AI 기반 검색 환경에서 가시성과 영향력을 측정하고 향상시키는 방법에 대해 설명합니다.
+다음 단계를 수행하면 LLM 가시성을 개선할 수 있습니다.
+
+1. 분석: LLM에서 주요 고객 프롬프트에 브랜드가 표시되는 방식을 검토하십시오.
+2. Planning: 집중 캠페인에 대해 유사한 의도를 갖는 프롬프트 클러스터를 타겟팅합니다.
+3. 작업: 변경 사항을 구현하고 시간에 따른 LLM 가시성 변화를 모니터링합니다.
+4. 적응: 최적기의 실행 가능한 통찰력을 기반으로 전략을 구체화합니다.
+5. 이러한 단계를 이해하고 활용하면 AI가 정보 발견의 중심이 될 때 브랜드의 연관성을 유지하는 데 도움이 될 수 있습니다.
+
+## LLM과 SEO: 주요 차이점
+
+LLM에 대한 최적화는 기존 SEO와 근본적으로 다릅니다.
+
+* LLM은 색인이 아닌 토큰을 사용합니다. 결과는 색인화된 웹 페이지가 아닌 훈련된 데이터에서 생성됩니다.
+* 브랜드 언급은 링크보다 더 중요합니다. LLM은 백링크보다 콘텐츠 관련성 및 브랜드 존재의 우선 순위를 지정합니다.
+* RAG를 통한 실시간 정보: Retrieval-Augmented Generation을 통해 LLM은 최신 정보를 가져올 수 있으므로 환각을 줄일 수 있습니다.
+* 제한된 클라이언트측 JS 렌더링: 현재 LLM은 클라이언트측 JavaScript을 처리하지 않으므로 표시되는 콘텐츠에 영향을 줍니다.
+* 링크 권한 속성 없음: SEO와 달리 LLM은 링크를 사용하여 권한을 결정하지 않습니다.
+* 이러한 차이점을 인식하는 것은 효과적인 LLM 최적화에 중요합니다.
+
+
+## 실행 가능한 최적화 단계
+
+LLM Optimizer은 Opportunities 대시보드에서 최적화 기회를 제안합니다.
+
+다음은 LLM에서 브랜드 가시성을 높이기 위한 몇 가지 실제 작업입니다.
+
+* Wikipedia 페이지 업데이트: 회사 및 인용 페이지가 최신 상태이고 관련성이 있는지 확인합니다.
+* LLM 액세스 활성화: robots.txt 및 CDN 설정을 모니터링하여 AI 봇이 차단되지 않도록 합니다.
+* 콘텐츠 개선: 페이지 콘텐츠의 10~15%를 새로 고치고, 참조를 추가하고, 헤더(H1, H2, H3)로 구조를 개선합니다.
+* FAQ 추가: 사용자 쿼리를 처리하기 위해 프롬프트 분석을 기반으로 관련 FAQ를 통합합니다.
+* Reddit/Quora에서 브랜드 언급 늘리기: LLM 소스 인용이 있는 사용자 생성 콘텐츠 플랫폼에 기여합니다.
+
+이러한 단계를 일관되게 수행하면 AI 기반 검색 결과에서 브랜드의 존재감이 크게 향상될 수 있습니다.
+
+
+## 전략 캠페인 계획
+
+성공적인 LLM 최적화 캠페인을 구축하려면 다음이 필요합니다.
+
+가치가 높은 주제 식별: 비즈니스 목표 및 고객 요구에 따라 신속한 의도를 파악합니다.
+경쟁업체 언급 표시: 경쟁업체가 인용되는 프롬프트에 중점을 두어 브랜드 포함 기회를 나타냅니다.
+의도별 그룹 프롬프트: 주제 및 검색 필드를 사용하여 벤치마킹 가시성을 위한 유사한 사용자 목표를 클러스터링합니다.
+현실적인 브랜드 포함 평가: EEAT(경험, 전문 지식, 권한, 신뢰도) 및 YYYL(Your Money or Your Life) 표준과 같은 요소를 고려하여 브랜드를 신뢰할 수 있게 언급할 수 있는지 평가합니다.
+
+이 전략적 접근 방식은 LLM 가시성을 목표로 한 데이터 기반 개선 사항을 보장합니다.
+
+
+이 보고서는 LLM(Large Language Models)에서 브랜드의 가시성이 시간에 따라 어떻게 변하는지를 이해하는 데 도움이 되도록 설계되었습니다. LLM이 생성한 응답에서 브랜드의 존재를 추적, 개선 및 측정하는 단계를 안내합니다.
+
+LLM 가시성이란?
+LLM 가시성은 ChatGPT나 다른 AI 모델과 같은 도구로 생성된 응답에 브랜드가 표시되는 빈도와 정도에 관한 것입니다. 다음에 따라 다릅니다.
+
+언급: 답변에서 내 브랜드가 언급된 횟수.
+인용: LLM이 질문에 답변하기 위해 콘텐츠나 소스를 사용하는 빈도.
+감정: 브랜드에 대한 언급이 긍정적인지, 중립적인지 또는 부정적인지 여부.
+위치: 응답에서 브랜드가 언급되는 위치(예: 첫 번째, 중간 또는 마지막).
+
+이러한 모든 요소가 가시성 점수로 결합되므로 LLM 응답에서 브랜드의 존재감이 얼마나 강한지 알 수 있습니다.
+
+<!--How to Track Visibility Changes
+Here's how you can keep an eye on your brand's visibility in LLMs:
+Step 1: Check Your Current Visibility
+
+Use tools like Adobe LLM Optimizer to see how often your brand is mentioned in LLM responses.
+Look at the prompts (questions) where your brand is mentioned and where it's missing.
+Compare your visibility to your competitors to see how you stack up.
+
+Step 2: Plan Your Strategy
+
+Group similar prompts together based on what people are asking.
+Focus on the prompts that are most important to your customers.
+Check if your brand has a good chance of being mentioned for certain prompts. Make sure your content shows your expertise, trustworthiness, and authority.
+
+Step 3: Improve Your Content
+
+Update your website and other content to make it more relevant to the prompts you want to target.
+Add FAQs to your pages that answer common questions people might ask.
+Make sure your content is easy for LLMs to find and read. Fix any issues like blocked pages or problems with your website's code.
+
+Step 4: Keep Improving
+
+Use Adobe LLM Optimizer to track how your visibility changes over time.
+If you notice competitors getting mentioned more often, adjust your strategy to stay ahead.
+Keep updating your content to match what people are searching for and asking about.
+
+
+Tools You Can Use
+Here are some tools that can help you track and improve your visibility:
+
+Adobe LLM Optimizer: This tool shows you how visible your brand is, what prompts you're mentioned in, and how you compare to competitors.
+Google Search Console: Use this to find out what people are searching for and turn those searches into LLM prompts.
+SEO Tools: Tools like Ahrefs or SEMrush can help you find keywords and questions people are asking online.
+User-Generated Content Platforms: Platforms like Reddit, Quora, and Wikipedia are often used by LLMs to find information. Make sure your brand is visible there.
+
+
+How to Measure Your Progress
+To see how well your efforts are working, track these key metrics:
+
+Mentions: How many times your brand is mentioned in LLM responses.
+Citations: How often LLMs use your content or sources.
+Sentiment: Are the mentions positive, neutral, or negative?
+Position: Is your brand mentioned first, in the middle, or last in the response?
+Visibility Score: This is a number that combines all the above metrics to show your overall visibility.
+
+
+5. Real-Life Examples
+Here are some examples of how you can improve your visibility:
+Example 1: Fixing Website Issues
+If LLMs can't access your website because of blocked pages or coding problems, they won't mention your brand. You can use Adobe LLM Optimizer to fix these issues and make sure your content is easy for LLMs to find.
+Example 2: Updating Wikipedia
+Since LLMs often use Wikipedia for information, make sure your company's page is accurate and up-to-date. You can also add your brand to other Wikipedia pages where it's relevant.
+Example 3: Engaging on Reddit and Quora
+LLMs use platforms like Reddit and Quora to find answers. You can join discussions and share helpful information about your brand to increase visibility.
+
+6. Challenges You Might Face
+
+Understanding Metrics: It can be tricky to figure out what visibility scores mean. Use tools like Adobe LLM Optimizer to get clear explanations.
+Technical Problems: If your website has blocked pages or coding issues, LLMs might not be able to access your content.
+Keeping Content Relevant: You'll need to make sure your content matches what people are asking about.
+
+
+7. Tips for Success
+
+Learn how to use Adobe LLM Optimizer to track your visibility and improve your content.
+Make sure your website is easy for LLMs to access by fixing any technical issues.
+Use data from search tools and user-generated content platforms to find out what people are asking about.
+Keep updating your content to stay relevant and ahead of your competitors.
+
+
+Conclusion
+Improving your brand's visibility in LLMs is an ongoing process. By tracking your visibility, updating your content, and using the right tools, you can make sure your brand is mentioned more often and in a positive way. This report gives you the steps and tools you need to get started and succeed in LLM optimization.
+What can I help with next?
+Simplify the report further for a middle school audience.
+Create a step-by-step LLM visibility improvement checklist.
+
+
+Marketer's guide to Generative Engine Optimization (GEO)
+
+Generative Engine Optimization (GEO), also called Answer Engine Optimization (AEO), is how you make your brand and content visible, trustworthy, and retrievable within AI-generated answers - across ChatGPT, Perplexity, Copilot, Gemini, and other LLM-driven assistants.
+
+If traditional SEO helped you win page-one rankings, GEO helps you win AI citations and visibility inside answer engines. The Adobe LLM Optimizer lets you measure how your brand and content is visible inside those answer engines.
+
+This article describes how to measure and enhance your visibility and influence in AI-driven search environments whether you're an SEO analyst/specialist, public relations (PR) or communication strategist, or a marketing manager.
 
 
 <!-- brands enhance their visibility, accuracy, and influence in AI-driven search environments. It provides insights into brand presence in AI-generated answers, offers prescriptive content recommendations, and automates optimization fixes -->
@@ -28,13 +170,13 @@ May remove this - Traditional SEO focuses on rankings in Google SERPs and GEO sh
 
 Think about semantic visibility and retrieval relevance - not just keyword rankings. -->
 
-## GEO(Generative Engine Optimization)/AEO(Answer Engine Optimization)에 대한 SEO 분석가의 가이드
+GEO(Generative Engine Optimization)/AEO(Answer Engine Optimization)에 대한 SEO 분석가의 가이드
 
 SEO 전문가/분석가로서 목표는 생성 AI 응답 내에서 검색 기능과 브랜드 콘텐츠 포함을 극대화하는 것입니다. 최적화된 페이지가 표시되고 인용되며 측정 가능한 트래픽 또는 참여를 유도합니다.
 
 순위와 상위 10개 위치, 검색 엔진 결과 페이지(SERP) 결과 및 키워드 공유에 초점을 맞춥니다. 이제 생성 AI 시스템이 사용자 질문에 직접 답변하면서 가시성이 전환되고 있으므로 몇 가지 추가 지표를 확인해야 합니다. 사이트 **순위**&#x200B;뿐만 아니라 콘텐츠 **더 자주 검색**&#x200B;되고 있습니다.
 
-### SEO 분석가를 위한 상위 KPI
+SEO 분석가를 위한 상위 KPI
 
 Adobe의 LLM Optimizer에서 상위 KPI를 도구에서 바로 사용할 수 있습니다.
 
@@ -138,4 +280,50 @@ GEO Tool에서 필요한 기능
 
 
 
+
+
+<!-- Use the "Share of Voice" feature to see which competitors are dominating specific topics and adjust your strategy accordingly.-->
+
+<!-- Purpose: Measure how much of the conversation your brand owns compared to competitors.
+Insight:
+
+This feature shows the percentage of visibility your brand has for specific topics compared to competitors.
+For example, you can see how many mentions your brand has versus competitors like Canva or Microsoft for a topic like "design creation."
+
+
+Best Practice:
+
+Use this insight to identify gaps in your visibility and focus on improving your presence in underperforming topics.-->
+
+
+
+<!--6. Content Visibility
+
+Purpose: Ensure LLMs can access and render your content.
+Insight:
+
+The dashboard compares what LLMs can see versus what is actually on your page.
+It provides a percentage of content visibility, highlighting areas where LLMs may only see a small portion of your page due to client-side rendering issues.
+
+
+Best Practice:
+
+Use the "LLM Optimizer on the Edge" feature to render static HTML versions of your pages for LLM bots, ensuring full content visibility.
+Address issues like blocked pages, robots.txt restrictions, and client-side rendering problems.
+
+
+
+7. Opportunities
+
+Purpose: Identify actionable steps to improve visibility.
+Insight:
+
+The dashboard highlights opportunities for optimization, such as updating Wikipedia pages, contributing to Reddit or Quora threads, or improving page structure.
+It provides specific recommendations, such as adding FAQs to pages or improving headers (H1, H2, H3).
+
+
+Best Practice:
+
+Review the opportunities section regularly and take action on the recommendations provided.
+Ensure contributions to platforms like Wikipedia and Reddit are unbiased, non-commercial, and add value.-->
 
