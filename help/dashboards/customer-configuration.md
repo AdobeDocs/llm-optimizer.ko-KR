@@ -1,9 +1,9 @@
 ---
 title: 고객 구성
 description: 문서 개요입니다.
-source-git-commit: e35ddb9b055d2f974fd94b3a21e13e92d05c8799
+source-git-commit: 5dbf794b87df92583daec83ab02063821ee7a412
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 고객 구성은 플랫폼 내에서 브랜드를 모니터링하고 분석하는 방법을 정의하는 곳입니다. 카테고리(예: 비즈니스 단위 또는 제품 라인)를 사용자 정의하고, 경쟁업체를 추적하고, 브랜드 언급 별칭을 추가하여 프롬프트 전체에서 브랜드의 모든 변형을 캡처할 수 있습니다. 이 설정을 통해 플랫폼은 비즈니스 컨텍스트에 대한 통찰력을 맞춤화하므로 정확한 가시성, 트래픽 및 기회 분석을 수행할 수 있습니다.
 
-![인용을 위해 경쟁하는 트렌드 URL](/help/dashboards/assets/customer-config.png)
+![고객 구성 대시보드](/help/dashboards/assets/customer-config.png)
 
 LLM Optimizer이 다양한 시장 및 경쟁 환경에서 브랜드 존재를 모니터링하고 분석하는 방법을 구성하려면 다음 탭에 액세스할 수 있습니다.
 
