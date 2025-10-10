@@ -21,7 +21,7 @@ LLM Optimizer를 시작하려면 온보딩 프로세스를 거쳐야 합니다. 
 
 ### AEM 클라우드 고객
 
-AEM Cloud 고객(Cloud Service/Managed Services/ Edge Delivery 서비스)에게는 [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)의 제품 공지 카드를 통해 LLM Optimizer을 시도할 수 있는 옵션이 표시됩니다.
+AEM Cloud 고객(Cloud Service/Managed Services/ Edge Delivery 서비스)에게는 [Experience Hub](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)의 제품 공지 카드를 통해 LLM Optimizer을 시도할 수 있는 옵션이 표시됩니다.
 
 >[!NOTE]
 >새로 추가된 프롬프트는 처리가 완료될 때까지 브랜드 유무에 표시되지 않습니다. AEM Cloud 고객(Cloud Service, Managed Services/ Edge Delivery Service)은 LLM Optimizer 무료 평가판을 사용할 수 있습니다. 200개 이상의 프롬프트를 사용하려면 별도의 라이센스 계약이 필요합니다. 액세스는 &quot;있는 그대로&quot; 및 &quot;사용 가능한 대로&quot; 제공되며 언제든지 Adobe에 의해 수정, 제한 또는 제거될 수 있습니다. 자세한 내용은 [계정 담당자]에게 문의하십시오.
