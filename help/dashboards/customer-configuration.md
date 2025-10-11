@@ -1,9 +1,9 @@
 ---
 title: 고객 구성
 description: 고객 구성을 사용하여 LLM 최적화 도구 플랫폼 내에서 브랜드를 모니터링하고 분석하는 방법을 정의합니다.
-source-git-commit: 653a6be856412faac8783fa9dc7b759a7c6e1f68
+source-git-commit: b39a6acbcb86c91d23c3aab790266f37b579f651
 workflow-type: tm+mt
-source-wordcount: '1594'
+source-wordcount: '1608'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->* 정규 표현식 필터가 있는 LLM Optimizer 및 Google 검색 콘솔과 같은 도구를 사용하여 일반적인 질문 구조(예: &quot;방법&quot;, &quot;내용&quot;, &quot;시기&quot;, &quot;위치&quot;)를 식별할 수 있습니다.
+>* 정규 표현식 필터가 있는 Adobe LLM Optimizer 및 Google 검색 콘솔과 같은 도구를 사용하여 일반적인 질문 구조(예: &quot;방법&quot;, &quot;what&quot;, &quot;when&quot;, &quot;where&quot;)를 식별하고 사람들이 사이트를 방문하기 위해 사용하는 프롬프트가 무엇인지 확인할 수 있습니다.
 >* 사이트/브랜드와 관련된 프롬프트를 알아보려면 온사이트 검색 데이터, 검색 엔진 결과 페이지의 FAQ를 사용하거나 고객이 브랜드에 대해 질문할 수 있는 사항을 LLM 챗봇에게 직접 질문할 수도 있습니다.
 
 ### 경쟁업체를 위한 Best Practice

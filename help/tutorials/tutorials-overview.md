@@ -1,9 +1,9 @@
 ---
 title: LLM Optimizer 기본 사항
 description: Adobe LLM Optimizer이 AI 기반 검색에서 브랜드 가시성을 높이는 방법에 대해 알아보십시오. 언급, 인용 및 통찰력을 추적합니다. 보다 나은 참여와 영향력을 위해 지금 최적화를 시작하십시오.
-source-git-commit: 227eb378bd5484fad2fb4165822394b0b605747b
+source-git-commit: b39a6acbcb86c91d23c3aab790266f37b579f651
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
@@ -62,75 +62,9 @@ Adobe LLM Optimizer을 사용하여 다음과 같은 작업을 수행할 수 있
 **팀 Collaboration 사용** - 대시보드를 공유하고, 프롬프트 또는 범주에 대한 소유자를 할당하고, 마케팅, SEO 및 커뮤니케이션 기능에서 가시성 목표를 추적하도록 합니다.
 
 
-## 참조
-
-여기에 추가 링크 및 세부 정보를 추가하십시오.
 
 
 
-
-
-
-
-
-<!--## Understanding Brand Visibility and AI Search
-
-Use these as guidelines for creating tutorials - some may be covered already in docs
-
-## Using the Brand Presence Dashboard
-
-* Visibility Score
-* Mentions and Citations
-* Competitor Benchmarking
-* Sentiment Trend Analysis
-
-
-## Exploring the Data Insights Table
-
-* Topic-Level Performance
-* Sentiment and Position Analysis
-* Citation Breakdown
-* Optimization Prioritization
-
-
-## Tracking Agentic Traffic from AI Crawlers
-
-* Setup and Activation
-* Traffic Distribution and Trends
-* User Agent and URL Performance Analysis
-
-
-## Measuring Referral Traffic from AI Citations
-
-* Setup and Activation
-* Source, Region, and Channel Filters
-* Top Referral URLs and Traffic Quality
-
-
-## Inspecting URL Performance in AI Responses
-
-* Cited URLs and Prompt Coverage
-* Competing URLs and Citation Trends
-
-
-## Identifying Optimization Opportunities
-
-* Content Fixes (Headings, FAQs, Canonicals)
-* Technical Fixes (Blocked Agents, Errors)
-* Third-Party Influence Strategies
-
-## Collaborating Across Teams
-
-* Workspace Sharing
-* Role-Based Dashboards
-* Prompt and Category Ownership
-
-
-## Configuring Your Brand Monitoring Setup
-
-* Categories and Topics
-* Brand and Competitor Aliases
-* Domain Switching and Customization -->
 
 
 
