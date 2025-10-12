@@ -1,9 +1,9 @@
 ---
 title: LLM Optimizer 우수 사례
 description: AI 검색에서 브랜드 가시성을 높이기 위한 LLM 최적화 모범 사례를 살펴보십시오. 콘텐츠 벤치마킹 및 최적화에 대한 통찰력.
-source-git-commit: c7c66566137ad1f5bda89f55748b9d81ddf36f76
+source-git-commit: a76d348a94495682d648ef0aad268e835e321017
 workflow-type: tm+mt
-source-wordcount: '1655'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ LLM 최적화(GEO(Generative Engine Optimization) 또는 AEO(Answer Engine Optim
 
 기존의 SEO가 1페이지 등급 획득에 도움이 되었다면, LLM 최적화는 답변 엔진 내에서 AI 인용과 가시성을 획득하는 데 도움이 됩니다. Adobe LLM Optimizer을 사용하면 응답 엔진 내에서 브랜드의 가시성을 측정하고 향상시킬 수 있습니다.
 
-이 문서에서는 Adobe LLM Optimizer을 사용하여 AI 기반 검색 환경에서 가시성과 영향력을 측정하고 향상시키는 것과 관련된 모범 사례에 대해 설명합니다.
+이 문서에서는 Adobe LLM Optimizer을 사용하여 AI 기반 검색 환경에서 가시성과 영향력을 측정하고 개선하기 위한 모범 사례에 대해 설명합니다.
 
 * [LLM과 SEO: 주요 차이점](#key-differences)
 * [전략 캠페인 계획](#strategic-campaign-planning)
@@ -30,7 +30,7 @@ LLM 최적화(GEO(Generative Engine Optimization) 또는 AEO(Answer Engine Optim
 
 >[!NOTE]
 >
->현재 SEO 트래픽은 대부분의 웹 사이트에 대한 트래픽을 가장 많이 발생시키는 요소이므로 브랜드의 가시성 전략에 매우 중요합니다.
+>현재 SEO 트래픽은 대부분의 웹에 트래픽을 발생시키는 가장 큰 요인이므로 브랜드의 가시성 전략에 매우 중요합니다.
 
 
 | SEO | LLM |
@@ -192,7 +192,7 @@ AI가 생성한 답변에서 브랜드가 어떻게 표시되는지 이해하는
 
 ### 제로 클릭 경험
 
-기존 검색에서 사용자는 웹 사이트를 클릭스루하여 콘텐츠를 사용합니다. 그러나 LLM을 사용하면 사용자가 사이트를 방문하지 않고도 채팅 인터페이스 또는 검색 엔진 결과에서 직접 완전한 답변을 얻을 수 있습니다. 이를 제로 클릭 경험이라고 합니다.
+기존 검색에서 사용자는 웹 사이트를 클릭스루하여 콘텐츠를 사용합니다. 그러나 LLM을 사용하면 사용자가 사이트를 방문하지 않고도 채팅 인터페이스 또는 검색 엔진 결과 페이지에서 직접 완전한 답변을 얻을 수 있습니다. 이를 제로 클릭 경험이라고 합니다.
 
 브랜드에 어떤 영향을 미칩니까?
 
