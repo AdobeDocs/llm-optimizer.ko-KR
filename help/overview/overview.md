@@ -1,9 +1,9 @@
 ---
 title: LLM Optimizer 개요
 description: Adobe LLM Optimizer이 AI 기반 검색에서 브랜드 가시성을 높이는 방법에 대해 알아보십시오. 언급, 인용 및 통찰력을 추적합니다. 보다 나은 참여와 영향력을 위해 지금 최적화를 시작하십시오.
-source-git-commit: bb3e3e4ebc7499fb8c8dfc165eb87595b40a4b4c
+source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,8 @@ Adobe LLM Optimizer을 사용하여 다음과 같은 작업을 수행할 수 있
 
 * [빠른 시작](/help/overview/quick-start.md)을 통해 빠르게 시작하고 실행할 수 있습니다.
 * [대시보드 개요](/help/dashboards/dashboards-overview.md)는 LLM Optimizer에서 사용할 수 있는 모든 대시보드를 설명합니다.
-* [모범 사례](/help/tutorials/best-practices.md)는 도구를 사용하여 브랜드에 필요한 통찰력을 얻는 방법을 안내합니다.
+* [카테고리, 주제, 프롬프트 및 경쟁업체 구성에 대한 우수 사례](/help/overview/best-practices-topics-prompts.md)에는 LLM Optimizer 설정에 필요한 정보가 포함되어 있습니다.
+* [우수 사례](/help/tutorials/best-practices.md)를 통해 LLM 최적화에 대한 우수 사례를 찾아 AI 검색에서 브랜드 가시성을 높일 수 있습니다.
 
 
 

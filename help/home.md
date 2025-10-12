@@ -1,9 +1,9 @@
 ---
 title: Adobe LLM Optimizer
 description: Adobe LLM Optimizer으로 브랜드를 향상시키십시오. 언급을 추적하고 통찰력을 발견하고 AI 기반 검색을 지배합니다. 가시성을 제어하십시오. 지금 최적화를 시작하십시오!
-source-git-commit: bb3e3e4ebc7499fb8c8dfc165eb87595b40a4b4c
+source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '288'
 ht-degree: 3%
 
 ---
@@ -23,6 +23,12 @@ Adobe LLM Optimizer은 생성 엔진 최적화를 위한 생성 AI 우선 애플
   {title= Quickstart guide}
   {description= Learn how to quickly get up and running with the LLM Optimizer.}
   {image= /help/assets/overview/agentic-traffic-card.png}
+  {target=_blank}
+  {cta=Learn more}
+* ./overview/best-practices-topics-prompts.md
+  {title= Best practices for setting up categories, topics, prompts, and competitors}
+  {description= Learn how to configure LLM Optimizer for tailored brand monitoring and strategic content analysis.}
+  {image= /help/assets/overview/customer-configuration-card.png}
   {target=_blank}
   {cta=Learn more}
 * ./dashboards/dashboards-overview.md
@@ -52,6 +58,29 @@ Adobe LLM Optimizer은 생성 엔진 최적화를 위한 생성 AI 우선 애플
                     <p class="is-size-6">LLM Optimizer을 빠르게 시작하고 실행하는 방법에 대해 알아봅니다.</p>
                 </div>
                 <a href="./overview/quick-start.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Best practices for setting up categories, topics, prompts, and competitors">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./overview/best-practices-topics-prompts.md" title="카테고리, 주제, 프롬프트 및 경쟁업체 설정에 대한 우수 사례" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/customer-configuration-card.png" alt="카테고리, 주제, 프롬프트 및 경쟁업체 설정에 대한 우수 사례"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" title="카테고리, 주제, 프롬프트 및 경쟁업체 설정에 대한 우수 사례">카테고리, 주제, 프롬프트 및 경쟁업체 설정에 대한 우수 사례</a>
+                    </p>
+                    <p class="is-size-6">맞춤형 브랜드 모니터링 및 전략적 콘텐츠 분석을 위해 LLM Optimizer을 구성하는 방법에 대해 알아봅니다.</p>
+                </div>
+                <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
                 </a>
             </div>

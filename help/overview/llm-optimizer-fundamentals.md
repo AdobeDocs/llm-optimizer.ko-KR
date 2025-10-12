@@ -1,7 +1,7 @@
 ---
 title: LLM Optimizer 기본 사항
 description: Adobe LLM Optimizer이 AI 기반 검색에서 브랜드 가시성을 높이는 방법에 대해 알아보십시오. 언급, 인용 및 통찰력을 추적합니다. 보다 나은 참여와 영향력을 위해 지금 최적화를 시작하십시오.
-source-git-commit: 227eb378bd5484fad2fb4165822394b0b605747b
+source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
@@ -9,9 +9,7 @@ ht-degree: 0%
 ---
 
 
-# LLM Optimizer 개요
-
-<!-- This doesn't seem like a tutorials overview to me. Still trying to place correctly -->
+# LLM Optimizer 기본 사항
 
 이 페이지에서는 다음 사항에 대해 자세히 설명합니다.
 
@@ -34,9 +32,6 @@ Adobe LLM Optimizer은 생성 엔진 최적화를 위해 설계된 도구 모음
 * 실행 가능한 기회 발견: 콘텐츠 및 기술 개선 사항(예: FAQ, 추상화, 스키마, 탐색 가능성)을 식별하여 언급 및 인용 횟수를 늘립니다.
 * 트래픽 영향 추적: 아젠틱(AI 비서)과 참조 트래픽을 모두 모니터링하여 가시성을 참여에 연결합니다.
 * 팀 Collaboration 활성화: 대시보드를 공유하고, 소유자를 할당하고, 마케팅, SEO 및 커뮤니케이션 팀 전반에 걸쳐 목표를 조정합니다.
-
-
-<!-- I'm adding headings because LLMs like them and that way we'll rank better. Generally question format/question words in the the title is preferred. We can discuss. Or we can mirror what we did for Sites Optimizer and have this info on another page-->
 
 ## 브랜드에 LLM 최적화가 중요한 이유
 
