@@ -1,7 +1,7 @@
 ---
 title: 참조 트래픽
 description: 참조 트래픽 대시보드를 사용하여 방문자가 외부 플랫폼, AI 인용 및 참조 링크에서 사이트에 도착하는 방법을 알아봅니다.
-source-git-commit: 4cbfbe420a8419a04c2d6c465b6a290ee00ff3d4
+source-git-commit: 4192fe32c9e7cea4218ea580a9300f1fceb0f909
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 0%
@@ -78,10 +78,10 @@ The Top Referral URLs list surfaces your site’s most visited pages from referr
 
 레퍼러 소스 세부 사항 보기는 OpenAI, Microsoft, Google 및 Perplexity와 같은 다양한 플랫폼에서 발생하는 트래픽을 분류합니다. 방문 횟수, 바운스 비율 및 채널 유형과 같은 주요 지표를 표시하므로 어떤 AI 및 검색 소스가 사이트로 가장 많은 트래픽을 유도하는 것인지 이해할 수 있습니다.
 
-**Source** - 참조 트래픽의 소스.
-**방문 횟수** - 각 소스에 대한 총 방문 횟수입니다.
-**바운스 비율** - 조회 원본에서 참여 이벤트가 없는 세션의 백분율입니다.
-**채널** - 소스에 대한 채널(획득, 유료 또는 둘 다)입니다.
+* **Source** - 참조 트래픽의 소스.
+* **방문 횟수** - 각 소스에 대한 총 방문 횟수입니다.
+* **바운스 비율** - 조회 원본에서 참여 이벤트가 없는 세션의 백분율입니다.
+* **채널** - 소스에 대한 채널(획득, 유료 또는 둘 다)입니다.
 
 >[!TAB URL 성능 분석]
 

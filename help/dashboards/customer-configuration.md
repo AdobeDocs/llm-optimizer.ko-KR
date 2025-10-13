@@ -1,9 +1,9 @@
 ---
 title: 고객 구성
 description: 고객 구성을 사용하여 LLM 최적화 도구 플랫폼 내에서 브랜드를 모니터링하고 분석하는 방법을 정의합니다.
-source-git-commit: 099d4387b6a5efd25e142db13e309a181fe67941
+source-git-commit: 4192fe32c9e7cea4218ea580a9300f1fceb0f909
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ LLM Optimizer이 다양한 시장 및 경쟁 환경에서 브랜드 존재를 �
 
 목록에서 각 항목을 클릭하면 관련 프롬프트가 나타납니다. 항목과 관련 프롬프트를 삭제하려면 목록에서 삭제 아이콘을 클릭합니다.
 
-## Agentic CDN {#agentic-cdn}
+<!--## Agentic CDN {#agentic-cdn}
 
-사용할 수 없음(릴리스에서 사용할 수 있습니까?).
+Not available (will it be available for release?).-->
 
