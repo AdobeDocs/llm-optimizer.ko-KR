@@ -1,10 +1,10 @@
 ---
 title: 고객 구성
 description: 고객 구성을 사용하여 LLM 최적화 도구 플랫폼 내에서 브랜드를 모니터링하고 분석하는 방법을 정의합니다.
-source-git-commit: 5e8efde82c10c9afa09d51ec9ef20fc006363210
+source-git-commit: a37c4e7d2e26f16dc10dc7bc39ba58ba1df77cd5
 workflow-type: tm+mt
-source-wordcount: '813'
-ht-degree: 0%
+source-wordcount: '800'
+ht-degree: 1%
 
 ---
 
@@ -98,7 +98,7 @@ LLM Optimizer이 다양한 시장 및 경쟁 환경에서 브랜드 존재를 �
 
 **온보드 CDN 공급자** 창에서:
 
-1. CDN 공급자(예: Akamai, Adobe 관리 Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare 또는 기타)를 선택합니다.
+1. CDN 공급자를 선택합니다.
 2. 로그 전달을 사용하려면 **온보드**&#x200B;를 클릭합니다.
 
 **기타**&#x200B;을(를) 선택하면 Adobe에 지원을 요청해야 합니다.

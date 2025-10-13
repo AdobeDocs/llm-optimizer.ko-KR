@@ -1,7 +1,7 @@
 ---
 title: 브랜드 유무
 description: 브랜드 유무 대시보드를 사용하여 브랜드가 AI에서 생성한 응답 수준에서 어떻게 인식되는지 이해하는 방법에 대해 알아봅니다.
-source-git-commit: 5e8efde82c10c9afa09d51ec9ef20fc006363210
+source-git-commit: a37c4e7d2e26f16dc10dc7bc39ba58ba1df77cd5
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 브랜드 유무 대시보드는 AI가 생성한 응답 수준에서 브랜드를 인식하는 방법에 대한 자세한 개요를 제공합니다. 브랜드가 언급되는 위치, 빈도 및 컨텍스트를 보여 줍니다. 대시보드를 사용하여 가시성을 측정하고, 인용을 추적하고, 감정 트렌드를 탐색할 수 있습니다. 대시보드는 각각 다른 통찰력을 제공하는 몇 개의 섹션으로 나뉘어져 있습니다. 표시된 데이터를 구체화하는 데 도움이 되는 맞춤형 필터도 있습니다.
 
-![브랜드 유무](/help/dashboards/assets/brand-main1.png)
+![브랜드 유무](/help/dashboards/assets/brand-main.png)
 
 이 페이지에서는 다음 사항에 대해 자세히 설명합니다.
 
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 기타 비교 섹션에서 최대 5개의 다른 브랜드를 선택하고 해당 언급 및 인용을 브랜드와 비교할 수 있습니다. 이러한 방식으로 다른 브랜드와 비교하여 성과를 보고 벤치마킹할 수 있습니다.
 
-![기타 비교](/help/dashboards/assets/competitor-comparison1.png)
+![기타 비교](/help/dashboards/assets/other-comparison.png)
 
 드롭다운 목록에서 다른 브랜드를 선택하면 **필터 적용**&#x200B;을 클릭하면 차트가 업데이트됩니다. 차트에는 주간 언급 및 주간 인용이 나란히 표시됩니다. 마우스를 차트 위에 놓아 주별 시간대에 걸친 데이터 진행 상황을 확인할 수도 있습니다.
 
