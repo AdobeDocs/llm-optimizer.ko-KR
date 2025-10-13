@@ -1,9 +1,9 @@
 ---
 title: 빠른 시작
 description: Adobe LLM Optimizer 시작하기 - 브랜드를 온보딩하고, AI 가시성 통찰력을 잠금 해제하고, 대시보드를 탐색하여 검색 성능을 향상시키십시오.
-source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
+source-git-commit: 5e8efde82c10c9afa09d51ec9ef20fc006363210
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ AEM Cloud(Cloud Service, Managed Services, Edge Delivery Service) 고객은 **�
 
 ### AEM 클라우드 고객
 
-AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)에서 제품 공지 카드를 사용하여 LLM Optimizer을 시도할 수 있습니다.
+AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)에서 제품 공지 카드를 사용하여 LLM Optimizer을 시도할 수 있습니다.
 
 >[!NOTE]
 >새로 추가된 프롬프트는 처리가 완료될 때까지 [브랜드 현재 상태 대시보드](/help/dashboards/brand-presence.md)에 표시되지 않습니다. AEM Cloud 고객은 LLM Optimizer의 무료 평가판을 사용할 수 있습니다. 200개 이상의 프롬프트를 사용하려면 별도의 라이센스 계약이 필요합니다. 액세스는 &quot;있는 그대로&quot; 및 &quot;사용 가능한 대로&quot; 제공되며 언제든지 Adobe에 의해 수정, 제한 또는 제거될 수 있습니다. 자세한 내용은 계정 담당자에게 문의하십시오.
@@ -68,14 +68,14 @@ AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/k
 * 추적할 **사용자 지정 항목** 또는 하위 항목을 입력하십시오. 주제는 도메인과 연결된 대량 비브랜드 키워드에 연결된 특정 테마일 수 있습니다.
 * 특정 쿼리에서 가시성을 모니터링하려면 **프롬프트**&#x200B;를 만드십시오. 프롬프트는 기준 가시성을 제공하는 쿼리(브랜드 및 비브랜드)입니다. 제공한 범주 및 항목에 따라 제한된 수의 프롬프트만 자동으로 생성됩니다.
 * 브랜드에 대한 모든 언급을 캡처하고 설명하도록 언급 **별칭**&#x200B;을(를) 정의합니다.
-* 경쟁사를 정확하게 추적하려면 **경쟁사 별칭**&#x200B;을 정의하십시오.
+* 다른 브랜드를 정확하게 추적하려면 **다른 별칭**&#x200B;을 정의하세요.
 
 >[!NOTE]
 >LLM에 묻는 정확한 프롬프트는 LLM에 의해 공개되지 않으므로 공개적으로 사용할 수 없습니다.
 
 >[!NOTE]
 >
-> 범주, 주제, 프롬프트 및 경쟁사를 설정하는 방법에 대한 자세한 내용은 [범주, 주제, 프롬프트 및 경쟁사 구성에 대한 모범 사례](/help/overview/best-practices-topics-prompts.md) 페이지를 참조하십시오.
+> 범주, 주제, 프롬프트를 설정하는 방법에 대한 자세한 내용은 [범주, 주제, 프롬프트 구성에 대한 모범 사례](/help/overview/best-practices-topics-prompts.md) 페이지를 참조하십시오.
 
 ### 3단계: 인사이트의 자동 사전 채우기
 
@@ -96,7 +96,7 @@ AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/k
 
 CDN 로그 전달에 대한 정보를 제공하면 다음과 같은 작업을 수행할 수 있습니다.
 
-* [브랜드 유무](/help/dashboards/brand-presence.md) 대시보드를 보고 가시성 점수를 보고 경쟁사와 비교하여 성과를 추적하십시오.
+* [브랜드 유무](/help/dashboards/brand-presence.md) 대시보드를 보고 가시성 점수를 보고 다른 브랜드와 비교하여 성과를 추적하세요.
 * CDN 로그 전달이 구성된 경우 [Agentic](/help/dashboards/agentic-traffic.md) 및 [참조 트래픽](/help/dashboards/referral-traffic.md) 대시보드를 살펴보십시오.
 * [기회](/help/dashboards/opportunities.md)를 사용하여 콘텐츠 및 기술 개선 사항을 식별하십시오.
 * 데이터를 내보내고 팀에 공동 작업하거나 동료가 제품을 사용하도록 초대합니다.

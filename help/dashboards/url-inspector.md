@@ -1,7 +1,7 @@
 ---
 title: URL 검사기
 description: URL 관리자를 사용하여 도메인의 특정 페이지가 AI 검색에서 어떻게 작동하는지 분석하는 방법에 대해 알아봅니다.
-source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
+source-git-commit: 5e8efde82c10c9afa09d51ec9ef20fc006363210
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%
@@ -65,7 +65,7 @@ URL 관리자 는 여러 개요 지표를 제공하므로 AI 검색에서 페이
 제공되는 지표는 다음과 같습니다.
 
 * **URL** - 분석된 URL
-* **컨텐츠 유형** - 컨텐츠 유형(소유, 소셜, 획득, 경쟁자).
+* **컨텐츠 유형** - 컨텐츠 유형(소유, 소셜, 획득, 기타)입니다.
 * **인용된 횟수** - AI가 생성한 답변에서 URL이 인용된 횟수입니다.
 * **다음 위치에 인용된 프롬프트** - URL을 인용한 고유한 AI 프롬프트 수입니다.
 * **범주** - URL과 연결된 제품 범주 또는 항목입니다.
