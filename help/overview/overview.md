@@ -1,9 +1,9 @@
 ---
 title: LLM Optimizer 개요
 description: Adobe LLM Optimizer이 AI 기반 검색에서 브랜드 가시성을 높이는 방법에 대해 알아보십시오. 언급, 인용 및 통찰력을 추적합니다. 보다 나은 참여와 영향력을 위해 지금 최적화를 시작하십시오.
-source-git-commit: c7c66566137ad1f5bda89f55748b9d81ddf36f76
+source-git-commit: 06c09c4690488d9b29d0626521fb53bf7d70d3a8
 workflow-type: tm+mt
-source-wordcount: '604'
+source-wordcount: '608'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe LLM Optimizer은 생성 엔진 최적화(응답 엔진 최적화라고도 
 Adobe LLM Optimizer은 생성 엔진 최적화를 위해 설계된 도구 모음을 제공합니다.
 
 * **브랜드 가시성 측정**: 벤치마킹에 대한 명확한 가시성 점수를 사용하여 AI 기반 검색 결과에 브랜드가 표시되는 시기, 위치 및 빈도를 추적합니다.
-* **경쟁업체 벤치마크**: 브랜드의 음성 및 현재 상태를 일반 엔진의 경쟁업체와 비교합니다.
+* **다른 사용자 벤치마크**: 브랜드의 음성 및 현재 상태 점유율을 생성 엔진의 경쟁자를 포함한 다른 사용자와 비교합니다.
 * **실행 가능한 영업 기회 발견**: 언급 및 인용률을 높이기 위한 콘텐츠 및 기술 개선 사항(예: FAQ, 추상화, 스키마, 탐색 가능성)을 식별합니다.
 * **트래픽 영향 추적**: 아젠틱(AI 도우미)과 소유된 속성에 대한 참조 트래픽을 모두 모니터링하여 가시성을 참여와 연결합니다.
 * **팀 Collaboration 사용**: 대시보드를 공유하고 소유자를 할당하고 마케팅, SEO 및 커뮤니케이션 팀 간의 목표를 조정합니다.
@@ -55,7 +55,7 @@ LLM 최적화는 점점 더 중요해지고 있습니다.
 Adobe LLM Optimizer을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 
 **브랜드 가시성 측정** - AI 기반 검색 결과에서 브랜드가 언급되는 시기, 위치 및 빈도를 추적합니다. 시간이 지남에 따라 벤치마킹할 수 있는 명확한 가시성 점수로 추측 범위를 넘어서십시오. [브랜드 유무 대시보드](/help/dashboards/brand-presence.md)를 참조하세요.
-**경쟁업체 벤치마크** - 브랜드가 일반 엔진의 경쟁업체와 어떻게 비교되는지 확인하십시오. 음성 격차의 점유율을 파악하고 경쟁 우위를 파악합니다. [브랜드 유무 대시보드](/help/dashboards/brand-presence.md)를 참조하세요.
+**다른 사용자 벤치마크** - 브랜드가 일반 엔진의 경쟁자를 포함하여 다른 사용자와 어떻게 비교되는지 확인하십시오. 음성 격차의 점유율을 파악하고 경쟁 우위를 파악합니다. [브랜드 유무 대시보드](/help/dashboards/brand-presence.md)를 참조하세요.
 **실행 가능한 영업 기회 찾기** - 언급 및 인용을 직접 늘리는 콘텐츠 영업 기회(예: FAQ, 추상화, 스키마) 및 기술 영업 기회(탐색 가능성, 색인화 문제)를 정확하게 파악합니다. [기회 대시보드](/help/dashboards/opportunities.md)를 참조하세요.
 **AI의 트래픽 영향 추적** - 소유한 속성에 대한 에이전트 트래픽(AI 도우미) 및 참조 트래픽(인용을 통한 사용자 클릭)을 모니터링합니다. 지역 가시성을 실제 참여와 연계합니다. [에이전트 트래픽 대시보드](/help/dashboards/agentic-traffic.md) 및 [참조 트래픽 대시보드](/help/dashboards/referral-traffic.md)를 참조하세요.
 **팀 Collaboration 사용** - 대시보드를 공유하고, 프롬프트 또는 범주에 대한 소유자를 할당하고, 마케팅, SEO(검색 엔진 최적화) 및 커뮤니케이션 기능 전반에서 가시성 목표를 추적하도록 합니다. [Collaboration 대시보드](/help/dashboards/collaboration.md)를 참조하세요.
@@ -66,7 +66,7 @@ Adobe LLM Optimizer을 사용하여 다음과 같은 작업을 수행할 수 있
 
 * [빠른 시작](/help/overview/quick-start.md)을 통해 빠르게 시작하고 실행할 수 있습니다.
 * [대시보드 개요](/help/dashboards/dashboards-overview.md)는 LLM Optimizer에서 사용할 수 있는 모든 대시보드를 설명합니다.
-* [카테고리, 주제, 프롬프트 및 경쟁업체 구성에 대한 우수 사례](/help/overview/best-practices-topics-prompts.md)에는 LLM Optimizer 설정에 필요한 정보가 포함되어 있습니다.
+* [카테고리, 주제, 프롬프트 등을 구성하는 우수 사례](/help/overview/best-practices-topics-prompts.md)에는 LLM Optimizer 설정에 필요한 정보가 포함되어 있습니다.
 * [우수 사례](/help/tutorials/best-practices.md)를 통해 LLM 최적화에 대한 우수 사례를 찾아 AI 검색에서 브랜드 가시성을 높일 수 있습니다.
 
 
