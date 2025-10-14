@@ -1,7 +1,8 @@
 ---
 title: 공동 작업
 description: 공동 작업 대시보드를 사용하여 팀 구성원을 조직의 LLM Optimizer 작업 영역에 초대하는 방법을 알아봅니다.
-source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
+feature: Collaboration
+source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 1%

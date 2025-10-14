@@ -1,7 +1,8 @@
 ---
 title: 참조 트래픽
 description: 참조 트래픽 대시보드를 사용하여 방문자가 외부 플랫폼, AI 인용 및 참조 링크에서 사이트에 도착하는 방법을 알아봅니다.
-source-git-commit: a6d050516e681094d97b25fcdc59e9ed4e60e104
+feature: Referral Traffic
+source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
 workflow-type: tm+mt
 source-wordcount: '599'
 ht-degree: 0%
@@ -62,7 +63,7 @@ ht-degree: 0%
 
 <!--## Top Referral URLs {#top-referrals}
 
-The Top Referral URLs list surfaces your site’s most visited pages from referrals.
+The Top Referral URLs list surfaces your site's most visited pages from referrals.
 
 ![Top Referral URLs](/help/dashboards/assets/top-url.png)-->
 

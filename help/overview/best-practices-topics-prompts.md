@@ -1,7 +1,8 @@
 ---
 title: 카테고리, 주제, 프롬프트 등에 대한 우수 사례
 description: 카테고리, 주제, 프롬프트 및 기타 브랜드를 구성하여 맞춤형 브랜드 모니터링 및 전략적 콘텐츠 분석을 위한 경쟁사를 포함하여 추적함으로써 LLM 통찰력을 최적화합니다.
-source-git-commit: 06c09c4690488d9b29d0626521fb53bf7d70d3a8
+feature: Best Practices, Customer Configuration
+source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 0%
@@ -50,7 +51,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > * 한 가지 접근법을 선택하고 그것을 고수하세요.
-> * 계정/브랜드당 **하나** 범주 모델만 가질 수 있습니다. **SBU**&#x200B;와(과) **URL_DIR**&#x200B;을(를) 동시에 섞지 마십시오.
+> * 계정/브랜드당 **하나** 범주 모델만 가질 수 있습니다. **SBU**&#x200B;와(과) **URL_DIR**을(를) 동시에 섞지 마십시오.
 >   <!--Can you mix Product/Service with these?-->
 
 예:

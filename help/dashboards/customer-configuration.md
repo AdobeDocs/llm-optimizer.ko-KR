@@ -1,7 +1,8 @@
 ---
 title: 고객 구성
 description: 고객 구성을 사용하여 LLM 최적화 도구 플랫폼 내에서 브랜드를 모니터링하고 분석하는 방법을 정의합니다.
-source-git-commit: a6d050516e681094d97b25fcdc59e9ed4e60e104
+feature: Customer Configuration
+source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
 workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 0%
