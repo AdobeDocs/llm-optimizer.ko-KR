@@ -1,9 +1,9 @@
 ---
 title: 빠른 시작
 description: Adobe LLM Optimizer 시작하기 - 브랜드를 온보딩하고, AI 가시성 통찰력을 잠금 해제하고, 대시보드를 탐색하여 검색 성능을 향상시키십시오.
-source-git-commit: 5e8efde82c10c9afa09d51ec9ef20fc006363210
+source-git-commit: a6d050516e681094d97b25fcdc59e9ed4e60e104
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '929'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ AEM Cloud(Cloud Service, Managed Services, Edge Delivery Service) 고객은 **�
 
 ### AEM 클라우드 고객
 
-AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)에서 제품 공지 카드를 사용하여 LLM Optimizer을 시도할 수 있습니다.
+AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)에서 제품 공지 카드를 사용하여 LLM Optimizer을 시도할 수 있습니다.
 
 >[!NOTE]
 >새로 추가된 프롬프트는 처리가 완료될 때까지 [브랜드 현재 상태 대시보드](/help/dashboards/brand-presence.md)에 표시되지 않습니다. AEM Cloud 고객은 LLM Optimizer의 무료 평가판을 사용할 수 있습니다. 200개 이상의 프롬프트를 사용하려면 별도의 라이센스 계약이 필요합니다. 액세스는 &quot;있는 그대로&quot; 및 &quot;사용 가능한 대로&quot; 제공되며 언제든지 Adobe에 의해 수정, 제한 또는 제거될 수 있습니다. 자세한 내용은 계정 담당자에게 문의하십시오.
@@ -83,11 +83,11 @@ AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/k
 
 ### 4단계: CDN 로그 전달에 대한 정보 제공 {#step-4}
 
-에이전트 트래픽 및 참조 트래픽 인사이트를 잠금 해제하려면 CDN 로그 전달에 대한 정보를 제공해야 합니다. [CDN 구성](/help/dashboards/customer-configuration.md) 탭으로 이동한 다음 **CDN 온보드**&#x200B;를 클릭하여 **고객 구성 대시보드**&#x200B;에서 추가할 수 있습니다.
+에이전트 트래픽 및 참조 트래픽 인사이트를 잠금 해제하려면 CDN 로그 전달에 대한 정보를 제공해야 합니다. [CDN 구성](/help/dashboards/customer-configuration.md#cdn-configuration) 탭으로 이동한 다음 **CDN 온보드**&#x200B;를 클릭하여 **고객 구성 대시보드**&#x200B;에서 추가할 수 있습니다.
 
 ![고객 구성 CDN](/help/overview/assets/cc-cdn.png)
 
-또는 위의 예제와 유사하게 미리 추가된 CDN 공급자가 없는 경우 에이전트 및 참조 트래픽 대시보드에 처음 액세스할 때 CDN 로그 전달을 추가하라는 메시지가 표시됩니다. 자세한 내용은 다음을 참조하십시오.
+또는 위에서 설명한 대로 미리 추가된 CDN 공급자가 없는 경우 에이전트 및 참조 트래픽 대시보드에 처음 액세스할 때 CDN 로그 전달을 추가하라는 메시지가 표시됩니다. 자세한 내용은 다음을 참조하십시오.
 
 * [무형성 트래픽](/help/dashboards/agentic-traffic.md#cdn-setup)
 * [참조 트래픽](/help/dashboards/referral-traffic.md#setup#setup)

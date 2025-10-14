@@ -1,9 +1,9 @@
 ---
 title: 참조 트래픽
 description: 참조 트래픽 대시보드를 사용하여 방문자가 외부 플랫폼, AI 인용 및 참조 링크에서 사이트에 도착하는 방법을 알아봅니다.
-source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
+source-git-commit: a6d050516e681094d97b25fcdc59e9ed4e60e104
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 참조 트래픽
 
-참조 트래픽은 방문자가 외부 플랫폼, AI 인용 및 참조 링크에서 사이트에 도달하는 방식을 보여 줍니다. 외부 웹 사이트 및 플랫폼의 트래픽 소스, 참조 패턴 및 전환 지표를 추적하고 분석합니다. 이렇게 하면 가장 많은 트래픽을 유도하는 소스, 지역 및 페이지를 이해하는 데 도움이 됩니다. CDN 로그 또는 [AEM Operational Telemetry](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/sites/operational-telemetry-for-aem-as-a-cloud-service)에서 데이터를 가져온 경우 이러한 두 소스는 모두 개인 정보 보호를 위한 것이며 개인 사용자 데이터를 캡처하지 않습니다. 표시된 데이터를 구체화하는 데 도움이 되는 맞춤형 필터도 있습니다.
+참조 트래픽은 방문자가 외부 플랫폼, AI 인용 및 참조 링크에서 사이트에 도달하는 방식을 보여 줍니다. 외부 웹 사이트 및 플랫폼의 트래픽 소스, 참조 패턴 및 전환 지표를 추적하고 분석합니다. 이렇게 하면 가장 많은 트래픽을 유도하는 소스, 지역 및 페이지를 이해하는 데 도움이 됩니다. <!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.--> 표시된 데이터를 구체화하는 데 도움이 되는 맞춤형 필터도 있습니다.
 
 ![참조 페이지](/help/dashboards/assets/referral-traffic.png)
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 설정 {#setup}
 
-처음 로그인하면 참조 트래픽 대시보드가 비어 있을 수 있습니다. 데이터를 보려면 **구성으로 이동**&#x200B;을 선택하여 참조 트래픽 공급자를 구성해야 합니다.
+처음 로그인하면 참조 트래픽 대시보드가 비어 있을 수 있습니다. 데이터를 보려면 [구성으로 이동](/help/dashboards/customer-configuration.md#cdn-configuration)을 선택하여 **CDN 로그 전달**&#x200B;을 구성해야 합니다.
 
 ![조회 설정](/help/dashboards/assets/referral-setup1.png)
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 2. Enter a primary contact email.
 3. Click **Request activation** to enable data ingestion. Hiding this until confirmation from PM-->
 
-참조 트래픽 공급자가 선택되면 대시보드가 참조 트래픽 지표로 채워집니다.
+활성화되면 대시보드가 참조 트래픽 지표로 채워집니다.
 
 ## 필터 {#filters}
 

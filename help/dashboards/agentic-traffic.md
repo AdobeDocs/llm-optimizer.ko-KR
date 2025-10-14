@@ -1,7 +1,7 @@
 ---
 title: 무형성 트래픽
 description: AI 에이전트가 사이트와 상호 작용하는 방법을 확인하기 위해 에이전트 트래픽 대시보드를 사용하는 방법을 알아봅니다.
-source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
+source-git-commit: a6d050516e681094d97b25fcdc59e9ed4e60e104
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 0%
@@ -42,7 +42,7 @@ ht-degree: 0%
 1. CDN 공급자(예: Akamai, Adobe 관리 Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare 또는 기타)를 선택합니다.
 2. 로그 전달을 사용하려면 **온보드**&#x200B;를 클릭합니다.
 
-**기타**&#x200B;을(를) 선택하면 Adobe에 지원을 요청해야 합니다.
+**기타**&#x200B;를 선택하는 경우 llmo-now@adobe.com에 연락하여 도움을 받아야 합니다.
 
 활성화되면 로그가 수집되고 대시보드는 총 에이전트 상호 작용, 성공률, 시장별 히트 수, 사용자 에이전트 분석 및 URL 수준 성능과 같은 지표로 채워집니다.
 
