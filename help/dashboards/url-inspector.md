@@ -2,9 +2,9 @@
 title: URL 검사기
 description: URL 관리자를 사용하여 도메인의 특정 페이지가 AI 검색에서 어떻게 작동하는지 분석하는 방법에 대해 알아봅니다.
 feature: URL Inspector
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '681'
 ht-degree: 0%
 
 ---
@@ -36,14 +36,14 @@ URL 관리자 는 여러 개요 지표를 제공하므로 AI 검색에서 페이
 * **총 고유 프롬프트** - 총 고유 AI 프롬프트 수.
 * **고유 인용 URL** - 인용된 고유 소유 URL 수입니다.
 * **인용된 총 시간** - AI가 생성한 답변에서 소유한 URL이 인용된 총 시간.
-<!-- * **Total agentic hits** - The total number of hits from AI agents on your URLs.
-* **Referral hits from LLMs** - The total number of hits directed from AI-generated answers to your URLs.-->
+* **총 에이전트 히트 수** - URL에 있는 AI 에이전트의 총 히트 수입니다.
+* **LLM에서 조회 히트** - AI가 생성한 응답에서 사용자의 URL로 리디렉션된 총 히트 수입니다.
 
 각 개요 지표에 대한 트렌드 지표는 이러한 값이 이전 기간과 비교하여 시간이 지남에 따라 어떻게 변하는지를 보여줍니다.
 
 ## 인용한 URL
 
-인용된 URL 보기에는 지원 지표와 함께 AI가 생성한 답변에서 인용된 브랜드의 모든 URL이 나열됩니다. 데이터 테이블에는 특정 URL에 빠르게 액세스할 수 있는 검색 필드도 있습니다. 또한 **내보내기** 옵션을 사용하여 테이블 .csv를 다운로드하고 팀원과 인사이트를 공유하거나 실행 보고에 테이블을 포함할 수 있습니다.
+인용된 URL 보기에는 지원 지표와 함께 AI가 생성한 답변에서 인용된 브랜드의 모든 URL이 나열됩니다. 두 테이블 모두 항목에 빠르게 액세스하기 위한 검색 필드가 있으며 **열 구성** 단추를 클릭하여 표시되는 지표를 사용자 지정할 수 있습니다. 또한 **내보내기** 옵션을 사용하여 테이블 .csv를 다운로드하고 팀원과 인사이트를 공유하거나 실행 보고에 테이블을 포함할 수 있습니다.
 
 ![인용된 URL](/help/dashboards/assets/cited-urls.png)
 
@@ -74,6 +74,6 @@ URL 관리자 는 여러 개요 지표를 제공하므로 AI 검색에서 페이
 
 ### 세부 정보 창
 
-인용된 보기와 트렌드 보기 모두에서 마우스를 특정 URL 위로 가져가면 URL에 **세부 정보** 단추가 표시됩니다. 버튼을 클릭하면 추가 세부 정보가 포함된 별도의 창이 표시됩니다. 세부 정보 창에는 URL이 인용되는 빈도, 언급된 AI 응답의 감정, URL이 표시되는 주제 및 프롬프트, 시간 경과에 따른 에이전트 및 참조 트래픽 트렌드(소유한 URL의 경우)가 표시됩니다.
+인용된 보기와 트렌드 보기 모두에서 URL은 각 행의 끝에 **세부 정보** 단추가 있습니다. 버튼을 클릭하면 추가 세부 정보가 포함된 별도의 창이 표시됩니다. 세부 정보 창에는 URL이 인용되는 빈도, <!--the sentiment of AI responses where it is mentioned,-->개의 주제와 프롬프트, 시간 경과에 따른 에이전트 및 참조 트래픽 트렌드(소유한 URL의 경우)가 표시됩니다.
 
 ![세부 정보 창](/help/dashboards/assets/details-url.png)

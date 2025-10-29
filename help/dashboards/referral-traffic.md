@@ -2,9 +2,9 @@
 title: 참조 트래픽
 description: 참조 트래픽 대시보드를 사용하여 방문자가 외부 플랫폼, AI 인용 및 참조 링크에서 사이트에 도착하는 방법을 알아봅니다.
 feature: Referral Traffic
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -54,12 +54,13 @@ ht-degree: 0%
 대시보드는 다음을 포함한 주요 지표를 표시하여 전체 참조 성능을 강조 표시합니다.
 
 * **총 참조 트래픽** - 모든 소스의 총 참조 트래픽.
+* **LLM의 참조 트래픽** - LLM의 총 참조 트래픽.
 * **동의율** - 동의 프롬프트를 수락하는 방문자의 비율입니다.
 * **바운스 비율** - 참여 이벤트가 없는 조회 원본의 세션 비율입니다.
 
 ![참조 페이지](/help/dashboards/assets/referral-traffic.png)
 
-위에 표시된 전체 성능 지표 외에 **상위 지역** 패널은 지역별로 트래픽을 분류합니다. 한편 **최상위 참조 원본** 패널에서는 가장 많은 방문 횟수를 유도하는 플랫폼을 보여줍니다. 지표에 대한 트렌드 지표는 이러한 값이 이전 기간과 비교하여 시간이 지남에 따라 어떻게 변경되는지 보여줍니다.
+위에 제시된 전체 성능 지표 외에 다른 시장, 참조 소스 및 페이지 의도 범주 <!-- the **Top Regions** panel breaks down traffic by geography. Meanwhile, the **Top Referral Sources** panel shows the platforms driving the most visits. Trend indicators for the metrics show how these values are changing over time compared to the previous period.-->에 걸친 트래픽 분포를 보여주는 세 개의 추가 패널이 있습니다
 
 <!--## Top Referral URLs {#top-referrals}
 
@@ -90,4 +91,4 @@ URL 성능 분석 보기는 LLM 및 기타 소스의 참조 트래픽 볼륨을 
 
 >[!ENDTABS]
 
-두 테이블 모두에서 **내보내기** 옵션을 사용하여 테이블 .csv를 다운로드하고 팀원과 인사이트를 공유하거나 임원 보고에 참조 트래픽 테이블을 포함할 수 있습니다.
+두 테이블 모두에서 **내보내기** 옵션을 사용하여 테이블 .csv를 다운로드하고 팀과 인사이트를 공유하거나 경영진 보고에 테이블을 포함할 수 있습니다. 또한 두 테이블 모두에 대해 **열 구성** 단추를 클릭하여 표시되는 지표를 사용자 지정할 수 있습니다.

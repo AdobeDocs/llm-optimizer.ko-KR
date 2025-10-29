@@ -2,10 +2,10 @@
 title: 고객 구성
 description: 고객 구성을 사용하여 LLM 최적화 도구 플랫폼 내에서 브랜드를 모니터링하고 분석하는 방법을 정의합니다.
 feature: Customer Configuration
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 0%
+source-wordcount: '800'
+ht-degree: 1%
 
 ---
 
@@ -93,7 +93,7 @@ LLM Optimizer이 다양한 시장 및 경쟁 환경에서 브랜드 존재를 �
 
 ## CDN 구성 {#cdn-configuration}
 
-이 탭에서 Adobe LLM Optimizer이 CDN 데이터를 분석할 수 있도록 CDN 스트림을 구성할 수 있습니다. 이 데이터는 대시보드에 전원을 공급하는 데 사용되며(에이전트 및 참조 트래픽 등), 트래픽 패턴, 성능 지표 및 최적화 기회에 대한 통찰력을 제공합니다. CDN 공급자를 온보딩하려면 **CDN 온보딩**&#x200B;을 클릭하세요.
+이 탭에서 Adobe LLM Optimizer이 CDN 데이터를 분석할 수 있도록 CDN 스트림을 구성할 수 있습니다. 이 데이터는 대시보드(예: 에이전트 트래픽)에 전원을 공급하는 데 사용되며 트래픽 패턴, 성능 지표 및 최적화 기회에 대한 통찰력을 제공합니다. CDN 공급자를 온보딩하려면 **CDN 온보딩**&#x200B;을 클릭하세요.
 
 ![고객 구성 CDN](/help/overview/assets/cc-cdn.png)
 
