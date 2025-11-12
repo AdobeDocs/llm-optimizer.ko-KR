@@ -2,9 +2,9 @@
 title: 빠른 시작
 description: Adobe LLM Optimizer 시작하기 - 브랜드를 온보딩하고, AI 가시성 통찰력을 잠금 해제하고, 대시보드를 탐색하여 검색 성능을 향상시키십시오.
 feature: Quickstart, Onboarding
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: 48f7f64cd68c442f4a6837c5f4b7b29c3b175d1b
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ AEM Cloud(Cloud Service, Managed Services, Edge Delivery Service) 고객은 **�
 
 ### AEM 클라우드 고객
 
-AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)에서 제품 공지 카드를 사용하여 LLM Optimizer을 시도할 수 있습니다.
+AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)에서 제품 공지 카드를 사용하여 LLM Optimizer을 시도할 수 있습니다.
 
 >[!NOTE]
 >새로 추가된 프롬프트는 처리가 완료될 때까지 [브랜드 현재 상태 대시보드](/help/dashboards/brand-presence.md)에 표시되지 않습니다. AEM Cloud 고객은 LLM Optimizer의 무료 평가판을 사용할 수 있습니다. 200개 이상의 프롬프트를 사용하려면 별도의 라이센스 계약이 필요합니다. 액세스는 &quot;있는 그대로&quot; 및 &quot;사용 가능한 대로&quot; 제공되며 언제든지 Adobe에 의해 수정, 제한 또는 제거될 수 있습니다. 자세한 내용은 계정 담당자에게 문의하십시오.
@@ -47,7 +47,7 @@ AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/k
 >[!NOTE]
 >제공한 도메인은 조직의 모든 사용자가 사용하게 되며 변경할 수 없습니다.
 
-브랜드 유무 분석을 트리거하려면 카테고리, 주제 및 프롬프트를 제공해야 합니다.
+온보딩 단계 중에 작은 범주, 주제 및 프롬프트 세트가 생성됩니다. 이러한 프롬프트에 대한 브랜드 현재 상태 분석은 사이트가 온보딩된 직후에 사용할 수 있습니다.
 
 ![브랜드 유무 분석](/help/overview/assets/bp-analysis.png)
 
@@ -59,7 +59,7 @@ AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/k
 
 ### 2단계: 범주, 주제 및 프롬프트 사용자 정의
 
-브랜드 유무 분석을 트리거하고 대시보드를 브랜드 가시성에 대한 인사이트로 채우려면 카테고리, 주제 및 프롬프트를 사용자 정의해야 합니다. 이 구성은 [고객 구성 대시보드](/help/dashboards/customer-configuration.md)에 만들어집니다.
+사이트가 온보딩되면 온보딩 단계 중에 자동으로 생성된 작은 프롬프트 세트를 기반으로 브랜드 현재 상태 분석을 볼 수 있습니다. 앞으로 이동하여 브랜드에 대한 카테고리, 주제 및 프롬프트를 사용자 정의할 수 있습니다. 이 구성은 [고객 구성 대시보드](/help/dashboards/customer-configuration.md)에 만들어집니다.
 
 ![고객 구성 대시보드](/help/overview/assets/prompt-creation.png)
 
@@ -78,9 +78,9 @@ AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/k
 >
 > 범주, 주제, 프롬프트를 설정하는 방법에 대한 자세한 내용은 [범주, 주제, 프롬프트 구성에 대한 모범 사례](/help/overview/best-practices-topics-prompts.md) 페이지를 참조하십시오.
 
-### 3단계: 인사이트의 자동 사전 채우기
+### 3단계: 브랜드 유무 통찰력
 
-도메인이 온보딩되고 카테고리와 주제를 제공하면 LLM Optimizer이 브랜드 존재 분석을 자동으로 트리거합니다.
+도메인이 온보딩되면 온보딩 중에 자동으로 생성된 프롬프트를 기반으로 브랜드 현재 상태 보기에서 초기 인사이트를 보게 됩니다. 카테고리, 주제 및 프롬프트를 사용자 정의하면 LLM Optimizer에서 제공한 프롬프트에 대해 브랜드 존재 분석을 자동으로 트리거하고 24시간 후에 결과를 사용할 수 있습니다.
 
 ### 4단계: CDN 로그 전달에 대한 정보 제공 {#step-4}
 
