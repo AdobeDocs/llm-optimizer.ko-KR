@@ -2,9 +2,9 @@
 title: LLM Optimizer 우수 사례
 description: AI 검색에서 브랜드 가시성을 높이기 위한 LLM 최적화 모범 사례를 살펴보십시오. 콘텐츠 벤치마킹 및 최적화에 대한 통찰력.
 feature: Best Practices, Agentic Traffic, Brand Presence
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: 31c36f9959993171de4bec384a361d38e6e01dad
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1685'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ LLM 가시성은 브랜드가 AI가 생성한 응답에 얼마나 자주, 얼마
 
 >[!TIP]
 >
->LLM Optimizer은 [기회](/help/dashboards/opportunities.md) 대시보드에서 온사이트 및 오프사이트 최적화 기회를 제안합니다. 이러한 기회는 사이트에 따라 다릅니다. 종종 최적화를 사이트에 직접 배포할 수 있습니다.
+>LLM Optimizer은 [기회](/help/dashboards/opportunities.md) 대시보드에서 온사이트 및 오프사이트 최적화 기회를 제안합니다. 이러한 기회는 사이트에 따라 다릅니다. 이러한 제안 중 대부분은 LLM Optimizer을 사용하여 사이트에 직접 배포할 수 있습니다.
 
 다음은 몇 가지 최적화 모범 사례입니다.
 
@@ -118,7 +118,7 @@ LLM 가시성은 브랜드가 AI가 생성한 응답에 얼마나 자주, 얼마
 
 >[!TIP]
 >
->LLM Optimizer은 [기회](/help/dashboards/opportunities.md) 대시보드에서 온사이트 및 오프사이트 최적화 기회를 제안합니다. 이러한 기회는 사이트에 따라 다릅니다. 종종 최적화를 사이트에 직접 배포할 수 있습니다.
+>LLM Optimizer은 [기회](/help/dashboards/opportunities.md) 대시보드에서 온사이트 및 오프사이트 최적화 기회를 제안합니다. 이러한 기회는 사이트에 따라 다릅니다. 이러한 제안 중 대부분은 LLM Optimizer을 사용하여 사이트에 직접 배포할 수 있습니다.
 
 
 주요 오프사이트 채널:
