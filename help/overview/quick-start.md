@@ -2,9 +2,9 @@
 title: 빠른 시작
 description: Adobe LLM Optimizer 시작하기 - 브랜드를 온보딩하고, AI 가시성 통찰력을 잠금 해제하고, 대시보드를 탐색하여 검색 성능을 향상시키십시오.
 feature: Quickstart, Onboarding
-source-git-commit: 48f7f64cd68c442f4a6837c5f4b7b29c3b175d1b
+source-git-commit: 3068247d9d13d0c3cd22e2077daa06fd1680d6b3
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '1102'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,17 @@ LLM Optimizer를 시작하려면 아래 제시된 단계에 설명된 대로 온
 ## 온보딩 개요
 
 온보딩 프로세스는 도메인 온보딩으로 시작합니다. AEM Cloud 고객인지 여부에 따라 프로세스가 다릅니다. 프로세스를 완료한 후에는 CDN 로그 전달에 대한 정보를 제공하고 마지막으로 카테고리, 주제 및 프롬프트를 사용자 정의해야 합니다. 프로세스의 각 부분은 LLM Optimizer을 최대한 빨리 시작하는 방법에 대한 유용한 팁과 함께 아래에 자세히 설명되어 있습니다.
+
+### Adobe LLM Optimizer의 공개 페이지 액세스 허용
+
+정확한 컨텐츠 및 기술 권장 사항을 전달하려면 Adobe LLM Optimizer에서 공개 페이지에 액세스해야 합니다. 이는 보안 내부 크롤러(Spacecat/1.0 사용자 에이전트)를 통해 수행됩니다.
+
+구성 요구 사항:
+
+* 사이트의 robots.txt 파일 또는 보트 트래픽 규칙에 Spacecat/1.0 사용자 에이전트를 허용 목록에 추가하다 관리에 추가합니다
+* 페이지가 도메인 또는 CDN 수준에서 차단되지 않았는지 확인합니다. 차단된 페이지는 인덱싱할 수 없어 최적화 작업과 그에 대한 인사이트를 생성할 수 없습니다.
+
+대시보드에 컨텐츠 가시성이 낮게 나타나는 경우 크롤러가 도메인에 액세스할 수 있는지 확인하십시오. 제한된 액세스는 불완전한 색인화의 일반적인 원인입니다.
 
 ## 1단계: 도메인 온보드
 
@@ -33,7 +44,7 @@ AEM Cloud(Cloud Service, Managed Services, Edge Delivery Service) 고객은 **�
 
 ### AEM 클라우드 고객
 
-AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)에서 제품 공지 카드를 사용하여 LLM Optimizer을 시도할 수 있습니다.
+AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)에서 제품 공지 카드를 사용하여 LLM Optimizer을 시도할 수 있습니다.
 
 >[!NOTE]
 >새로 추가된 프롬프트는 처리가 완료될 때까지 [브랜드 현재 상태 대시보드](/help/dashboards/brand-presence.md)에 표시되지 않습니다. AEM Cloud 고객은 LLM Optimizer의 무료 평가판을 사용할 수 있습니다. 200개 이상의 프롬프트를 사용하려면 별도의 라이센스 계약이 필요합니다. 액세스는 &quot;있는 그대로&quot; 및 &quot;사용 가능한 대로&quot; 제공되며 언제든지 Adobe에 의해 수정, 제한 또는 제거될 수 있습니다. 자세한 내용은 계정 담당자에게 문의하십시오.
