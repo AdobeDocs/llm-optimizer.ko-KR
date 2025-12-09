@@ -2,9 +2,9 @@
 title: 빠른 시작
 description: Adobe LLM Optimizer 시작하기 - 브랜드를 온보딩하고, AI 가시성 통찰력을 잠금 해제하고, 대시보드를 탐색하여 검색 성능을 향상시키십시오.
 feature: Quickstart, Onboarding
-source-git-commit: 3068247d9d13d0c3cd22e2077daa06fd1680d6b3
+source-git-commit: 24183fbe2577bb9402f8b6aaaf1e46c75403383d
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1099'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ AEM Cloud(Cloud Service, Managed Services, Edge Delivery Service) 고객은 **�
 
 ### AEM 클라우드 고객
 
-AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)에서 제품 공지 카드를 사용하여 LLM Optimizer을 시도할 수 있습니다.
+AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)에서 제품 공지 카드를 사용하여 LLM Optimizer을 시도할 수 있습니다.
 
 >[!NOTE]
 >새로 추가된 프롬프트는 처리가 완료될 때까지 [브랜드 현재 상태 대시보드](/help/dashboards/brand-presence.md)에 표시되지 않습니다. AEM Cloud 고객은 LLM Optimizer의 무료 평가판을 사용할 수 있습니다. 200개 이상의 프롬프트를 사용하려면 별도의 라이센스 계약이 필요합니다. 액세스는 &quot;있는 그대로&quot; 및 &quot;사용 가능한 대로&quot; 제공되며 언제든지 Adobe에 의해 수정, 제한 또는 제거될 수 있습니다. 자세한 내용은 계정 담당자에게 문의하십시오.
@@ -60,7 +60,7 @@ AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/k
 
 온보딩 단계 중에 작은 범주, 주제 및 프롬프트 세트가 생성됩니다. 이러한 프롬프트에 대한 브랜드 현재 상태 분석은 사이트가 온보딩된 직후에 사용할 수 있습니다.
 
-![브랜드 유무 분석](/help/overview/assets/bp-analysis.png)
+<!--![Brand Presence Analysis](/help/overview/assets/bp-analysis.png)-->
 
 또한 트래픽 분석을 위해 [CDN 로그 전달](#step-4)을 구성해야 합니다. LLM Optimizer은 AI 가시성을 높이기 위해 에이전시 및 레퍼러 트래픽의 브랜드 유무 데이터와 통찰력을 통해 기회를 식별하고 처방적 권장 사항을 제공해야 합니다.
 

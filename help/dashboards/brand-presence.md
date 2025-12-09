@@ -2,9 +2,9 @@
 title: 브랜드 유무
 description: 브랜드 유무 대시보드를 사용하여 브랜드가 AI에서 생성한 응답 수준에서 어떻게 인식되는지 이해하는 방법에 대해 알아봅니다.
 feature: Brand Presence
-source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
+source-git-commit: 24183fbe2577bb9402f8b6aaaf1e46c75403383d
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1292'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 * **날짜 범위** - 표시된 데이터의 시간대를 선택합니다. 예를 들어 지난 4주. **주 사용자 지정** 옵션을 선택하여 기간을 사용자 지정할 수도 있습니다.
 * **범주** - 표시된 결과를 사전 정의된 범주 또는 사용자 지정 범주별로 필터링합니다.
 * **주제** - AI 응답에 브랜드가 나타나는 콘텐츠 테마 및 주제 영역을 분석하기 위해 주제별로 필터링합니다.
-* **플랫폼** - 분석할 AI 엔진을 선택합니다.
+* **플랫폼** - 분석할 AI 엔진을 선택합니다. LLM Optimizer은 현재 ChatGPT, Google AI 개요, Google AI 모드, Microsoft Co-pilot, Google Gemini 및 Perplexity를 지원합니다.
 * **프롬프트 원본** - 프롬프트의 원본을 선택합니다. 원점은 사용자 입력 또는 AI 생성 중 하나일 수 있습니다.
 * **프롬프트 브랜딩** - 브랜드 프롬프트 또는 비브랜드 프롬프트로 결과를 필터링합니다.
 * **지역** - 지역별로 결과를 필터링합니다. 일부 지역은 시작 시 사용할 수 없습니다.
