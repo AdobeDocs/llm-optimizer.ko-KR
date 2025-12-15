@@ -2,9 +2,9 @@
 title: 최적화 기회
 description: Opportunities 대시보드를 사용하여 브랜드 가시성을 높이기 위해 사이트를 개선할 수 있는 방법을 자동으로 감지하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: 533565d089076d651bb633ea7e426b0a4282de97
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,10 @@ ht-degree: 0%
 | 차단된 에이전트 트래픽 감지 | 기술 지역 | 알려진 AI 에이전트(예: GPTBot, PerplestityBot)의 차단된 요청에 대한 CDN 로그를 분석합니다. 영향을 받는 URL 및 에이전트를 보고합니다. | 해당되는 경우 지원되는 AI 크롤러에 액세스할 수 있도록 robots.txt 또는 서버 구성을 업데이트합니다. |
 | 404s/403s/5xx 문제 감지 | 기술 지역 | CDN 로그에서 오류 응답을 모니터링합니다. 빈도, 영향을 받는 URL 및 예상 히트 손실을 보고합니다. | 주요 콘텐츠가 200개의 응답을 반환하도록 끊어진 링크를 수정하고, 권한을 업데이트하고, 서버측 문제를 해결합니다. |
 | 컨텐츠 가시성 복구(조기 액세스) | 기술 지역 | AI 에이전트에서 중요한 콘텐츠가 숨겨져 있는 페이지에 플래그를 지정합니다. 영향을 받는 URL 및 복구할 수 있는 예상 컨텐츠를 표시합니다. | JavaScript 실행 없이 AI 에이전트가 더 많은 콘텐츠를 사용할 수 있도록 페이지를 사전 렌더링합니다. |
+
+## 자동 최적화 {#auto-optimization}
+
+자동 최적화를 사용하면 한 번의 클릭으로 권장 최적화를 배포할 수 있으므로 수작업과 가치 실현 시간을 줄일 수 있습니다. 최적화는 컨텐츠 소스 또는 CDN 에지에서 적용할 수 있습니다. Edge 기반 자동 최적화는 현재 선택한 기회에 대한 조기 액세스에서 사용할 수 있습니다. 자세한 내용은 [Edge에서 최적화](/help/dashboards/optimize-at-edge.md) 페이지를 참조하십시오.
 
 ### 컨텐츠 가시성 복구 영업 기회 {#recover-contet}
 
