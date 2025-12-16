@@ -1,10 +1,10 @@
 ---
 title: Adobe LLM Optimizer
 description: Adobe LLM Optimizer으로 브랜드를 향상시키십시오. 언급을 추적하고 통찰력을 발견하고 AI 기반 검색을 지배합니다. 가시성을 제어하십시오. 지금 최적화를 시작하십시오!
-source-git-commit: 37dcc663240c3466437c6c5b17e01b4e56e1306b
+source-git-commit: c8752f04dda63c6add508e034b1b158ae43140e0
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 3%
+source-wordcount: '381'
+ht-degree: 4%
 
 ---
 
@@ -124,7 +124,9 @@ Adobe LLM Optimizer은 생성 엔진 최적화를 위한 생성 AI 우선 애플
   {title= Best practices for LLM optimization using Adobe LLM Optimizer}
   {image= /help/assets/overview/best-practices-card.png}
   {description= Learn how LLM Optimizer can help you drive brand authority in AI search and discovery.}
-* https://business.adobe.com/kr/products/llm-optimizer.html
+  {target=_blank}
+  {cta=Learn more}
+* https://business.adobe.com/products/llm-optimizer.html
   {title = Explore the capabilities of the Adobe LLM Optimizer}
   {image = /help/assets/overview/business-adobe.png}
   {target=_blank}
@@ -133,6 +135,8 @@ Adobe LLM Optimizer은 생성 엔진 최적화를 위한 생성 AI 우선 애플
   {title= Optimize at Edge}
   {image= /help/assets/overview/optimize-on-edge-card.png}
   {description= Learn how to deliver optimizations in LLM Optimizer without any authoring changes required.}
+  {target=_blank}
+  {cta=Learn more}
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -187,7 +191,7 @@ Adobe LLM Optimizer은 생성 엔진 최적화를 위한 생성 AI 우선 애플
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://business.adobe.com/kr/products/llm-optimizer.html" title="Adobe LLM Optimizer의 기능 탐색" target="_blank" rel="referrer">
+                    <a href="https://business.adobe.com/products/llm-optimizer.html" title="Adobe LLM Optimizer의 기능 탐색" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="/help/assets/overview/business-adobe.png" alt="Adobe LLM Optimizer의 기능 탐색"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -196,16 +200,54 @@ Adobe LLM Optimizer은 생성 엔진 최적화를 위한 생성 AI 우선 애플
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://business.adobe.com/kr/products/llm-optimizer.html" target="_blank" rel="referrer" title="Adobe LLM Optimizer의 기능 탐색">Adobe LLM Optimizer의 기능 살펴보기</a>
+                        <a href="https://business.adobe.com/products/llm-optimizer.html" target="_blank" rel="referrer" title="Adobe LLM Optimizer의 기능 탐색">Adobe LLM Optimizer의 기능 살펴보기</a>
                     </p>
                     <p class="is-size-6">Adobe LLM Optimizer을 사용하여 AI 검색 결과에서 브랜드의 존재를 구체화합니다. GEO에 대한 통찰력을 얻고, LLM에서 가시성을 높이고, 측정 가능한 트래픽 증가를 유도하십시오.</p>
                 </div>
-                <a href="https://business.adobe.com/kr/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://business.adobe.com/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
                 </a>
             </div>
         </div>
     </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Optimize at Edge">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./dashboards/optimize-at-edge.md" title="Edge에서 최적화" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/optimize-on-edge-card.png" alt="Edge에서 최적화"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./dashboards/optimize-at-edge.md" target="_blank" rel="referrer" title="Edge에서 최적화">Edge에서 최적화</a>
+                    </p>
+                    <p class="is-size-6">작성 변경 작업 없이 LLM Optimizer에서 최적화를 제공하는 방법에 대해 알아봅니다.</p>
+                </div>
+                <a href="./dashboards/optimize-at-edge.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
+<!-- CARDS
+
+* ./dashboards/optimize-at-edge.md
+  {title= Optimize at Edge}
+  {image= /help/assets/overview/optimize-on-edge-card.png}
+  {description= Learn how to deliver optimizations in LLM Optimizer without any authoring changes required.}
+  {target=_blank}
+  {cta=Learn more}
+
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Optimize at Edge">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
