@@ -74,7 +74,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 < x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-[originSelector CDN 규칙](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
+[originSelector CDN 규칙](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
 
 * 라우팅할 도메인 결정
 * 라우팅할 경로 결정
@@ -82,7 +82,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 
 규칙을 배포하려면 다음을 수행해야 합니다.
 
-* [구성 파이프라인 만들기](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)
+* [구성 파이프라인 만들기](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/operations/config-pipeline)
 * 저장소에 `cdn.yaml` 구성 파일을 커밋합니다.
 * 구성 파이프라인 실행
 
