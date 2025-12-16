@@ -2,9 +2,9 @@
 title: 최적화 기회
 description: Opportunities 대시보드를 사용하여 브랜드 가시성을 높이기 위해 사이트를 개선할 수 있는 방법을 자동으로 감지하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 533565d089076d651bb633ea7e426b0a4282de97
+source-git-commit: 39658a057fd4d67f74dc286e1687e384133ac653
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '624'
 ht-degree: 0%
 
 ---
@@ -44,9 +44,9 @@ ht-degree: 0%
 
 자동 최적화를 사용하면 한 번의 클릭으로 권장 최적화를 배포할 수 있으므로 수작업과 가치 실현 시간을 줄일 수 있습니다. 최적화는 컨텐츠 소스 또는 CDN 에지에서 적용할 수 있습니다. Edge 기반 자동 최적화는 현재 선택한 기회에 대한 조기 액세스에서 사용할 수 있습니다. 자세한 내용은 [Edge에서 최적화](/help/dashboards/optimize-at-edge.md) 페이지를 참조하십시오.
 
-### 컨텐츠 가시성 복구 영업 기회 {#recover-contet}
+<!--### Recover Content Visibility Opportunity {#recover-contet}
 
-위에서 설명한 바와 같이, 콘텐츠 가시성 기회는 클라이언트측 렌더링으로 인해 AI 에이전트에 대해 주요 콘텐츠가 유실된 페이지에 플래그를 지정합니다. 식별된 각 페이지에 대해 AI 에이전트 보기에서 누락된 콘텐츠가 정확하게 표시되므로 가시성 차이를 찾아내는 데 도움이 됩니다. 또한 CMS(Content Management System) 변경 없이 에이전트 트래픽에 더 많은 HTML 컨텐츠를 제공할 수 있는 에지 기반의 렌더링 기능도 지원됩니다. 이 기능은 현재 조기 액세스 상태이며 LLM Optimizer 팀의 설정이 필요합니다. 콘텐츠 가시성 기회를 활성화하려면 `llmo-at-edge@adobe.com`에 문의하십시오.
+As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. This functionality is currently in Early Access and requires setup from the LLM Optimizer team. Please contact `llmo-at-edge@adobe.com` to activate the content visibility opportunity.-->
 
 ### 추가 도구
 

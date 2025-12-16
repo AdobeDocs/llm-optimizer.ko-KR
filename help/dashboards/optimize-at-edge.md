@@ -2,9 +2,9 @@
 title: Edge에서 최적화
 description: 작성 변경 작업 없이 CDN 에지에서 LLM Optimizer의 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 522abddcabaf02ce86fb4d7978ef7fa4d6eb0358
+source-git-commit: 39658a057fd4d67f74dc286e1687e384133ac653
 workflow-type: tm+mt
-source-wordcount: '2218'
+source-wordcount: '2224'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Edge에서 최적화는 AI에게 친숙한 LLM 사용자 에이전트 변경 사항을 제공하는 LLM Optimizer의 에지 기반 배포 기능입니다. 현재 컨텍스트에서 &quot;Edge&quot;는 최적화가 CDN 계층에서 적용됨을 의미합니다. CDN 계층에서 최적화를 제공하기 때문에, 원본 CMS이 변경되지 않은 상태로 유지되도록 컨텐츠 관리 시스템(CMS)의 작성 변경 사항이 필요하지 않습니다. 이러한 분리를 통해 기존 게시 워크플로우를 변경하지 않고 LLM 가시성을 향상시킬 수 있습니다. 에이전트 트래픽만 타겟팅하며 사람 사용자나 SEO 봇에는 영향을 주지 않습니다. LLM Optimizer이 페이지 최적화 기회를 감지하면 사용자가 CDN 에지에서 직접 수정 사항을 배포할 수 있습니다.
 
-Edge에서 최적화는 복잡한 엔지니어링 노력이 필요한 기존의 수정 사항에 대한 보다 빠르고 효율적인 대안입니다. 위에서 언급했듯이 1회 설정을 완료한 후에는 플랫폼 변경 사항이나 변경 사항을 적용하는 데 긴 개발 주기가 필요하지 않습니다. 개발자 참여 없이도 몇 분 안에 개선 사항을 게시할 수 있습니다. AI 에이전트용으로 웹 사이트를 최적화하는 낮은 위험의 코드 없는 방법입니다.
+Edge에서 최적화는 복잡한 엔지니어링 노력이 필요한 기존의 수정 사항에 대한 보다 빠르고 효율적인 대안입니다. 위에서 언급했듯이 1회 설정을 완료한 후에는 플랫폼 변경 사항이나 변경 사항을 적용하는 데 긴 개발 주기가 필요하지 않습니다. 개발자 참여 없이도 몇 분 안에 개선 사항을 게시할 수 있습니다. AI 에이전트용으로 웹 사이트를 최적화하는 비코드 방법입니다.
 
 Edge에서 최적화는 마케팅, SEO, 콘텐츠 및 디지털 전략 팀의 비즈니스 사용자를 위해 설계되었습니다. 이를 통해 비즈니스 사용자는 LLM Optimizer에서 기회 식별, 제안 사항 이해 및 수정 사항 간편한 배포와 같은 전체 여정을 완료할 수 있습니다. Edge에서 최적화를 사용하면 변경 사항을 미리 보고, CDN 에지에서 신속하게 배포하고, 최적화가 라이브 상태인지 확인할 수 있습니다. LLM Optimizer 에코시스템에서 성능을 추적할 수 있습니다.
 
@@ -29,7 +29,7 @@ Edge에서 최적화는 마케팅, SEO, 콘텐츠 및 디지털 전략 팀의 �
 
 * **AI 전용 게재:** 사람 방문자나 SEO 봇에 영향을 주지 않고 AI 에이전트에게만 최적화된 HTML을 제공합니다.
 * **더 빠른 주기:** 게시 변경 사항을 몇 주가 아니라 몇 분 단위로 변경합니다. 플랫폼 변경이나 긴 엔지니어링 주기가 필요하지 않습니다.
-* **위험이 적고 되돌리기 가능:** 페이지를 몇 분 안에 되돌릴 수 있는 한 번의 클릭으로 롤백 기능이 지원됩니다.
+* **복원 가능:** 페이지를 몇 분 안에 되돌릴 수 있는 원클릭 롤백 기능이 지원됩니다.
 * **성능에 영향을 주지 않음:** Edge 기반 최적화 및 캐싱은 사이트 대기 시간에 영향을 주지 않습니다.
 * **CDN 및 CMS 불가지론자:**&#x200B;은(는) 콘텐츠 관리 시스템에 관계없이 모든 CDN 구성 및 프론트엔드 설정에서 작동합니다.
 
@@ -74,7 +74,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 < x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-[originSelector CDN 규칙](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
+[originSelector CDN 규칙](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
 
 * 라우팅할 도메인 결정
 * 라우팅할 경로 결정
@@ -83,9 +83,9 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 
 규칙을 배포하려면 다음을 수행해야 합니다.
 
-* [구성 파이프라인 만들기](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/operations/config-pipeline)
+* [구성 파이프라인 만들기](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)
 * 저장소에 `cdn.yaml` 구성 파일을 커밋합니다.
-* api 키를 [암호 환경 변수](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)&#x200B;(으)로 배포
+* api 키를 [암호 환경 변수](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)&#x200B;(으)로 배포
 * 구성 파이프라인 실행
 
 
@@ -482,10 +482,10 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 ### 컨텐츠 가시성 복구
 
 이 영업 기회는 클라이언트측 렌더링으로 인해 AI 에이전트용 주요 콘텐츠가 숨겨져 있는 페이지에 플래그를 지정합니다. 식별된 각 페이지에 대해 AI 에이전트 보기에서 누락된 콘텐츠를 정확하게 보여 주고, 가시성 차이를 강조 표시하며, 숨겨진 콘텐츠를 복구하기 위해 변경 사항을 직접 적용할 수 있도록 합니다. Edge에서 최적화를 사용하여 이 영업 기회를 배포하면 사전 렌더링된 AI 최적화 버전의 페이지가 LLM 사용자 에이전트에게 제공되어 Javascript를 실행하지 않고도 전체 컨텍스트에 액세스할 수 있습니다.
-이렇게 하면 페이지가 AI 에이전트에게 먼저 완전히 표시됩니다. 추가 개선 사항은 사전 렌더링된 HTML 위에 적용됩니다.
+이렇게 하면 페이지가 AI 에이전트에게 처음으로 완전히 표시됩니다. 추가 개선 사항은 사전 렌더링된 HTML 위에 적용됩니다.
 
 >[!IMPORTANT]
->이 사전 렌더링 기능은 Edge에서 최적화를 사용하여 배포할 때 아래에 제시된 모든 기회에 자동으로 적용됩니다.
+>이 사전 렌더링 기능은 Edge에서 최적화로 배포하면 아래에 제시된 모든 기회에 자동으로 적용되어 페이지가 AI 에이전트에게 완전히 표시되도록 합니다.
 
 ### LLM에 대한 제목 최적화
 
@@ -505,7 +505,7 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 ## Edge에서 자동 최적화
 
-각 기회에 대해 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브 미리 보고, 롤백할 수 있습니다.
+각 영업 기회에 대해 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
 ### 미리보기
 
@@ -566,4 +566,3 @@ Q. Edge에서 Adobe EDS(Edge Delivery Service)를 사용하는 사이트에 대�
 Q. Edge에서 최적화 사전 렌더링은 기존의 서버측 렌더링(SSR)과 어떻게 다릅니까?
 
 둘 다 서로 다른 문제를 해결하고 함께 일할 수 있다. 기존 SSR은 서버측 콘텐츠를 렌더링하지만 나중에 브라우저에서 로드되는 콘텐츠는 포함하지 않습니다. Edge에서 최적화 사전 렌더링은 JavaScript 및 클라이언트측 데이터가 로드된 후 페이지를 캡처하여 CDN 에지에서 완전히 조립된 버전을 생성합니다. SSR은 사용자 경험 개선에 중점을 두고 있으며, Edge에서 최적화는 LLM의 웹 경험을 개선합니다.
-
