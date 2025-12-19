@@ -2,9 +2,9 @@
 title: Edge에서 최적화
 description: 작성 변경 작업 없이 CDN 에지에서 LLM Optimizer의 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 52984ea987ecacbd6d3bb08a6d04ff634fdf2779
+source-git-commit: 1ef457043d1ad06dc7fa19363fab232562b30d6c
 workflow-type: tm+mt
-source-wordcount: '2206'
+source-wordcount: '2178'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 < x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-[originSelector CDN 규칙](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
+[originSelector CDN 규칙](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
 
 * 라우팅할 도메인 결정
 * 라우팅할 경로 결정
@@ -82,7 +82,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 
 규칙을 배포하려면 다음을 수행해야 합니다.
 
-* [구성 파이프라인 만들기](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/operations/config-pipeline)
+* [구성 파이프라인 만들기](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)
 * 저장소에 `cdn.yaml` 구성 파일을 커밋합니다.
 * 구성 파이프라인 실행
 
@@ -555,7 +555,7 @@ Q. Edge에서 최적화를 위해 온보딩되지 않은 경우 어떻게 됩니
 
 질문: 소스에서 콘텐츠가 업데이트되면 어떻게 됩니까?
 
-기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 페이지 버전을 제공합니다. 그러나 소스가 변경되면 시스템이 자동으로 새로 고쳐져 AI 에이전트는 항상 최신 콘텐츠를 수신하게 됩니다. 이는 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하여 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하기 때문입니다. 모든 사이트에 맞는 범용 TTL이 없으므로 두 시스템이 동기화 상태를 유지하도록 캐시 무효화 규칙을 기반으로 이 TTL을 구성할 수 있습니다.
+기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 페이지 버전을 제공합니다. 그러나 소스가 변경되면 시스템이 자동으로 새로 고쳐져 AI 에이전트는 항상 최신 콘텐츠를 수신하게 됩니다. 이는 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하여 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하기 때문입니다. <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 Q. Edge에서 Adobe EDS(Edge Delivery Service)를 사용하는 사이트에 대해서만 최적화됩니까?
 
