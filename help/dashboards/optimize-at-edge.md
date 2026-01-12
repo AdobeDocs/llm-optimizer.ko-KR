@@ -2,9 +2,9 @@
 title: Edge에서 최적화
 description: 작성 변경 작업 없이 CDN 에지에서 LLM Optimizer의 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 24585a5743a3291d2440c98f91495416bbbe1760
+source-git-commit: 3986fec2dcb9537f5b8f94ce9c72558845aba376
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2191'
 ht-degree: 1%
 
 ---
@@ -15,22 +15,22 @@ ht-degree: 1%
 이 페이지에서는 작성 변경 없이 CDN 에지에서 최적화를 제공하는 방법에 대한 자세한 개요를 제공합니다. 온보딩 프로세스, 사용 가능한 최적화 기회 및 에지에서 자동 최적화하는 방법을 다룹니다.
 
 >[!NOTE]
->이 기능은 현재 조기 액세스 상태입니다. 조기 액세스 프로그램 [여기](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)에 대해 자세히 알아볼 수 있습니다.
+>이 기능은 현재 조기 액세스 상태입니다. 조기 액세스 프로그램 [여기](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)에 대해 자세히 알아볼 수 있습니다.
 
 ## Edge에서 최적화란 무엇입니까?
 
 Edge에서 최적화는 AI에게 친숙한 LLM 사용자 에이전트 변경 사항을 제공하는 LLM Optimizer의 에지 기반 배포 기능입니다. 현재 컨텍스트에서 &quot;Edge&quot;는 최적화가 CDN 계층에서 적용됨을 의미합니다. CDN 계층에서 최적화를 제공하기 때문에, 원본 CMS이 변경되지 않은 상태로 유지되도록 컨텐츠 관리 시스템(CMS)의 작성 변경 사항이 필요하지 않습니다. 이러한 분리를 통해 기존 게시 워크플로우를 변경하지 않고 LLM 가시성을 향상시킬 수 있습니다. 에이전트 트래픽만 타겟팅하며 사람 사용자나 SEO 봇에는 영향을 주지 않습니다. LLM Optimizer이 페이지 최적화 기회를 감지하면 사용자가 CDN 에지에서 직접 수정 사항을 배포할 수 있습니다.
 
-Edge에서 최적화는 복잡한 엔지니어링 노력이 필요한 기존의 수정 사항에 대한 보다 빠르고 효율적인 대안입니다. 위에서 언급했듯이 1회 설정을 완료한 후에는 플랫폼 변경 사항이나 변경 사항을 적용하는 데 긴 개발 주기가 필요하지 않습니다. 개발자 참여 없이도 몇 분 안에 개선 사항을 게시할 수 있습니다. AI 에이전트용으로 웹 사이트를 최적화하는 비코드 방법입니다.
+Edge에서 최적화는 복잡한 엔지니어링 노력이 필요한 기존의 수정 사항에 대한 보다 빠르고 효율적인 대안입니다. 위에서 언급했듯이 1회 설정을 완료한 후에는 플랫폼 변경 사항이나 변경 사항을 적용하는 데 긴 개발 주기가 필요하지 않습니다. 개발자 참여 없이 몇 분 만에 향상된 기능을 게시할 수 있습니다. AI 에이전트용으로 웹 사이트를 최적화하는 비코드 방법입니다.
 
 Edge에서 최적화는 마케팅, SEO, 콘텐츠 및 디지털 전략 팀의 비즈니스 사용자를 위해 설계되었습니다. 이를 통해 비즈니스 사용자는 LLM Optimizer에서 기회 식별, 제안 사항 이해 및 수정 사항 간편한 배포와 같은 전체 여정을 완료할 수 있습니다. Edge에서 최적화를 사용하면 변경 사항을 미리 보고, CDN 에지에서 신속하게 배포하고, 최적화가 라이브 상태인지 확인할 수 있습니다. LLM Optimizer 에코시스템에서 성능을 추적할 수 있습니다.
 
 ### 주요 이점
 
 * **AI 전용 게재:** 사람 방문자나 SEO 봇에 영향을 주지 않고 AI 에이전트에게만 최적화된 HTML을 제공합니다.
-* **더 빠른 주기:** 게시 변경 사항을 몇 주가 아니라 몇 분 단위로 변경합니다. 플랫폼 변경이나 긴 엔지니어링 주기가 필요하지 않습니다.
+* **더 빠른 주기:** 몇 주가 아닌 몇 분 내에 변경 내용을 게시합니다. 플랫폼 변경이나 긴 엔지니어링 주기가 필요하지 않습니다.
 * **복원 가능:** 페이지를 몇 분 안에 되돌릴 수 있는 원클릭 롤백 기능이 지원됩니다.
-* **성능에 영향을 주지 않음:** Edge 기반 최적화 및 캐싱은 사이트 대기 시간에 영향을 주지 않습니다.
+* **성능에 영향을 주지 않음:** Edge 기반 최적화 및 캐싱은 사이트 지연 시간에 영향을 주지 않습니다.
 * **CDN 및 CMS 불가지론자:**&#x200B;은(는) 콘텐츠 관리 시스템에 관계없이 모든 CDN 구성 및 프론트엔드 설정에서 작동합니다.
 
 ### Edge에서 최적화를 통해 지원되는 영업 기회는 무엇입니까?
@@ -39,7 +39,7 @@ Edge에서 최적화를 통해 아젠틱 웹 경험을 개선할 수 있는 기�
 
 ## 온보딩
 
-온보딩 프로세스를 시작하려면 Adobe 계정 팀 또는 FDE 팀에 연락해야 합니다. IT 또는 CDN 팀도 전제 조건 및 설정 프로세스를 완료해야 합니다. 또한 추가 온보딩 지원이 필요한 경우 `llmo-at-edge@adobe.com`(으)로 팀에 문의할 수도 있습니다.
+온보딩 프로세스를 시작하려면 Adobe 계정 팀 또는 FDE 팀에 연락해야 합니다. IT 또는 CDN 팀도 전제 조건 및 설정 프로세스를 완료해야 합니다. 또한 `llmo-at-edge@adobe.com`에 연락하여 추가 온보딩 지원을 받을 수도 있습니다.
 
 Edge에서 최적화하기 위해 온보딩해야 하는 전제 조건:
 
@@ -74,7 +74,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 < x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-[originSelector CDN 규칙](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
+[originSelector CDN 규칙](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
 
 * 라우팅할 도메인 결정
 * 라우팅할 경로 결정
@@ -82,7 +82,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 
 규칙을 배포하려면 다음을 수행해야 합니다.
 
-* [구성 파이프라인 만들기](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/operations/config-pipeline)
+* [구성 파이프라인 만들기](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)
 * 저장소에 `cdn.yaml` 구성 파일을 커밋합니다.
 * 구성 파이프라인 실행
 
@@ -503,7 +503,7 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 각 영업 기회에 대해 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477991/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### 미리보기
 
