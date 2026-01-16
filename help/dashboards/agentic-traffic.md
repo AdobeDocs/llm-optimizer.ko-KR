@@ -2,9 +2,9 @@
 title: 무형성 트래픽
 description: AI 에이전트가 사이트와 상호 작용하는 방법을 확인하기 위해 에이전트 트래픽 대시보드를 사용하는 방법을 알아봅니다.
 feature: Agentic Traffic
-source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
+source-git-commit: 2993f840c7451adeccf4f11a0132b91a9bc81803
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1302'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,18 @@ ht-degree: 0%
 **기타**&#x200B;를 선택하는 경우 llmo-now@adobe.com에 연락하여 도움을 받아야 합니다.
 
 활성화되면 로그가 수집되고 대시보드는 총 에이전트 상호 작용, 성공률, 시장별 히트 수, 사용자 에이전트 분석 및 URL 수준 성능과 같은 지표로 채워집니다.
+
+LLM Optimizer은 CDN 로그에서 필드의 하위 집합만 수집 및 처리합니다. 원시 로그 필드 이름은 CDN 공급자에 따라 다르지만 다음과 같이 표준화되고 표시됩니다.
+
+* URL(경로만)
+* user_agent
+* 상태
+* referer
+* 호스트
+* Ttfb(첫 번째 바이트까지의 시간)
+* cdn_provider
+
+이러한 정규화된 필드는 무의미한 보기를 통해 노출된다. [참조 트래픽](/help/dashboards/referral-traffic.md) 대시보드에서 CDN 로그를 사용하여 페이지 히트 지표를 표시합니다. CDN 로그 수집 또는 후속 데이터 처리 단계에서는 PII(개인 식별 정보)가 처리되거나 저장되지 않습니다.
 
 ## 필터 {#filters}
 
