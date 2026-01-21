@@ -2,9 +2,9 @@
 title: Edge에서 최적화
 description: 작성 변경 작업 없이 CDN 에지에서 LLM Optimizer의 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 2311bd2990c6ff7ecee22ca82b25987df10e7e1c
+source-git-commit: 09fa235f39d61daa343a8c9cc043574a6ea2a1cc
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2149'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 이 페이지에서는 작성 변경 없이 CDN 에지에서 최적화를 제공하는 방법에 대한 자세한 개요를 제공합니다. 온보딩 프로세스, 사용 가능한 최적화 기회 및 에지에서 자동 최적화하는 방법을 다룹니다.
 
 >[!NOTE]
->이 기능은 현재 조기 액세스 상태입니다. 조기 액세스 프로그램 [여기](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)에 대해 자세히 알아볼 수 있습니다.
+>이 기능은 현재 조기 액세스 상태입니다. 조기 액세스 프로그램 [여기](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)에 대해 자세히 알아볼 수 있습니다.
 
 ## Edge에서 최적화란 무엇입니까?
 
@@ -57,24 +57,21 @@ IT/CDN 팀에 대한 요구 사항:
 
 다음은 여러 CDN 설정에 대한 샘플 구성으로서, 설정 프로세스를 안내하는 예제입니다. 이러한 예제는 실제 라이브 구성에 맞게 조정되어야 합니다. 먼저 낮은 환경에서 변경 사항을 적용하는 것이 좋습니다.
 
->[!NOTE]
->아래 코드 샘플에서는 &quot;tokowaka&quot;에 대한 참조가 표시될 수 있습니다. 이 이름은 Edge에서 최적화를 위한 작업 프로젝트 이름입니다. 이러한 식별자는 호환성을 위해 코드에 유지되며, 이 설명서에서 설명한 것과 동일한 기능을 참조하십시오.
-
 >[!BEGINTABS]
 
 >[!TAB Adobe 관리 CDN]
 
 **Adobe 관리 CDN**
 
-이 구성의 목적은 Optimizer 서비스(`edge.tokowaka.now` 백 엔드)로 라우팅될 에이전트 사용자 에이전트를 사용하여 요청을 구성하는 것입니다. 구성을 테스트하려면 설정이 완료된 후 응답에서 `x-tokowaka-request-id` 헤더를 찾으십시오.
+이 구성의 목적은 Optimizer 서비스(`live.edgeoptimize.net` 백 엔드)로 라우팅될 에이전트 사용자 에이전트를 사용하여 요청을 구성하는 것입니다. 구성을 테스트하려면 설정이 완료된 후 응답에서 `x-edge-optimize-request-id` 헤더를 찾으십시오.
 
 ```
 curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatgpt-user"
 < HTTP/2 200
-< x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+< x-edge-optimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-[originSelector CDN 규칙](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
+[originSelector CDN 규칙](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
 
 * 라우팅할 도메인 결정
 * 라우팅할 경로 결정
@@ -82,7 +79,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 
 규칙을 배포하려면 다음을 수행해야 합니다.
 
-* [구성 파이프라인 만들기](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/operations/config-pipeline)
+* [구성 파이프라인 만들기](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)
 * 저장소에 `cdn.yaml` 구성 파일을 커밋합니다.
 * 구성 파이프라인 실행
 
@@ -91,16 +88,16 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 kind: "CDN"
 version: "1"
 data:
-  # Origin selectors to route to Tokowaka backend
+  # Origin selectors to route to Edge Optimize backend
   originSelectors:
     rules:
-      - name: route-to-tokowaka-backend
+      - name: route-to-edge-optimize-backend
         when:
           allOf:
-            - reqHeader: x-tokowaka-request
-              exists: false # avoid loops when requests comes from Tokowaka
+            - reqHeader: x-edge-optimize-request
+              exists: false # avoid loops when requests comes from Edge Optimize
             - reqHeader: user-agent
-              matches: "(?i)(Tokowaka-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)" # routed user agents
+              matches: "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)" # routed user agents
             - reqProperty: domain
               equals: "example.com" # routed domain
             - reqProperty: originalPath
@@ -110,10 +107,10 @@ data:
               - { reqProperty: originalPath, like: "/dir/*" } # routed pages, wildcard path matching
         action:
           type: selectOrigin
-          originName: tokowaka-backend
+          originName: edge-optimize-backend
     origins:
-      - name: tokowaka-backend
-        domain: "edge.tokowaka.now"
+      - name: edge-optimize-backend
+        domain: "live.edgeoptimize.net"
 ```
 
 설정을 테스트하려면 curl을 실행하고 다음을 기대해 보십시오.
@@ -121,7 +118,7 @@ data:
 ```
 curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
 < HTTP/2 200
-< x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+< x-edge-optimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
 <!-- >>[!TAB Akamai (BYOCDN)]
@@ -402,7 +399,7 @@ Important considerations:
 
 >[!TAB Fastly(BYOCDN)]
 
-**Tokowaka BYOCDN - Fastly - VCL**
+**Edge BYOCDN 최적화 - Fastly - VCL**
 
 ![가장 빠른 VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
 
@@ -411,40 +408,40 @@ Important considerations:
 **vcl_recv 코드 조각**
 
 ```
-unset req.http.x-tokowaka-url;
-unset req.http.x-tokowaka-config;
-unset req.http.x-tokowaka-api-key;
+unset req.http.x-edge-optimize-url;
+unset req.http.x-edge-optimize-config;
+unset req.http.x-edge-optimize-api-key;
 
-if (!req.http.x-tokowaka-request
-    && req.http.user-agent ~ "(?i)(Tokowaka-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
+if (!req.http.x-edge-optimize-request
+    && req.http.user-agent ~ "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
   set req.http.x-fowarded-host = req.http.host; # required for identifying the original host
-  set req.http.x-tokowaka-url = req.url; # required for identifying the original url
-  set req.http.x-tokowaka-config = "LLMCLIENT=true"; # required for cache key
-  set req.http.x-tokowaka-api-key = "<YOUR API KEY>"; # required for identifying the client
-  set req.backend = F_Tokowaka;
+  set req.http.x-edge-optimize-url = req.url; # required for identifying the original url
+  set req.http.x-edge-optimize-config = "LLMCLIENT=true"; # required for cache key
+  set req.http.x-edge-optimize-api-key = "<YOUR API KEY>"; # required for identifying the client
+  set req.backend = F_EDGE_OPTIMIZE;
 }
 ```
 
 **vcl_hash 코드 조각**
 
 ```
-if (req.http.x-tokowaka-config) {
-  set req.hash += "tokowaka";
-  set req.hash += req.http.x-tokowaka-config;
+if (req.http.x-edge-optimize-config) {
+  set req.hash += "edge-optimize";
+  set req.hash += req.http.x-edge-optimize-config;
 }
 ```
 
 **vcl_deliver 코드 조각**
 
 ```
-if (req.http.x-tokowaka-config && resp.status >= 400) {
-  set req.http.x-tokowaka-request = "failover";
+if (req.http.x-edge-optimize-config && resp.status >= 400) {
+  set req.http.x-edge-optimize-request = "failover";
   set req.backend = F_Default_Origin;
   restart;
 }
 
-if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
-  set resp.http.x-tokowaka-fo = "1";
+if (!req.http.x-edge-optimize-config && req.http.x-edge-optimize-request == "failover") {
+  set resp.http.x-edge-optimize-fo = "1";
 }
 ```
 
@@ -503,7 +500,7 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 각 영업 기회에 대해 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477991/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### 미리보기
 
