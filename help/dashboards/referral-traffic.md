@@ -1,11 +1,11 @@
 ---
 title: 참조 트래픽
-description: 참조 트래픽 대시보드를 사용하여 방문자가 외부 플랫폼, AI 인용 및 참조 링크에서 사이트에 도착하는 방법을 알아봅니다.
+description: 참조 트래픽 대시보드를 사용하여 방문자가 외부 플랫폼, AI 인용 및 참조 링크에서 사이트에 도달하는 방법을 알아봅니다.
 feature: Referral Traffic
 source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
 workflow-type: tm+mt
 source-wordcount: '603'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 * [설정](#setup)
 * [필터](#filters)
 * [전체 참조 성능](#overall-performance)
-* [최상위 참조 URL](#top-referrals)
+* [상위 참조 URL](#top-referrals)
 * [참조 트래픽 세부 정보](#traffic-details)
 
 ## 설정 {#setup}
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 * **날짜 범위** - 표시된 데이터의 시간대를 선택합니다. 예를 들어 지난 4주. **주 사용자 지정** 옵션을 선택하여 기간을 사용자 지정할 수도 있습니다.
 * **플랫폼** - Google, OpenAI 또는 소셜 미디어와 같은 특정 트래픽 소스를 선택합니다.
-* **페이지 의도** - 사용자 의도별로 참조 트래픽을 필터링합니다.
+* **페이지 의도** - 사용자 의도로 참조 트래픽을 필터링합니다.
 * **채널 Source** - 채널의 소스로 필터링합니다. 옵션에는 LLM, 획득, 유료 또는 혼합 참조 채널이 포함됩니다.
 * **장치 유형** - 데스크톱, 모바일 또는 모든 장치 중 방문자의 장치 유형별로 트래픽을 분석합니다.
   **지역** - 다른 지역의 참조 패턴을 봅니다.
@@ -80,7 +80,7 @@ The Top Referral URLs list surfaces your site's most visited pages from referral
 
 레퍼러 소스 세부 사항 보기는 OpenAI, Microsoft, Google 및 Perplexity와 같은 다양한 플랫폼에서 발생하는 트래픽을 분류합니다. 방문 횟수, 바운스 비율 및 채널 유형과 같은 주요 지표를 표시하므로 어떤 AI 및 검색 소스가 사이트로 가장 많은 트래픽을 유도하는 것인지 이해할 수 있습니다.
 
-* **Source** - 참조 트래픽의 소스.
+* **Source** - 참조 트래픽 소스.
 * **방문 횟수** - 각 소스에 대한 총 방문 횟수입니다.
 * **바운스 비율** - 조회 원본에서 참여 이벤트가 없는 세션의 백분율입니다.
 * **채널** - 소스에 대한 채널(획득, 유료 또는 둘 다)입니다.

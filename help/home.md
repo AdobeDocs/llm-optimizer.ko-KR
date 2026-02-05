@@ -1,17 +1,17 @@
 ---
 title: Adobe LLM Optimizer
-description: Adobe LLM Optimizer으로 브랜드를 향상시키십시오. 언급을 추적하고 통찰력을 발견하고 AI 기반 검색을 지배합니다. 가시성을 제어하십시오. 지금 최적화를 시작하십시오!
+description: Adobe LLM Optimizer를 통해 브랜드를 성장시키십시오. 멘션을 추적하고, 인사이트를 발견하며, AI 기반 검색을 주도하십시오. 가시성을 제어하고, 지금 최적화를 시작하십시오!
 source-git-commit: 0714b6c83e384ff21ddceafa941e3fe8c7305467
 workflow-type: tm+mt
 source-wordcount: '357'
-ht-degree: 3%
+ht-degree: 12%
 
 ---
 
 
 # Adobe LLM Optimizer
 
-Adobe LLM Optimizer은 생성 엔진 최적화를 위한 생성 AI 우선 애플리케이션으로, 브랜드가 AI 기반 검색 환경에서 가시성, 정확성 및 영향력을 향상시킬 수 있도록 설계되었습니다. AI가 생성한 답변의 브랜드 유무에 대한 통찰력을 제공하고, 규범적인 콘텐츠 권장 사항을 제공하고 최적화 수정 사항을 자동화합니다.
+Adobe LLM Optimizer은 생성 엔진 최적화를 위한 생성 AI 우선 애플리케이션으로, 브랜드가 AI 기반 검색 환경에서 가시성, 정확성 및 영향력을 향상시킬 수 있도록 설계되었습니다. AI가 생성한 답변의 브랜드 존재감에 대한 통찰력을 제공하고, 규범적인 콘텐츠 권장 사항을 제공하며, 최적화 수정 사항을 자동화합니다.
 
 ## LLM Optimizer 시작
 
@@ -53,7 +53,7 @@ Adobe LLM Optimizer은 생성 엔진 최적화를 위한 생성 AI 우선 애플
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./overview/overview.md" target="_blank" rel="referrer" title="LLM Optimizer 개요">LLM Optimizer 개요</a>
                     </p>
-                    <p class="is-size-6">Adobe LLM Optimizer이 AI 기반 검색에서 브랜드 가시성을 높이는 방법에 대해 알아보십시오.</p>
+                    <p class="is-size-6">Adobe LLM Optimizer이 AI 기반 검색에서 브랜드 가시성을 강화하는 방법에 대해 알아봅니다.</p>
                 </div>
                 <a href="./overview/overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
@@ -126,7 +126,7 @@ Adobe LLM Optimizer은 생성 엔진 최적화를 위한 생성 AI 우선 애플
   {description= Learn how LLM Optimizer can help you drive brand authority in AI search and discovery.}
   {target=_blank}
   {cta=Learn more}
-* https://business.adobe.com/kr/products/llm-optimizer.html
+* https://business.adobe.com/products/llm-optimizer.html
   {title = Explore the capabilities of the Adobe LLM Optimizer}
   {image = /help/assets/overview/business-adobe.png}
   {target=_blank}
@@ -173,7 +173,7 @@ Adobe LLM Optimizer은 생성 엔진 최적화를 위한 생성 AI 우선 애플
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./tutorials/best-practices.md" target="_blank" rel="referrer" title="Adobe LLM Optimizer을 사용한 LLM 최적화 우수 사례">Adobe LLM Optimizer을 사용한 LLM 최적화 모범 사례</a>
                     </p>
-                    <p class="is-size-6">LLM Optimizer이 AI 검색 및 검색에서 브랜드 권위를 높이는 데 어떻게 도움이 되는지 알아봅니다.</p>
+                    <p class="is-size-6">LLM Optimizer이 AI 검색 및 검색에서 브랜드 위상을 높이는 데 어떻게 도움이 되는지 알아봅니다.</p>
                 </div>
                 <a href="./tutorials/best-practices.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
@@ -185,7 +185,7 @@ Adobe LLM Optimizer은 생성 엔진 최적화를 위한 생성 AI 우선 애플
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://business.adobe.com/kr/products/llm-optimizer.html" title="Adobe LLM Optimizer의 기능 탐색" target="_blank" rel="referrer">
+                    <a href="https://business.adobe.com/products/llm-optimizer.html" title="Adobe LLM Optimizer의 기능 탐색" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="/help/assets/overview/business-adobe.png" alt="Adobe LLM Optimizer의 기능 탐색"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -194,11 +194,11 @@ Adobe LLM Optimizer은 생성 엔진 최적화를 위한 생성 AI 우선 애플
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://business.adobe.com/kr/products/llm-optimizer.html" target="_blank" rel="referrer" title="Adobe LLM Optimizer의 기능 탐색">Adobe LLM Optimizer의 기능 살펴보기</a>
+                        <a href="https://business.adobe.com/products/llm-optimizer.html" target="_blank" rel="referrer" title="Adobe LLM Optimizer의 기능 탐색">Adobe LLM Optimizer의 기능 살펴보기</a>
                     </p>
-                    <p class="is-size-6">Adobe LLM Optimizer을 사용하여 AI 검색 결과에서 브랜드의 존재를 구체화합니다. GEO에 대한 통찰력을 얻고, LLM에서 가시성을 높이고, 측정 가능한 트래픽 증가를 유도하십시오.</p>
+                    <p class="is-size-6">Adobe LLM Optimizer을 사용하여 AI 검색 결과에서 브랜드의 입지를 다져보십시오. GEO에 대한 통찰력을 얻고, LLM에서 가시성을 높이고, 측정 가능한 트래픽 증가를 유도하십시오.</p>
                 </div>
-                <a href="https://business.adobe.com/kr/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://business.adobe.com/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
                 </a>
             </div>

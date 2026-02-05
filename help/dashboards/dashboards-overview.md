@@ -12,9 +12,9 @@ ht-degree: 5%
 
 # 대시보드 개요
 
-대시보드 개요를 시작합니다. LLM-Optimizer의 대시보드를 사용하면 마케터가 AI 검색 플랫폼 전반에서 브랜드 가시성과 감성을 추적하고 최적화 기회를 식별하고 규범적 변경 사항을 구현하여 인용 및 성능을 향상시킬 수 있습니다.
+대시보드 개요를 시작합니다. LLM-Optimizer의 대시보드를 사용하면 마케터가 AI 검색 플랫폼 전반에서 브랜드 가시성 및 감정을 추적하고, 최적화 기회를 식별하고, 규범적 변경 사항을 구현하여 인용 및 성능을 향상시킬 수 있습니다.
 
-주요 보기에는 브랜드 유무, 에이전트 및 레퍼러 트래픽, URL 검사자, 기회 식별, Collaboration 및 고객 구성이 포함됩니다.
+주요 보기에는 브랜드 존재감, 에이전트 및 참조 트래픽, URL 검사기, 영업 기회 식별, Collaboration 및 고객 구성이 포함됩니다.
 
 <!-- CARDS
 
@@ -68,8 +68,8 @@ ht-degree: 5%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./brand-presence.md" title="브랜드 유무 대시보드" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/brand-presence-card.png" alt="브랜드 유무 대시보드"
+                    <a href="./brand-presence.md" title="브랜드 존재감 대시보드" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/brand-presence-card.png" alt="브랜드 존재감 대시보드"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -77,7 +77,7 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./brand-presence.md" target="_blank" rel="referrer" title="브랜드 유무 대시보드">브랜드 유무 대시보드</a>
+                        <a href="./brand-presence.md" target="_blank" rel="referrer" title="브랜드 존재감 대시보드">브랜드 존재감 대시보드</a>
                     </p>
                     <p class="is-size-6">감정 분석 및 다른 브랜드의 벤치마킹을 포함하여 LLM 검색 플랫폼에서 브랜드가 어떻게 표시되는지 추적합니다.</p>
                 </div>
@@ -171,7 +171,7 @@ ht-degree: 5%
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./opportunities.md" target="_blank" rel="referrer" title="영업 기회 대시보드">기회 대시보드</a>
                     </p>
-                    <p class="is-size-6">AI 기반 검색 플랫폼 전반에서 브랜드 가시성 및 인용 성능을 개선하는 실행 가능한 통찰력을 표출 및 우선 순위 지정</p>
+                    <p class="is-size-6">AI 기반 검색 플랫폼에서 브랜드 가시성 및 인용 성능을 향상시키는 실행 가능한 통찰력을 제공하고 우선 순위를 지정합니다.</p>
                 </div>
                 <a href="./opportunities.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
