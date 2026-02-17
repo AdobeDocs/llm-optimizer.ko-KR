@@ -38,13 +38,13 @@ AEM Cloud(Cloud Service, Managed Services, Edge Delivery Service) 고객은 **�
 무료 버전에서는 사용할 수 없는 몇 가지 제품 기능이 있습니다.
 
 * 평가판은 하나의 도메인으로 제한됩니다. 설치를 완료한 후에는 입력한 도메인을 변경할 수 없습니다.
-* 최적화 배포 기능은 Early Access에서 사용할 수 있습니다. 자세한 내용은 [Edge에서 최적화](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge#frequently-asked-questions)를 참조하세요.
+* 최적화 배포 기능은 Early Access에서 사용할 수 있습니다. 자세한 내용은 [Edge에서 최적화](https://experienceleague.adobe.com/ko/docs/llm-optimizer/using/resources/optimize-at-edge#frequently-asked-questions)를 참조하세요.
 
 무료 평가판 버전을 활성화하고 도메인을 온보딩하는 방법에 대한 자세한 내용은 아래 섹션을 참조하십시오.
 
 ### AEM 클라우드 고객
 
-AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)에서 제품 공지 카드를 사용하여 LLM Optimizer을 시도할 수 있습니다.
+AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)에서 제품 공지 카드를 사용하여 LLM Optimizer을 시도할 수 있습니다.
 
 >[!NOTE]
 >새로 추가된 프롬프트는 처리가 완료될 때까지 [브랜드 존재감 대시보드](/help/dashboards/brand-presence.md)에 표시되지 않습니다. AEM Cloud 고객은 LLM Optimizer의 무료 평가판을 사용할 수 있습니다. 200개 이상의 프롬프트를 사용하려면 별도의 라이센스 계약이 필요합니다. 액세스는 &quot;있는 그대로&quot; 및 &quot;사용 가능한 대로&quot; 제공되며 언제든지 Adobe에 의해 수정, 제한 또는 제거될 수 있습니다. 자세한 내용은 계정 담당자에게 문의하십시오.

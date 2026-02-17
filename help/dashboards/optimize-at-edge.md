@@ -15,7 +15,7 @@ ht-degree: 1%
 이 페이지에서는 작성 변경 없이 CDN 에지에서 최적화를 제공하는 방법에 대한 자세한 개요를 제공합니다. 온보딩 프로세스, 사용 가능한 최적화 기회 및 에지에서 자동 최적화하는 방법을 다룹니다.
 
 >[!NOTE]
->이 기능은 현재 조기 액세스 상태입니다. 조기 액세스 프로그램 [여기](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)에 대해 자세히 알아볼 수 있습니다.
+>이 기능은 현재 조기 액세스 상태입니다. 조기 액세스 프로그램 [여기](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)에 대해 자세히 알아볼 수 있습니다.
 
 ## Edge에서 최적화란 무엇입니까?
 
@@ -84,7 +84,7 @@ IT/CDN 팀에 대한 요구 사항:
 
 **Cloud Manager 파이프라인을 통한 셀프 서비스 라우팅**
 
-Cloud Manager 파이프라인을 통해 직접 라우팅을 구성하려는 경우 아래 단계를 따르십시오. [originSelector CDN 규칙](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
+Cloud Manager 파이프라인을 통해 직접 라우팅을 구성하려는 경우 아래 단계를 따르십시오. [originSelector CDN 규칙](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
 
 * 라우팅할 도메인을 결정합니다.
 * 라우팅할 경로를 결정합니다.
@@ -92,7 +92,7 @@ Cloud Manager 파이프라인을 통해 직접 라우팅을 구성하려는 경�
 
 규칙을 배포하려면 다음을 수행해야 합니다.
 
-* [구성 파이프라인](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)을 만듭니다.
+* [구성 파이프라인](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/operations/config-pipeline)을 만듭니다.
 * 저장소에 `cdn.yaml` 구성 파일을 커밋합니다.
 * 구성 파이프라인을 실행합니다.
 
