@@ -2,9 +2,9 @@
 title: 빠른 시작
 description: Adobe LLM Optimizer 시작하기 - 브랜드를 온보딩하고, AI 가시성 통찰력을 잠금 해제하고, 대시보드를 탐색하여 검색 성능을 향상시키십시오.
 feature: Quickstart, Onboarding
-source-git-commit: 24183fbe2577bb9402f8b6aaaf1e46c75403383d
+source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 빠른 시작
 
-LLM Optimizer를 시작하려면 아래 제시된 단계에 설명된 대로 온보딩 프로세스를 완료해야 합니다. 프로세스를 완료하면 [LLM Optimizer의 대시보드](/help/dashboards/dashboards-overview.md) 및 기타 기능에 대한 전체 액세스 권한을 갖게 됩니다.
+LLM Optimizer을 시작하려면 아래 단계에 설명된 대로 온보딩 프로세스를 완료해야 합니다. 프로세스를 완료하면 [LLM Optimizer의 대시보드](/help/dashboards/dashboards-overview.md) 및 기타 기능에 대한 전체 액세스 권한을 갖게 됩니다.
 
 ## 온보딩 개요
 
@@ -38,13 +38,13 @@ AEM Cloud(Cloud Service, Managed Services, Edge Delivery Service) 고객은 **�
 무료 버전에서는 사용할 수 없는 몇 가지 제품 기능이 있습니다.
 
 * 평가판은 하나의 도메인으로 제한됩니다. 설치를 완료한 후에는 입력한 도메인을 변경할 수 없습니다.
-* 최적화를 배포할 수 없습니다.
+* 최적화 배포 기능은 Early Access에서 사용할 수 있습니다. 자세한 내용은 [Edge에서 최적화](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge#frequently-asked-questions)를 참조하세요.
 
 무료 평가판 버전을 활성화하고 도메인을 온보딩하는 방법에 대한 자세한 내용은 아래 섹션을 참조하십시오.
 
 ### AEM 클라우드 고객
 
-AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)에서 제품 공지 카드를 사용하여 LLM Optimizer을 시도할 수 있습니다.
+AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)에서 제품 공지 카드를 사용하여 LLM Optimizer을 시도할 수 있습니다.
 
 >[!NOTE]
 >새로 추가된 프롬프트는 처리가 완료될 때까지 [브랜드 존재감 대시보드](/help/dashboards/brand-presence.md)에 표시되지 않습니다. AEM Cloud 고객은 LLM Optimizer의 무료 평가판을 사용할 수 있습니다. 200개 이상의 프롬프트를 사용하려면 별도의 라이센스 계약이 필요합니다. 액세스는 &quot;있는 그대로&quot; 및 &quot;사용 가능한 대로&quot; 제공되며 언제든지 Adobe에 의해 수정, 제한 또는 제거될 수 있습니다. 자세한 내용은 계정 담당자에게 문의하십시오.
@@ -68,7 +68,7 @@ AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/k
 
 비즈니스 계약이 완료되면 LLM Optimizer에서 온보딩하려는 도메인과 함께 온보딩됩니다. 이 온보딩이 완료되면 [https://llmo.now](https://llmo.now)을(를) 통해 LLM Optimizer에 로그인할 수 있습니다.
 
-### 2단계: 범주, 주제 및 프롬프트 사용자 정의
+## 2단계: 범주, 주제 및 프롬프트 사용자 정의
 
 사이트가 온보딩되면 온보딩 단계 중에 자동으로 생성된 작은 프롬프트 세트를 기반으로 브랜드 존재감 분석을 볼 수 있습니다. 앞으로 이동하여 브랜드에 대한 카테고리, 주제 및 프롬프트를 사용자 정의할 수 있습니다. 이 구성은 [고객 구성 대시보드](/help/dashboards/customer-configuration.md)에 만들어집니다.
 
@@ -89,13 +89,13 @@ AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/k
 >
 > 범주, 주제, 프롬프트를 설정하는 방법에 대한 자세한 내용은 [범주, 주제, 프롬프트 구성에 대한 모범 사례](/help/overview/best-practices-topics-prompts.md) 페이지를 참조하십시오.
 
-### 3단계: 브랜드 존재감 통찰력
+## 3단계: 브랜드 존재감 통찰력
 
 브랜드 존재감이 온보딩되면 온보딩 중에 자동으로 생성된 프롬프트를 기반으로 도메인 보기에 초기 인사이트가 표시됩니다. 범주, 주제 및 프롬프트를 사용자 정의하면 LLM Optimizer에서 사용자가 제공한 프롬프트에 대해 브랜드 존재감 분석을 자동으로 트리거하고 24시간 후에 결과를 사용할 수 있습니다.
 
-### 4단계: CDN 로그 전달에 대한 정보 제공 {#step-4}
+## 4단계: CDN 로그 전달에 대한 정보 제공 {#step-4}
 
-에이전트 트래픽 및 참조 트래픽 통찰력을 잠금 해제하려면 CDN 로그 전달에 대한 정보를 제공해야 합니다. [CDN 구성](/help/dashboards/customer-configuration.md#cdn-configuration) 탭으로 이동한 다음 **CDN 온보드**&#x200B;를 클릭하여 **고객 구성 대시보드**&#x200B;에서 추가할 수 있습니다.
+에이전트 트래픽 및 참조 트래픽 통찰력을 잠금 해제하려면 CDN 로그 전달에 대한 정보를 제공해야 합니다. **CDN 구성** 탭으로 이동한 다음 **CDN 온보드**&#x200B;를 클릭하여 [고객 구성 대시보드](/help/dashboards/customer-configuration.md#cdn-configuration)에서 추가할 수 있습니다.
 
 ![고객 구성 CDN](/help/overview/assets/cc-cdn.png)
 
@@ -104,7 +104,7 @@ AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/k
 * [에이전틱 트래픽](/help/dashboards/agentic-traffic.md#cdn-setup)
 * [참조 트래픽](/help/dashboards/referral-traffic.md#setup#setup)
 
-### 5단계: 대시보드 탐색 및 작업 수행
+## 5단계: 대시보드 탐색 및 작업 수행
 
 CDN 로그 전달에 대한 정보를 제공하면 다음과 같은 작업을 수행할 수 있습니다.
 

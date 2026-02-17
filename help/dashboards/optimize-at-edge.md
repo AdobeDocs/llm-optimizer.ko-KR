@@ -2,9 +2,9 @@
 title: Edge에서 최적화
 description: 작성 변경 작업 없이 CDN 에지에서 LLM Optimizer의 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: eb8bdf9144aebb85171a529a3cc25034be5b076e
+source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
 workflow-type: tm+mt
-source-wordcount: '2291'
+source-wordcount: '4843'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 이 페이지에서는 작성 변경 없이 CDN 에지에서 최적화를 제공하는 방법에 대한 자세한 개요를 제공합니다. 온보딩 프로세스, 사용 가능한 최적화 기회 및 에지에서 자동 최적화하는 방법을 다룹니다.
 
 >[!NOTE]
->이 기능은 현재 조기 액세스 상태입니다. 조기 액세스 프로그램 [여기](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)에 대해 자세히 알아볼 수 있습니다.
+>이 기능은 현재 조기 액세스 상태입니다. 조기 액세스 프로그램 [여기](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)에 대해 자세히 알아볼 수 있습니다.
 
 ## Edge에서 최적화란 무엇입니까?
 
@@ -47,42 +47,54 @@ Edge에서 최적화하기 위해 온보딩해야 하는 전제 조건:
 * CDN 로그에 대한 로그 전달 프로세스를 완료합니다.
 
 IT/CDN 팀에 대한 요구 사항:
-
-* API 키를 생성합니다.
+* 허용 목록에 추가하다 사이트의 txt 파일 또는 봇 트래픽 관리 규칙에 `*AdobeEdgeOptimize/1.0*` 사용자 에이전트를 robots에 추가합니다.
+* 페이지가 도메인 또는 CDN 수준에서 차단되지 않았는지 확인합니다.
 * CDN에 Edge 라우팅 규칙에 최적화 를 추가합니다.
-* 허용 목록에 추가하다 사용자 정의 경로 또는 전체 도메인
-* LLM 사용자 에이전트의 사용자 정의 목록을 타겟에 추가합니다.
-* `robots.txt`이(가) 타깃팅할 사용자 에이전트를 차단하지 않는지 확인하십시오.
 * LLM Optimizer 인터페이스에서 Edge 라우팅에서 최적화 를 확인합니다.
 
 다음은 여러 CDN 설정에 대한 샘플 구성으로서, 설정 프로세스를 안내하는 예제입니다. 이러한 예제는 실제 라이브 구성에 맞게 조정되어야 합니다. 먼저 낮은 환경에서 변경 사항을 적용하는 것이 좋습니다.
 
 >[!BEGINTABS]
 
->[!TAB Adobe 관리 CDN]
+>[!TAB AEM Cloud Service Managed CDN(Fastly)]
 
-**Adobe 관리 CDN**
+**Edge 최적화 - AEM Cloud Service Managed CDN(Fastly)**
 
-이 구성의 목적은 Optimizer 서비스(`live.edgeoptimize.net` 백 엔드)로 라우팅될 에이전트 사용자 에이전트를 사용하여 요청을 구성하는 것입니다. 구성을 테스트하려면 설정이 완료된 후 응답에서 `x-edgeoptimize-request-id` 헤더를 찾으십시오.
+이 구성은 에이전트 트래픽(AI 보트 및 LLM 사용자 에이전트의 요청)을 Edge 최적화 백 엔드 서비스(`live.edgeoptimize.net`)로 라우팅합니다. 사람 방문자와 SEO 봇은 평소처럼 원산지에서 계속 제공됩니다. 구성을 테스트하려면 설정이 완료된 후 응답에서 `x-edgeoptimize-request-id` 헤더를 찾습니다.
 
-```
-curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatgpt-user"
-< HTTP/2 200
-< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
-```
+**사전 요구 사항**
 
-[originSelector CDN 규칙](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
+에이전트 트래픽을 Edge으로 라우팅하려면 다음을 수행하십시오.
 
-* 라우팅할 도메인 결정
-* 라우팅할 경로 결정
-* 라우팅할 사용자 에이전트 결정(권장 정규 표현식)
+1. **고객 구성**(으)로 이동하고 **CDN 구성** 탭을 선택합니다.
+
+   ![고객 구성으로 이동](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+
+2. **최적화를 배포할 AI 트래픽 라우팅**&#x200B;에서 **AI 에이전트에 최적화 배포** 확인란을 선택하십시오. Adobe 팀이 귀하를 대신하여 라우팅 구성을 처리합니다.
+
+   ![AI 에이전트에 최적화 적용](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+
+3. 확인란을 활성화하면 설정 진행 중 상태가 표시됩니다. Adobe 팀이 라우팅 구성을 완료합니다.
+
+   ![AI 트래픽 라우팅 설정 진행 중](/help/assets/optimize-at-edge/prereq-traffic-routing-progress.png)
+
+   공정순서가 구성되고 활성화되면 상태가 업데이트되어 공정순서가 성공적으로 사용되었음을 나타내는 녹색 확인 표시가 나타납니다. 추가적인 작업은 필요하지 않습니다.
+
+또한 위의 단계에 대한 도움이 필요한 경우 Adobe 계정 팀이나 `llmo-at-edge@adobe.com`에 문의하십시오.
+
+**Cloud Manager 파이프라인을 통한 셀프 서비스 라우팅**
+
+Cloud Manager 파이프라인을 통해 직접 라우팅을 구성하려는 경우 아래 단계를 따르십시오. [originSelector CDN 규칙](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
+
+* 라우팅할 도메인을 결정합니다.
+* 라우팅할 경로를 결정합니다.
+* 라우팅할 사용자 에이전트를 결정합니다(권장 정규 표현식).
 
 규칙을 배포하려면 다음을 수행해야 합니다.
 
-* [구성 파이프라인 만들기](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/operations/config-pipeline)
+* [구성 파이프라인](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)을 만듭니다.
 * 저장소에 `cdn.yaml` 구성 파일을 커밋합니다.
-* 구성 파이프라인 실행
-
+* 구성 파이프라인을 실행합니다.
 
 ```
 kind: "CDN"
@@ -113,17 +125,57 @@ data:
         domain: "live.edgeoptimize.net"
 ```
 
+**설정 확인**
+
 설정을 테스트하려면 curl을 실행하고 다음을 기대해 보십시오.
 
 ```
-curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
+curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chatgpt-user"
 < HTTP/2 200
 < x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
+LLM Optimizer UI에서 트래픽 라우팅 상태를 확인할 수도 있습니다. **고객 구성**(으)로 이동하고 **CDN 구성** 탭을 선택합니다.
+
+라우팅이 활성화된 ![AI 트래픽 라우팅 상태](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
+
 >[!TAB Fastly(BYOCDN)]
 
-**Edge BYOCDN 최적화 - Fastly - VCL**
+**Edge 최적화 - Fastly(BYOCDN)**
+
+이 구성은 에이전트 트래픽(AI 보트 및 LLM 사용자 에이전트의 요청)을 Edge 최적화 백 엔드 서비스(`live.edgeoptimize.net`)로 라우팅합니다. 사람 방문자와 SEO 봇은 평소처럼 원산지에서 계속 제공됩니다. 구성을 테스트하려면 설정이 완료된 후 응답에서 `x-edgeoptimize-request-id` 헤더를 찾습니다.
+
+**사전 요구 사항**
+
+Fastly VCL 규칙을 설정하기 전에 다음을 확인하십시오.
+
+* 도메인의 Fastly에 액세스
+* LLM Optimizer 온보딩 프로세스를 완료했습니다.
+* LLM Optimizer에 CDN 로그 전달을 완료했습니다.
+* LLM Optimizer UI에서 검색한 Edge Optimize API 키.
+
+**API 키를 검색하는 단계:**
+
+1. **고객 구성**(으)로 이동하고 **CDN 구성** 탭을 선택합니다.
+
+   ![고객 구성으로 이동](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+
+2. **최적화를 배포할 AI 트래픽 라우팅**&#x200B;에서 **AI 에이전트에 최적화 배포** 확인란을 선택하십시오.
+
+   ![AI 에이전트에 최적화 적용](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+
+3. API 키를 복사하고 아래 라우팅 구성 단계를 진행합니다.
+
+   ![API 키 복사](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+
+   >[!NOTE]
+   >이 단계에서, 상태는 설정이 아직 완료되지 않았음을 나타내는 적색 십자가를 보여줄 수 있다. 예상된 결과입니다. 아래 라우팅 구성을 완료하고 AI 보트 트래픽이 흐르기 시작하면 상태가 라우팅이 성공적으로 활성화되었음을 확인하는 녹색 확인 표시로 업데이트됩니다.
+
+또한 위의 단계에 대한 도움이 필요한 경우 Adobe 계정 팀이나 `llmo-at-edge@adobe.com`에 문의하십시오.
+
+**구성**
+
+Fastly 서비스에 다음 3개의 VCL 코드 조각을 추가합니다. 이러한 스니펫은 Edge 최적화, 캐시 키 분리 및 기본 원본으로의 장애 조치(failover)에 대한 라우팅 에이전트 요청을 처리합니다.
 
 ![가장 빠른 VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
 
@@ -138,9 +190,9 @@ unset req.http.x-edgeoptimize-api-key;
 
 if (!req.http.x-edgeoptimize-request
     && req.http.user-agent ~ "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
-  set req.http.x-fowarded-host = req.http.host; # required for identifying the original host
+  set req.http.x-forwarded-host = req.http.host; # required for identifying the original host
   set req.http.x-edgeoptimize-url = req.url; # required for identifying the original url
-  set req.http.x-edgeoptimize-config = "LLMCLIENT=true"; # required for cache key
+  set req.http.x-edgeoptimize-config = "LLMCLIENT=TRUE;"; # required for cache key
   set req.http.x-edgeoptimize-api-key = "<YOUR API KEY>"; # required for identifying the client
   set req.backend = F_EDGE_OPTIMIZE;
 }
@@ -169,26 +221,92 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 }
 ```
 
+**장애 조치**
+
+`vcl_deliver` 코드 조각은 장애 조치(failover)를 자동으로 처리합니다. Edge 최적화가 `4XX` 또는 `5XX` 오류를 반환하는 경우 요청이 다시 시작되고 기본 원본으로 다시 라우팅되어 최종 사용자가 응답을 계속 받습니다. 장애 조치(failover) 응답에는 `x-edgeoptimize-fo: 1` 헤더가 포함됩니다.
+
+| 시나리오 | 비헤이비어 |
+| --- | --- |
+| Edge 최적화 반환: `2XX` | 최적화된 응답이 클라이언트에 제공됩니다. |
+| Edge 최적화는 `4XX` 또는 `5XX` 반환 | 요청이 다시 시작되고 기본 원본에서 제공됩니다. |
+| 장애 조치(failover) 응답 | 헤더 `x-edgeoptimize-fo: 1`을(를) 포함합니다. |
+
+**설정 확인**
+
+설정을 테스트하려면 curl을 실행하고 다음을 기대해 보십시오.
+
+```
+curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chatgpt-user"
+< HTTP/2 200
+< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+```
+
+LLM Optimizer UI에서 트래픽 라우팅 상태를 확인할 수도 있습니다. **고객 구성**(으)로 이동하고 **CDN 구성** 탭을 선택합니다.
+
+라우팅이 활성화된 ![AI 트래픽 라우팅 상태](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+
 >[!TAB Akamai(BYOCDN)]
 
-**Edge BYOCDN 최적화 - Akamai**
+**Edge 최적화 - Akamai(BYOCDN)**
 
-이 구성의 목적은 에이전트 사용자 에이전트의 요청을 Edge 최적화 서비스(`live.edgeoptimize.net` 백 엔드)로 라우팅하는 것입니다. 구성을 테스트하려면 설정이 완료된 후 응답에서 `x-edgeoptimize-request-id` 헤더를 찾으십시오.
+이 구성은 에이전트 트래픽(AI 보트 및 LLM 사용자 에이전트의 요청)을 Edge 최적화 백 엔드 서비스(`live.edgeoptimize.net`)로 라우팅합니다. 사람 방문자와 SEO 봇은 평소처럼 원산지에서 계속 제공됩니다. 구성을 테스트하려면 설정이 완료된 후 응답에서 `x-edgeoptimize-request-id` 헤더를 찾습니다.
 
+**사전 요구 사항**
 
-**다음 Akamai Property Manager JSON 규칙은 LLM 사용자 에이전트를 Edge Optimize로 라우팅합니다.**
+Akamai 속성 관리자 규칙을 설정하기 전에 다음을 확인하십시오.
 
-구성에는 다음 단계가 포함됩니다.
+* 도메인의 Akamai Property Manager에 액세스
+* LLM Optimizer 온보딩 프로세스를 완료했습니다.
+* LLM Optimizer에 CDN 로그 전달을 완료했습니다.
+* LLM Optimizer UI에서 검색한 Edge Optimize API 키.
+
+**API 키를 검색하는 단계:**
+
+1. **고객 구성**(으)로 이동하고 **CDN 구성** 탭을 선택합니다.
+
+   ![고객 구성으로 이동](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+
+2. **최적화를 배포할 AI 트래픽 라우팅**&#x200B;에서 **AI 에이전트에 최적화 배포** 확인란을 선택하십시오.
+
+   ![AI 에이전트에 최적화 적용](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+
+3. API 키를 복사하고 아래 라우팅 구성 단계를 진행합니다.
+
+   ![API 키 복사](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+
+   >[!NOTE]
+   >이 단계에서, 상태는 설정이 아직 완료되지 않았음을 나타내는 적색 십자가를 보여줄 수 있다. 예상된 결과입니다. 아래 라우팅 구성을 완료하고 AI 보트 트래픽이 흐르기 시작하면 상태가 라우팅이 성공적으로 활성화되었음을 확인하는 녹색 확인 표시로 업데이트됩니다.
+
+또한 위의 단계에 대한 도움이 필요한 경우 Adobe 계정 팀이나 `llmo-at-edge@adobe.com`에 문의하십시오.
+
+**구성**
+
+다음 Akamai Property Manager 규칙은 LLM 사용자 에이전트를 Edge Optimize로 라우팅합니다. 구성에는 다음 단계가 포함됩니다.
 
 **1. 라우팅 조건 설정(사용자 에이전트 일치)**
+
+다음 사용자 에이전트에 대한 라우팅을 설정합니다.
+
+```
+ *AdobeEdgeOptimize-AI*,
+ *ChatGPT-User*,
+ *GPTBot*,
+ *OAI-SearchBot*,
+ *PerplexityBot*,
+ *Perplexity-User*
+```
 
 ![라우팅 조건 설정](/help/assets/optimize-at-edge/akamai-step1-routing.png)
 
 **2. 원본 및 SSL 동작 설정**
 
+원본을 `live.edgeoptimize.net`(으)로 설정하고 SAN을 `*.edgeoptimize.net`(으)로 일치
+
 ![원본 및 SSL 동작 설정](/help/assets/optimize-at-edge/akamai-step2-origin.png)
 
 **3. 캐시 키 변수 설정**
+
+캐시 키 변수 `PMUSER_EDGE_OPTIMIZE_CACHE_KEY`을(를) `LLMCLIENT=TRUE;X_FORWARDED_HOST={{builtin.AK_HOST}}`(으)로 설정
 
 ![캐시 키 변수 설정](/help/assets/optimize-at-edge/akamai-step3-cachekey.png)
 
@@ -197,6 +315,11 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 ![캐싱 규칙](/help/assets/optimize-at-edge/akamai-step4-rules.png)
 
 **5. 수신 요청 헤더 수정**
+
+다음 수신 요청 헤더를 설정합니다.
+LLMO에서 검색한 API 키에 대한 `x-edgeoptimize-api-key`
+`x-edgeoptimize-config` - `LLMCLIENT=TRUE;`
+`x-edgeoptimize-url` - `{{builtin.AK_URL}}`
 
 ![수신 요청 헤더 수정](/help/assets/optimize-at-edge/akamai-step5-request.png)
 
@@ -208,23 +331,462 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 
 ![캐시 ID 수정](/help/assets/optimize-at-edge/akamai-step7-cacheid.png)
 
-**8. 사이트 장애 조치(Failover)**
+**8. 보내는 요청 헤더 수정**
 
-![사이트 장애 조치](/help/assets/optimize-at-edge/akamai-step8-failover.png)
+`x-forwarded-host` 헤더를 `{{builtin.AK_HOST}}`(으)로 설정
 
-![장애 조치(Failover) 동작](/help/assets/optimize-at-edge/akamai-step8-failover-behaviors.png)
+![보내는 요청 헤더 수정](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 
-![장애 조치(Failover) 규칙](/help/assets/optimize-at-edge/akamai-step8-failover-rules.png)
+**9. 사이트 장애 조치(Failover)**
 
-![동작 응답](/help/assets/optimize-at-edge/akamai-step8-behaviors-response.png)
+![사이트 장애 조치](/help/assets/optimize-at-edge/akamai-step9-failover.png)
+
+![장애 조치(Failover) 동작](/help/assets/optimize-at-edge/akamai-step9-failover-behaviors.png)
+
+![장애 조치(Failover) 규칙](/help/assets/optimize-at-edge/akamai-step9-failover-rules.png)
+
+사이트 장애 조치(Failover)를 통해 Edge 최적화가 `4XX` 또는 `5XX` 오류를 반환하는 경우 요청이 기본 원본으로 다시 자동 라우팅되어 최종 사용자가 응답을 계속 받게 됩니다.
+
+| 시나리오 | 비헤이비어 |
+| --- | --- |
+| Edge 최적화 반환: `2XX` | 최적화된 응답이 클라이언트에 제공됩니다. |
+| Edge 최적화는 `4XX` 또는 `5XX` 반환 | 요청은 기본 원점으로 다시 라우팅됩니다. |
+
+**설정 확인**
 
 설정을 테스트하려면 curl을 실행하고 다음을 기대해 보십시오.
 
 ```
-curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
+curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chatgpt-user"
 < HTTP/2 200
 < x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
+
+LLM Optimizer UI에서 트래픽 라우팅 상태를 확인할 수도 있습니다. **고객 구성**(으)로 이동하고 **CDN 구성** 탭을 선택합니다.
+
+라우팅이 활성화된 ![AI 트래픽 라우팅 상태](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+
+>[!TAB Cloudflare(BYOCDN)]
+
+**Edge 최적화 - Cloudflare(BYOCDN)**
+
+이 구성은 에이전트 트래픽(AI 보트 및 LLM 사용자 에이전트의 요청)을 Edge 최적화 백 엔드 서비스(`live.edgeoptimize.net`)로 라우팅합니다. 사람 방문자와 SEO 봇은 평소처럼 원산지에서 계속 제공됩니다. 구성을 테스트하려면 설정이 완료된 후 응답에서 `x-edgeoptimize-request-id` 헤더를 찾습니다.
+
+**사전 요구 사항**
+
+Cloudflare Worker 라우팅 규칙을 설정하기 전에 다음을 확인하십시오.
+
+* 도메인에서 작업자가 활성화된 Cloudflare 계정입니다.
+* Cloudflare에서 도메인의 DNS 설정에 액세스합니다.
+* LLM Optimizer 온보딩 프로세스를 완료했습니다.
+* LLM Optimizer에 CDN 로그 전달을 완료했습니다.
+* LLM Optimizer UI에서 검색한 Edge Optimize API 키.
+
+**API 키를 검색하는 단계:**
+
+1. **고객 구성**(으)로 이동하고 **CDN 구성** 탭을 선택합니다.
+
+   ![고객 구성으로 이동](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+
+2. **최적화를 배포할 AI 트래픽 라우팅**&#x200B;에서 **AI 에이전트에 최적화 배포** 확인란을 선택하십시오.
+
+   ![AI 에이전트에 최적화 적용](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+
+3. API 키를 복사하고 아래 라우팅 구성 단계를 진행합니다.
+
+   ![API 키 복사](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+
+   >[!NOTE]
+   >이 단계에서, 상태는 설정이 아직 완료되지 않았음을 나타내는 적색 십자가를 보여줄 수 있다. 예상된 결과입니다. 아래 라우팅 구성을 완료하고 AI 보트 트래픽이 흐르기 시작하면 상태가 라우팅이 성공적으로 활성화되었음을 확인하는 녹색 확인 표시로 업데이트됩니다.
+
+또한 위의 단계에 대한 도움이 필요한 경우 Adobe 계정 팀이나 `llmo-at-edge@adobe.com`에 문의하십시오.
+
+**라우팅 작동 방식**
+
+올바르게 구성된 경우 에이전트 사용자 에이전트에서 도메인(예: `www.example.com/page.html`)에 대한 요청이 Cloudflare Worker에 의해 이전되어 Edge Optimize 백엔드로 라우팅됩니다. 백엔드 요청에 필수 헤더가 포함됩니다.
+
+**백 엔드 요청 테스트**
+
+Edge 최적화 백엔드에 직접 요청하여 라우팅을 확인할 수 있습니다.
+
+```
+curl -svo /dev/null https://live.edgeoptimize.net/page.html \
+  -H 'x-forwarded-host: www.example.com' \
+  -H 'x-edgeoptimize-url: /page.html' \
+  -H 'x-edgeoptimize-api-key: $EDGE_OPTIMIZE_API_KEY' \
+  -H 'x-edgeoptimize-config: LLMCLIENT=TRUE;'
+```
+
+**필수 헤더**
+
+Edge 최적화 백엔드에 대한 요청에 대해 다음 헤더를 설정해야 합니다.
+
+| 헤더 | 설명 | 예 |
+|--------|-------------|---------|
+| `x-forwarded-host` | 요청의 원래 호스트입니다. 사이트 도메인을 식별하는 데 필요합니다. | `www.example.com` |
+| `x-edgeoptimize-url` | 요청의 원래 URL 경로 및 쿼리 문자열입니다. | `/page.html` 또는 `/products?id=123` |
+| `x-edgeoptimize-api-key` | Adobe에서 도메인에 대해 제공하는 API 키. | `your-api-key-here` |
+| `x-edgeoptimize-config` | 캐시 키 구분을 위한 구성 문자열입니다. | `LLMCLIENT=TRUE;` |
+
+**1단계: Cloudflare 작업자 만들기**
+
+1. Cloudflare 대시보드에 로그인합니다.
+2. 사이드바에서 **작업자 및 페이지**(으)로 이동합니다.
+3. **응용 프로그램 만들기**&#x200B;를 클릭한 다음 **작업자 만들기**&#x200B;를 클릭합니다.
+4. 작업자 이름을 지정합니다(예: `edge-optimize-router`).
+5. 기본 코드로 작업자를 만들려면 **배포**&#x200B;를 클릭하십시오.
+
+![Cloudflare Workers 대시보드](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
+
+**2단계: 작업자 코드 추가**
+
+작업자를 만든 후 **코드 편집**&#x200B;을 클릭하고 기본 코드를 다음으로 바꿉니다.
+
+```javascript
+/**
+ * Edge Optimize BYOCDN - Cloudflare Worker
+ *
+ * This worker routes requests from agentic bots (AI/LLM user agents) to the
+ * Edge Optimize backend service for optimized content delivery.
+ *
+ * Features:
+ * - Routes agentic bot traffic to Edge Optimize backend
+ * - Failover to origin on Edge Optimize errors (any 4XX or 5XX errors)
+ * - Loop protection to prevent infinite redirects
+ * - Human visitors and SEO bots are served from the origin as usual
+ */
+
+// List of agentic bot user agents to route to Edge Optimize
+const AGENTIC_BOTS = [
+  'AdobeEdgeOptimize-AI',
+  'ChatGPT-User',
+  'GPTBot',
+  'OAI-SearchBot',
+  'PerplexityBot',
+  'Perplexity-User'
+];
+
+// Targeted paths for Edge Optimize routing
+// Set to null to route all HTML pages, or specify an array of paths
+const TARGETED_PATHS = null; // e.g., ['/', '/page.html', '/products']
+
+// Failover configuration
+// Failover on any 4XX client error or 5XX server error from Edge Optimize
+const FAILOVER_ON_4XX = true; // Failover on any 4XX error (400-499)
+const FAILOVER_ON_5XX = true; // Failover on any 5XX error (500-599)
+
+export default {
+  async fetch(request, env, ctx) {
+    return await handleRequest(request, env, ctx);
+  },
+};
+
+async function handleRequest(request, env, ctx) {
+  const url = new URL(request.url);
+  const userAgent = request.headers.get("user-agent")?.toLowerCase() || "";
+
+  // Check if request is already processed (loop protection)
+  const isEdgeOptimizeRequest = !!request.headers.get("x-edgeoptimize-request");
+
+  // Construct the original path and query string
+  const pathAndQuery = `${url.pathname}${url.search}`;
+
+  // Check if the path matches HTML pages (no extension or .html extension)
+  const isHtmlPage = /(?:\/[^./]+|\.html|\/)$/.test(url.pathname);
+
+  // Check if path is in targeted paths (if specified)
+  const isTargetedPath = TARGETED_PATHS === null
+    ? isHtmlPage
+    : (isHtmlPage && TARGETED_PATHS.includes(url.pathname));
+
+  // Check if user agent is an agentic bot
+  const isAgenticBot = AGENTIC_BOTS.some((ua) => userAgent.includes(ua.toLowerCase()));
+
+  // Route to Edge Optimize if:
+  // 1. Request is NOT already from Edge Optimize (prevents infinite loops)
+  // 2. User agent matches one of the agentic bots
+  // 3. Path is targeted for optimization
+  if (!isEdgeOptimizeRequest && isAgenticBot && isTargetedPath) {
+
+    // Build the Edge Optimize request URL
+    const edgeOptimizeURL = `https://live.edgeoptimize.net${pathAndQuery}`;
+
+    // Clone and modify headers for the Edge Optimize request
+    const edgeOptimizeHeaders = new Headers(request.headers);
+
+    // Remove any existing Edge Optimize headers for security
+    edgeOptimizeHeaders.delete("x-edgeoptimize-api-key");
+    edgeOptimizeHeaders.delete("x-edgeoptimize-url");
+    edgeOptimizeHeaders.delete("x-edgeoptimize-config");
+
+    // x-forwarded-host: The original site domain
+    // Use environment variable if set, otherwise use the request host
+    edgeOptimizeHeaders.set("x-forwarded-host", env.EDGE_OPTIMIZE_TARGET_HOST ?? url.host);
+
+    // x-edgeoptimize-api-key: Your Adobe-provided API key
+    edgeOptimizeHeaders.set("x-edgeoptimize-api-key", env.EDGE_OPTIMIZE_API_KEY);
+
+    // x-edgeoptimize-url: The original request URL path and query
+    edgeOptimizeHeaders.set("x-edgeoptimize-url", pathAndQuery);
+
+    // x-edgeoptimize-config: Configuration for cache key differentiation
+    edgeOptimizeHeaders.set("x-edgeoptimize-config", "LLMCLIENT=TRUE;");
+
+    try {
+      // Send request to Edge Optimize backend
+      const edgeOptimizeResponse = await fetch(new Request(edgeOptimizeURL, {
+        headers: edgeOptimizeHeaders,
+        redirect: "manual", // Preserve redirect responses from Edge Optimize
+      }), {
+        cf: {
+          cacheEverything: true, // Enable caching based on origin's cache-control headers
+        },
+      });
+
+      // Check if we need to failover to origin
+      const status = edgeOptimizeResponse.status;
+      const is4xxError = FAILOVER_ON_4XX && status >= 400 && status < 500;
+      const is5xxError = FAILOVER_ON_5XX && status >= 500 && status < 600;
+
+      if (is4xxError || is5xxError) {
+        console.log(`Edge Optimize returned ${status}, failing over to origin`);
+        return await failoverToOrigin(request, env, url);
+      }
+
+      // Return the Edge Optimize response
+      return edgeOptimizeResponse;
+
+    } catch (error) {
+      // Network error or timeout - failover to origin
+      console.log(`Edge Optimize request failed: ${error.message}, failing over to origin`);
+      return await failoverToOrigin(request, env, url);
+    }
+  }
+
+  // For all other requests (human users, SEO bots), pass through unchanged
+  return fetch(request);
+}
+
+/**
+ * Failover to origin server when Edge Optimize returns an error
+ * @param {Request} request - The original request
+ * @param {Object} env - Environment variables
+ * @param {URL} url - Parsed URL object
+ */
+async function failoverToOrigin(request, env, url) {
+  // Build origin URL
+  const originURL = `${url.protocol}//${env.EDGE_OPTIMIZE_TARGET_HOST}${url.pathname}${url.search}`;
+
+  // Prepare headers - clean Edge Optimize headers and add loop protection
+  const originHeaders = new Headers(request.headers);
+  originHeaders.set("Host", env.EDGE_OPTIMIZE_TARGET_HOST);
+  originHeaders.delete("x-edgeoptimize-api-key");
+  originHeaders.delete("x-edgeoptimize-url");
+  originHeaders.delete("x-edgeoptimize-config");
+  originHeaders.delete("x-forwarded-host");
+  originHeaders.set("x-edgeoptimize-request", "fo");
+
+  // Create and send origin request
+  const originRequest = new Request(originURL, {
+    method: request.method,
+    headers: originHeaders,
+    body: request.body,
+    redirect: "manual",
+  });
+
+  const originResponse = await fetch(originRequest);
+
+  // Add failover marker header to response
+  const modifiedResponse = new Response(originResponse.body, {
+    status: originResponse.status,
+    statusText: originResponse.statusText,
+    headers: originResponse.headers,
+  });
+  modifiedResponse.headers.set("x-edgeoptimize-fo", "1");
+  return modifiedResponse;
+}
+```
+
+작업자를 게시하려면 **저장 및 배포**&#x200B;를 클릭하십시오.
+
+![Cloudflare Worker 코드 편집기](/help/assets/optimize-at-edge/cloudflare-worker-editor.png)
+
+**3단계: 환경 변수 구성**
+
+환경 변수는 API 키와 같은 민감한 구성을 안전하게 저장합니다.
+
+1. 작업자 설정에서 **설정** > **변수**(으)로 이동합니다.
+2. **환경 변수**&#x200B;에서 **변수 추가**&#x200B;를 클릭합니다.
+3. 다음 변수를 추가합니다.
+
+   | 변수 이름 | 설명 | 필수 |
+   |---------------|-------------|----------|
+   | `EDGE_OPTIMIZE_API_KEY` | Adobe 제공 Edge Optimize API 키. | 예 |
+   | `EDGE_OPTIMIZE_TARGET_HOST` | Edge 최적화 요청의 대상 호스트(`x-forwarded-host` 헤더로 전송됨)와 장애 조치(failover)의 원본 도메인입니다. 프로토콜 없이 도메인만 사용해야 합니다(예: `https://www.example.com`이(가) 아닌 `www.example.com`). | 예 |
+
+4. API 키를 안전하게 저장하려면 **암호화**&#x200B;를 클릭합니다.
+5. **저장 및 배포**&#x200B;를 클릭합니다.
+
+![Cloudflare 환경 변수](/help/assets/optimize-at-edge/cloudflare-env-variables.png)
+
+**4단계: 도메인에 대한 경로 추가**
+
+도메인에서 작업자를 활성화하려면 다음을 수행합니다.
+
+1. 작업자의 **설정** > **트리거**(으)로 이동합니다.
+2. **경로**&#x200B;에서 **경로 추가**&#x200B;를 클릭합니다.
+3. 도메인 패턴(예: `www.example.com/*` 또는 `example.com/*`)을 입력하십시오.
+4. 드롭다운에서 영역을 선택합니다.
+5. **저장**&#x200B;을 클릭합니다.
+
+또는 영역 수준에서 경로를 구성할 수 있습니다.
+
+1. Cloudflare에서 도메인 탐색
+2. **작업자 경로**(으)로 이동합니다.
+3. **경로 추가**&#x200B;를 클릭하고 패턴과 작업자를 지정하십시오.
+
+![Cloudflare Worker 경로](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
+
+**5단계: 설정 확인**
+
+배포 후 에이전트 사용자 에이전트를 사용하여 요청하여 구성을 테스트합니다.
+
+```
+curl -svo /dev/null https://www.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
+
+성공적인 응답에는 `x-edgeoptimize-request-id` 헤더가 포함됩니다.
+
+```
+< HTTP/2 200
+< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+```
+
+LLM Optimizer UI에서 트래픽 라우팅 상태를 확인할 수도 있습니다. **고객 구성**(으)로 이동하고 **CDN 구성** 탭을 선택합니다.
+
+라우팅이 활성화된 ![AI 트래픽 라우팅 상태](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+
+또한 일반 트래픽이 계속 작동하는지 확인할 수 있습니다.
+
+```
+curl -svo /dev/null https://www.example.com/page.html \
+  --header "user-agent: Mozilla/5.0"
+```
+
+이 요청은 `x-edgeoptimize-request-id` 헤더 없이 원본에서 제공해야 합니다.
+
+**장애 조치(failover) 동작 확인**
+
+Edge 최적화를 사용할 수 없거나 오류를 반환하는 경우 작업자가 자동으로 원점으로 장애 조치(failover)합니다. 장애 조치(failover) 응답에는 `x-edgeoptimize-fo` 헤더가 포함됩니다.
+
+```
+< HTTP/2 200
+< x-edgeoptimize-fo: 1
+```
+
+Cloudflare Workers 로그에서 페일오버 이벤트를 모니터링하여 문제를 해결할 수 있습니다.
+
+**작업자 논리 이해**
+
+Cloudflare Worker는 다음과 같은 논리를 구현합니다.
+
+1. **사용자 에이전트 검색:** 들어오는 요청의 사용자 에이전트가 정의된 에이전트 봇과 일치하는지 확인합니다(대/소문자 구분 안 함).
+
+2. **경로 타깃팅:** 선택적으로 타깃팅된 경로를 기반으로 요청을 필터링합니다. 기본적으로 모든 HTML 페이지(`/`, 확장 없음 또는 `.html`(으)로 끝나는 URL)는 라우팅됩니다. `TARGETED_PATHS` 배열을 사용하여 특정 경로를 지정할 수 있습니다.
+
+3. **루프 보호:** `x-edgeoptimize-request` 헤더에서 무한 루프를 방지합니다. Edge 최적화에서 원본을 다시 요청하면 이 헤더가 `"1"`(으)로 설정되고, 작업자는 요청을 다시 Edge 최적화로 라우팅하지 않고 통과시킵니다.
+
+4. **헤더 보안:** Edge Optimize 헤더를 설정하기 전에 작업자가 수신 요청에서 기존 `x-edgeoptimize-*` 헤더를 제거하여 헤더 삽입 공격을 방지합니다.
+
+5. **헤더 매핑:** 작업자가 Edge 최적화에 필요한 헤더를 설정합니다.
+   * `x-forwarded-host` - 원래 사이트 도메인을 식별합니다.
+   * `x-edgeoptimize-url` - 원래 요청 경로와 쿼리 문자열을 유지합니다.
+   * `x-edgeoptimize-api-key` - Edge 최적화로 요청을 인증합니다.
+   * `x-edgeoptimize-config` - 캐시 키 구성을 제공합니다.
+
+6. **장애 조치(Failover) 논리:** Edge 최적화가 오류 상태 코드(4XX 클라이언트 오류 또는 5XX 서버 오류)를 반환하거나 네트워크 오류로 인해 요청이 실패하는 경우 작업자는 `EDGE_OPTIMIZE_TARGET_HOST`을(를) 사용하여 자동으로 원본으로 장애 조치합니다. 장애 조치(failover) 응답에는 장애 조치가 발생했음을 나타내는 `x-edgeoptimize-fo: 1` 헤더가 포함됩니다.
+
+7. **리디렉션 처리:** `redirect: "manual"` 옵션을 사용하면 작업자가 리디렉션 응답을 팔로우하지 않고 Edge 최적화의 리디렉션 응답을 클라이언트에 전달할 수 있습니다.
+
+**구성 사용자 지정**
+
+코드의 맨 위에서 구성 상수를 수정하여 작업자 동작을 사용자 정의할 수 있습니다.
+
+**에이전트 보트 목록**
+
+사용자 에이전트를 추가하거나 제거하려면 `AGENTIC_BOTS` 배열을 수정하십시오.
+
+```javascript
+const AGENTIC_BOTS = [
+  'AdobeEdgeOptimize-AI',
+  'ChatGPT-User',
+  'GPTBot',
+  'OAI-SearchBot',
+  'PerplexityBot',
+  'Perplexity-User',
+  // Add additional user agents as needed
+  'ClaudeBot',
+  'Anthropic-AI'
+];
+```
+
+**타깃팅된 경로**
+
+기본적으로 모든 HTML 페이지는 Edge 최적화로 라우팅됩니다. 특정 경로로 라우팅을 제한하려면 `TARGETED_PATHS` 배열을 수정하십시오.
+
+```javascript
+// Route all HTML pages (default)
+const TARGETED_PATHS = null;
+
+// Or specify exact paths to route
+const TARGETED_PATHS = ['/', '/page.html', '/products', '/about-us'];
+```
+
+**장애 조치(failover) 구성**
+
+기본적으로 작업자는 Edge 최적화에서 4XX 또는 5XX 오류가 발생하면 장애 조치됩니다. 다음 동작을 사용자 지정합니다.
+
+```javascript
+// Default: failover on any 4XX or 5XX error
+const FAILOVER_ON_4XX = true;
+const FAILOVER_ON_5XX = true;
+
+// Failover only on 5XX server errors (not 4XX client errors)
+const FAILOVER_ON_4XX = false;
+const FAILOVER_ON_5XX = true;
+
+// Disable automatic failover (not recommended)
+const FAILOVER_ON_4XX = false;
+const FAILOVER_ON_5XX = false;
+```
+
+**중요 고려 사항**
+
+* **장애 조치(failover) 동작:** Edge 최적화가 오류(4XX 또는 5XX 상태 코드)를 반환하거나 네트워크 오류로 인해 요청이 실패하는 경우 작업자가 자동으로 원본에 장애 조치됩니다. 장애 조치(failover)에서 `EDGE_OPTIMIZE_TARGET_HOST`을(를) 원본 도메인으로 사용합니다(Fastly의 `F_Default_Origin` 또는 CloudFront의 `Default_Origin`과(와) 유사). 장애 조치(failover) 응답에는 모니터링 및 디버깅에 사용할 수 있는 `x-edgeoptimize-fo: 1` 헤더가 포함됩니다.
+
+* **캐싱:** Cloudflare는 기본적으로 URL을 기반으로 응답을 캐시합니다. 에이전트 트래픽은 사람 트래픽과 다른 콘텐츠를 수신하므로 캐시 구성이 이를 처리하는지 확인하십시오. 캐시 API 또는 캐시 헤더를 사용하여 캐시된 콘텐츠를 구분하는 것이 좋습니다. `x-edgeoptimize-config` 헤더가 캐시 키에 포함되어야 합니다.
+
+* **속도 제한:** Edge을 모니터링하여 사용을 최적화하고 필요한 경우 에이전트 트래픽에 대한 속도 제한을 구현하는 것이 좋습니다.
+
+* **테스트:** 프로덕션에 배포하기 전에 항상 스테이징 환경에서 구성을 테스트하십시오. 무의미한 트래픽과 사람 트래픽이 모두 예상대로 작동하는지 확인합니다. Edge 최적화 오류를 시뮬레이션하여 장애 조치(failover) 동작을 테스트합니다.
+
+* **로깅:** Cloudflare Workers 로깅을 사용하여 요청을 모니터링하고 문제를 해결합니다. 실시간 로그를 보려면 **작업자** > **작업자** > **로그**(으)로 이동합니다. 작업자는 디버깅을 위해 페일오버 이벤트를 기록합니다.
+
+**문제 해결**
+
+| 문제 | 가능한 원인 | 솔루션 |
+|-------|----------------|----------|
+| 응답 중인 `x-edgeoptimize-request-id` 헤더 없음 | 작업자 경로가 일치하지 않거나 사용자 에이전트가 에이전트 보트 목록에 없습니다. | 경로 패턴이 요청 URL과 일치하는지 확인합니다. 사용자 에이전트가 `AGENTIC_BOTS` 배열에 있는지 확인하십시오. |
+| Edge 최적화에서 401 또는 403 오류 | API 키가 잘못되었거나 누락되었습니다. | `EDGE_OPTIMIZE_API_KEY`이(가) 환경 변수에 올바르게 설정되어 있는지 확인하십시오. Adobe에 문의하여 API 키가 활성 상태인지 확인하십시오. |
+| 무한 리디렉션 또는 루프 | 루프 보호 헤더가 올바르게 설정되거나 검사되지 않습니다. | `x-edgeoptimize-request` 헤더 검사가 제대로 되어 있는지 확인하십시오. |
+| 영향을 받는 사람 트래픽 | 작업자 라우팅 논리가 너무 광범위합니다. | 사용자 에이전트 일치 논리가 올바르고 대/소문자를 구분하지 않는지 확인합니다. `TARGETED_PATHS`이(가) 올바르게 구성되어 있는지 확인하십시오. |
+| 느린 응답 시간 | Edge 최적화 백엔드에 대한 네트워크 대기 시간. | 이는 첫 번째 요청에 대해 예상되며, 후속 요청은 Edge 최적화에 캐시됩니다. |
+| 응답의 `x-edgeoptimize-fo: 1` 헤더 | Edge 최적화에서 오류를 반환했으며 원본으로 페일오버가 발생했습니다. | Cloudflare Workers 로그에서 특정 오류 코드를 확인합니다. Adobe을 사용하여 Edge 서비스 상태 최적화 를 확인합니다. |
+| 장애 조치(failover)가 작동하지 않음 | 장애 조치(failover) 플래그가 비활성화되어 있거나 장애 조치(failover) 논리에 오류가 있습니다. | `FAILOVER_ON_4XX` 및 `FAILOVER_ON_5XX`이(가) `true`(으)로 설정되어 있는지 확인하십시오. 작업자 로그에서 오류 메시지를 확인하십시오. |
+| 특정 경로가 최적화되지 않음 | 경로가 타겟팅된 경로 또는 HTML 페이지 패턴과 일치하지 않습니다. | 경로가 `TARGETED_PATHS`에 있고(지정된 경우) HTML 페이지 정규 표현식 패턴과 일치하는지 확인하십시오. |
+| 잘못된 호스트로 인해 요청 실패 | `EDGE_OPTIMIZE_TARGET_HOST`에 프로토콜(예: `https://`)이 포함되어 있습니다. | 프로토콜 없이 도메인 이름만 사용합니다(예: `https://example.com`이(가) 아닌 `example.com`). |
+| 장애 조치(failover) 중 530 오류 | Cloudflare가 원본에 연결할 수 없거나 장애 조치(failover) 요청에 잘못된 헤더가 있습니다. | 장애 조치(failover) 기능이 Edge 최적화 헤더를 제거하는지 확인합니다. 원본을 액세스할 수 있고 DNS가 올바르게 구성되어 있는지 확인하십시오. |
 
 >[!ENDTABS]
 
@@ -247,7 +809,7 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
 
 [Adobe LLM Optimizer: 웹 페이지를 사용할 수 있습니까?](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome 확장은 LLM이 액세스할 수 있는 웹 페이지 콘텐츠의 양과 숨겨진 항목을 보여 줍니다. 독립형 무료 진단 도구로 설계되어 제품 라이선스나 설정이 필요 없습니다.
 
-한 번의 클릭으로 모든 사이트의 시스템 가독성을 평가할 수 있습니다. AI 에이전트가 보는 내용과 사람 사용자가 보는 내용을 나란히 비교하고 LLM Optimizer을 사용하여 복구할 수 있는 콘텐츠의 양을 예측할 수 있습니다. [AI가 웹 사이트를 읽을 수 있습니까?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension)페이지입니다.
+한 번의 클릭으로 모든 사이트의 시스템 가독성을 평가할 수 있습니다. AI 에이전트가 보는 내용과 사람 사용자가 보는 내용을 나란히 비교하고 LLM Optimizer을 사용하여 복구할 수 있는 콘텐츠의 양을 예측할 수 있습니다. [AI가 웹 사이트를 읽을 수 있습니까?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) 페이지 를 참조하십시오.
 
 ## 영업 기회 세부 정보
 
@@ -281,7 +843,7 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
 
 각 영업 기회에 대해 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477991/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### 미리보기
 
@@ -333,7 +895,8 @@ Q. Edge에서 최적화를 위해 온보딩되지 않은 경우 어떻게 됩니
 
 질문: 소스에서 콘텐츠가 업데이트되면 어떻게 됩니까?
 
-기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 페이지 버전을 제공합니다. 그러나 소스가 변경되면 시스템이 자동으로 새로 고쳐져 AI 에이전트는 항상 최신 콘텐츠를 수신하게 됩니다. 이는 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하여 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하기 때문입니다. <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
+기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 페이지 버전을 제공합니다. 그러나 소스가 **콘텐츠 가시성 복구**&#x200B;에 대해 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하여 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하기 때문입니다. **LLM 친화적 요약 추가**와 같은 콘텐츠 기회에 대해 LLM Optimizer은 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정하여 에이전트가 표시하는 페이지와 사람이 표시하는 페이지 사이의 콘텐츠 드리프트를 방지합니다.
+<!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 Q. Edge에서 Adobe EDS(Edge Delivery Service)를 사용하는 사이트에 대해서만 최적화됩니까?
 
@@ -342,3 +905,7 @@ Q. Edge에서 Adobe EDS(Edge Delivery Service)를 사용하는 사이트에 대�
 Q. Edge에서 최적화 사전 렌더링은 기존의 서버측 렌더링(SSR)과 어떻게 다릅니까?
 
 둘 다 서로 다른 문제를 해결하고 함께 일할 수 있다. 기존 SSR은 서버측 콘텐츠를 렌더링하지만 나중에 브라우저에서 로드되는 콘텐츠는 포함하지 않습니다. Edge에서 최적화 사전 렌더링은 JavaScript 및 클라이언트측 데이터가 로드된 후 페이지를 캡처하여 CDN 에지에서 완전히 조립된 버전을 생성합니다. SSR은 사용자 경험 개선에 중점을 두고 있으며, Edge에서 최적화는 LLM의 웹 경험을 개선합니다.
+
+Q. 모든 URL이 아닌 일부 URL에 대해 최적화를 배포할 경우 어떻게 됩니까?
+
+명시적으로 최적화하는 URL만 수정됩니다. 기회가 배포된 URL의 경우 AI 에이전트는 최적화된 버전을 받습니다. 배포된 기회가 없는 URL의 경우, 당사 서비스는 변경 사항을 적용하거나 최적화 캐시 레이어에 저장하지 않고 원본 페이지를 그대로 프록시합니다. 이렇게 하면 사이트의 나머지 부분에 영향을 주지 않고 최적화를 선택적으로 배포할 수 있습니다.

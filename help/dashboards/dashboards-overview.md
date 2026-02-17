@@ -2,9 +2,9 @@
 title: 대시보드 개요
 description: 문서 개요입니다.
 feature: Onboarding
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '262'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 대시보드 개요를 시작합니다. LLM-Optimizer의 대시보드를 사용하면 마케터가 AI 검색 플랫폼 전반에서 브랜드 가시성 및 감정을 추적하고, 최적화 기회를 식별하고, 규범적 변경 사항을 구현하여 인용 및 성능을 향상시킬 수 있습니다.
 
-주요 보기에는 브랜드 존재감, 에이전트 및 참조 트래픽, URL 검사기, 영업 기회 식별, Collaboration 및 고객 구성이 포함됩니다.
+주요 보기에는 개요, 브랜드 존재감, 에이전트 및 참조 트래픽, URL 검사기, 기회, Collaboration 및 고객 구성이 포함됩니다.
 
 <!-- CARDS
 
