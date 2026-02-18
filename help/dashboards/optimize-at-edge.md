@@ -838,7 +838,7 @@ const FAILOVER_ON_5XX = false;
 
 각 영업 기회에 대해 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477991/?captions=kor&learn=on&enablevpops)
 
 ### 미리보기
 
