@@ -1,9 +1,9 @@
 ---
 title: LLM Optimizer 기본 사항
 description: Adobe LLM Optimizer이 AI 기반 검색에서 브랜드 가시성을 강화하는 방법에 대해 알아봅니다. 언급, 인용 및 통찰력을 추적합니다. 보다 나은 참여와 영향력을 위해 지금 최적화를 시작하십시오.
-source-git-commit: 06c09c4690488d9b29d0626521fb53bf7d70d3a8
+source-git-commit: 1f665bd14349c15d92f8274742606abcf9b02000
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -53,10 +53,10 @@ Adobe LLM Optimizer은 생성 엔진 최적화를 위해 설계된 도구 모음
 Adobe LLM Optimizer을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 
 **브랜드 가시성 측정** - AI 기반 검색 결과에서 브랜드가 언급되는 시기, 위치 및 빈도를 추적합니다. 추측에 머물지 않고 시간이 지남에 따라 벤치마킹할 수 있는 명확한 가시성 점수를 사용하십시오.
-**다른 사용자 벤치마크** - 브랜드가 생성 엔진의 다른 사용자와 어떻게 비교되는지 확인하십시오. 언급 점유율 격차를 파악하고 경쟁 우위를 파악합니다.
-**실행 가능한 영업 기회 발견** - 언급 및 인용률을 직접적으로 높이는 콘텐츠 영업 기회(예: FAQ, 추상화, 스키마) 및 기술 영업 기회(크롤링 가능성, 색인화 문제)를 정확하게 파악합니다.
-**AI의 트래픽 영향 추적** - 소유한 속성에 대한 에이전트 트래픽(AI 도우미) 및 참조 트래픽(인용을 통한 사용자 클릭)을 모니터링합니다. 지역 가시성을 실제 참여와 연계합니다.
-**팀 Collaboration 사용** - 대시보드를 공유하고, 프롬프트 또는 범주에 대한 소유자를 할당하고, 마케팅, SEO 및 커뮤니케이션 기능에서 가시성 목표를 추적하도록 합니다.
+**다른 사용자를 벤치마킹합니다** - 브랜드가 생성 엔진의 다른 사용자와 어떻게 비교되는지 확인하십시오. 언급 점유율 격차를 파악하고 경쟁 우위를 파악합니다.
+**실행 가능한 기회 발견** - 언급 및 인용을 직접 늘리는 콘텐츠 기회(예: FAQ, 추상화, 스키마) 및 기술 기회(크롤링 가능성, 색인화 문제)를 정확하게 파악합니다.
+**AI**의 트래픽 영향 추적 - 소유한 속성에 대한 에이전트 트래픽(AI 지원) 및 참조 트래픽(인용을 통한 사용자 클릭)을 모니터링합니다. 지역 가시성을 실제 참여와 연계합니다.
+**팀 Collaboration** 사용 - 대시보드를 공유하고, 프롬프트 또는 범주에 대한 소유자를 할당하고, 마케팅, SEO 및 커뮤니케이션 기능 전반에서 가시성 목표를 추적하도록 합니다.
 
 
 ## 참조
@@ -112,7 +112,7 @@ Use these as guidelines for creating tutorials - some may be covered already in 
 
 ## Identifying Optimization Opportunities
 
-* Content Fixes (Headings, FAQs, Canonicals)
+* Content Fixes (FAQs, Canonicals)
 * Technical Fixes (Blocked Agents, Errors)
 * Third-Party Influence Strategies
 

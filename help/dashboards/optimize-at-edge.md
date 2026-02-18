@@ -2,9 +2,9 @@
 title: Edge에서 최적화
 description: 작성 변경 작업 없이 CDN 에지에서 LLM Optimizer의 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
+source-git-commit: 1f665bd14349c15d92f8274742606abcf9b02000
 workflow-type: tm+mt
-source-wordcount: '4843'
+source-wordcount: '4708'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 이 페이지에서는 작성 변경 없이 CDN 에지에서 최적화를 제공하는 방법에 대한 자세한 개요를 제공합니다. 온보딩 프로세스, 사용 가능한 최적화 기회 및 에지에서 자동 최적화하는 방법을 다룹니다.
 
 >[!NOTE]
->이 기능은 현재 조기 액세스 상태입니다. 조기 액세스 프로그램 [여기](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)에 대해 자세히 알아볼 수 있습니다.
+>이 기능은 현재 조기 액세스 상태입니다. 조기 액세스 프로그램 [여기](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)에 대해 자세히 알아볼 수 있습니다.
 
 ## Edge에서 최적화란 무엇입니까?
 
@@ -84,7 +84,7 @@ IT/CDN 팀에 대한 요구 사항:
 
 **Cloud Manager 파이프라인을 통한 셀프 서비스 라우팅**
 
-Cloud Manager 파이프라인을 통해 직접 라우팅을 구성하려는 경우 아래 단계를 따르십시오. [originSelector CDN 규칙](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
+Cloud Manager 파이프라인을 통해 직접 라우팅을 구성하려는 경우 아래 단계를 따르십시오. [originSelector CDN 규칙](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)을 사용하여 라우팅 구성을 수행합니다. 전제 조건은 다음과 같습니다.
 
 * 라우팅할 도메인을 결정합니다.
 * 라우팅할 경로를 결정합니다.
@@ -92,7 +92,7 @@ Cloud Manager 파이프라인을 통해 직접 라우팅을 구성하려는 경�
 
 규칙을 배포하려면 다음을 수행해야 합니다.
 
-* [구성 파이프라인](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/operations/config-pipeline)을 만듭니다.
+* [구성 파이프라인](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)을 만듭니다.
 * 저장소에 `cdn.yaml` 구성 파일을 커밋합니다.
 * 구성 파이프라인을 실행합니다.
 
@@ -800,7 +800,6 @@ const FAILOVER_ON_5XX = false;
 | 기회 | 유형 | 자동 식별 | 자동 제안 | 자동 최적화 |
 |---------|----------|----------|----------|----------|
 | 콘텐츠 가시성 복구 | 기술 GEO | AI 에이전트에서 중요한 콘텐츠를 숨기는 페이지를 감지합니다. 영향을 받는 URL 및 복구할 수 있는 예상 컨텐츠를 표시합니다. | AI 에이전트에 사용할 수 있는 콘텐츠를 강조 표시하고 해당 페이지에 대한 사전 렌더링을 활성화하는 것을 권장합니다. | 완전히 렌더링된 AI 친화적인 HTML 스냅샷을 이전에 숨긴 콘텐츠를 복구하는 에이전트 트래픽에 제공합니다. |
-| LLM에 대한 제목 최적화 | 콘텐츠 최적화 | 제목을 스캔하여 비어 있거나, 중복되거나, 누락되거나, 모호한 제목이 있으면 기계 가독성을 떨어뜨릴 수 있습니다. | 머리글 계층 구조 및 향상된 레이블을 제안하고 각 페이지에 대해 업데이트된 구조의 미리보기를 표시합니다. | AI 에이전트에 대한 향상된 제목 구조를 삽입하고 시각적 디자인을 유지하면서 LLM에 대해 페이지를 보다 읽기 쉽게 만듭니다. |
 | LLM 친화적 요약 추가 | 콘텐츠 최적화 | 는 페이지 또는 섹션 수준에서 간결한 요약이 부족한 길거나 복잡한 페이지를 식별하여 AI가 빠르게 스캔하고 이해하는 것을 어렵게 합니다. | 는 주요 콘텐츠를 캡처하는 페이지 및 섹션 수준에서 AI가 생성한 짧은 요약을 권장합니다. | 관련 HTML 섹션에 요약을 삽입하여 모델이 페이지 콘텐츠를 해석하고 설명하는 방식을 개선합니다. |
 | 관련 FAQ 추가 | 콘텐츠 최적화 | FAQ의 이점을 얻을 수 있는 기존 페이지 콘텐츠의 의도 차이를 감지합니다. | 사용자 의도와 기존 주제에 맞게 AI가 생성한 FAQ 콘텐츠를 제안합니다. | HTML에 FAQ 콘텐츠를 삽입함으로써 페이지를 AI 기반 답변에서 더 많이 찾고 연관시킬 수 있습니다. |
 | 복잡한 콘텐츠 간소화 | 콘텐츠 최적화 | AI 이해를 방해할 수 있는 복잡한 텍스트로 페이지에 플래그를 지정합니다. | AI가 생성한 간소화된 버전의 복잡한 텍스트를 제공하면서도 원래 의미는 그대로 유지합니다. | 페이지의 복잡한 섹션을 재작성하여 AI 가독성을 개선합니다. |
@@ -823,10 +822,6 @@ const FAILOVER_ON_5XX = false;
 >[!IMPORTANT]
 >이 사전 렌더링 기능은 Edge에서 최적화로 배포하면 아래에 제시된 모든 기회에 자동으로 적용되어 페이지가 AI 에이전트에게 완전히 표시되도록 합니다.
 
-### LLM에 대한 제목 최적화
-
-이 기회는 제목 구조가 비어 있거나, 중복되거나, 누락되거나 모호한 제목으로 인해 AI 에이전트가 페이지를 이해하기 어렵게 하는 페이지를 감지합니다. 영향을 받는 각 페이지에 대해 영업 기회는 하위 머리글을 표시하며 더 명확한 계층을 권장합니다. Edge에서 최적화를 사용하여 배포하면 개선된 제목이 에이전트 트래픽에 제공되는 HTML에 적용됩니다. 이렇게 하면 사람 대면 레이아웃을 그대로 유지하면서 기계를 가독할 수 있습니다.
-
 ### LLM 친화적 요약 추가
 
 이 기회는 LLM이 페이지 콘텐츠의 내용을 신속하게 이해할 수 있도록 간결한 요약의 이점을 얻을 수 있는 페이지를 식별합니다. 각 페이지에 대해 영업 기회는 요약이 가장 필요한 위치를 감지하고 페이지 수준 또는 섹션 수준에서 AI가 생성한 요약을 생성합니다. Edge에서 최적화를 사용하여 배포할 때 이러한 요약은 AI 에이전트가 검색하는 HTML에 삽입되므로 콘텐츠를 보다 정확하게 설명할 가능성이 향상됩니다.
@@ -843,7 +838,7 @@ const FAILOVER_ON_5XX = false;
 
 각 영업 기회에 대해 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477991/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### 미리보기
 
@@ -895,7 +890,7 @@ Q. Edge에서 최적화를 위해 온보딩되지 않은 경우 어떻게 됩니
 
 질문: 소스에서 콘텐츠가 업데이트되면 어떻게 됩니까?
 
-기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 페이지 버전을 제공합니다. 그러나 소스가 **콘텐츠 가시성 복구**&#x200B;에 대해 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하여 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하기 때문입니다. **LLM 친화적 요약 추가**&#x200B;와 같은 콘텐츠 기회에 대해 LLM Optimizer은 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정하여 에이전트가 표시하는 페이지와 사람이 표시하는 페이지 사이의 콘텐츠 드리프트를 방지합니다.
+기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 페이지 버전을 제공합니다. 그러나 소스가 **콘텐츠 가시성 복구**&#x200B;에 대해 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하여 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하기 때문입니다. **LLM 친화적 요약 추가**와 같은 콘텐츠 기회에 대해 LLM Optimizer은 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정하여 에이전트가 표시하는 페이지와 사람이 표시하는 페이지 사이의 콘텐츠 드리프트를 방지합니다.
 <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 Q. Edge에서 Adobe EDS(Edge Delivery Service)를 사용하는 사이트에 대해서만 최적화됩니까?
