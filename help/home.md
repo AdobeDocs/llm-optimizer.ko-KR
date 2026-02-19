@@ -1,8 +1,8 @@
 ---
 title: Adobe LLM Optimizer
 description: Adobe LLM Optimizer를 통해 브랜드를 성장시키십시오. 언급을 추적하고, 인사이트를 발견하며, AI 기반 검색을 주도하십시오. 가시성을 제어하고, 지금 최적화를 시작하십시오!
-source-git-commit: 0714b6c83e384ff21ddceafa941e3fe8c7305467
-workflow-type: ht
+source-git-commit: 5af79711014a44e34a43babd60a5a7e18e333b92
+workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 100%
 
@@ -126,7 +126,7 @@ Adobe LLM Optimizer는 생성형 엔진 최적화를 위한 생성형 AI 우선 
   {description= Learn how LLM Optimizer can help you drive brand authority in AI search and discovery.}
   {target=_blank}
   {cta=Learn more}
-* https://business.adobe.com/kr/products/llm-optimizer.html
+* https://business.adobe.com/products/llm-optimizer.html
   {title = Explore the capabilities of the Adobe LLM Optimizer}
   {image = /help/assets/overview/business-adobe.png}
   {target=_blank}
@@ -185,7 +185,7 @@ Adobe LLM Optimizer는 생성형 엔진 최적화를 위한 생성형 AI 우선 
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://business.adobe.com/kr/products/llm-optimizer.html" title="Adobe LLM Optimizer의 기능 탐색" target="_blank" rel="referrer">
+                    <a href="https://business.adobe.com/products/llm-optimizer.html" title="Adobe LLM Optimizer의 기능 탐색" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="/help/assets/overview/business-adobe.png" alt="Adobe LLM Optimizer의 기능 탐색"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -194,11 +194,11 @@ Adobe LLM Optimizer는 생성형 엔진 최적화를 위한 생성형 AI 우선 
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://business.adobe.com/kr/products/llm-optimizer.html" target="_blank" rel="referrer" title="Adobe LLM Optimizer의 기능 탐색">Adobe LLM Optimizer의 기능 탐색</a>
+                        <a href="https://business.adobe.com/products/llm-optimizer.html" target="_blank" rel="referrer" title="Adobe LLM Optimizer의 기능 탐색">Adobe LLM Optimizer의 기능 탐색</a>
                     </p>
                     <p class="is-size-6">Adobe LLM Optimizer을 사용하여 AI 검색 결과에서 브랜드의 존재감을 다져보십시오. GEO 인사이트를 얻고, LLM 전반의 가시성을 높이며, 측정 가능한 트래픽 증가를 유도하십시오.</p>
                 </div>
-                <a href="https://business.adobe.com/kr/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://business.adobe.com/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
                 </a>
             </div>
@@ -211,7 +211,7 @@ Adobe LLM Optimizer는 생성형 엔진 최적화를 위한 생성형 AI 우선 
 
 <!-- CARDS
 
-* ./dashboards/optimize-at-edge.md
+* ./dashboards/optimize-at-edge/overview.md
   {title= Optimize at Edge}
   {image= /help/assets/overview/optimize-on-edge-card.png}
   {description= Learn how to deliver optimizations in LLM Optimizer without any authoring changes required.}
@@ -225,7 +225,7 @@ Adobe LLM Optimizer는 생성형 엔진 최적화를 위한 생성형 AI 우선 
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./dashboards/optimize-at-edge.md" title="Optimize at Edge" target="_blank" rel="referrer">
+                    <a href="./dashboards/optimize-at-edge/overview.md" title="Optimize at Edge" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="/help/assets/overview/optimize-on-edge-card.png" alt="Optimize at Edge"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -234,11 +234,11 @@ Adobe LLM Optimizer는 생성형 엔진 최적화를 위한 생성형 AI 우선 
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./dashboards/optimize-at-edge.md" target="_blank" rel="referrer" title="Optimize at Edge">Optimize at Edge</a>
+                        <a href="./dashboards/optimize-at-edge/overview.md" target="_blank" rel="referrer" title="Optimize at Edge">Optimize at Edge</a>
                     </p>
                     <p class="is-size-6">작성 변경 없이 LLM Optimizer에서 최적화를 제공하는 방법에 대해 알아봅니다.</p>
                 </div>
-                <a href="./dashboards/optimize-at-edge.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="./dashboards/optimize-at-edge/overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
                 </a>
             </div>

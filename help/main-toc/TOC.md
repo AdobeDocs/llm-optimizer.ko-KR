@@ -2,7 +2,7 @@
 user-guide-title: LLM Optimizer
 breadcrumb-title: LLM Optimizer
 user-guide-description: Adobe LLM Optimizer를 통해 브랜드를 성장시키십시오. 언급을 추적하고, 인사이트를 발견하며, AI 기반 검색을 주도하십시오. 가시성을 제어하고, 지금 최적화를 시작하십시오!
-source-git-commit: 26ee5a2412bccb955fee1c3aecf45ac918465e55
+source-git-commit: 82830e66d43ddd9741617cdf6daab63cd259554b
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 85%
@@ -29,8 +29,8 @@ ht-degree: 85%
    + [공동 작업](/help/dashboards/collaboration.md)
 + 추가 리소스{#resources}
    + Optimize at Edge{#optimize-at-edge}
-      + [개요](/help/dashboards/optimize-at-edge.md)
-      + [AEM Cloud Service 관리 CDN(Fastly)](/help/dashboards/optimize-at-edge-aem-managed-cdn.md)
-      + [Fastly (BYOCDN)](/help/dashboards/optimize-at-edge-fastly-byocdn.md)
-      + [Akamai(BYOCDN)](/help/dashboards/optimize-at-edge-akamai-byocdn.md)
-      + [Cloudflare(BYOCDN)](/help/dashboards/optimize-at-edge-cloudflare-byocdn.md)
+      + [개요](/help/dashboards/optimize-at-edge/overview.md)
+      + [AEM Cloud Service 관리 CDN(Fastly)](/help/dashboards/optimize-at-edge/aemcs-managed-cdn.md)
+      + [Fastly (BYOCDN)](/help/dashboards/optimize-at-edge/fastly-byocdn.md)
+      + [Akamai(BYOCDN)](/help/dashboards/optimize-at-edge/akamai-byocdn.md)
+      + [Cloudflare(BYOCDN)](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md)
