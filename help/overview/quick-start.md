@@ -38,7 +38,7 @@ AEM Cloud(Cloud Service, Managed Services, Edge Delivery Service) 고객은 **�
 무료 버전에서는 사용할 수 없는 몇 가지 제품 기능이 있습니다.
 
 * 체험판은 하나의 도메인으로 제한됩니다. 설정을 완료한 후에는 입력한 도메인을 변경할 수 없습니다.
-* 최적화 배포 기능은 Early Access에서 사용할 수 있습니다. 자세한 내용은 [Edge에서 최적화](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions)를 참조하세요.
+* 최적화 배포 기능은 Early Access에서 사용할 수 있습니다. 자세한 내용은 [Edge에서 최적화](https://experienceleague.adobe.com/ko/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions)를 참조하세요.
 
 무료 체험판 버전을 활성화하고 도메인을 온보딩하는 방법에 대한 자세한 내용은 아래 섹션을 참조하십시오.
 
