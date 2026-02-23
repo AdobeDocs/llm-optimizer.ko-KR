@@ -2,10 +2,10 @@
 title: Optimize at Edge
 description: CDN 에지에서 작성 변경 없이 LLM Optimizer로 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 82830e66d43ddd9741617cdf6daab63cd259554b
+source-git-commit: 547c38986da609a6cd42cb94402c811d6eb1f939
 workflow-type: tm+mt
-source-wordcount: '2172'
-ht-degree: 85%
+source-wordcount: '2181'
+ht-degree: 84%
 
 ---
 
@@ -62,6 +62,7 @@ IT/CDN 팀에 대한 요구 사항:
 | Fastly (BYOCDN) | 자체 CDN 가져오기 | [설치 가이드 보기](/help/dashboards/optimize-at-edge/fastly-byocdn.md) |
 | Akamai(BYOCDN) | 자체 CDN 가져오기 | [설치 가이드 보기](/help/dashboards/optimize-at-edge/akamai-byocdn.md) |
 | Cloudflare(BYOCDN) | 자체 CDN 가져오기 | [설치 가이드 보기](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md) |
+| CloudFront(BYOCDN) | 자체 CDN 가져오기 | [설치 가이드 보기](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
 
 >[!NOTE]
 >CDN 공급자가 위에 나열되어 있지 않거나 LLM Optimizer UI에서 도메인 또는 이메일을 찾을 수 없는 경우 `llmo-at-edge@adobe.com`에 연락하여 온보딩 지원을 받으십시오. 설정 구성이 완료되면 LLM Optimizer에서 Optimize at Edge 기회에 대한 제안을 배포할 수 있습니다.
@@ -113,7 +114,7 @@ IT/CDN 팀에 대한 요구 사항:
 
 각 기회마다 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477991/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### 미리보기
 
@@ -165,7 +166,7 @@ The CDN is where the optimized version of the page is assembled and delivered to
 
 질문: 콘텐츠가 소스에서 업데이트되면 어떻게 됩니까?
 
-기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 페이지 버전을 제공합니다. 그러나 소스가 **콘텐츠 가시성 복구**&#x200B;에 대해 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하여 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하기 때문입니다. **LLM 친화적 요약 추가**&#x200B;와 같은 콘텐츠 기회에 대해 LLM Optimizer은 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정하여 에이전트가 표시하는 페이지와 사람이 표시하는 페이지 사이의 콘텐츠 드리프트를 방지합니다.
+기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 페이지 버전을 제공합니다. 그러나 소스가 **콘텐츠 가시성 복구**&#x200B;에 대해 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하여 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하기 때문입니다. **LLM 친화적 요약 추가**와 같은 콘텐츠 기회에 대해 LLM Optimizer은 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정하여 에이전트가 표시하는 페이지와 사람이 표시하는 페이지 사이의 콘텐츠 드리프트를 방지합니다.
 <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 질문. Optimize at Edge는 Adobe Edge Delivery Service(EDS)를 사용하는 사이트에만 적용됩니까?
