@@ -178,7 +178,7 @@ Google 검색 콘솔 쿼리를 LLM Optimizer과 통합하고 사용하려면 아
 이 기능을 사용하려면 먼저 Google Search Console 계정을 LLM Optimizer와 통합해야 합니다.
 
 1. 고객 구성 대시보드를 엽니다.
-1. Google 검색 콘솔 탭으로 이동하여 **계정 연결**을 클릭합니다.
+1. Google 검색 콘솔 탭으로 이동하여 **계정 연결**&#x200B;을 클릭합니다.
    ![Google 검색 콘솔](/help/dashboards/assets/google-console.png)
 1. 원하는 검색 콘솔 속성에 액세스할 수 있는 Google 계정으로 로그인합니다.
    ![Google 계정](/help/dashboards/assets/google-account.png)
@@ -194,7 +194,7 @@ Google 검색 콘솔 계정을 LLM 최적기와 통합한 후 검색 콘솔에�
 1. Google 검색 콘솔 탭에서 검색 콘솔에서 가져온 주제 및 프롬프트 목록을 검토합니다.
    ![프롬프트 목록](/help/dashboards/assets/prompts-list.png)
 1. 원하는 항목/프롬프트 범주를 클릭하여 목록을 확장합니다.
-1. **추가** 단추를 사용하여 목록에서 프롬프트를 추가하십시오. **모두 추가**를 사용하여 프롬프트 및 범주를 일괄 추가할 수도 있습니다.
+1. **추가** 단추를 사용하여 목록에서 프롬프트를 추가하십시오. **모두 추가**&#x200B;를 사용하여 프롬프트 및 범주를 일괄 추가할 수도 있습니다.
    ![프롬프트 추가](/help/dashboards/assets/add-prompts.png)
 1. 선택 사항이 만족스러우면 알림 메시지에서 **저장**&#x200B;을(를) 클릭합니다.
 
