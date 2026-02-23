@@ -233,10 +233,10 @@ CloudFront 구성을 설정하기 전에 다음을 확인하십시오.
 
 2. 설명을 추가합니다.
 
-3. **게시**를 클릭합니다.
+3. **게시**&#x200B;를 클릭합니다.
    ![Lambda 게시](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
 
-4. **함수 ARN**을(를) 복사하거나 메모하십시오. 다음 단계에서 이 작업이 필요합니다.
+4. **함수 ARN**&#x200B;을(를) 복사하거나 메모하십시오. 다음 단계에서 이 작업이 필요합니다.
    ![람다 ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
 
 **5단계: 함수 및 캐시 정책을 동작과 연결**
