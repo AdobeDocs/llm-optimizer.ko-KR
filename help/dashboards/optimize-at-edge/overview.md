@@ -5,7 +5,7 @@ feature: Opportunities
 source-git-commit: 547c38986da609a6cd42cb94402c811d6eb1f939
 workflow-type: tm+mt
 source-wordcount: '2181'
-ht-degree: 84%
+ht-degree: 99%
 
 ---
 
@@ -47,27 +47,27 @@ Optimize at Edge에 온보딩하기 위한 전제 조건:
 * CDN 로그에 대한 로그 전달 프로세스를 완료합니다.
 
 IT/CDN 팀에 대한 요구 사항:
-* 허용 목록에 추가하다 사이트의 txt 파일 또는 봇 트래픽 관리 규칙에 `*AdobeEdgeOptimize/1.0*` 사용자 에이전트를 robots에 추가합니다.
+* `*AdobeEdgeOptimize/1.0*` 사용자 에이전트를 사이트의 robots.txt 파일 또는 봇 트래픽 관리 규칙의 허용 목록에 추가합니다.
 * 페이지가 도메인 또는 CDN 수준에서 차단되지 않았는지 확인합니다.
 * CDN에서 Optimize at Edge 라우팅 규칙에 추가합니다.
 * LLM Optimizer 인터페이스에서 Optimize at Edge 라우팅을 확인합니다.
 
 설정 프로세스를 안내하려면 아래에서 CDN 공급자를 선택하고 해당 구성 안내서를 따르십시오. 이러한 예제는 실제 라이브 구성에 맞게 조정되어야 합니다. 먼저 저사양 환경에서 변경 사항을 적용하는 것을 권장합니다.
 
-### CDN 구성 가이드
+### CDN 구성 안내서
 
 | CDN 공급자 | 유형 | 안내서 |
 |---|---|---|
-| AEM Cloud Service 관리 CDN(Fastly) | Adobe 관리 | [설치 가이드 보기](/help/dashboards/optimize-at-edge/aemcs-managed-cdn.md) |
-| Fastly (BYOCDN) | 자체 CDN 가져오기 | [설치 가이드 보기](/help/dashboards/optimize-at-edge/fastly-byocdn.md) |
-| Akamai(BYOCDN) | 자체 CDN 가져오기 | [설치 가이드 보기](/help/dashboards/optimize-at-edge/akamai-byocdn.md) |
-| Cloudflare(BYOCDN) | 자체 CDN 가져오기 | [설치 가이드 보기](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md) |
-| CloudFront(BYOCDN) | 자체 CDN 가져오기 | [설치 가이드 보기](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
+| AEM Cloud Service Managed CDN(Fastly) | Adobe 관리 | [설정 안내서 보기](/help/dashboards/optimize-at-edge/aemcs-managed-cdn.md) |
+| Fastly(BYOCDN) | 자체 CDN 가져오기 | [설정 안내서 보기](/help/dashboards/optimize-at-edge/fastly-byocdn.md) |
+| Akamai(BYOCDN) | 자체 CDN 가져오기 | [설정 안내서 보기](/help/dashboards/optimize-at-edge/akamai-byocdn.md) |
+| Cloudflare(BYOCDN) | 자체 CDN 가져오기 | [설정 안내서 보기](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md) |
+| CloudFront(BYOCDN) | 자체 CDN 가져오기 | [설정 안내서 보기](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
 
 >[!NOTE]
->CDN 공급자가 위에 나열되어 있지 않거나 LLM Optimizer UI에서 도메인 또는 이메일을 찾을 수 없는 경우 `llmo-at-edge@adobe.com`에 연락하여 온보딩 지원을 받으십시오. 설정 구성이 완료되면 LLM Optimizer에서 Optimize at Edge 기회에 대한 제안을 배포할 수 있습니다.
+>CDN 공급자가 위에 나열되어 있지 않거나 LLM Optimizer UI에서 도메인이나 이메일을 찾을 수 없는 경우 `llmo-at-edge@adobe.com`에 연락하여 온보딩 지원을 받으십시오. 설정 구성이 완료되면 LLM Optimizer에서 Optimize at Edge 기회에 대한 제안을 배포할 수 있습니다.
 
-위의 각 CDN 설정 안내서에는 에이전트 트래픽이 올바르게 라우팅되고 있으며 인간 트래픽에 영향을 주지 않는지 확인하는 자세한 확인 단계가 포함되어 있습니다.
+위의 각 CDN 설정 안내서는 에이전틱 트래픽이 올바르게 라우팅되고 있으며 사람 트래픽이 영향을 받지 않는지 확인하기 위한 자세한 검증 단계가 포함되어 있습니다.
 
 ## 기회
 
@@ -114,7 +114,7 @@ IT/CDN 팀에 대한 요구 사항:
 
 각 기회마다 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477991/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### 미리보기
 
@@ -166,7 +166,7 @@ The CDN is where the optimized version of the page is assembled and delivered to
 
 질문: 콘텐츠가 소스에서 업데이트되면 어떻게 됩니까?
 
-기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 페이지 버전을 제공합니다. 그러나 소스가 **콘텐츠 가시성 복구**&#x200B;에 대해 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하여 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하기 때문입니다. **LLM 친화적 요약 추가**&#x200B;와 같은 콘텐츠 기회에 대해 LLM Optimizer은 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정하여 에이전트가 표시하는 페이지와 사람이 표시하는 페이지 사이의 콘텐츠 드리프트를 방지합니다.
+기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 버전의 페이지를 제공합니다. 그러나 **콘텐츠 가시성 복구**&#x200B;를 위해 소스가 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하도록 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하기 때문입니다. **LLM 친화 요약 추가**와 같은 콘텐츠 기회를 위해 LLM Optimizer는 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 에이전트가 볼 수 있는 페이지와 사람이 볼 수 있는 페이지 간의 콘텐츠 이동을 방지하기 위해 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정합니다.
 <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 질문. Optimize at Edge는 Adobe Edge Delivery Service(EDS)를 사용하는 사이트에만 적용됩니까?
@@ -177,6 +177,6 @@ The CDN is where the optimized version of the page is assembled and delivered to
 
 둘 다 서로 다른 문제를 해결하고 함께 일할 수 있습니다. 기존 SSR은 서버측 콘텐츠를 렌더링하지만 나중에 브라우저에 로드된 콘텐츠는 포함하지 않습니다. Optimize at Edge 사전 렌더링은 JavaScript와 클라이언트측 데이터가 로드된 후 페이지를 캡처하여 CDN 에지에서 완전히 조립된 버전을 생성합니다. SSR은 사용자 경험을 개선하는 데 중점을 두고 있으며, Optimize at Edge는 LLM의 웹 경험을 개선합니다.
 
-Q. 모든 URL이 아닌 일부 URL에 대해 최적화를 배포할 경우 어떻게 됩니까?
+Q. 모든 URL이 아닌 일부 URL에 대한 최적화를 배포하면 어떻게 됩니까?
 
-명시적으로 최적화하는 URL만 수정됩니다. 기회가 배포된 URL의 경우 AI 에이전트는 최적화된 버전을 받습니다. 배포된 기회가 없는 URL의 경우, 당사 서비스는 변경 사항을 적용하거나 최적화 캐시 레이어에 저장하지 않고 원본 페이지를 그대로 프록시합니다. 이렇게 하면 사이트의 나머지 부분에 영향을 주지 않고 최적화를 선택적으로 배포할 수 있습니다.
+명시적으로 최적화된 URL만 수정됩니다. 배포된 기회가 있는 URL의 경우, AI 에이전트는 최적화된 버전을 받습니다. 배포된 기회가 없는 URL의 경우, 당사 서비스는 변경 사항을 적용하거나 최적화 캐시 레이어에 저장하지 않고 원본 페이지를 그대로 프록시합니다. 이렇게 하면 나머지 사이트에 영향을 미치지 않고 최적화를 선택적으로 배포할 수 있습니다.
