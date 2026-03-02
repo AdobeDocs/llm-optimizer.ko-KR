@@ -3,18 +3,18 @@ title: 대시보드 개요
 description: 문서 개요입니다.
 feature: Onboarding
 source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '262'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 
 # 대시보드 개요
 
-대시보드 개요를 시작합니다. LLM-Optimizer의 대시보드를 사용하면 마케터가 AI 검색 플랫폼 전반에서 브랜드 가시성 및 감정을 추적하고, 최적화 기회를 식별하고, 규범적 변경 사항을 구현하여 인용 및 성능을 향상시킬 수 있습니다.
+대시보드 개요를 시작합니다. LLM-Optimizer의 대시보드를 통해 마케터는 AI 검색 플랫폼 전반에서 브랜드 가시성과 감정을 추적하고 최적화 기회를 식별하며 인용과 성능을 향상시키기 위한 규범적 변경 사항을 구현할 수 있습니다.
 
-주요 보기에는 개요, 브랜드 존재감, 에이전트 및 참조 트래픽, URL 검사기, 기회, Collaboration 및 고객 구성이 포함됩니다.
+주요 보기에는 개요, 브랜드 존재감, 에이전틱 및 참조 트래픽, URL 관리자, 기회, 공동 작업, 고객 구성 등이 포함됩니다.
 
 <!-- CARDS
 
@@ -79,7 +79,7 @@ ht-degree: 5%
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./brand-presence.md" target="_blank" rel="referrer" title="브랜드 존재감 대시보드">브랜드 존재감 대시보드</a>
                     </p>
-                    <p class="is-size-6">감정 분석 및 다른 브랜드의 벤치마킹을 포함하여 LLM 검색 플랫폼에서 브랜드가 어떻게 표시되는지 추적합니다.</p>
+                    <p class="is-size-6">감정 분석 및 다른 브랜드 벤치마크를 포함하여 LLM 검색 플랫폼에서 브랜드가 어떻게 표시되는지 추적합니다.</p>
                 </div>
                 <a href="./brand-presence.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
@@ -91,8 +91,8 @@ ht-degree: 5%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./agentic-traffic.md" title="에이전트 트래픽 대시보드" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/agentic-traffic-card.png" alt="에이전트 트래픽 대시보드"
+                    <a href="./agentic-traffic.md" title="에이전틱 트래픽 대시보드" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/agentic-traffic-card.png" alt="에이전틱 트래픽 대시보드"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -100,9 +100,9 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./agentic-traffic.md" target="_blank" rel="referrer" title="에이전트 트래픽 대시보드">에이전트 트래픽 대시보드</a>
+                        <a href="./agentic-traffic.md" target="_blank" rel="referrer" title="에이전틱 트래픽 대시보드">에이전틱 트래픽 대시보드</a>
                     </p>
-                    <p class="is-size-6">기존 분석이 놓치는 LLM의 트래픽을 표시하므로 AI 지원 검색을 참여 및 매출에 연결할 수 있습니다.</p>
+                    <p class="is-size-6">기존 분석에서 누락된 LLM의 트래픽을 표시하므로 AI 지원 검색을 참여도 및 매출에 연결할 수 있습니다.</p>
                 </div>
                 <a href="./agentic-traffic.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
@@ -125,7 +125,7 @@ ht-degree: 5%
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./referral-traffic.md" target="_blank" rel="referrer" title="참조 트래픽 대시보드">참조 트래픽 대시보드</a>
                     </p>
-                    <p class="is-size-6">실제 AI 사용자 참여를 발견할 수 있도록 해 주는 AI가 생성한 인용에서 비롯된 사람 방문을 측정합니다</p>
+                    <p class="is-size-6">실제 AI 사용자 참여를 발견할 수 있도록 해 주는 AI 생성 인용에서 비롯된 사용자 방문을 측정합니다.</p>
                 </div>
                 <a href="./referral-traffic.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
@@ -137,8 +137,8 @@ ht-degree: 5%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./collaboration.md" title="Collaboration 대시보드" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/collaboration-card.png" alt="Collaboration 대시보드"
+                    <a href="./collaboration.md" title="공동 작업 대시보드" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/collaboration-card.png" alt="공동 작업 대시보드"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -146,9 +146,9 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./collaboration.md" target="_blank" rel="referrer" title="Collaboration 대시보드">Collaboration 대시보드</a>
+                        <a href="./collaboration.md" target="_blank" rel="referrer" title="공동 작업 대시보드">공동 작업 대시보드</a>
                     </p>
-                    <p class="is-size-6">공유 작업 공간에 동료를 초대할 수 있도록 하여 다양한 분야의 사람들과 함께 일하는 것을 가능하게 해 줍니다.</p>
+                    <p class="is-size-6">동료를 공유 작업 영역으로 초대할 수 있도록 하여 다양한 분야의 사람들과 팀워크를 가능하게 합니다.</p>
                 </div>
                 <a href="./collaboration.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
@@ -160,8 +160,8 @@ ht-degree: 5%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./opportunities.md" title="영업 기회 대시보드" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/opportunities-card.png" alt="영업 기회 대시보드"
+                    <a href="./opportunities.md" title="기회 대시보드" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/opportunities-card.png" alt="기회 대시보드"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -169,9 +169,9 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./opportunities.md" target="_blank" rel="referrer" title="영업 기회 대시보드">기회 대시보드</a>
+                        <a href="./opportunities.md" target="_blank" rel="referrer" title="기회 대시보드">기회 대시보드</a>
                     </p>
-                    <p class="is-size-6">AI 기반 검색 플랫폼에서 브랜드 가시성 및 인용 성능을 향상시키는 실행 가능한 통찰력을 제공하고 우선 순위를 지정합니다.</p>
+                    <p class="is-size-6">AI 기반 검색 플랫폼 전반에서 브랜드 가시성과 인용 성능을 향상시키는 실행 가능한 인사이트를 제공하고 우선순위를 정합니다.</p>
                 </div>
                 <a href="./opportunities.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
@@ -192,9 +192,9 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./url-inspector.md" target="_blank" rel="referrer" title="URL 관리자 대시보드">URL 검사기 대시보드</a>
+                        <a href="./url-inspector.md" target="_blank" rel="referrer" title="URL 관리자 대시보드">URL 관리자 대시보드</a>
                     </p>
-                    <p class="is-size-6">소유한 URL이 AI 기반 검색 환경에서 어떻게 작동하는지 보여 줍니다.</p>
+                    <p class="is-size-6">AI 기반 검색 환경에서 소유한 URL이 어떻게 작동하는지 파악할 수 있습니다.</p>
                 </div>
                 <a href="./url-inspector.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
@@ -217,7 +217,7 @@ ht-degree: 5%
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./customer-configuration.md" target="_blank" rel="referrer" title="고객 구성 대시보드">고객 구성 대시보드</a>
                     </p>
-                    <p class="is-size-6">조직이 특정 요구 사항에 맞게 Adobe LLM Optimizer이 작동하는 방식을 제어할 수 있습니다.</p>
+                    <p class="is-size-6">조직이 특정 요구 사항에 맞게 Adobe LLM Optimizer의 작동 방식을 제어할 수 있습니다.</p>
                 </div>
                 <a href="./customer-configuration.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>

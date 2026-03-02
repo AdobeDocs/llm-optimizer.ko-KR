@@ -3,16 +3,16 @@ title: 빠른 시작
 description: Adobe LLM Optimizer 시작하기 - 브랜드를 온보딩하고, AI 가시성 인사이트를 잠금 해제하고, 대시보드를 탐색하여 검색 성능을 향상시키십시오.
 feature: Quickstart, Onboarding
 source-git-commit: 82830e66d43ddd9741617cdf6daab63cd259554b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1152'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
 
 # 빠른 시작
 
-LLM Optimizer을 시작하려면 아래 단계에 설명된 대로 온보딩 프로세스를 완료해야 합니다. 프로세스를 완료하면 [LLM Optimizer의 대시보드](/help/dashboards/dashboards-overview.md) 및 기타 기능에 대한 전체 액세스 권한을 갖게 됩니다.
+LLM Optimizer를 시작하려면 아래 제시된 단계에 설명된 대로 온보딩 프로세스를 완료해야 합니다. 프로세스를 완료하면 [LLM Optimizer의 대시보드](/help/dashboards/dashboards-overview.md) 및 기타 기능에 대한 전체 액세스 권한을 갖게 됩니다.
 
 ## 온보딩 개요
 
@@ -33,12 +33,12 @@ LLM Optimizer을 시작하려면 아래 단계에 설명된 대로 온보딩 프
 
 ### 구매 전 시도
 
-AEM Cloud(Cloud Service, Managed Services, Edge Delivery Service) 고객은 **구매 전에 시도** 오퍼를 사용할 수 있습니다. 최대 200개의 무료 프롬프트가 포함된 LLM Optimizer 무료 체험판입니다. 200개 이상의 프롬프트를 사용하려면 별도의 라이선스 계약이 필요합니다. 액세스는 “있는 그대로” 및 “사용 가능한 대로” 제공되며, Adobe는 언제든지 수정, 제한 또는 제거할 수 있습니다.
+AEM Cloud(Cloud Service, Managed Services, Edge Delivery Service) 고객은 **구매 전 시도** 오퍼를 사용할 수 있습니다. 최대 200개의 무료 프롬프트가 포함된 LLM Optimizer 무료 체험판입니다. 200개 이상의 프롬프트를 사용하려면 별도의 라이선스 계약이 필요합니다. 액세스는 “있는 그대로” 및 “사용 가능한 대로” 제공되며, Adobe는 언제든지 수정, 제한 또는 제거할 수 있습니다.
 
 무료 버전에서는 사용할 수 없는 몇 가지 제품 기능이 있습니다.
 
 * 체험판은 하나의 도메인으로 제한됩니다. 설정을 완료한 후에는 입력한 도메인을 변경할 수 없습니다.
-* 최적화 배포 기능은 Early Access에서 사용할 수 있습니다. 자세한 내용은 [Edge에서 최적화](https://experienceleague.adobe.com/ko/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions)를 참조하세요.
+* 최적화 배포 기능은 얼리 액세스에서 사용할 수 있습니다. 자세한 내용은 [Optimize at Edge 자주 묻는 질문](https://experienceleague.adobe.com/ko/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions)을 참조하십시오.
 
 무료 체험판 버전을 활성화하고 도메인을 온보딩하는 방법에 대한 자세한 내용은 아래 섹션을 참조하십시오.
 
