@@ -3,9 +3,9 @@ title: Optimize at Edge
 description: CDN 에지에서 작성 변경 없이 LLM Optimizer로 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
 source-git-commit: 547c38986da609a6cd42cb94402c811d6eb1f939
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2181'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -77,12 +77,12 @@ IT/CDN 팀에 대한 요구 사항:
 |---------|----------|----------|----------|----------|
 | 콘텐츠 가시성 복구 | 기술 GEO | AI 에이전트에서 중요한 콘텐츠가 숨겨져 있는 페이지를 감지합니다. 영향을 받는 URL 및 복구할 수 있는 예상 콘텐츠를 표시합니다. | AI 에이전트가 사용할 수 있는 콘텐츠를 강조하고 해당 페이지에 대한 사전 렌더링을 활성화할 것을 권장합니다. | 완전히 렌더링된 AI 친화적인 HTML 스냅샷을 에이전틱 트래픽에 제공하여 이전에 숨겨져 있던 콘텐츠를 복구합니다. |
 | LLM 친화 요약 추가 | 콘텐츠 최적화 | 페이지나 섹션 수준에서 간결한 요약이 어려운 길거나 복잡한 페이지를 식별하여 AI가 빠르게 스캔하고 이해하기 어렵게 만듭니다. | 페이지 및 섹션 수준에서 주요 콘텐츠가 담긴 짧은 AI 생성 요약을 권장합니다. | 요약을 관련 HTML 섹션에 삽입하여 모델이 페이지 내용을 해석하고 설명하는 방식을 개선합니다. |
-| 관련 FAQ 추가 | 콘텐츠 최적화 | FAQ의 혜택을 받을 수 있는 기존 페이지 콘텐츠의 의도 차이를 감지합니다. | 사용자 의도와 기존 주제에 맞춘 AI 생성 FAQ 콘텐츠를 제안합니다. | HTML에 FAQ 콘텐츠를 삽입하여 AI 기반 응답에서 페이지를 더 쉽게 발견하고 연관시킬 수 있습니다. |
+| 관련 FAQ 추가 | 콘텐츠 최적화 | FAQ의 혜택을 받을 수 있는 기존 페이지 콘텐츠의 의도 차이를 감지합니다. | 사용자 의도와 기존 토픽에 맞춘 AI 생성 FAQ 콘텐츠를 제안합니다. | HTML에 FAQ 콘텐츠를 삽입하여 AI 기반 응답에서 페이지를 더 쉽게 발견하고 연관시킬 수 있습니다. |
 | 복잡한 콘텐츠 간소화 | 콘텐츠 최적화 | AI 이해를 방해할 수 있는 복잡한 텍스트로 페이지에 플래그를 지정합니다. | AI가 생성한 복잡한 텍스트의 단순화된 버전을 제공하면서 원래의 의미를 유지합니다. | 페이지의 복잡한 섹션을 다시 작성하여 AI 가독성을 향상시킵니다. |
 
 ### 추가 도구
 
-[Adobe LLM Optimizer: 웹 페이지가 인용 가능합니까?](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome 확장 기능은 LLM이 액세스할 수 있는 웹 페이지 콘텐츠의 양과 숨겨진 항목을 보여 줍니다. 무료 독립형 진단 도구로 설계되었으며, 제품 라이선스나 설정이 필요하지 않습니다.
+[Adobe LLM Optimizer: 웹 페이지가 인용 가능합니까?](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome 확장 기능은 LLM이 액세스할 수 있는 웹 페이지 콘텐츠의 양과 숨겨진 토픽을 보여 줍니다. 무료 독립형 진단 도구로 설계되었으며, 제품 라이선스나 설정이 필요하지 않습니다.
 
 한 번의 클릭으로 모든 사이트의 시스템 가독성을 평가할 수 있습니다. AI 에이전트가 보는 내용과 사용자가 보는 내용을 나란히 비교하고 LLM Optimizer을 사용하여 복구할 수 있는 콘텐츠의 양을 예측할 수 있습니다. 자세한 내용은 [AI가 웹 사이트를 읽을 수 있습니까?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) 페이지를 참조하십시오.
 
@@ -114,7 +114,7 @@ IT/CDN 팀에 대한 요구 사항:
 
 각 기회마다 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477991/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### 미리보기
 
@@ -166,7 +166,7 @@ The CDN is where the optimized version of the page is assembled and delivered to
 
 질문: 콘텐츠가 소스에서 업데이트되면 어떻게 됩니까?
 
-기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 버전의 페이지를 제공합니다. 그러나 **콘텐츠 가시성 복구**&#x200B;를 위해 소스가 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하도록 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하기 때문입니다. **LLM 친화 요약 추가**&#x200B;와 같은 콘텐츠 기회를 위해 LLM Optimizer는 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 에이전트가 볼 수 있는 페이지와 사람이 볼 수 있는 페이지 간의 콘텐츠 이동을 방지하기 위해 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정합니다.
+기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 버전의 페이지를 제공합니다. 그러나 **콘텐츠 가시성 복구**&#x200B;를 위해 소스가 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하도록 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하기 때문입니다. **LLM 친화 요약 추가**와 같은 콘텐츠 기회를 위해 LLM Optimizer는 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 에이전트가 볼 수 있는 페이지와 사람이 볼 수 있는 페이지 간의 콘텐츠 이동을 방지하기 위해 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정합니다.
 <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 질문. Optimize at Edge는 Adobe Edge Delivery Service(EDS)를 사용하는 사이트에만 적용됩니까?
