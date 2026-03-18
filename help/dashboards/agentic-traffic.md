@@ -2,10 +2,10 @@
 title: 에이전틱 트래픽
 description: 에이전틱 트래픽 대시보드를 사용하여 AI 에이전트가 사이트와 상호작용하는 방법을 알아봅니다.
 feature: Agentic Traffic
-source-git-commit: 26926f3ed4df3a408b74b0208f0d1eb064b97d28
-workflow-type: ht
-source-wordcount: '1316'
-ht-degree: 100%
+source-git-commit: a1ba7684ccef9baf3452cc158fc0d6a12aa7adb8
+workflow-type: tm+mt
+source-wordcount: '1333'
+ht-degree: 98%
 
 ---
 
@@ -44,6 +44,9 @@ ht-degree: 100%
 2. 로그 전달을 사용하려면 **온보딩**&#x200B;을 클릭합니다.
 
 **기타**&#x200B;를 선택하는 경우 llmo-now@adobe.com에 도움을 요청해야 합니다.
+
+>[!NOTE]
+>고객 관리 CDN(BYOCDN)을 사용할 때의 로그 전달에 대한 자세한 내용은 [BYOCDN 로그 전달 개요](/help/overview/log-forwarding/log-forwarding-overview.md)를 참조하십시오.
 
 활성화되면 로그가 수집되고 대시보드는 총 에이전트 상호작용, 성공률, 시장별 히트 수, 사용자 에이전트 분석, URL 수준 성능과 같은 지표로 채워집니다.
 

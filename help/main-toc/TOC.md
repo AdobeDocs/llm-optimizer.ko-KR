@@ -2,10 +2,10 @@
 user-guide-title: LLM Optimizer
 breadcrumb-title: LLM Optimizer
 user-guide-description: Adobe LLM Optimizer를 통해 브랜드를 성장시키십시오. 언급을 추적하고, 인사이트를 발견하며, AI 기반 검색을 주도하십시오. 가시성을 제어하고, 지금 최적화를 시작하십시오!
-source-git-commit: 547c38986da609a6cd42cb94402c811d6eb1f939
-workflow-type: ht
-source-wordcount: '86'
-ht-degree: 100%
+source-git-commit: b590cd14ba7d64e56a6c972fd6090e2df9de58f6
+workflow-type: tm+mt
+source-wordcount: '98'
+ht-degree: 91%
 
 ---
 
@@ -27,6 +27,14 @@ ht-degree: 100%
    + [기회](/help/dashboards/opportunities.md)
    + [고객 구성](/help/dashboards/customer-configuration.md)
    + [공동 작업](/help/dashboards/collaboration.md)
++ BYOCDN 로그 전달{#log-forwarding}
+   + [개요](/help/overview/log-forwarding/log-forwarding-overview.md)
+   + [Akamai](/help/overview/log-forwarding/akamai.md)
+   + [Cloudflare](/help/overview/log-forwarding/cloudflare.md)
+   + [CloudFront](/help/overview/log-forwarding/cloudfront.md)
+   + [Fastly](/help/overview/log-forwarding/fastly.md)
+   + [임페르바](/help/overview/log-forwarding/imperva.md)
+   + [기타(수동 업로드)](/help/overview/log-forwarding/other.md)
 + 추가 리소스{#resources}
    + Optimize at Edge{#optimize-at-edge}
       + [개요](/help/dashboards/optimize-at-edge/overview.md)
