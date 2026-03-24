@@ -3,9 +3,9 @@ user-guide-title: LLM Optimizer
 breadcrumb-title: LLM Optimizer
 user-guide-description: Adobe LLM Optimizer를 통해 브랜드를 성장시키십시오. 언급을 추적하고, 인사이트를 발견하며, AI 기반 검색을 주도하십시오. 가시성을 제어하고, 지금 최적화를 시작하십시오!
 source-git-commit: b590cd14ba7d64e56a6c972fd6090e2df9de58f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '98'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 91%
    + [Cloudflare](/help/overview/log-forwarding/cloudflare.md)
    + [CloudFront](/help/overview/log-forwarding/cloudfront.md)
    + [Fastly](/help/overview/log-forwarding/fastly.md)
-   + [임페르바](/help/overview/log-forwarding/imperva.md)
+   + [Imperva](/help/overview/log-forwarding/imperva.md)
    + [기타(수동 업로드)](/help/overview/log-forwarding/other.md)
 + 추가 리소스{#resources}
    + Optimize at Edge{#optimize-at-edge}

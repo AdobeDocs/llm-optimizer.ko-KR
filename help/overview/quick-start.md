@@ -3,9 +3,9 @@ title: 빠른 시작
 description: Adobe LLM Optimizer 시작하기 - 브랜드를 온보딩하고, AI 가시성 인사이트를 잠금 해제하고, 대시보드를 탐색하여 검색 성능을 향상시키십시오.
 feature: Quickstart, Onboarding
 source-git-commit: a1ba7684ccef9baf3452cc158fc0d6a12aa7adb8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1169'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -105,7 +105,7 @@ AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/k
 * [참조 트래픽](/help/dashboards/referral-traffic.md#setup#setup)
 
 >[!NOTE]
->고객 관리 CDN(BYOCDN)을 사용할 때의 로그 전달에 대한 자세한 내용은 [BYOCDN 로그 전달 개요](/help/overview/log-forwarding/log-forwarding-overview.md)를 참조하십시오.
+>고객 관리 CDN(BYOCDN) 사용 시 로그 전달에 대한 자세한 내용은 [BYOCDN 로그 전달 개요](/help/overview/log-forwarding/log-forwarding-overview.md)를 참조하십시오
 
 ## 5단계: 대시보드 탐색 및 조치
 
