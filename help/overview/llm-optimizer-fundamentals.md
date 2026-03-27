@@ -2,7 +2,7 @@
 title: LLM Optimizer 기본 사항
 description: Adobe LLM Optimizer가 AI 기반 검색에서 브랜드 가시성을 높이는 방법에 대해 알아봅니다. 언급, 인용 및 인사이트를 추적합니다. 참여도와 영향력을 개선하기 위해 지금 최적화를 시작하십시오.
 source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '508'
 ht-degree: 100%
 

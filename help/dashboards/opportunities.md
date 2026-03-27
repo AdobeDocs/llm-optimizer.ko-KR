@@ -3,7 +3,7 @@ title: 최적화 기회
 description: 기회 대시보드를 사용하여 브랜드 가시성을 높이기 위해 사이트를 개선할 수 있는 방법을 자동으로 감지하는 방법에 대해 알아봅니다.
 feature: Opportunities
 source-git-commit: f62148a9073e79d63e6ae19f0585aa87c16bcd3e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '544'
 ht-degree: 100%
 

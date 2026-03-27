@@ -3,7 +3,7 @@ title: 대시보드 개요
 description: 문서 개요입니다.
 feature: Onboarding
 source-git-commit: 945537c3139e5a2038858e6121172e1a1a10ddf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '262'
 ht-degree: 100%
 

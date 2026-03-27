@@ -3,7 +3,7 @@ title: LLM Optimizer 모범 사례
 description: AI 검색에서 브랜드 가시성을 높이기 위한 LLM 최적화 모범 사례를 살펴보십시오. 콘텐츠 벤치마크 및 최적화에 대한 인사이트.
 feature: Best Practices, Agentic Traffic, Brand Presence
 source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1718'
 ht-degree: 100%
 
