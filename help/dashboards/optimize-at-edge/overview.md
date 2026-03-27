@@ -2,8 +2,8 @@
 title: Optimize at Edge
 description: CDN 에지에서 작성 변경 없이 LLM Optimizer로 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 547c38986da609a6cd42cb94402c811d6eb1f939
-workflow-type: ht
+source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
+workflow-type: tm+mt
 source-wordcount: '2181'
 ht-degree: 100%
 
@@ -15,6 +15,7 @@ ht-degree: 100%
 이 페이지는 작성 변경 없이 CDN 에지에서 최적화를 제공하는 방법에 대한 자세한 개요를 제공합니다. 온보딩 프로세스, 사용 가능한 최적화 기회 및 에지에서 자동 최적화하는 방법을 다룹니다.
 
 >[!NOTE]
+>
 >이 기능은 현재 얼리 액세스 상태입니다. 얼리 액세스 프로그램에 대한 자세한 내용은 [여기](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)에서 확인할 수 있습니다.
 
 ## Optimize at Edge란 무엇입니까?
@@ -47,6 +48,7 @@ Optimize at Edge에 온보딩하기 위한 전제 조건:
 * CDN 로그에 대한 로그 전달 프로세스를 완료합니다.
 
 IT/CDN 팀에 대한 요구 사항:
+
 * `*AdobeEdgeOptimize/1.0*` 사용자 에이전트를 사이트의 robots.txt 파일 또는 봇 트래픽 관리 규칙의 허용 목록에 추가합니다.
 * 페이지가 도메인 또는 CDN 수준에서 차단되지 않았는지 확인합니다.
 * CDN에서 Optimize at Edge 라우팅 규칙에 추가합니다.
@@ -65,6 +67,7 @@ IT/CDN 팀에 대한 요구 사항:
 | CloudFront(BYOCDN) | 자체 CDN 가져오기 | [설정 안내서 보기](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
 
 >[!NOTE]
+>
 >CDN 공급자가 위에 나열되어 있지 않거나 LLM Optimizer UI에서 도메인이나 이메일을 찾을 수 없는 경우 `llmo-at-edge@adobe.com`에 연락하여 온보딩 지원을 받으십시오. 설정 구성이 완료되면 LLM Optimizer에서 Optimize at Edge 기회에 대한 제안을 배포할 수 있습니다.
 
 위의 각 CDN 설정 안내서는 에이전틱 트래픽이 올바르게 라우팅되고 있으며 사람 트래픽이 영향을 받지 않는지 확인하기 위한 자세한 검증 단계가 포함되어 있습니다.
@@ -114,7 +117,7 @@ IT/CDN 팀에 대한 요구 사항:
 
 각 기회마다 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477991/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### 미리보기
 
@@ -152,13 +155,15 @@ IT/CDN 팀에 대한 요구 사항:
 
 타기팅할 사용자 에이전트 목록은 온보딩 프로세스 중에 사용자가 정의합니다.
 
-<!--Q. What does "Edge" in Optimize at Edge mean?
+<!--
+Q. What does "Edge" in Optimize at Edge mean?
 
 In our context, "Edge" means that the optimization is applied at the CDN layer and not inside your CMS.
 
 Q. Why does this optimization require a CDN?
 
-The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.-->
+The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.
+-->
 
 질문. 아직 Optimize at Edge에 온보딩되지 않았으면 어떻게 됩니까?
 

@@ -2,8 +2,8 @@
 title: 대시보드 개요
 description: 문서 개요입니다.
 feature: Onboarding
-source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
-workflow-type: ht
+source-git-commit: 945537c3139e5a2038858e6121172e1a1a10ddf4
+workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 100%
 
@@ -16,7 +16,8 @@ ht-degree: 100%
 
 주요 보기에는 개요, 브랜드 존재감, 에이전틱 및 참조 트래픽, URL 관리자, 기회, 공동 작업, 고객 구성 등이 포함됩니다.
 
-<!-- CARDS
+<!--
+CARDS
 
 * ./brand-presence.md
   {title= Brand presence dashboard}

@@ -1,8 +1,8 @@
 ---
 title: LLM Optimizer 기본 사항
 description: Adobe LLM Optimizer가 AI 기반 검색에서 브랜드 가시성을 높이는 방법에 대해 알아봅니다. 언급, 인용 및 인사이트를 추적합니다. 참여도와 영향력을 개선하기 위해 지금 최적화를 시작하십시오.
-source-git-commit: 1f665bd14349c15d92f8274742606abcf9b02000
-workflow-type: ht
+source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
+workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 100%
 
@@ -69,7 +69,8 @@ Adobe LLM Optimizer을 사용하여 다음과 같은 작업을 수행할 수 있
 
 
 
-<!--## Understanding Brand Visibility and AI Search
+<!--
+## Understanding Brand Visibility and AI Search
 
 Use these as guidelines for creating tutorials - some may be covered already in docs
 
@@ -126,18 +127,5 @@ Use these as guidelines for creating tutorials - some may be covered already in 
 
 * Categories and Topics
 * Brand and Competitor Aliases
-* Domain Switching and Customization -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* Domain Switching and Customization
+-->
