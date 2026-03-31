@@ -2,10 +2,10 @@
 title: 참조 트래픽
 description: 참조 트래픽 대시보드를 사용하여 외부 플랫폼, AI 인용 및 참조 링크에서 방문자가 사이트에 도달하는 방식을 알아봅니다.
 feature: Referral Traffic
-source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
-workflow-type: ht
-source-wordcount: '605'
-ht-degree: 100%
+source-git-commit: c0ef7710411a01410fddf87b0c4344eb782c264f
+workflow-type: tm+mt
+source-wordcount: '665'
+ht-degree: 90%
 
 ---
 
@@ -13,6 +13,9 @@ ht-degree: 100%
 # 참조 트래픽
 
 참조 트래픽은 외부 플랫폼, AI 인용 및 참조 링크에서 방문자가 사이트에 도달하는 방식을 보여 줍니다. 외부 웹 사이트 및 플랫폼에서 트래픽 소스, 참조 패턴 및 전환 지표를 추적하고 분석합니다. 이렇게 하면 가장 많은 트래픽이 발생하는 소스, 지역 및 페이지를 이해할 수 있습니다. <!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.--> 표시된 데이터를 세분화하는 데 도움이 되는 사용자 정의 가능 필터도 있습니다.
+
+>[!NOTE]
+>기본적으로 이 대시보드는 **CDN 로그**&#x200B;에서 트래픽 인사이트를 빌드합니다. 조직에서 유료 오퍼를 사용하는 경우 **Adobe Analytics**&#x200B;을(를) 연결하여 AI 기반 검색 및 사이트 참여를 측정하는 데이터를 추가할 수 있습니다. 이 데이터는 **비즈니스 영향** 탭에서 사용할 수 있습니다. Adobe Analytics에 통합되지 않으면 탭이 채워지지 않습니다. 자세한 내용은 [Adobe Analytics 통합](/help/dashboards/adobe-analytics-integration.md)을 참조하십시오.
 
 ![참조 페이지](/help/dashboards/assets/referral-traffic.png)
 
@@ -47,7 +50,7 @@ ht-degree: 100%
 * **페이지 의도** - 사용자 의도로 참조 트래픽을 필터링합니다.
 * **채널 소스** - 채널의 소스로 필터링합니다. 옵션에는 LLM, 획득, 유료 또는 혼합 참조 채널이 포함됩니다.
 * **장치 유형** - 데스크탑, 모바일 또는 모든 장치 중 방문자의 장치 유형별로 트래픽을 분석합니다.
-  **지역** - 다른 지역의 참조 패턴을 봅니다.
+* **지역** - 다른 지역의 참조 패턴을 봅니다.
 
 원하는 필터를 선택한 후 **필터 적용**&#x200B;을 클릭하여 대시보드에 선택 사항을 적용합니다.
 
