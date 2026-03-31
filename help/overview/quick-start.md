@@ -1,22 +1,22 @@
 ---
 title: 빠른 시작
-description: Adobe LLM Optimizer 시작하기 - 브랜드를 온보딩하고, AI 가시성 인사이트를 잠금 해제하고, 대시보드를 탐색하여 검색 성능을 향상시키십시오.
+description: 브랜드 이름과 도메인을 온보딩하고, Experience Hub 또는 Experience Cloud에서 체험판을 활성화하며, Adobe LLM Optimizer 설정을 완료하는 방법을 알아봅니다.
 feature: Quickstart, Onboarding
-source-git-commit: a1ba7684ccef9baf3452cc158fc0d6a12aa7adb8
-workflow-type: ht
-source-wordcount: '1169'
-ht-degree: 100%
+source-git-commit: dcbeb1c61dd9dcefd83908f65f8303d36c0fb78e
+workflow-type: tm+mt
+source-wordcount: '1208'
+ht-degree: 50%
 
 ---
 
 
 # 빠른 시작
 
-LLM Optimizer를 시작하려면 아래 제시된 단계에 설명된 대로 온보딩 프로세스를 완료해야 합니다. 프로세스를 완료하면 [LLM Optimizer의 대시보드](/help/dashboards/dashboards-overview.md) 및 기타 기능에 대한 전체 액세스 권한을 갖게 됩니다.
+LLM Optimizer을 시작하려면 온보딩 프로세스를 완료해야 합니다. 온보딩 후에는 범주, 주제, 프롬프트를 사용자 지정하고, 보다 정확한 통찰력을 얻고 [LLM Optimizer의 대시보드](/help/dashboards/dashboards-overview.md) 및 기타 기능에 대한 전체 액세스를 위해 로그 전달을 구성할 수 있습니다.
 
 ## 온보딩 개요
 
-온보딩 프로세스는 도메인 온보딩으로 시작합니다. AEM Cloud 고객인지 여부에 따라 프로세스가 다릅니다. 프로세스를 완료한 후에는 CDN 로그 전달에 대한 정보를 제공하고 마지막으로 카테고리, 주제 및 프롬프트를 사용자 정의해야 합니다. 프로세스의 각 부분은 LLM Optimizer를 최대한 빨리 시작하는 방법에 대한 유용한 팁과 함께 아래에 자세히 설명되어 있습니다.
+온보딩 프로세스는 도메인 및 브랜드 이름을 온보딩하는 것으로 시작됩니다. 온보딩 여정의 각 부분은 가능한 한 빨리 LLM Optimizer을 시작하는 방법에 대한 유용한 팁과 함께 아래에 자세히 설명되어 있습니다.
 
 ### Adobe LLM Optimizer의 공개 페이지 액세스 허용
 
@@ -24,49 +24,78 @@ LLM Optimizer를 시작하려면 아래 제시된 단계에 설명된 대로 온
 
 구성 요구 사항:
 
-* Spacecat/1.0 사용자 에이전트를 사이트의 robots.txt 파일 또는 봇 트래픽 관리 규칙의 허용 목록에 추가합니다.
+* 사이트의 robots.txt 파일 또는 보트 트래픽 규칙에 Spacecat/1.0 사용자 에이전트를 허용 목록에 추가하다 관리 규칙에 추가합니다.
 * 페이지가 도메인 또는 CDN 수준에서 차단되지 않았는지 확인합니다. 차단된 페이지는 색인화할 수 없으므로 최적화 작업과 인사이트를 생성할 수 없습니다.
 
 대시보드에서 콘텐츠 가시성이 낮게 나타나면 크롤러가 도메인에 액세스할 수 있는지 확인합니다. 제한된 액세스는 불완전한 색인화의 일반적인 원인입니다.
 
-## 1단계: 도메인 온보딩
+## 1단계: 브랜드 이름 및 도메인 온보드 {#step-1-onboard-your-domain}
 
-### 구매 전 시도
+LLM Optimizer을 시작하려면 먼저 평가판을 활성화하고(적격한 경우) 브랜드 이름과 도메인을 온보딩합니다.
 
-AEM Cloud(Cloud Service, Managed Services, Edge Delivery Service) 고객은 **구매 전 시도** 오퍼를 사용할 수 있습니다. 최대 200개의 무료 프롬프트가 포함된 LLM Optimizer 무료 체험판입니다. 200개 이상의 프롬프트를 사용하려면 별도의 라이선스 계약이 필요합니다. 액세스는 “있는 그대로” 및 “사용 가능한 대로” 제공되며, Adobe는 언제든지 수정, 제한 또는 제거할 수 있습니다.
+### 체험판 활성화
 
-무료 버전에서는 사용할 수 없는 몇 가지 제품 기능이 있습니다.
+활성화 흐름은 Adobe 제품에 따라 다릅니다.
 
-* 체험판은 하나의 도메인으로 제한됩니다. 설정을 완료한 후에는 입력한 도메인을 변경할 수 없습니다.
-* 최적화 배포 기능은 얼리 액세스에서 사용할 수 있습니다. 자세한 내용은 [Optimize at Edge 자주 묻는 질문](https://experienceleague.adobe.com/ko/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions)을 참조하십시오.
+#### AEM Cloud 고객
 
-무료 체험판 버전을 활성화하고 도메인을 온보딩하는 방법에 대한 자세한 내용은 아래 섹션을 참조하십시오.
+AEM Cloud 고객으로서 체험판을 활성화하려면 다음 중 하나를 수행할 수 있습니다.
 
-### AEM Cloud 고객
-
-AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)의 제품 공지 카드를 사용하여 LLM Optimizer를 사용해 볼 수 있습니다.
-
->[!NOTE]
->처리가 완료될 때까지 새로 추가된 프롬프트가 [브랜드 존재감 대시보드](/help/dashboards/brand-presence.md)에 표시되지 않습니다. AEM Cloud 고객은 LLM Optimizer의 무료 체험판 버전을 사용할 수 있습니다. 200개 이상의 프롬프트를 사용하려면 별도의 라이선스 계약이 필요합니다. 액세스는 “있는 그대로” 및 “사용 가능한 대로” 제공되며, Adobe는 언제든지 수정, 제한 또는 제거할 수 있습니다. 자세한 내용은 계정 담당자에게 문의하십시오.
+* [Experience Hub](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)&#x200B;(으)로 이동하고 제품 공지 카드를 사용하여 LLM Optimizer을 활성화합니다. **LLM Optimizer 시도**&#x200B;를 선택하면 [https://llmo.now](https://llmo.now)&#x200B;(으)로 리디렉션됩니다. IMS를 통해 로그인한 다음, 도메인과 브랜드 이름을 입력하여 온보딩 프로세스를 시작하십시오.
+* 또는 [https://llmo.now](https://llmo.now)&#x200B;(으)로 이동한 다음 로그인하세요.
 
 ![LLM Optimizer 체험판](/help/overview/assets/llm-trial.png)
 
-**LLM Optimizer 시도** 버튼을 클릭하면 [https://llmo.now](https://llmo.now)로 리디렉션됩니다. 그런 다음 IMS를 통해 로그인해야 합니다. 로그인하면 도메인과 브랜드 이름을 입력하여 온보딩 프로세스를 시작합니다.
+#### Adobe Analytics 고객
+
+Adobe Analytics 고객인 경우 Experience Cloud 홈 페이지에 배너가 표시됩니다.
+
+![Adobe LLM Optimizer 평가판 배너를 사용하여 Experience Cloud 홈 페이지](/help/overview/assets/experience-cloud-llmo-trial-banner.png)
+
+다음 방법 중 하나로 체험판을 활성화할 수 있습니다.
+
+* 배너에서 **Adobe LLM Optimizer 평가판 시작**&#x200B;을 선택합니다.
+* [https://llmo.now](https://llmo.now)&#x200B;(으)로 이동한 다음 로그인합니다.
+
+체험판이 활성화되면 브랜드 이름과 도메인 온보딩을 계속 진행하십시오.
+
+>[!NOTE]
+>
+> * **무료 체험판:** AEM Cloud 및 Adobe Analytics 고객은 LLM Optimizer 무료 체험판을 사용할 수 있습니다.
+> * **2026년 4월 1일 또는 그 이후에 평가판을 활성화하는 고객**&#x200B;은(는) 최대 100개의 프롬프트, 하나의 도메인을 사용할 수 있으며, 단일 영업 기회 유형에 대해 최대 10개의 URL에 최적화를 배포할 수 있습니다.
+> * **2026년 4월 1일 이전에 평가판을 활성화한 고객**&#x200B;은(는) 기존 약관에 따라 최대 200개의 프롬프트에 계속 액세스할 수 있습니다.
+>
+>포함된 한도를 초과하여 사용하려면 별도의 라이센스 계약이 필요합니다. 액세스는 &quot;있는 그대로&quot; 및 &quot;사용 가능한 대로&quot; 제공되며 언제든지 수정, 제한 또는 제거할 수 있습니다. 자세한 내용은 계정 담당자에게 문의하십시오.
+
+#### 브랜드 이름 및 도메인 온보드
+
+LLM Optimizer 사용을 시작하기 위해 브랜드 이름과 도메인을 온보딩합니다.
+
+1. 브랜드 이름과 관련 도메인을 입력합니다.
+
+   * 콘텐츠를 분석하고 최적화할 주 도메인이어야 합니다.
+
+1. 온보딩을 완료합니다.
+
+   * 제출되면 LLM Optimizer은 도메인을 분석하고 통찰력을 생성하기 시작합니다.
 
 ![LLM Optimizer 도메인](/help/overview/assets/domain.png)
+
+>[!NOTE]
+>처리가 완료될 때까지 새로 추가된 프롬프트가 [브랜드 존재감 대시보드](/help/dashboards/brand-presence.md)에 표시되지 않습니다.
 
 >[!NOTE]
 >입력한 도메인은 조직에서 모든 사용자가 사용하므로 변경할 수 없습니다.
 
 온보딩 단계 중에 작은 카테고리, 주제 및 프롬프트 세트가 생성됩니다. 해당 프롬프트에 대한 브랜드 존재감 분석은 사이트가 온보딩된 직후에 사용할 수 있습니다.
 
-<!--![Brand Presence Analysis](/help/overview/assets/bp-analysis.png)-->
+Edge에서 최적화를 배포하는 기능도 사용할 수 있습니다. [Edge에서 최적화 — 자주 묻는 질문](https://experienceleague.adobe.com/ko/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions)에서 자세히 알아보십시오.
 
-또한 트래픽 분석을 위해 [CDN 로그 전달](#step-4)을 구성해야 합니다. LLM Optimizer는 AI 가시성을 높이기 위해 기회를 식별하고 규범적인 추천을 제공하는 브랜드 존재감 데이터와 에이전틱 및 참조 트래픽의 인사이트가 필요합니다.
+또한 트래픽 분석을 위해 [CDN 로그 전달](#step-4)을 구성하십시오. LLM Optimizer은 기회를 식별하고 AI 가시성을 향상시키는 처방적 권장 사항을 제공하기 위해 에이전시와 참조 트래픽의 브랜드 존재감 데이터와 통찰력이 필요합니다.
 
-### AEM Cloud 고객 외
+### AEM Cloud가 아닌 고객
 
-비즈니스 계약이 완료되면 LLM Optimizer에서 온보딩하려는 도메인에 함께 온보딩됩니다. 이 온보딩이 완료되면 [https://llmo.now](https://llmo.now)를 통해 LLM Optimizer에 로그인할 수 있습니다.
+조직에서 비즈니스 계약을 완료하면 조직에서 선택한 도메인으로 LLM Optimizer에 온보딩됩니다. 온보딩이 완료되면 [https://llmo.now](https://llmo.now)에 로그인하십시오.
 
 ## 2단계: 카테고리, 주제 및 프롬프트 사용자 정의
 
@@ -95,14 +124,14 @@ AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/k
 
 ## 4단계: CDN 로그 전달에 대한 정보 제공 {#step-4}
 
-에이전틱 트래픽 및 참조 트래픽 인사이트를 잠금 해제하려면 CDN 로그 전달에 대한 정보를 입력해야 합니다. [고객 구성 대시보드](/help/dashboards/customer-configuration.md#cdn-configuration)에서 **CDN 구성** 탭으로 이동하고 **CDN 온보딩**&#x200B;을 클릭하여 추가할 수 있습니다.
+에이전트 트래픽 및 참조 트래픽 통찰력을 잠금 해제하려면 [고객 구성 대시보드](/help/dashboards/customer-configuration.md#cdn-configuration)에서 CDN 로그 전달 정보를 추가하십시오. **CDN 구성** 탭을 열고 **온보드 CDN**&#x200B;을(를) 선택합니다.
 
 ![고객 구성 CDN](/help/overview/assets/cc-cdn.png)
 
 또는 위에서 설명한 대로 CDN 공급자가 사전에 추가되지 않은 경우 에이전틱 및 참조 트래픽 대시보드에 처음 액세스할 때 CDN 로그 전달을 추가하라는 메시지가 표시됩니다. 자세한 내용은 다음을 참조하십시오.
 
 * [에이전틱 트래픽](/help/dashboards/agentic-traffic.md#cdn-setup)
-* [참조 트래픽](/help/dashboards/referral-traffic.md#setup#setup)
+* [참조 트래픽](/help/dashboards/referral-traffic.md#setup)
 
 >[!NOTE]
 >고객 관리 CDN(BYOCDN) 사용 시 로그 전달에 대한 자세한 내용은 [BYOCDN 로그 전달 개요](/help/overview/log-forwarding/log-forwarding-overview.md)를 참조하십시오
@@ -112,7 +141,7 @@ AEM Cloud 고객인 경우 [Experience Hub](https://experienceleague.adobe.com/k
 CDN 로그 전달에 대한 정보를 제공하면 다음과 같은 작업을 수행할 수 있습니다.
 
 * [브랜드 존재감](/help/dashboards/brand-presence.md) 대시보드를 보고 다른 브랜드와 비교하여 가시성 점수를 확인하고 성과를 추적합니다.
-* CDN 로그 전달이 구성된 경우 [에이전틱](/help/dashboards/agentic-traffic.md) 및 [참조 트래픽](/help/dashboards/referral-traffic.md) 대시보드를 탐색합니다.
+* CDN 로그 전달이 구성된 경우 [에이전트](/help/dashboards/agentic-traffic.md) 및 [참조 트래픽](/help/dashboards/referral-traffic.md) 대시보드를 탐색합니다.
 * [기회](/help/dashboards/opportunities.md)를 사용하여 콘텐츠 및 기술 개선 사항을 파악합니다.
 * 데이터를 내보내고 팀과 공동 작업하거나 동료가 제품을 사용하도록 초대합니다.
 
