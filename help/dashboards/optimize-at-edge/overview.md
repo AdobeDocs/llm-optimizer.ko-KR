@@ -2,10 +2,10 @@
 title: Optimize at Edge
 description: CDN 에지에서 작성 변경 없이 LLM Optimizer로 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
-workflow-type: ht
-source-wordcount: '2181'
-ht-degree: 100%
+source-git-commit: 23a4b06e2492d9692d37eb0e52208bdc49328b2a
+workflow-type: tm+mt
+source-wordcount: '2240'
+ht-degree: 92%
 
 ---
 
@@ -13,10 +13,6 @@ ht-degree: 100%
 # Optimize at Edge
 
 이 페이지는 작성 변경 없이 CDN 에지에서 최적화를 제공하는 방법에 대한 자세한 개요를 제공합니다. 온보딩 프로세스, 사용 가능한 최적화 기회 및 에지에서 자동 최적화하는 방법을 다룹니다.
-
->[!NOTE]
->
->이 기능은 현재 얼리 액세스 상태입니다. 얼리 액세스 프로그램에 대한 자세한 내용은 [여기](https://experienceleague.adobe.com/ko/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)에서 확인할 수 있습니다.
 
 ## Optimize at Edge란 무엇입니까?
 
@@ -40,7 +36,17 @@ Optimize at Edge는 마케팅, SEO, 콘텐츠 및 디지털 전략 팀의 비즈
 
 ## 온보딩
 
-온보딩 프로세스를 시작하려면 Adobe 계정 팀 또는 FDE 팀에 문의해야 합니다. IT 또는 CDN 팀도 사전 요구 사항과 설정 프로세스를 완료해야 합니다. 또한 `llmo-at-edge@adobe.com`에 문의하여 추가 온보딩 지원을 받을 수도 있습니다.
+<!--You should reach out to either your Adobe account team or the FDE team to start the onboarding process. Your IT or CDN team is also required to complete the pre-requisites and setup process. Additionally, you can also contact `llmo-at-edge@adobe.com` for further onboarding assistance.-->
+
+LLM Optimizer 계정에서 온보딩 프로세스를 시작합니다.
+
+1. **고객 구성** n 대시보드에서 **CDN 구성** 탭을 선택합니다.
+1. **CDN 온보드**를 클릭합니다.
+   ![CDN 구성 탭](/help/overview/assets/cc-cdn.png)
+1. AEM Fastly 고객의 경우 Adobe에서 온보딩 프로세스 완료를 지원할 수 있습니다. 다른 CDN 공급자를 사용하는 고객의 경우 IT/CDN 팀이 필요한 설정 및 사전 요구 사항을 완료해야 합니다. 추가 지침은 아래에 제공된 CDN 안내서 예 를 참조하십시오.
+
+>[!NOTE]
+>전체 온보딩 플로우를 다루는 아래의 단계별 안내서를 참조하십시오. 안내서에서 해결되지 않은 문제의 경우 `llmo-at-edge@adobe.com`에게 문의하십시오.
 
 Optimize at Edge에 온보딩하기 위한 전제 조건:
 
@@ -85,7 +91,7 @@ IT/CDN 팀에 대한 요구 사항:
 
 ### 추가 도구
 
-[Adobe LLM Optimizer: 웹 페이지가 인용 가능합니까?](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome 확장 기능은 LLM이 액세스할 수 있는 웹 페이지 콘텐츠의 양과 숨겨진 토픽을 보여 줍니다. 무료 독립형 진단 도구로 설계되었으며, 제품 라이선스나 설정이 필요하지 않습니다.
+[AI 콘텐츠 가시성 검사기](https://chromewebstore.google.com/detail/ai-content-visibility-che/jbjngahjjdgonbeinjlepfamjdmdcbcc) 브라우저 확장 기능은 LLM이 액세스할 수 있는 웹 페이지 콘텐츠의 양과 숨겨진 항목을 보여 줍니다. 무료 독립형 진단 도구로 설계되었으며, 제품 라이선스나 설정이 필요하지 않습니다.
 
 한 번의 클릭으로 모든 사이트의 시스템 가독성을 평가할 수 있습니다. AI 에이전트가 보는 내용과 사용자가 보는 내용을 나란히 비교하고 LLM Optimizer을 사용하여 복구할 수 있는 콘텐츠의 양을 예측할 수 있습니다. 자세한 내용은 [AI가 웹 사이트를 읽을 수 있습니까?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) 페이지를 참조하십시오.
 
@@ -117,7 +123,7 @@ IT/CDN 팀에 대한 요구 사항:
 
 각 기회마다 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477991/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### 미리보기
 
@@ -150,6 +156,10 @@ IT/CDN 팀에 대한 요구 사항:
 ![롤백](/help/assets/optimize-at-edge/rollback.png)
 
 ## 자주 묻는 질문
+
+질문: 평가판 고객은 Edge에서 최적화를 시도할 수 있습니까?
+
+예. 평가판 고객은 하나의 최적화 기회에 액세스하고 최대 10페이지에 배포할 수 있습니다. 기본적으로 영업 기회는 콘텐츠 가시성 복구로, AI 에이전트가 페이지 콘텐츠의 전체 버전에 액세스할 수 있습니다.
 
 질문. Optimize at Edge는 어떤 종류의 LLM을 목표로 합니까?
 
