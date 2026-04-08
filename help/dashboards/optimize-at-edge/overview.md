@@ -2,10 +2,10 @@
 title: Optimize at Edge
 description: CDN 에지에서 작성 변경 없이 LLM Optimizer로 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 23a4b06e2492d9692d37eb0e52208bdc49328b2a
+source-git-commit: b56c2a355c794c8461dda15bf7c733983fd95740
 workflow-type: tm+mt
-source-wordcount: '2240'
-ht-degree: 92%
+source-wordcount: '2348'
+ht-degree: 87%
 
 ---
 
@@ -40,8 +40,8 @@ Optimize at Edge는 마케팅, SEO, 콘텐츠 및 디지털 전략 팀의 비즈
 
 LLM Optimizer 계정에서 온보딩 프로세스를 시작합니다.
 
-1. **고객 구성** n 대시보드에서 **CDN 구성** 탭을 선택합니다.
-1. **CDN 온보드**&#x200B;를 클릭합니다.
+1. **고객 구성** 대시보드에서 **CDN 구성** 탭을 선택합니다.
+1. **CDN 온보드**를 클릭합니다.
    ![CDN 구성 탭](/help/overview/assets/cc-cdn.png)
 1. AEM Fastly 고객의 경우 Adobe에서 온보딩 프로세스 완료를 지원할 수 있습니다. 다른 CDN 공급자를 사용하는 고객의 경우 IT/CDN 팀이 필요한 설정 및 사전 요구 사항을 완료해야 합니다. 추가 지침은 아래에 제공된 CDN 안내서 예 를 참조하십시오.
 
@@ -60,7 +60,14 @@ IT/CDN 팀에 대한 요구 사항:
 * CDN에서 Optimize at Edge 라우팅 규칙에 추가합니다.
 * LLM Optimizer 인터페이스에서 Optimize at Edge 라우팅을 확인합니다.
 
+>[!IMPORTANT]
+>라우팅을 외부 CDN(클라이언트에 가장 가까운 CDN)에서 구성해야 합니다. 여러 CDN이 있는 경우 라우팅은 외부 CDN에서만 수행할 수 있습니다.
+
 설정 프로세스를 안내하려면 아래에서 CDN 공급자를 선택하고 해당 구성 안내서를 따르십시오. 이러한 예제는 실제 라이브 구성에 맞게 조정되어야 합니다. 먼저 저사양 환경에서 변경 사항을 적용하는 것을 권장합니다.
+
+### 스테이징 도메인 API 키(선택 사항)
+
+프로덕션 전에 스테이징 호스트 이름에서 테스트하는 경우 LLM Optimizer을 사용하여 **one** 스테이징 도메인을 등록하고 **스테이징** Edge 최적화 API 키를 **고객 구성** → **CDN 구성** → **AI 에이전트에 최적화 배포** → **스테이징 도메인 추가**(또는 **스테이징 도메인**)에서 복사합니다. 스테이징 호스트 이름은 프로덕션 사이트와 동일한 등록 가능한 도메인을 공유해야 합니다. **자체 CDN 가져오기** 안내서에는 스테이징 키를 검색하고 스테이징 URL에서 라우팅을 확인하는 전체 단계가 포함되어 있습니다.
 
 ### CDN 구성 안내서
 
@@ -123,7 +130,7 @@ IT/CDN 팀에 대한 요구 사항:
 
 각 기회마다 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477991/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### 미리보기
 
@@ -181,7 +188,7 @@ The CDN is where the optimized version of the page is assembled and delivered to
 
 질문: 콘텐츠가 소스에서 업데이트되면 어떻게 됩니까?
 
-기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 버전의 페이지를 제공합니다. 그러나 **콘텐츠 가시성 복구**&#x200B;를 위해 소스가 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하도록 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하기 때문입니다. **LLM 친화 요약 추가**&#x200B;와 같은 콘텐츠 기회를 위해 LLM Optimizer는 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 에이전트가 볼 수 있는 페이지와 사람이 볼 수 있는 페이지 간의 콘텐츠 이동을 방지하기 위해 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정합니다.
+기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 버전의 페이지를 제공합니다. 그러나 **콘텐츠 가시성 복구**&#x200B;를 위해 소스가 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하도록 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하기 때문입니다. **LLM 친화 요약 추가**와 같은 콘텐츠 기회를 위해 LLM Optimizer는 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정하여 에이전트가 표시하는 페이지와 사람이 표시하는 페이지 사이의 콘텐츠 드리프트를 방지합니다.
 <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 질문. Optimize at Edge는 Adobe Edge Delivery Service(EDS)를 사용하는 사이트에만 적용됩니까?
