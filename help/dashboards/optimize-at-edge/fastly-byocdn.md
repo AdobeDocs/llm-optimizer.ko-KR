@@ -2,10 +2,10 @@
 title: Optimize at Edge - Fastly(BYOCDN)
 description: LLM Optimizer의 Optimize at Edge를 위해 Fastly BYOCDN을 구성하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 9230e525340bb951fcd9f2ae1f88bad557d5b7d7
-workflow-type: ht
-source-wordcount: '369'
-ht-degree: 100%
+source-git-commit: da789100d814004687de2f46e18a295671dec4b8
+workflow-type: tm+mt
+source-wordcount: '407'
+ht-degree: 83%
 
 ---
 
@@ -22,8 +22,11 @@ Fastly VCL 규칙을 설정하기 전에 다음을 확인하십시오.
 * LLM Optimizer 온보딩 프로세스 완료
 * LLM Optimizer로 CDN 로그 전달 완료
 * LLM Optimizer UI에서 검색한 Edge Optimize API 키
+* (선택 사항) 스테이징 Edge 먼저 스테이징 호스트 이름에서 라우팅을 테스트하는 경우 API 최적화 키.
 
 {{retrieve-byocdn-api-key}}
+
+{{retrieve-staging-edge-optimize-api-key}}
 
 **구성**
 
@@ -121,8 +124,17 @@ curl -svo /dev/null https://www.example.com/page.html \
 | `x-edgeoptimize-request-id` | 있음 — 고유한 요청 ID가 포함되어 있습니다. | 없음 |
 | `x-edgeoptimize-fo` | 장애 조치가 발생한 경우에만 표시됩니다(값: `1`). | 없음 |
 
-LLM Optimizer UI에서 트래픽 라우팅 상태를 확인할 수도 있습니다. **고객 구성**&#x200B;으로 이동하여 **CDN 구성** 탭을 선택합니다.
+**4. 스테이징 도메인(선택 사항)**
 
-![라우팅이 활성화된 AI 트래픽 라우팅 상태](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+LLM Optimizer에서 스테이징 호스트 이름과 스테이징 API 키를 사용하는 경우 **스테이징** API 키를 사용하여 동일한 VCL 코드 조각을 **스테이징** Fastly 서비스에 추가하십시오. 그런 다음 스테이징 호스트에서 보트 트래픽을 확인합니다.
+
+```
+curl -svo /dev/null https://staging.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
+
+`https://staging.example.com/page.html`을(를) 실제 준비 URL 및 경로로 바꾸십시오. 성공한 응답에는 `x-edgeoptimize-request-id` 헤더가 포함됩니다.
+
+{{verify-routing-status-in-ui}}
 
 {{return-to-overview}}

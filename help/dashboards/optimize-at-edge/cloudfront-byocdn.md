@@ -2,10 +2,10 @@
 title: Optimize at Edge - CloudFront(BYOCDN)
 description: LLM Optimizer의 Optimize at Edge를 위해 CloudFront BYOCDN을 구성하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 1253d0f0a58f6523699c52fbfab23028dc469c82
-workflow-type: ht
-source-wordcount: '2228'
-ht-degree: 100%
+source-git-commit: da789100d814004687de2f46e18a295671dec4b8
+workflow-type: tm+mt
+source-wordcount: '2265'
+ht-degree: 96%
 
 ---
 
@@ -23,8 +23,11 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 * LLM Optimizer 온보딩 프로세스 완료
 * LLM Optimizer로 CDN 로그 전달 완료
 * LLM Optimizer UI에서 검색한 Edge Optimize API 키
+* (선택 사항) 스테이징 Edge 먼저 스테이징 호스트 이름에서 라우팅을 테스트하는 경우 API 최적화 키.
 
 {{retrieve-byocdn-api-key}}
+
+{{retrieve-staging-edge-optimize-api-key}}
 
 **1단계: Edge 최적화 원본 만들기**
 
@@ -296,11 +299,20 @@ curl -svo /dev/null https://www.example.com/page.html \
 | `x-edgeoptimize-request-id` | 있음 — 고유한 요청 ID가 포함되어 있습니다. | 없음 |
 | `x-edgeoptimize-fo` | 장애 조치가 발생한 경우에만 표시됩니다(값: `1`). | 없음 |
 
-LLM Optimizer UI에서 트래픽 라우팅 상태를 확인할 수도 있습니다. **고객 구성**&#x200B;으로 이동하여 **CDN 구성** 탭을 선택합니다.
+**4. 스테이징 도메인(선택 사항)**
 
-![라우팅이 활성화된 AI 트래픽 라우팅 상태](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+LLM Optimizer에서 스테이징 호스트 이름과 스테이징 API 키를 사용하는 경우 **스테이징** API 키를 사용하여 **스테이징** 배포에 동일한 CloudFront 구성을 배포하십시오. 그런 다음 스테이징 호스트에서 보트 트래픽을 확인합니다.
 
-**4. 로그 흐름이 올바른지 확인**
+```
+curl -svo /dev/null https://staging.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
+
+`https://staging.example.com/page.html`을(를) 실제 준비 URL 및 경로로 바꾸십시오. 성공한 응답에는 `x-edgeoptimize-request-id` 헤더가 포함됩니다.
+
+{{verify-routing-status-in-ui}}
+
+**5. 로그 흐름이 올바른지 확인**
 
 위의 테스트 요청을 실행한 후 CloudFront 함수와 Lambda@Edge 함수 모두에 대해 로그가 기록되고 있는지 확인합니다.
 

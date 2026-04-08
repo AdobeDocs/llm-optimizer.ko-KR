@@ -2,10 +2,10 @@
 title: Optimize at Edge - AEM Cloud Service Managed CDN(Fastly)
 description: LLM Optimizer에서 Optimize at Edge를 위해 AEM Cloud Service Managed CDN(Fastly)을 구성하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 9230e525340bb951fcd9f2ae1f88bad557d5b7d7
-workflow-type: ht
+source-git-commit: 0c7ccadbb40c8c119cb2a57cf8118708c33c4236
+workflow-type: tm+mt
 source-wordcount: '481'
-ht-degree: 100%
+ht-degree: 76%
 
 ---
 
@@ -18,19 +18,21 @@ ht-degree: 100%
 
 에이전틱 트래픽을 Edge Optimize로 라우팅하려면 다음을 수행합니다.
 
-1. **고객 구성**&#x200B;으로 이동하여 **CDN 구성** 탭을 선택합니다.
+1. LLM Optimizer에서 **고객 구성**&#x200B;을 열고 **CDN 구성** 탭을 선택합니다.
 
    ![고객 구성으로 이동](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
-2. **최적화 배포를 위한 AI 트래픽 라우팅**&#x200B;에서 **AI 에이전트에 최적화 배포** 확인란을 선택합니다. Adobe 팀이 사용자를 대신하여 라우팅 구성을 처리합니다.
+2. **AI 에이전트에 최적화 배포** 섹션을 찾습니다. **최적화 엔진 사용** 확인란을 선택합니다.
 
-   ![AI 에이전트에 최적화 배포 선택](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![AI 에이전트에 최적화 배포 — 보류 중](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending.png)
 
-3. 확인란을 활성화하면 설정 진행 중 상태가 표시됩니다. Adobe 팀이 라우팅 구성을 완료합니다.
+3. 확인 대화 상자에서 **사용**&#x200B;을 선택합니다. Adobe 팀이 사용자를 대신하여 라우팅 구성을 처리합니다.
 
-   ![AI 트래픽 라우팅 설정 진행 중](/help/assets/optimize-at-edge/prereq-traffic-routing-progress.png)
+   ![최적화 엔진 확인 대화 상자 사용](/help/assets/optimize-at-edge/byocdn-enable-optimization-engine-dialog.png)
 
-   라우팅이 구성되고 활성화되면 상태가 업데이트되어 라우팅이 성공적으로 활성화되었음을 나타내는 녹색 체크 표시가 나타납니다. 추가적인 액션은 필요하지 않습니다.
+   라우팅을 구성하고 활성화하면 상태가 **완료됨**(으)로 업데이트되고 녹색 확인 표시가 표시되어 라우팅을 사용할 수 있음을 확인합니다. 추가적인 액션은 필요하지 않습니다.
+
+   ![AI 에이전트에 최적화 배포 — 완료됨](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 또한 위 단계에 대한 도움이 필요한 경우 Adobe 계정 팀 또는 `llmo-at-edge@adobe.com`에 문의하십시오.
 
@@ -115,8 +117,10 @@ curl -svo /dev/null https://www.example.com/page.html \
 | `x-edgeoptimize-request-id` | 있음 — 고유한 요청 ID가 포함되어 있습니다. | 없음 |
 | `x-edgeoptimize-fo` | 장애 조치가 발생한 경우에만 표시됩니다(값: `1`). | 없음 |
 
-LLM Optimizer UI에서 트래픽 라우팅 상태를 확인할 수도 있습니다. **고객 구성**&#x200B;으로 이동하여 **CDN 구성** 탭을 선택합니다.
+**4. LLM Optimizer**&#x200B;에서 라우팅 상태 확인
 
-![라우팅이 활성화된 AI 트래픽 라우팅 상태](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
+LLM Optimizer UI에서 라우팅을 확인할 수도 있습니다. **고객 구성**&#x200B;을 열고 **CDN 구성** 탭을 선택합니다. 라우팅이 활성화된 경우 **AI 에이전트에 최적화 배포** 섹션에 **완료됨**&#x200B;이 표시됩니다.
+
+![AI 에이전트에 최적화 배포 — 완료됨](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 {{return-to-overview}}
