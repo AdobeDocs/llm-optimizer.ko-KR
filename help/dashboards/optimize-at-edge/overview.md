@@ -5,7 +5,7 @@ feature: Opportunities
 source-git-commit: b56c2a355c794c8461dda15bf7c733983fd95740
 workflow-type: tm+mt
 source-wordcount: '2348'
-ht-degree: 87%
+ht-degree: 94%
 
 ---
 
@@ -38,15 +38,15 @@ Optimize at Edge는 마케팅, SEO, 콘텐츠 및 디지털 전략 팀의 비즈
 
 <!--You should reach out to either your Adobe account team or the FDE team to start the onboarding process. Your IT or CDN team is also required to complete the pre-requisites and setup process. Additionally, you can also contact `llmo-at-edge@adobe.com` for further onboarding assistance.-->
 
-LLM Optimizer 계정에서 온보딩 프로세스를 시작합니다.
+다음 단계를 따라 LLM Optimizer 계정에서 온보딩 프로세스를 시작합니다.
 
 1. **고객 구성** 대시보드에서 **CDN 구성** 탭을 선택합니다.
-1. **CDN 온보드**&#x200B;를 클릭합니다.
+1. **CDN 온보딩**을 클릭합니다.
    ![CDN 구성 탭](/help/overview/assets/cc-cdn.png)
-1. AEM Fastly 고객의 경우 Adobe에서 온보딩 프로세스 완료를 지원할 수 있습니다. 다른 CDN 공급자를 사용하는 고객의 경우 IT/CDN 팀이 필요한 설정 및 사전 요구 사항을 완료해야 합니다. 추가 지침은 아래에 제공된 CDN 안내서 예 를 참조하십시오.
+1. AEM Fastly 고객의 경우 Adobe에서 온보딩 프로세스 완료를 지원할 수 있습니다. 다른 CDN 공급자를 사용하는 고객의 경우 IT/CDN 팀이 필요한 설정 및 사전 요구 사항을 완료해야 합니다. 추가 지침은 아래에 제공된 CDN 안내서 예시를 참조하십시오.
 
 >[!NOTE]
->전체 온보딩 플로우를 다루는 아래의 단계별 안내서를 참조하십시오. 안내서에서 해결되지 않은 문제의 경우 `llmo-at-edge@adobe.com`에게 문의하십시오.
+>전체 온보딩 흐름을 다루는 아래의 단계별 안내서를 참조하십시오. 안내서를 통해 해결할 수 없는 문제의 경우 `llmo-at-edge@adobe.com`에 문의하십시오.
 
 Optimize at Edge에 온보딩하기 위한 전제 조건:
 
@@ -98,7 +98,7 @@ IT/CDN 팀에 대한 요구 사항:
 
 ### 추가 도구
 
-[AI 콘텐츠 가시성 검사기](https://chromewebstore.google.com/detail/ai-content-visibility-che/jbjngahjjdgonbeinjlepfamjdmdcbcc) 브라우저 확장 기능은 LLM이 액세스할 수 있는 웹 페이지 콘텐츠의 양과 숨겨진 항목을 보여 줍니다. 무료 독립형 진단 도구로 설계되었으며, 제품 라이선스나 설정이 필요하지 않습니다.
+[AI 콘텐츠 가시성 검사기](https://chromewebstore.google.com/detail/ai-content-visibility-che/jbjngahjjdgonbeinjlepfamjdmdcbcc) 브라우저 확장 프로그램은 LLM이 웹 페이지 콘텐츠 중 액세스할 수 있는 부분과 숨겨져 있는 부분을 보여 줍니다. 무료 독립형 진단 도구로 설계되었으며, 제품 라이선스나 설정이 필요하지 않습니다.
 
 한 번의 클릭으로 모든 사이트의 시스템 가독성을 평가할 수 있습니다. AI 에이전트가 보는 내용과 사용자가 보는 내용을 나란히 비교하고 LLM Optimizer을 사용하여 복구할 수 있는 콘텐츠의 양을 예측할 수 있습니다. 자세한 내용은 [AI가 웹 사이트를 읽을 수 있습니까?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) 페이지를 참조하십시오.
 
@@ -130,7 +130,7 @@ IT/CDN 팀에 대한 요구 사항:
 
 각 기회마다 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477991/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### 미리보기
 
@@ -164,9 +164,9 @@ IT/CDN 팀에 대한 요구 사항:
 
 ## 자주 묻는 질문
 
-질문: 평가판 고객은 Edge에서 최적화를 시도할 수 있습니까?
+Q: 체험판 고객이 Edge에서 최적화를 시도할 수 있습니까?
 
-예. 평가판 고객은 하나의 최적화 기회에 액세스하고 최대 10페이지에 배포할 수 있습니다. 기본적으로 영업 기회는 콘텐츠 가시성 복구로, AI 에이전트가 페이지 콘텐츠의 전체 버전에 액세스할 수 있습니다.
+예. 체험판 고객은 하나의 최적화 기회에 액세스하여 이를 최대 10페이지에 배포할 수 있습니다. 기본적으로 이 기회는 AI 에이전트가 페이지 콘텐츠의 전체 버전에 액세스할 수 있는 콘텐츠 가시성 복구입니다.
 
 질문. Optimize at Edge는 어떤 종류의 LLM을 목표로 합니까?
 
@@ -186,9 +186,9 @@ The CDN is where the optimized version of the page is assembled and delivered to
 
 필요한 설정을 완료하기 전에 **최적화 배포**&#x200B;를 클릭하면 사이트에 아무것도 적용되지 않습니다. 대신 팝업 대화 상자가 나타나 `llmo-at-edge@adobe.com`의 팀에 문의하여 온보딩 지원을 받으라는 메시지가 표시됩니다. 온보딩이 완료될 때까지 감지된 기회와 제안을 계속 탐색할 수 있지만 원클릭 배포 워크플로는 비활성 상태로 유지됩니다.
 
-질문: 콘텐츠가 소스에서 업데이트되면 어떻게 됩니까?
+Q: 콘텐츠가 소스에서 업데이트되면 어떻게 됩니까?
 
-기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 버전의 페이지를 제공합니다. 그러나 **콘텐츠 가시성 복구**&#x200B;를 위해 소스가 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하도록 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하기 때문입니다. **LLM 친화 요약 추가**&#x200B;와 같은 콘텐츠 기회를 위해 LLM Optimizer는 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정하여 에이전트가 표시하는 페이지와 사람이 표시하는 페이지 사이의 콘텐츠 드리프트를 방지합니다.
+기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 버전의 페이지를 제공합니다. 그러나 **콘텐츠 가시성 복구**&#x200B;를 위해 소스가 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하도록 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하기 때문입니다. **LLM 친화 요약 추가**와 같은 콘텐츠 기회를 위해 LLM Optimizer는 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 에이전트가 볼 수 있는 페이지와 사람이 볼 수 있는 페이지 간의 콘텐츠 이동을 방지하기 위해 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정합니다.
 <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 질문. Optimize at Edge는 Adobe Edge Delivery Service(EDS)를 사용하는 사이트에만 적용됩니까?
