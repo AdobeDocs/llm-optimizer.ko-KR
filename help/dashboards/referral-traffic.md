@@ -3,9 +3,9 @@ title: 참조 트래픽
 description: 참조 트래픽 대시보드를 사용하여 외부 플랫폼, AI 인용 및 참조 링크에서 방문자가 사이트에 도달하는 방식을 알아봅니다.
 feature: Referral Traffic
 source-git-commit: c0ef7710411a01410fddf87b0c4344eb782c264f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '665'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 90%
 참조 트래픽은 외부 플랫폼, AI 인용 및 참조 링크에서 방문자가 사이트에 도달하는 방식을 보여 줍니다. 외부 웹 사이트 및 플랫폼에서 트래픽 소스, 참조 패턴 및 전환 지표를 추적하고 분석합니다. 이렇게 하면 가장 많은 트래픽이 발생하는 소스, 지역 및 페이지를 이해할 수 있습니다. <!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.--> 표시된 데이터를 세분화하는 데 도움이 되는 사용자 정의 가능 필터도 있습니다.
 
 >[!NOTE]
->기본적으로 이 대시보드는 **CDN 로그**&#x200B;에서 트래픽 인사이트를 빌드합니다. 조직에서 유료 오퍼를 사용하는 경우 **Adobe Analytics**&#x200B;을(를) 연결하여 AI 기반 검색 및 사이트 참여를 측정하는 데이터를 추가할 수 있습니다. 이 데이터는 **비즈니스 영향** 탭에서 사용할 수 있습니다. Adobe Analytics에 통합되지 않으면 탭이 채워지지 않습니다. 자세한 내용은 [Adobe Analytics 통합](/help/dashboards/adobe-analytics-integration.md)을 참조하십시오.
+>기본적으로 이 대시보드는 **CDN 로그**&#x200B;에서 트래픽 인사이트를 빌드합니다. 조직에서 유료 오퍼를 사용하는 경우 **Adobe Analytics**&#x200B;를 연결하여 AI 기반 검색 및 사이트 참여를 측정하는 데이터를 추가할 수 있습니다. 이 데이터는 **비즈니스 영향** 탭에서 사용할 수 있습니다. Adobe Analytics에 통합되지 않으면 탭이 채워지지 않습니다. 자세한 내용은 [Adobe Analytics 통합](/help/dashboards/adobe-analytics-integration.md)을 참조하십시오.
 
 ![참조 페이지](/help/dashboards/assets/referral-traffic.png)
 
