@@ -12,7 +12,7 @@ ht-degree: 20%
 
 # 로그 전달: CloudFront (AWS CLI) {#log-forwarding-cloudfront-cli}
 
-이 페이지에서는 에이전트 트래픽 데이터 수집을 위해 CloudFront에서 Adobe의 S3 버킷으로 CDN 로그를 전달하는 방법에 대해 자세히 설명합니다. LLM Optimizer CDN 구성 페이지를 사용하여 LLM Optimizer에 온보딩합니다. 온보딩 프로세스가 완료되면 이 페이지에 제공된 단계에 따라 [2{3단계}에서 [AWS 명령줄 인터페이스](https://aws.amazon.com/cli/)를 사용하여 로그 전달을 구성합니다.](#step-2-cli)
+이 페이지에서는 에이전트 트래픽 데이터 수집을 위해 CloudFront에서 Adobe의 S3 버킷으로 CDN 로그를 전달하는 방법에 대해 자세히 설명합니다. LLM Optimizer CDN 구성 페이지를 사용하여 LLM Optimizer에 온보딩합니다. 온보딩 프로세스가 완료되면 이 페이지에 제공된 단계에 따라 [&#128279;](#step-2-cli)2{3단계}에서 [AWS 명령줄 인터페이스](https://aws.amazon.com/cli/)를 사용하여 로그 전달을 구성합니다.
 
 >[!NOTE]
 >
