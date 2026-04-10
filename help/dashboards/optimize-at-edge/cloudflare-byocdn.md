@@ -2,10 +2,10 @@
 title: Optimize at Edge - Cloudflare(BYOCDN)
 description: LLM Optimizer의 Optimize at Edge를 위해 Cloudflare BYOCDN을 구성하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: da789100d814004687de2f46e18a295671dec4b8
+source-git-commit: 14dbee36f39b0d993d448edccb63fb8a519704a1
 workflow-type: tm+mt
-source-wordcount: '1439'
-ht-degree: 95%
+source-wordcount: '1922'
+ht-degree: 69%
 
 ---
 
@@ -55,6 +55,53 @@ Edge Optimize 백엔드에 대한 요청에는 다음 헤더를 설정해야 합
 | `x-edgeoptimize-url` | 요청의 원래 URL 경로 및 쿼리 문자열입니다. | `/page.html` 또는 `/products?id=123` |
 | `x-edgeoptimize-api-key` | Adobe에서 도메인에 대해 제공하는 API 키입니다. | `your-api-key-here` |
 | `x-edgeoptimize-config` | 캐시 키 구분을 위한 구성 문자열입니다. | `LLMCLIENT=TRUE;` |
+
+## 설정 옵션
+
+Edge Optimize용 Cloudflare Worker를 설정하는 방법에는 두 가지가 있습니다.
+
+* [**옵션 1: Cloudflare에 배포(권장)**](#option-1-deploy-to-cloudflare) — 새 작업자를 자동으로 만들고 필요한 환경 변수 및 암호를 묻는 메시지를 표시합니다. 이 도메인에 대한 기존 Cloudflare Worker가 없는 경우 이 옵션을 사용합니다.
+* [**옵션 2: 수동 설정**](#option-2-manual-setup) - 작업자를 직접 만들고 구성하는 단계별 지침입니다. 확장하려는 기존 Cloudflare Worker가 이미 있거나 배포에 대한 모든 권한을 선호하는 경우 이 옵션을 사용합니다.
+
+선택한 옵션에 관계없이 작업자를 도메인에 수동으로 연결해야 합니다. [단계: 도메인에 경로 추가](#add-a-route-to-your-domain)를 참조하십시오.
+
+## 옵션 1: Cloudflare에 배포
+
+이 옵션은 **Cloudflare에 배포** 단추를 사용하여 자동으로 작업자를 만들고 Cloudflare 계정에 필요한 환경 변수와 암호를 구성합니다. 새 작업자를 설정하는 경우 이를 시작하는 가장 빠른 방법입니다.
+
+>[!IMPORTANT]
+>
+>도메인에 기존 Cloudflare Worker가 **없는**&#x200B;경우에만 이 옵션을 사용합니다. 이미 작업자가 있는 경우 [옵션 2: 수동 설정](#option-2-manual-setup)을 사용하여 기존 작업자에게 Edge 최적화 라우팅 논리를 추가하십시오.
+
+**1단계: 작업자 배포**
+
+아래 버튼을 클릭하여 Edge Optimize 작업자를 Cloudflare 계정에 배포합니다.
+
+[![Cloudflare에 배포](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/adobe/llmo-code-samples/tree/main/optimize-at-edge/cloudflare/automation)
+
+**2단계: 배포 양식 작성**
+
+버튼을 클릭하면 Workers 설정 페이지가 열립니다. 다음과 같이 양식을 입력합니다.
+
+![Cloudflare 작업자 설정 페이지](/help/assets/optimize-at-edge/cloudflare-deploy-form.png)
+
+1. **Git 계정** — 드롭다운에서 GitHub 또는 GitLab 계정을 선택합니다. Cloudflare는 작업자 코드를 계정의 저장소에 포크합니다. 계정이 목록에 없으면 **+ 새 GitHub 연결** 또는 **+ 새 GitLab 연결**&#x200B;을 선택하여 드롭다운에서 직접 새 연결을 추가할 수 있습니다. 자세한 내용은 [Cloudflare Git 통합 안내서](https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/github-integration/)를 참조하십시오.
+
+   ![새 GitHub 연결 및 새 GitLab 연결 옵션을 표시하는 Git 계정 드롭다운](/help/assets/optimize-at-edge/cloudflare-git-connection.png)
+2. **개인 Git 저장소 만들기** — 이 항목을 선택된 상태로 둡니다(기본값).
+3. **프로젝트 이름** — `edge-optimize-router`(으)로 나가거나 선택한 이름을 입력하십시오.
+4. **EDGE_OPTIMIZE_API_KEY** - Adobe에서 제공한 Edge 최적화 API 키를 붙여넣습니다. 이 값은 암호화된 비밀로 저장됩니다.
+5. **EDGE_OPTIMIZE_TARGET_HOST** — 프로토콜 없이 사이트 도메인을 입력합니다(예: `www.example.com`).
+6. **빌드 명령** — 비워 둡니다.
+7. **명령 배포** — `npm run deploy`(미리 채워짐)로 둡니다.
+8. **비프로덕션 분기의 빌드** — 선택하지 않은 상태로 둡니다. 이 기능은 개발자 워크플로우 기능이며 이 배포에는 필요하지 않습니다.
+9. **만들기 및 배포**&#x200B;를 클릭합니다.
+
+작업자를 배포한 후 [도메인에 경로를 추가](#add-a-route-to-your-domain)하여 작업자를 도메인에 연결합니다. 라우팅은 자동으로 구성되지 않으며 수동으로 완료해야 합니다.
+
+## 옵션 2: 수동 설정
+
+다음 단계에 따라 작업자를 수동으로 만들고 구성합니다.
 
 **1단계: Cloudflare 작업자 만들기**
 
@@ -239,7 +286,7 @@ async function failoverToOrigin(request, env, url) {
 
 ![Cloudflare 작업자 코드 편집기](/help/assets/optimize-at-edge/cloudflare-worker-editor.png)
 
-**3 단계: 환경 변수 구성**
+**3단계: 환경 변수 및 암호 구성**
 
 환경 변수는 API 키와 같은 민감한 구성을 안전하게 저장합니다.
 
@@ -257,9 +304,9 @@ async function failoverToOrigin(request, env, url) {
 
 ![Cloudflare 환경 변수](/help/assets/optimize-at-edge/cloudflare-env-variables.png)
 
-**4단계: 도메인에 대한 경로 추가**
+## 도메인에 경로 추가 {#add-a-route-to-your-domain}
 
-도메인에서 작업자를 활성화하려면 다음을 수행합니다.
+어떤 설정 옵션을 사용했는지에 관계없이 작업자를 도메인에 수동으로 연결해야 합니다. 이 단계에서는 트래픽에서 작업자를 활성화합니다.
 
 1. 작업자의 **설정** > **트리거**&#x200B;로 이동합니다.
 2. **경로**&#x200B;에서 **경로 추가**&#x200B;를 클릭합니다.
@@ -377,7 +424,7 @@ const FAILOVER_ON_5XX = false;
 | 문제 | 가능한 원인 | 솔루션 |
 |-------|----------------|----------|
 | 응답 중인 `x-edgeoptimize-request-id` 헤더 없음 | 작업자 경로가 일치하지 않거나 사용자 에이전트가 에이전틱 봇 목록에 없습니다. | 경로 패턴이 요청 URL과 일치하는지 확인합니다. 사용자 에이전트가 `AGENTIC_BOTS` 배열에 있는지 확인합니다. |
-| Edge Optimize에서 401 또는 403 오류 | API 키가 잘못되었거나 누락되었습니다. | `EDGE_OPTIMIZE_API_KEY`가 환경 변수에 올바르게 설정되어 있는지 확인합니다. Adobe에 문의하여 API 키가 활성 상태인지 확인합니다. |
+| Edge Optimize에서 401 또는 403 오류 | API 키가 잘못되었거나 누락되었습니다. | `EDGE_OPTIMIZE_API_KEY`이(가) 환경 변수 및 비밀에 올바르게 설정되어 있는지 확인하십시오. Adobe에 문의하여 API 키가 활성 상태인지 확인합니다. |
 | 무한 리디렉션 또는 루프 | 루프 보호 헤더가 올바르게 설정되거나 검사되지 않았습니다. | `x-edgeoptimize-request` 헤더 검사가 제대로 되어 있는지 확인합니다. |
 | 영향을 받는 사람 트래픽 | 작업자 라우팅 논리가 너무 광범위합니다. | 사용자 에이전트 일치 논리가 올바르고 대소문자 구분이 없는지 확인합니다. `TARGETED_PATHS`가 올바르게 구성되어 있는지 확인합니다. |
 | 느린 응답 시간 | Edge Optimize 백엔드에 대한 네트워크 지연 시간이 발생했습니다. | 이는 첫 번째 요청에 대해 예상되며, 이후 요청은 Edge Optimize에서 캐시됩니다. |
