@@ -3,9 +3,9 @@ title: Optimize at Edge - CloudFront(BYOCDN)
 description: LLM Optimizer의 Optimize at Edge를 위해 CloudFront BYOCDN을 구성하는 방법에 대해 알아봅니다.
 feature: Opportunities
 source-git-commit: da789100d814004687de2f46e18a295671dec4b8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2265'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 * LLM Optimizer 온보딩 프로세스 완료
 * LLM Optimizer로 CDN 로그 전달 완료
 * LLM Optimizer UI에서 검색한 Edge Optimize API 키
-* (선택 사항) 스테이징 Edge 먼저 스테이징 호스트 이름에서 라우팅을 테스트하는 경우 API 최적화 키.
+* (선택 사항) 스테이징 호스트 이름에서 먼저 라우팅을 테스트하는 경우를 위한 스테이징 Edge Optimize API 키입니다.
 
 {{retrieve-byocdn-api-key}}
 
@@ -236,10 +236,10 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 2. 설명을 추가합니다.
 
-3. **게시**&#x200B;를 클릭합니다.
+3. **게시**를 클릭합니다.
    ![Lambda 게시](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
 
-4. **함수 ARN**&#x200B;을 복사하거나 기록하십시오. 다음 단계에서 이 정보가 필요합니다.
+4. **함수 ARN**을 복사하거나 기록하십시오. 다음 단계에서 이 정보가 필요합니다.
    ![Lambda ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
 
 **5단계: 함수 및 캐시 정책을 동작과 연결**
@@ -301,14 +301,14 @@ curl -svo /dev/null https://www.example.com/page.html \
 
 **4. 스테이징 도메인(선택 사항)**
 
-LLM Optimizer에서 스테이징 호스트 이름과 스테이징 API 키를 사용하는 경우 **스테이징** API 키를 사용하여 **스테이징** 배포에 동일한 CloudFront 구성을 배포하십시오. 그런 다음 스테이징 호스트에서 보트 트래픽을 확인합니다.
+LLM Optimizer에서 스테이징 호스트 이름과 스테이징 API 키를 사용하는 경우 **스테이징** API 키를 사용하여 **스테이징** 배포에 동일한 CloudFront 구성을 배포합니다. 그런 다음 스테이징 호스트에서 봇 트래픽을 확인합니다.
 
 ```
 curl -svo /dev/null https://staging.example.com/page.html \
   --header "user-agent: chatgpt-user"
 ```
 
-`https://staging.example.com/page.html`을(를) 실제 준비 URL 및 경로로 바꾸십시오. 성공한 응답에는 `x-edgeoptimize-request-id` 헤더가 포함됩니다.
+`https://staging.example.com/page.html`을 실제 스테이징 URL 및 경로로 바꿉니다. 성공적인 응답에는 `x-edgeoptimize-request-id` 헤더가 포함됩니다.
 
 {{verify-routing-status-in-ui}}
 
