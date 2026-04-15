@@ -2,10 +2,10 @@
 title: Optimize at Edge - Cloudflare(BYOCDN)
 description: LLM Optimizer의 Optimize at Edge를 위해 Cloudflare BYOCDN을 구성하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 14dbee36f39b0d993d448edccb63fb8a519704a1
+source-git-commit: 66b058734597c378040e77a23a4023bed9273427
 workflow-type: tm+mt
-source-wordcount: '1922'
-ht-degree: 73%
+source-wordcount: '1880'
+ht-degree: 71%
 
 ---
 
@@ -23,11 +23,9 @@ Cloudflare 작업자 라우팅 규칙을 설정하기 전에 다음을 확인하
 * LLM Optimizer 온보딩 프로세스 완료
 * LLM Optimizer로 CDN 로그 전달 완료
 * LLM Optimizer UI에서 검색한 Edge Optimize API 키
-* (선택 사항) 스테이징 호스트 이름에서 먼저 라우팅을 테스트하는 경우를 위한 스테이징 Edge Optimize API 키입니다.
+* (선택 사항) 스테이징 라우팅을 테스트하려면 **선택 사항: 이 페이지의 끝에 있는 스테이징 호스트 이름에서 라우팅 테스트**&#x200B;를 참조하십시오.
 
 {{retrieve-byocdn-api-key}}
-
-{{retrieve-staging-edge-optimize-api-key}}
 
 **라우팅 작동 방식**
 
@@ -193,6 +191,7 @@ async function handleRequest(request, env, ctx) {
     edgeOptimizeHeaders.delete("x-edgeoptimize-api-key");
     edgeOptimizeHeaders.delete("x-edgeoptimize-url");
     edgeOptimizeHeaders.delete("x-edgeoptimize-config");
+    edgeOptimizeHeaders.delete("x-edgeoptimize-fetcher-key"); // Optional (required only in case of WAF)
 
     // x-forwarded-host: The original site domain
     // Use environment variable if set, otherwise use the request host
@@ -206,6 +205,8 @@ async function handleRequest(request, env, ctx) {
 
     // x-edgeoptimize-config: Configuration for cache key differentiation
     edgeOptimizeHeaders.set("x-edgeoptimize-config", "LLMCLIENT=TRUE;");
+
+    // edgeOptimizeHeaders.set("x-edgeoptimize-fetcher-key", "<YOUR FETCHER KEY>"); // Optional (required only in case of WAF)
 
     try {
       // Send request to Edge Optimize backend
@@ -434,6 +435,10 @@ const FAILOVER_ON_5XX = false;
 | 잘못된 호스트로 인해 요청 실패 | `EDGE_OPTIMIZE_TARGET_HOST`에 프로토콜(예: `https://`)이 포함되어 있습니다. | 프로토콜 없이 도메인 이름만 사용합니다(예: `https://example.com`이 아닌 `example.com`). |
 | 장애 조치 중 530 오류 | Cloudflare가 원본에 연결할 수 없거나 장애 조치 요청에 잘못된 헤더가 있습니다. | 장애 조치 기능이 Edge Optimize 헤더를 제거하는지 확인합니다. 원본을 액세스할 수 있고 DNS가 올바르게 구성되어 있는지 확인합니다. |
 
+**방화벽 규칙을 통해 Edge에서 최적화 허용(선택 사항)**
+
+{{waf-allowlist-setup}}
+
 **설정 확인**
 
 설정을 완료한 후 봇 트래픽이 Edge Optimize로 라우팅되고 있으며 사람 트래픽이 영향을 받지 않는지 확인합니다.
@@ -472,17 +477,13 @@ curl -svo /dev/null https://www.example.com/page.html \
 | `x-edgeoptimize-request-id` | 있음 — 고유한 요청 ID가 포함되어 있습니다. | 없음 |
 | `x-edgeoptimize-fo` | 장애 조치가 발생한 경우에만 표시됩니다(값: `1`). | 없음 |
 
-**4. 스테이징 도메인(선택 사항)**
+{{verify-routing-status-in-ui}}
 
-LLM Optimizer에서 스테이징 호스트 이름과 스테이징 API 키를 사용하는 경우 **스테이징** API 키를 사용하여 **스테이징** 영역에 동일한 작업자 논리를 배포합니다. 그런 다음 스테이징 호스트에서 봇 트래픽을 확인합니다.
+{{retrieve-staging-edge-optimize-api-key}}
 
 ```
 curl -svo /dev/null https://staging.example.com/page.html \
   --header "user-agent: chatgpt-user"
 ```
-
-`https://staging.example.com/page.html`을 실제 스테이징 URL 및 경로로 바꿉니다. 성공적인 응답에는 `x-edgeoptimize-request-id` 헤더가 포함됩니다.
-
-{{verify-routing-status-in-ui}}
 
 {{return-to-overview}}
