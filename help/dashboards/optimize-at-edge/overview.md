@@ -2,10 +2,10 @@
 title: Optimize at Edge
 description: CDN 에지에서 작성 변경 없이 LLM Optimizer로 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: b56c2a355c794c8461dda15bf7c733983fd95740
-workflow-type: ht
-source-wordcount: '2348'
-ht-degree: 100%
+source-git-commit: 338baae83b63d2e09450bf508c65c6f97240a7dc
+workflow-type: tm+mt
+source-wordcount: '2312'
+ht-degree: 98%
 
 ---
 
@@ -58,16 +58,13 @@ IT/CDN 팀에 대한 요구 사항:
 * `*AdobeEdgeOptimize/1.0*` 사용자 에이전트를 사이트의 robots.txt 파일 또는 봇 트래픽 관리 규칙의 허용 목록에 추가합니다.
 * 페이지가 도메인 또는 CDN 수준에서 차단되지 않았는지 확인합니다.
 * CDN에서 Optimize at Edge 라우팅 규칙에 추가합니다.
+* CDN에 WAF 또는 보트 관리자 규칙이 있는 경우 `*AdobeEdgeOptimize/1.0*` 사용자 에이전트를 다운로드하십시오. 추가 확인이 필요한 경우 `x-edgeoptimize-fetcher-key` 헤더를 구성합니다. 아래의 각 BYOCDN 안내서에는 단계가 포함되어 있습니다.
 * LLM Optimizer 인터페이스에서 Optimize at Edge 라우팅을 확인합니다.
 
 >[!IMPORTANT]
 >라우팅은 외부 CDN(클라이언트에 가장 가까운 CDN)에서 구성해야 합니다. 여러 CDN이 있는 경우 라우팅은 외부 CDN에서만 수행할 수 있습니다.
 
-설정 프로세스를 안내하려면 아래에서 CDN 공급자를 선택하고 해당 구성 안내서를 따르십시오. 이러한 예제는 실제 라이브 구성에 맞게 조정되어야 합니다. 먼저 저사양 환경에서 변경 사항을 적용하는 것을 권장합니다.
-
-### 스테이징 도메인 API 키(선택 사항)
-
-프로덕션 전에 스테이징 호스트 이름에서 테스트하는 경우 LLM Optimizer을 사용하여 **하나의** 스테이징 도메인을 등록하고 **스테이징** Edge Optimize API 키를 **고객 구성** → **CDN 구성** → **AI 에이전트에 최적화 배포** → **스테이지 도메인 추가**(또는 **스테이지 도메인**)에서 복사합니다. 스테이징 호스트 이름은 프로덕션 사이트와 동일한 등록 가능 도메인을 공유해야 합니다. **자체 CDN 가져오기** 안내서에는 스테이징 키를 검색하고 스테이징 URL에서 라우팅을 확인하는 전체 단계가 포함되어 있습니다.
+설정 프로세스를 안내하려면 아래에서 CDN 공급자를 선택하고 해당 구성 안내서를 따르십시오. 이러한 예제는 실제 라이브 구성에 맞게 조정되어야 합니다. 먼저 저사양 환경에서 변경 사항을 적용하는 것을 권장합니다. **자체 CDN 가져오기** 안내서에는 각 페이지의 끝에 선택적 스테이징 호스트 이름 테스트가 포함되어 있습니다.
 
 ### CDN 구성 안내서
 
@@ -130,7 +127,7 @@ IT/CDN 팀에 대한 요구 사항:
 
 각 기회마다 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477991/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### 미리보기
 

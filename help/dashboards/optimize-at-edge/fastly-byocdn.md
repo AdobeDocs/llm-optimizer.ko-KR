@@ -2,10 +2,10 @@
 title: Optimize at Edge - Fastly(BYOCDN)
 description: LLM Optimizer의 Optimize at Edge를 위해 Fastly BYOCDN을 구성하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: da789100d814004687de2f46e18a295671dec4b8
-workflow-type: ht
-source-wordcount: '407'
-ht-degree: 100%
+source-git-commit: 412500d2a95d66a5c9bf6fa88efc62c6244834c8
+workflow-type: tm+mt
+source-wordcount: '364'
+ht-degree: 92%
 
 ---
 
@@ -22,11 +22,9 @@ Fastly VCL 규칙을 설정하기 전에 다음을 확인하십시오.
 * LLM Optimizer 온보딩 프로세스 완료
 * LLM Optimizer로 CDN 로그 전달 완료
 * LLM Optimizer UI에서 검색한 Edge Optimize API 키
-* (선택 사항) 스테이징 호스트 이름에서 먼저 라우팅을 테스트하는 경우를 위한 스테이징 Edge Optimize API 키입니다.
+* (선택 사항) 스테이징 라우팅을 테스트하려면 **선택 사항: 이 페이지의 끝에 있는 스테이징 호스트 이름에서 라우팅 테스트**&#x200B;를 참조하십시오.
 
 {{retrieve-byocdn-api-key}}
-
-{{retrieve-staging-edge-optimize-api-key}}
 
 **구성**
 
@@ -42,6 +40,7 @@ Fastly VCL 규칙을 설정하기 전에 다음을 확인하십시오.
 unset req.http.x-edgeoptimize-url;
 unset req.http.x-edgeoptimize-config;
 unset req.http.x-edgeoptimize-api-key;
+unset req.http.x-edgeoptimize-fetcher-key; # Optional (required only in case of WAF)
 
 if (!req.http.x-edgeoptimize-request
     && req.http.user-agent ~ "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
@@ -49,6 +48,7 @@ if (!req.http.x-edgeoptimize-request
   set req.http.x-edgeoptimize-url = req.url; # required for identifying the original url
   set req.http.x-edgeoptimize-config = "LLMCLIENT=TRUE;"; # required for cache key
   set req.http.x-edgeoptimize-api-key = "<YOUR API KEY>"; # required for identifying the client
+  set req.http.x-edgeoptimize-fetcher-key = "<YOUR FETCHER KEY>"; # Optional (required only in case of WAF)
   set req.backend = F_EDGE_OPTIMIZE;
 }
 ```
@@ -85,6 +85,10 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 | Edge Optimize는 `2XX`를 반환합니다. | 최적화된 응답을 클라이언트에 제공합니다. |
 | Edge Optimize는 `4XX` 또는 `5XX`를 반환합니다. | 요청이 다시 시작되고 기본 원본에서 제공됩니다. |
 | 장애 조치(Failover) 응답 | 헤더 `x-edgeoptimize-fo: 1`를 포함합니다. |
+
+**방화벽 규칙을 통해 Edge에서 최적화 허용(선택 사항)**
+
+{{waf-allowlist-setup}}
 
 **설정 확인**
 
@@ -124,17 +128,13 @@ curl -svo /dev/null https://www.example.com/page.html \
 | `x-edgeoptimize-request-id` | 있음 — 고유한 요청 ID가 포함되어 있습니다. | 없음 |
 | `x-edgeoptimize-fo` | 장애 조치가 발생한 경우에만 표시됩니다(값: `1`). | 없음 |
 
-**4. 스테이징 도메인(선택 사항)**
+{{verify-routing-status-in-ui}}
 
-LLM Optimizer에서 스테이징 호스트 이름과 스테이징 API 키를 사용하는 경우 **스테이징** API 키를 사용하여 동일한 VCL 코드 조각을 **스테이징** Fastly 서비스에 추가합니다. 그런 다음 스테이징 호스트에서 봇 트래픽을 확인합니다.
+{{retrieve-staging-edge-optimize-api-key}}
 
 ```
 curl -svo /dev/null https://staging.example.com/page.html \
   --header "user-agent: chatgpt-user"
 ```
-
-`https://staging.example.com/page.html`을 실제 스테이징 URL 및 경로로 바꿉니다. 성공적인 응답에는 `x-edgeoptimize-request-id` 헤더가 포함됩니다.
-
-{{verify-routing-status-in-ui}}
 
 {{return-to-overview}}

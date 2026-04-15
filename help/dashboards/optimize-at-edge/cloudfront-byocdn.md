@@ -2,10 +2,10 @@
 title: Optimize at Edge - CloudFront(BYOCDN)
 description: LLM Optimizer의 Optimize at Edge를 위해 CloudFront BYOCDN을 구성하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: da789100d814004687de2f46e18a295671dec4b8
-workflow-type: ht
-source-wordcount: '2265'
-ht-degree: 100%
+source-git-commit: 001ed59e25975c718367f543b2e35fedbce686f5
+workflow-type: tm+mt
+source-wordcount: '2223'
+ht-degree: 98%
 
 ---
 
@@ -23,11 +23,9 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 * LLM Optimizer 온보딩 프로세스 완료
 * LLM Optimizer로 CDN 로그 전달 완료
 * LLM Optimizer UI에서 검색한 Edge Optimize API 키
-* (선택 사항) 스테이징 호스트 이름에서 먼저 라우팅을 테스트하는 경우를 위한 스테이징 Edge Optimize API 키입니다.
+* (선택 사항) 스테이징 라우팅을 테스트하려면 **선택 사항: 이 페이지의 끝에 있는 스테이징 호스트 이름에서 라우팅 테스트**&#x200B;를 참조하십시오.
 
 {{retrieve-byocdn-api-key}}
-
-{{retrieve-staging-edge-optimize-api-key}}
 
 **1단계: Edge 최적화 원본 만들기**
 
@@ -261,6 +259,10 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 4. **변경 내용 저장**&#x200B;을 클릭합니다.
 
+**방화벽 규칙을 통해 Edge에서 최적화 허용(선택 사항)**
+
+{{waf-allowlist-setup}}
+
 **6단계: 구성 테스트**
 
 **1. 봇 트래픽 테스트(최적화해야 함)**
@@ -299,20 +301,9 @@ curl -svo /dev/null https://www.example.com/page.html \
 | `x-edgeoptimize-request-id` | 있음 — 고유한 요청 ID가 포함되어 있습니다. | 없음 |
 | `x-edgeoptimize-fo` | 장애 조치가 발생한 경우에만 표시됩니다(값: `1`). | 없음 |
 
-**4. 스테이징 도메인(선택 사항)**
-
-LLM Optimizer에서 스테이징 호스트 이름과 스테이징 API 키를 사용하는 경우 **스테이징** API 키를 사용하여 **스테이징** 배포에 동일한 CloudFront 구성을 배포합니다. 그런 다음 스테이징 호스트에서 봇 트래픽을 확인합니다.
-
-```
-curl -svo /dev/null https://staging.example.com/page.html \
-  --header "user-agent: chatgpt-user"
-```
-
-`https://staging.example.com/page.html`을 실제 스테이징 URL 및 경로로 바꿉니다. 성공적인 응답에는 `x-edgeoptimize-request-id` 헤더가 포함됩니다.
-
 {{verify-routing-status-in-ui}}
 
-**5. 로그 흐름이 올바른지 확인**
+**4. 로그 흐름이 올바른지 확인**
 
 위의 테스트 요청을 실행한 후 CloudFront 함수와 Lambda@Edge 함수 모두에 대해 로그가 기록되고 있는지 확인합니다.
 
@@ -412,5 +403,12 @@ Lambda@Edge 함수(`edgeoptimize-origin`)는 CloudFront 동작의 원본 요청 
 4. **변경 내용 저장**&#x200B;을 클릭합니다.
 
 5. 배포가 배포를 완료할 때까지 기다린 다음 에이전틱 요청이 6단계에서 설명한 대로 `x-edgeoptimize-request-id` 헤더를 반환하는지 확인합니다.
+
+{{retrieve-staging-edge-optimize-api-key}}
+
+```
+curl -svo /dev/null https://staging.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
 
 {{return-to-overview}}
