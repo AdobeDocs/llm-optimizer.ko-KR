@@ -2,10 +2,10 @@
 title: Optimize at Edge
 description: CDN 에지에서 작성 변경 없이 LLM Optimizer로 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 338baae83b63d2e09450bf508c65c6f97240a7dc
+source-git-commit: 050a4eaa510df7195c5208978ba56d4413916808
 workflow-type: tm+mt
-source-wordcount: '2312'
-ht-degree: 98%
+source-wordcount: '2323'
+ht-degree: 97%
 
 ---
 
@@ -43,7 +43,7 @@ Optimize at Edge는 마케팅, SEO, 콘텐츠 및 디지털 전략 팀의 비즈
 1. **고객 구성** 대시보드에서 **CDN 구성** 탭을 선택합니다.
 1. **CDN 온보딩**&#x200B;을 클릭합니다.
    ![CDN 구성 탭](/help/overview/assets/cc-cdn.png)
-1. AEM Fastly 고객의 경우 Adobe에서 온보딩 프로세스 완료를 지원할 수 있습니다. 다른 CDN 공급자를 사용하는 고객의 경우 IT/CDN 팀이 필요한 설정 및 사전 요구 사항을 완료해야 합니다. 추가 지침은 아래에 제공된 CDN 안내서 예시를 참조하십시오.
+1. AEM Cloud Service 관리 Fastly 고객의 경우, 라우팅 설정은 셀프서비스이며 LLM Optimizer UI에서 직접 완료할 수 있습니다. 다른 CDN 공급자를 사용하는 고객의 경우 IT/CDN 팀이 필요한 설정 및 사전 요구 사항을 완료해야 합니다. 추가 지침은 아래에 제공된 CDN 안내서 예시를 참조하십시오.
 
 >[!NOTE]
 >전체 온보딩 흐름을 다루는 아래의 단계별 안내서를 참조하십시오. 안내서를 통해 해결할 수 없는 문제의 경우 `llmo-at-edge@adobe.com`에 문의하십시오.
