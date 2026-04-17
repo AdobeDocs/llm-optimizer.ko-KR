@@ -1,22 +1,22 @@
 ---
 title: 로그 전달 - CloudFront(AWS CLI)
-description: Adobe CLI를 사용하여 CloudFront CDN 로그를 AWS의 S3 버킷으로 전달하여 게재 설정 및 작업을 수행합니다.
+description: AWS CLI를 사용하여 CloudFront CDN 로그를 AWS의 S3 버킷으로 전달하여 게재 설정 및 작업을 수행합니다.
 feature: Agentic Traffic
 source-git-commit: 3277e7f7f2e0c5e4693e40473d595b12d9e5f2e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '379'
-ht-degree: 19%
+ht-degree: 100%
 
 ---
 
 
-# 로그 전달: CloudFront (AWS CLI) {#log-forwarding-cloudfront-cli}
+# 로그 전달: CloudFront(AWS CLI) {#log-forwarding-cloudfront-cli}
 
-이 페이지에서는 에이전트 트래픽 데이터 수집을 위해 CloudFront에서 Adobe의 S3 버킷으로 CDN 로그를 전달하는 방법에 대해 자세히 설명합니다. LLM Optimizer CDN 구성 페이지를 사용하여 LLM Optimizer에 온보딩합니다. 온보딩 프로세스가 완료되면 이 페이지에 제공된 단계에 따라 [&#128279;](#step-2-cli)2{3단계}에서 [AWS 명령줄 인터페이스](https://aws.amazon.com/cli/)를 사용하여 로그 전달을 구성합니다.
+이 페이지에서는 에이전틱 트래픽 데이터 수집을 위해 CloudFront에서 Adobe의 S3 버킷으로 CDN 로그를 전달하는 방법을 자세히 설명합니다. LLM Optimizer CDN 구성 페이지를 사용하여 LLM Optimizer에 온보딩합니다. 온보딩 프로세스가 완료되면 이 페이지에 제공된 단계를 따라 [2단계](#step-2-cli)의 [AWS 명령줄 인터페이스](https://aws.amazon.com/cli/)를 사용하여 로그 전달을 구성합니다.
 
 >[!NOTE]
 >
-> 이 안내서에서는 [AWS 명령줄 인터페이스](https://aws.amazon.com/cli/)를 사용하여 로그 전달을 구성하는 방법을 설명합니다. **CloudFront UI**&#x200B;를 사용하여 로그 전달을 구성하려면 [로그 전달: CloudFront](/help/overview/log-forwarding/cloudfront.md)을(를) 참조하십시오.
+> 이 안내서는 [AWS 명령줄 인터페이스](https://aws.amazon.com/cli/)를 사용하여 로그 전달을 구성하는 방법을 설명합니다. **CloudFront UI**&#x200B;를 사용하여 로그 전달을 구성하려면 [로그 전달: CloudFront](/help/overview/log-forwarding/cloudfront.md)를 참조하십시오.
 
 ## 1단계: LLM Optimizer에서 온보딩 {#step-1}
 
@@ -86,13 +86,13 @@ aws sts get-caller-identity --profile LLMO
 
 ### 변수 초기화
 
-`REPLACEME123@AdobeOrg`을(를) 조직 Adobe IMS 조직 ID로 바꾸고 아래 명령을 실행하십시오. 이 명령의 출력 ID를 `TRANSFORM_IMS_ID`(으)로 참조합니다.
+`REPLACEME123@AdobeOrg`를 조직 Adobe IMS 조직 ID로 바꾸고 아래 명령을 실행합니다. 이 명령의 출력 ID를 `TRANSFORM_IMS_ID`로 참조합니다.
 
 ```bash
 echo "REPLACEME123@AdobeOrg" | sed 's/@AdobeOrg$//' | tr '[:upper:]' '[:lower:]'
 ```
 
-아래 지침에 따라 `CUSTOMER`, `CDN_ID`, `ACCT1` 및 `TRANSFORM_IMS_ID`의 값을 입력한 다음 터미널에서 명령을 실행하십시오.
+아래 지침에 따라 `CUSTOMER`, `CDN_ID`, `ACCT1` 및 `TRANSFORM_IMS_ID`의 값을 입력한 다음 터미널에서 명령을 실행합니다.
 
 ```bash
 export PROFILE1=LLMO
@@ -118,7 +118,7 @@ aws logs put-delivery-source --name llmo-cf-${CUSTOMER}-${CDN_ID} \
 
 >[!IMPORTANT]
 >
->다음 오류가 발생하면 기존 게재 원본을 검색합니다. *PutDeliverySource 작업을 호출할 때 오류가 발생했습니다(ConflictException). 이 ResourceId는 이 계정의 다른 게재 Source에서 이미 사용되었습니다.*
+>다음 오류가 발생하면 기존 게재 원본을 검색합니다. *PutDeliverySource 작업을 호출할 때 오류 발생(ConflictException): 이 ResourceId는 이 계정의 다른 게재 소스에서 이미 사용되었습니다.*
 >
 >기존 게재 소스를 검색하려면 이 명령을 실행합니다.
 >
@@ -127,7 +127,7 @@ aws logs put-delivery-source --name llmo-cf-${CUSTOMER}-${CDN_ID} \
 >--query "deliverySources[?contains(resourceArns[0], '<CDN DistributionID>')]"
 >```
 >
->다음 명령에서는 위의 명령 결과에서 게재 소스 이름을 사용합니다.
+>다음 명령에서 위의 명령 결과의 게재 소스 이름을 사용합니다.
 
 ### 게재 구성 만들기
 
