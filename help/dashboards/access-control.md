@@ -106,7 +106,7 @@ Adobe LLM Optimizer은 사용자 성향에 따라 기본 액세스 제어를 지
 1. 조직에 대한 관리 권한이 있는 계정으로 [Adobe Admin Console](https://adminconsole.adobe.com/)에 로그인합니다.
 1. Adobe LLM Optimizer 제품 프로필(또는 조직의 동등한 제품 자격)을 제품이 할당한 기능을 받아야 하는 사용자 또는 그룹에 할당합니다.
 
-자세한 단계는 [Admin Console에서 제품 관리](https://helpx.adobe.com/enterprise/using/manage-products.html) 및 [사용자 그룹 관리](https://helpx.adobe.com/kr/enterprise/using/user-groups.html)를 참조하십시오.
+자세한 단계는 [Admin Console에서 제품 관리](https://helpx.adobe.com/kr/enterprise/using/manage-products.html) 및 [사용자 그룹 관리](https://helpx.adobe.com/kr/enterprise/using/user-groups.html)를 참조하십시오.
 
 >[!NOTE]
 >
