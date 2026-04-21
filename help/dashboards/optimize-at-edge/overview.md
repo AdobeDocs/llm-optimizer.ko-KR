@@ -2,9 +2,9 @@
 title: Optimize at Edge
 description: CDN 에지에서 작성 변경 없이 LLM Optimizer로 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 050a4eaa510df7195c5208978ba56d4413916808
+source-git-commit: e9eab92835e555f7267f58eea7faa0302c2f1cd0
 workflow-type: tm+mt
-source-wordcount: '2323'
+source-wordcount: '2283'
 ht-degree: 97%
 
 ---
@@ -48,11 +48,6 @@ Optimize at Edge는 마케팅, SEO, 콘텐츠 및 디지털 전략 팀의 비즈
 >[!NOTE]
 >전체 온보딩 흐름을 다루는 아래의 단계별 안내서를 참조하십시오. 안내서를 통해 해결할 수 없는 문제의 경우 `llmo-at-edge@adobe.com`에 문의하십시오.
 
-Optimize at Edge에 온보딩하기 위한 전제 조건:
-
-* LLM Optimizer에 대한 온보딩 프로세스를 완료합니다.
-* CDN 로그에 대한 로그 전달 프로세스를 완료합니다.
-
 IT/CDN 팀에 대한 요구 사항:
 
 * `*AdobeEdgeOptimize/1.0*` 사용자 에이전트를 사이트의 robots.txt 파일 또는 봇 트래픽 관리 규칙의 허용 목록에 추가합니다.
@@ -64,7 +59,7 @@ IT/CDN 팀에 대한 요구 사항:
 >[!IMPORTANT]
 >라우팅은 외부 CDN(클라이언트에 가장 가까운 CDN)에서 구성해야 합니다. 여러 CDN이 있는 경우 라우팅은 외부 CDN에서만 수행할 수 있습니다.
 
-설정 프로세스를 안내하려면 아래에서 CDN 공급자를 선택하고 해당 구성 안내서를 따르십시오. 이러한 예제는 실제 라이브 구성에 맞게 조정되어야 합니다. 먼저 저사양 환경에서 변경 사항을 적용하는 것을 권장합니다. **자체 CDN 가져오기** 안내서에는 각 페이지의 끝에 선택적 스테이징 호스트 이름 테스트가 포함되어 있습니다.
+설정 프로세스를 안내하려면 아래에서 CDN 공급자를 선택하고 해당 구성 안내서를 따르십시오. 이러한 예제는 실제 라이브 구성에 맞게 조정되어야 합니다. 먼저 저사양 환경에서 변경 사항을 적용하는 것을 권장합니다.
 
 ### CDN 구성 안내서
 

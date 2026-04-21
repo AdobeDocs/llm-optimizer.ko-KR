@@ -2,10 +2,10 @@
 title: Optimize at Edge - Fastly(BYOCDN)
 description: LLM Optimizer의 Optimize at Edge를 위해 Fastly BYOCDN을 구성하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 412500d2a95d66a5c9bf6fa88efc62c6244834c8
+source-git-commit: 13d2f4bbd1f9d3886f89f80df0e76093f2afdf13
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 92%
+source-wordcount: '348'
+ht-degree: 93%
 
 ---
 
@@ -19,12 +19,8 @@ ht-degree: 92%
 Fastly VCL 규칙을 설정하기 전에 다음을 확인하십시오.
 
 * 도메인에 대한 Fastly 액세스
-* LLM Optimizer 온보딩 프로세스 완료
-* LLM Optimizer로 CDN 로그 전달 완료
-* LLM Optimizer UI에서 검색한 Edge Optimize API 키
-* (선택 사항) 스테이징 라우팅을 테스트하려면 **선택 사항: 이 페이지의 끝에 있는 스테이징 호스트 이름에서 라우팅 테스트**&#x200B;를 참조하십시오.
-
-{{retrieve-byocdn-api-key}}
+* LLM Optimizer UI에서 검색한 Edge Optimize API 키 단계는 [API 키 검색](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)을 참조하십시오.
+* (선택 사항) 스테이징 라우팅을 테스트하려면 [스테이징 API 키](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)를 참조하십시오.
 
 **구성**
 
@@ -129,12 +125,5 @@ curl -svo /dev/null https://www.example.com/page.html \
 | `x-edgeoptimize-fo` | 장애 조치가 발생한 경우에만 표시됩니다(값: `1`). | 없음 |
 
 {{verify-routing-status-in-ui}}
-
-{{retrieve-staging-edge-optimize-api-key}}
-
-```
-curl -svo /dev/null https://staging.example.com/page.html \
-  --header "user-agent: chatgpt-user"
-```
 
 {{return-to-overview}}

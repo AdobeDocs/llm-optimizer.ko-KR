@@ -2,9 +2,9 @@
 title: Optimize at Edge - CloudFront(BYOCDN)
 description: LLM Optimizer의 Optimize at Edge를 위해 CloudFront BYOCDN을 구성하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 001ed59e25975c718367f543b2e35fedbce686f5
+source-git-commit: 13d2f4bbd1f9d3886f89f80df0e76093f2afdf13
 workflow-type: tm+mt
-source-wordcount: '2223'
+source-wordcount: '2207'
 ht-degree: 98%
 
 ---
@@ -20,12 +20,8 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 * 웹 사이트를 제공하는 기존 CloudFront 배포
 * Lambda 함수, IAM 역할, CloudFront 배포 및 캐시 정책을 생성할 수 있는 AWS IAM 권한
-* LLM Optimizer 온보딩 프로세스 완료
-* LLM Optimizer로 CDN 로그 전달 완료
-* LLM Optimizer UI에서 검색한 Edge Optimize API 키
-* (선택 사항) 스테이징 라우팅을 테스트하려면 **선택 사항: 이 페이지의 끝에 있는 스테이징 호스트 이름에서 라우팅 테스트**&#x200B;를 참조하십시오.
-
-{{retrieve-byocdn-api-key}}
+* LLM Optimizer UI에서 검색한 Edge Optimize API 키 단계는 [API 키 검색](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)을 참조하십시오.
+* (선택 사항) 스테이징 라우팅을 테스트하려면 [스테이징 API 키](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)를 참조하십시오.
 
 **1단계: Edge 최적화 원본 만들기**
 
@@ -403,12 +399,5 @@ Lambda@Edge 함수(`edgeoptimize-origin`)는 CloudFront 동작의 원본 요청 
 4. **변경 내용 저장**&#x200B;을 클릭합니다.
 
 5. 배포가 배포를 완료할 때까지 기다린 다음 에이전틱 요청이 6단계에서 설명한 대로 `x-edgeoptimize-request-id` 헤더를 반환하는지 확인합니다.
-
-{{retrieve-staging-edge-optimize-api-key}}
-
-```
-curl -svo /dev/null https://staging.example.com/page.html \
-  --header "user-agent: chatgpt-user"
-```
 
 {{return-to-overview}}
