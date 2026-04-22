@@ -2,9 +2,9 @@
 title: Optimize at Edge
 description: CDN 에지에서 작성 변경 없이 LLM Optimizer로 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: e9eab92835e555f7267f58eea7faa0302c2f1cd0
+source-git-commit: 6395ea8bdaae419d931ecd67f719a524caa66d0f
 workflow-type: tm+mt
-source-wordcount: '2283'
+source-wordcount: '2301'
 ht-degree: 97%
 
 ---
@@ -55,6 +55,10 @@ IT/CDN 팀에 대한 요구 사항:
 * CDN에서 Optimize at Edge 라우팅 규칙에 추가합니다.
 * CDN에 WAF 또는 보트 관리자 규칙이 있는 경우 `*AdobeEdgeOptimize/1.0*` 사용자 에이전트를 다운로드하십시오. 추가 확인이 필요한 경우 `x-edgeoptimize-fetcher-key` 헤더를 구성합니다. 아래의 각 BYOCDN 안내서에는 단계가 포함되어 있습니다.
 * LLM Optimizer 인터페이스에서 Optimize at Edge 라우팅을 확인합니다.
+
+다음 다이어그램은 Edge에서 최적화를 사용하여 BYOCDN 설정을 통해 요청이 이동하는 방식을 보여 줍니다.
+
+![BYOCDN 요청 흐름](/help/assets/optimize-at-edge/byocdn-request-flow.png)
 
 >[!IMPORTANT]
 >라우팅은 외부 CDN(클라이언트에 가장 가까운 CDN)에서 구성해야 합니다. 여러 CDN이 있는 경우 라우팅은 외부 CDN에서만 수행할 수 있습니다.
