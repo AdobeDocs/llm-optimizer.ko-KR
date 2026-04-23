@@ -2,7 +2,7 @@
 title: 브랜드 존재감
 description: AI 생성 응답 수준에서 브랜드가 어떻게 인식되는지 이해하기 위해 브랜드 존재감 대시보드를 사용하는 방법에 대해 알아봅니다.
 feature: Brand Presence
-source-git-commit: be88e6a5fbabbc9c1ceb75b49b883cde92ab98b2
+source-git-commit: 625807b8905f741aa89d551483d89cca2ef91873
 workflow-type: tm+mt
 source-wordcount: '1346'
 ht-degree: 96%
@@ -24,7 +24,7 @@ ht-degree: 96%
 * [감정 트렌드](#sentiment-trend)
 * [데이터 인사이트](#data-insights)
 
-브랜드 중심 환경을 사용하는 경우 **브랜드 존재감**(으)로 이동합니다. 브랜드 드롭다운 목록에서 분석할 브랜드를 선택하거나 **모든 브랜드**&#x200B;를 선택하여 전체 브랜드 세트에 대한 가시성을 검토하십시오.
+[브랜드 중심 경험](/help/overview/quick-start.md#brand-centric-experience)을 사용하는 경우 **브랜드 존재감**(으)로 이동합니다. 브랜드 드롭다운 목록에서 분석할 브랜드를 선택하거나 **모든 브랜드**&#x200B;를 선택하여 전체 브랜드 세트에 대한 가시성을 검토하십시오.
 
 ![브랜드 선택기를 사용하여 브랜드 존재감(브랜드 중심 경험)](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
 

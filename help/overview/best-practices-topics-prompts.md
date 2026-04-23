@@ -2,7 +2,7 @@
 title: 카테고리, 주제, 프롬프트 등에 대한 모범 사례
 description: 맞춤형 브랜드 모니터링 및 전략적 콘텐츠 분석을 위한 경쟁 업체를 포함하여 카테고리, 주제, 프롬프트 및 기타 브랜드를 추적하도록 구성하여 LLM 인사이트를 최적화합니다.
 feature: Best Practices, Customer Configuration
-source-git-commit: a09824e35dd5a0b91fe07ca423f633f9253a6d74
+source-git-commit: 625807b8905f741aa89d551483d89cca2ef91873
 workflow-type: tm+mt
 source-wordcount: '1530'
 ht-degree: 93%

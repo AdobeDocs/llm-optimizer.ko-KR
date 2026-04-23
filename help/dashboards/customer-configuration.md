@@ -2,7 +2,7 @@
 title: 고객 구성
 description: 고객 구성을 사용하여 LLM Optimizer 플랫폼 내에서 브랜드를 모니터링하고 분석하는 방법을 정의합니다.
 feature: Customer Configuration
-source-git-commit: ef6b4ec9dcb3b5234add6e82cbc54ab29d363509
+source-git-commit: 625807b8905f741aa89d551483d89cca2ef91873
 workflow-type: tm+mt
 source-wordcount: '2249'
 ht-degree: 91%
@@ -27,7 +27,7 @@ LLM Optimizer가 다양한 시장과 경쟁 환경에서 브랜드 존재감을 
 * [CDN 구성](#agentic-cdn)
 * [Google Search Console](#google-console)
 
-브랜드 중심 환경을 사용하는 경우 **브랜드 관리**(으)로 이동하여 브랜드, 브랜드 별칭을 설정 및 구성하고 추적할 경쟁업체를 정의합니다. **브랜드 관리**&#x200B;는 또한 브랜드와 연계된 URL과 관련된 Google Search Console, Adobe Analytics 및 CDN 로그 전달과 같은 통합을 구성하는 데 사용됩니다. GSC, CDN 등의 해당 탭을 클릭하여 이 작업을 수행할 수 있습니다.
+[브랜드 중심 경험](/help/overview/quick-start.md#brand-centric-experience)에 있는 경우 **브랜드 관리**(으)로 이동하여 브랜드, 브랜드 별칭을 설정 및 구성하고 추적할 경쟁사를 정의하십시오. **브랜드 관리**&#x200B;는 또한 브랜드와 연계된 URL과 관련된 Google Search Console, Adobe Analytics 및 CDN 로그 전달과 같은 통합을 구성하는 데 사용됩니다. GSC, CDN 등의 해당 탭을 클릭하여 이 작업을 수행할 수 있습니다.
 
 ![브랜드 관리 — 앱 탐색(브랜드 중심 경험)](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
@@ -60,7 +60,7 @@ Adobe에서 만든 업계 프롬프트 라이브러리를 다운로드하고 사
 5. 지역을 선택합니다.
 6. **프롬프트 추가**&#x200B;를 클릭하면 프롬프트가 있는 토픽이 목록에 나타납니다.
 
-브랜드 중심 환경을 사용하는 고객의 경우 주제 및 프롬프트를 추가하려면 **프롬프트 관리**(으)로 이동합니다.
+[브랜드 중심 경험](/help/overview/quick-start.md#brand-centric-experience)을 사용하는 고객의 경우 주제 및 프롬프트를 추가하려면 **프롬프트 관리**&#x200B;로 이동하십시오.
 
 ![프롬프트 관리(브랜드 중심 경험)](/help/assets/brand-centric-experience/prompts-management.png)
 
@@ -212,7 +212,7 @@ Google Search Console 계정을 LLM Optimizer와 통합한 후 Search Console에
 
 #### 프롬프트 목록에서 추가된 쿼리 보기 {#prompts-list}
 
-쿼리가 추가되면 고객 구성 대시보드(클래식 경험) 내의 [프롬프트](#prompts-brand) 탭 또는 **프롬프트 관리**(브랜드 중심 경험)에 나타납니다. Google Search Console에서 가져온 프롬프트는 **원본** 열에서 Google Search Console 아이콘으로 표시됩니다. 이 아이콘을 통해 실제 사용자 검색 동작을 기반으로 하는 프롬프트와 수동 추가된 프롬프트 또는 기타 소스의 프롬프트를 구별할 수 있습니다.
+쿼리가 추가되면 고객 구성 대시보드(클래식 탐색) 내의 [프롬프트](#prompts-brand) 탭 또는 **프롬프트 관리**(브랜드 중심 경험)에 나타납니다. Google Search Console에서 가져온 프롬프트는 **원본** 열에서 Google Search Console 아이콘으로 표시됩니다. 이 아이콘을 통해 실제 사용자 검색 동작을 기반으로 하는 프롬프트와 수동 추가된 프롬프트 또는 기타 소스의 프롬프트를 구별할 수 있습니다.
 
 ### 자주 묻는 질문 {#gsc-faq}
 

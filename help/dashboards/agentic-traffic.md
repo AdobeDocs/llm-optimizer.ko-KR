@@ -2,10 +2,10 @@
 title: 에이전틱 트래픽
 description: 에이전틱 트래픽 대시보드를 사용하여 AI 에이전트가 사이트와 상호작용하는 방법을 알아봅니다.
 feature: Agentic Traffic
-source-git-commit: a09824e35dd5a0b91fe07ca423f633f9253a6d74
+source-git-commit: 82bfbea9375fe7f3cd7f27dfdf0adcab6489731d
 workflow-type: tm+mt
-source-wordcount: '1404'
-ht-degree: 90%
+source-wordcount: '1407'
+ht-degree: 91%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 90%
 * [상단 및 하단 증가 항목](#top-bottom-movers)
 * [사용자 에이전트 및 URL 성능 분석](#user-url-performance)
 
-브랜드 중심 환경에 있는 경우 **에이전트 트래픽**(으)로 이동하여 에이전트 트래픽 인사이트를 볼 사이트를 선택하십시오.
+[브랜드 중심 경험](/help/overview/quick-start.md#brand-centric-experience)에 있는 경우 **에이전트 트래픽**(으)로 이동하여 에이전트 트래픽 인사이트를 볼 사이트를 선택하십시오.
 
 ![에이전트 트래픽 — 사이트 선택기(브랜드 중심 경험)](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
 
@@ -33,11 +33,9 @@ ht-degree: 90%
 
 **CDN 로그 전달**&#x200B;이 없으면 에이전틱 트래픽 대시보드가 비어 있습니다. 에이전틱 상호작용을 보려면 **CDN 로그 전달**&#x200B;을 구성해야 합니다.
 
-브랜드 중심 환경에 있는 경우 **브랜드 관리**(으)로 이동하고 **CDN** 레이블을 클릭하여 CDN 로그 전달 정보를 추가할 수 있습니다.
+### 고객 구성(클래식 탐색)
 
-![브랜드 관리 — CDN 로그 전달](/help/assets/brand-centric-experience/brands-management-cdn.png)
-
-**고객 구성(클래식 탐색):** 처음 로그인하면 아래 그림과 같은 메시지가 표시됩니다.
+처음 로그인하면 아래 이미지에 표시된 것과 같은 메시지가 표시됩니다.
 
 ![CDN 설정](/help/dashboards/assets/ag-log-forward1.png)
 
@@ -59,6 +57,12 @@ ht-degree: 90%
 >고객 관리 CDN(BYOCDN) 사용 시 로그 전달에 대한 자세한 내용은 [BYOCDN 로그 전달 개요](/help/overview/log-forwarding/log-forwarding-overview.md)를 참조하십시오
 
 활성화되면 로그가 수집되고 대시보드는 총 에이전트 상호작용, 성공률, 시장별 히트 수, 사용자 에이전트 분석, URL 수준 성능과 같은 지표로 채워집니다.
+
+### 브랜드 중심 경험
+
+[브랜드 중심 환경](/help/overview/quick-start.md#brand-centric-experience)에 있는 경우 **브랜드 관리**(으)로 이동하고 **CDN** 레이블을 클릭하여 CDN 로그 전달 정보를 추가할 수 있습니다.
+
+![브랜드 관리 — CDN 로그 전달](/help/assets/brand-centric-experience/brands-management-cdn.png)
 
 LLM Optimizer는 CDN 로그에서 필드의 하위 집합을 처리합니다. 원시 로그 필드 이름은 CDN 공급자에 따라 다르지만 정규화되어 다음과 같이 표시됩니다.
 
