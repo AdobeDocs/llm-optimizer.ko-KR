@@ -2,10 +2,10 @@
 title: 참조 트래픽
 description: 참조 트래픽 대시보드를 사용하여 외부 플랫폼, AI 인용 및 참조 링크에서 방문자가 사이트에 도달하는 방식을 알아봅니다.
 feature: Referral Traffic
-source-git-commit: 625807b8905f741aa89d551483d89cca2ef91873
+source-git-commit: 82bfbea9375fe7f3cd7f27dfdf0adcab6489731d
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 87%
+source-wordcount: '734'
+ht-degree: 88%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 87%
 
 처음 로그인하면 참조 트래픽 대시보드가 비어 있을 수 있습니다. 데이터를 보려면 CDN 로그 전달을 구성해야 합니다.
 
-[브랜드 중심 환경](/help/overview/quick-start.md#brand-centric-experience)을 사용하는 고객의 경우 **브랜드 관리**(으)로 이동하고 **CDN** 레이블을 클릭하여 CDN 로그 전달 정보를 추가할 수 있습니다. [에이전트 트래픽 — CDN 설정](/help/dashboards/agentic-traffic.md#cdn-setup)도 참조하십시오.
+[브랜드 중심 환경](/help/overview/quick-start.md#brand-centric-experience)을 사용하는 고객의 경우 **브랜드 관리**(으)로 이동하고 **CDN** 레이블을 클릭하여 CDN 로그 전달 정보를 추가할 수 있습니다.
 
 **고객 구성(클래식 경험):** **구성으로 이동**&#x200B;을 선택하여 [CDN 로그 전달](/help/dashboards/customer-configuration.md#cdn-configuration)을 구성합니다.
 

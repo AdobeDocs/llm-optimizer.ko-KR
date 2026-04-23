@@ -2,7 +2,7 @@
 title: 에이전틱 트래픽
 description: 에이전틱 트래픽 대시보드를 사용하여 AI 에이전트가 사이트와 상호작용하는 방법을 알아봅니다.
 feature: Agentic Traffic
-source-git-commit: 625807b8905f741aa89d551483d89cca2ef91873
+source-git-commit: 82bfbea9375fe7f3cd7f27dfdf0adcab6489731d
 workflow-type: tm+mt
 source-wordcount: '1407'
 ht-degree: 91%
@@ -33,7 +33,7 @@ ht-degree: 91%
 
 **CDN 로그 전달**&#x200B;이 없으면 에이전틱 트래픽 대시보드가 비어 있습니다. 에이전틱 상호작용을 보려면 **CDN 로그 전달**&#x200B;을 구성해야 합니다.
 
-### 고객 구성(클래식 탐색):
+### 고객 구성(클래식 탐색)
 
 처음 로그인하면 아래 이미지에 표시된 것과 같은 메시지가 표시됩니다.
 
