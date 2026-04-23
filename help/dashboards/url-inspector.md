@@ -2,10 +2,10 @@
 title: URL 관리자
 description: URL 관리자를 사용하여 도메인의 특정 페이지가 AI 검색에서 어떻게 작동하는지 분석하는 방법에 대해 알아봅니다.
 feature: URL Inspector
-source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
-workflow-type: ht
-source-wordcount: '687'
-ht-degree: 100%
+source-git-commit: 7ba417a568d21c1e56de218e023df243b73f6357
+workflow-type: tm+mt
+source-wordcount: '718'
+ht-degree: 95%
 
 ---
 
@@ -15,6 +15,10 @@ ht-degree: 100%
 URL 관리자를 사용하면 도메인의 특정 페이지가 AI 검색에서 어떻게 작동하는지 분석할 수 있습니다. URL 수준에서 가시성, 에이전틱 트래픽, 참조 데이터를 결합하여 인용되는 URL과 응답에 표시되는 빈도를 세부적으로 볼 수 있습니다.
 
 ![URL 관리자](/help/dashboards/assets/url-insp.png)
+
+브랜드 중심 환경을 사용하는 경우 **URL 검사기**(으)로 이동하여 인사이트를 확인할 사이트를 선택하십시오.
+
+![URL 검사기 — 사이트 선택기(브랜드 중심 경험)](/help/assets/brand-centric-experience/url-inspector-dashboard.png)
 
 ## 필터
 
