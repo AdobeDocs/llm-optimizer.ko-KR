@@ -5,7 +5,7 @@ feature: Opportunities
 source-git-commit: 13d2f4bbd1f9d3886f89f80df0e76093f2afdf13
 workflow-type: tm+mt
 source-wordcount: '2207'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -63,7 +63,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
    게시하기 전에 코드에서 다음 값을 사용자 정의합니다.
 
    * `YOUR_DEFAULT_ORIGIN` — 기존 기본 원본 이름으로 대체합니다(CloudFront > 배포 > [배포] > 원본 탭에서 확인).
-   * `TARGETED_PATHS` — `null`을 모든 HTML 페이지를 타깃팅하도록 설정하거나 특정 경로의 배열(예: `['/', '/products', '/about']`)로 설정합니다.
+   * `TARGETED_PATHS` — `null`을 모든 HTML 페이지를 타기팅하도록 설정하거나 특정 경로의 배열(예: `['/', '/products', '/about']`)로 설정합니다.
 
 4. **변경 내용 저장** > **함수 게시**&#x200B;를 클릭합니다.
 
@@ -170,7 +170,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 **4단계: Lambda@Edge 함수 만들기(원본 요청 및 응답)**
 
 >[!IMPORTANT]
->Lambda@Edge 함수&#x200B;**는 `us-east-1`(버지니아 북부) 지역**&#x200B;에서 만들어야 합니다. 이는 AWS 요구 사항입니다. 함수를 `us-east-1`에서 만들더라도 AWS가 이 함수를 전 세계의 모든 CloudFront 엣지 위치에 자동 복제하므로 뷰어에 가장 가까운 엣지 로케이션에서 함수가 실행됩니다. 계속하기 전에 본인이 AWS Console에서 `us-east-1` 지역에 있는지 확인하십시오.
+>Lambda@Edge 함수&#x200B;**는 `us-east-1`(버지니아 북부) 지역**&#x200B;에서 만들어야 합니다. 이는 AWS 요구 사항입니다. 함수를 `us-east-1`에서 만들더라도 AWS가 이 함수를 전 세계의 모든 CloudFront 에지 위치에 자동 복제하므로 뷰어에 가장 가까운 에지 로케이션에서 함수가 실행됩니다. 계속하기 전에 본인이 AWS Console에서 `us-east-1` 지역에 있는지 확인하십시오.
 
 **Lambda 함수 만들기**
 
@@ -205,7 +205,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 3. **정책 업데이트**&#x200B;를 클릭합니다.
 
 >[!WARNING]
->Lambda@Edge의 `edgelambda.amazonaws.com` 서비스 주체는 **필수**&#x200B;입니다. 필수가 아닌 경우 CloudFront가 엣지 로케이션에서 함수를 호출할 수 없습니다.
+>Lambda@Edge의 `edgelambda.amazonaws.com` 서비스 주체는 **필수**&#x200B;입니다. 필수가 아닌 경우 CloudFront가 에지 로케이션에서 함수를 호출할 수 없습니다.
 
 **CloudWatch 로그 권한 정책 수정**
 
@@ -222,7 +222,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 3. **변경 내용 저장**&#x200B;을 클릭합니다.
 
 >[!WARNING]
->ARN의 지역은 `*`이어야 합니다. Lambda@Edge는 뷰어에 가장 가까운 엣지 위치에서 실행되므로 로그가 엣지 위치의 지역(예: `ap-south-1`, `eu-west-1`)에 있는 CloudWatch에 기록되며 지역이 반드시 `us-east-1`일 필요는 없습니다. 로그 그룹은 지역 접두사가 있는 이름 `/aws/lambda/us-east-1.FUNCTION_NAME`을(를) 사용합니다. 여기서 `us-east-1`은 항상 함수의 홈 지역입니다.
+>ARN의 지역은 `*`이어야 합니다. Lambda@Edge는 뷰어에 가장 가까운 에지 위치에서 실행되므로 로그가 에지 위치의 지역(예: `ap-south-1`, `eu-west-1`)에 있는 CloudWatch에 기록되며 지역이 반드시 `us-east-1`일 필요는 없습니다. 로그 그룹은 지역 접두사가 있는 이름 `/aws/lambda/us-east-1.FUNCTION_NAME`을(를) 사용합니다. 여기서 `us-east-1`은 항상 함수의 홈 지역입니다.
 
 **버전 게시**
 
@@ -320,7 +320,7 @@ curl -svo /dev/null https://www.example.com/page.html \
 *Lambda@Edge 로그(`edgeoptimize-origin`)*
 
 >[!IMPORTANT]
->Lambda@Edge 로그는 `us-east-1`가 아닌 요청을 제공한 **엣지 위치 지역**&#x200B;의 CloudWatch에 기록됩니다. curl 명령을 실행한 위치와 가장 가까운 AWS 지역에서 CloudWatch를 확인합니다.
+>Lambda@Edge 로그는 `us-east-1`가 아닌 요청을 제공한 **에지 위치 지역**&#x200B;의 CloudWatch에 기록됩니다. curl 명령을 실행한 위치와 가장 가까운 AWS 지역에서 CloudWatch를 확인합니다.
 
 **탐색:** AWS Console > CloudWatch > 로그 그룹(본인이 올바른 지역에 있는지 확인)
 
@@ -331,7 +331,7 @@ curl -svo /dev/null https://www.example.com/page.html \
    * `Calling Default Origin in case of failover for agentic requests` — 장애 조치 경로
    * `Failover Triggered for agentic requests` — 원본-응답 장애 조치 감지
 
-로그 그룹이 없으면 4단계에서 IAM 권한이 올바르게 업데이트되었는지 확인합니다. 요청을 제공한 엣지 위치가 예상과 다를 수 있으므로 근처의 다른 AWS 지역도 확인하십시오.
+로그 그룹이 없으면 4단계에서 IAM 권한이 올바르게 업데이트되었는지 확인합니다. 요청을 제공한 에지 위치가 예상과 다를 수 있으므로 근처의 다른 AWS 지역도 확인하십시오.
 
 **문제 해결**
 
@@ -339,7 +339,7 @@ curl -svo /dev/null https://www.example.com/page.html \
 |-------|----------------|----------|
 | 에이전틱 요청에 대한 응답에 `x-edgeoptimize-request-id` 없음 | 원본 그룹이 Edge Optimize로 라우팅되지 않음 | `YOUR_DEFAULT_ORIGIN`이 CloudFront 함수 코드에서 올바르게 대체되었는지 확인합니다(2단계). |
 | 에이전틱 요청에 대한 403 오류 | API 키가 잘못되었거나 누락됨 | Edge Optimize 원본 사용자 지정 헤더에서 `x-edgeoptimize-api-key` 헤더 값을 확인합니다(1단계). |
-| Lambda@Edge에 대한 CloudWatch 로그를 찾을 수 없음 | 잘못된 IAM 권한 | CloudWatch 로그 권한 정책이 업데이트되었는지 확인합니다(4단계). 참고: Lambda@Edge 로그는 요청을 제공한 엣지 지역에 표시되며 지역이 `us-east-1`일 필요는 없습니다. |
+| Lambda@Edge에 대한 CloudWatch 로그를 찾을 수 없음 | 잘못된 IAM 권한 | CloudWatch 로그 권한 정책이 업데이트되었는지 확인합니다(4단계). 참고: Lambda@Edge 로그는 요청을 제공한 에지 지역에 표시되며 지역이 `us-east-1`일 필요는 없습니다. |
 | 캐시가 `cache-control: no-store`를 준수하지 않음 | 최소 TTL이 너무 높을 수 있음 | 캐시 정책에서 최소 TTL을 `0`으로 설정합니다(3단계). 최소 TTL이 이미 매우 짧은 경우 TTL이 문제가 아닐 수 있습니다. |
 | 설정 후 중단된 일반(비에이전틱) 트래픽 | 캐시 정책 구성 오류 | 새 캐시 정책을 만든 경우(시나리오 C) 원래 관리 정책에서 모든 설정을 복제했는지 확인합니다. |
 

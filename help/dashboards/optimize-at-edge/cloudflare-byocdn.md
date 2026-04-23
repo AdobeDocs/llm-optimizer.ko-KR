@@ -5,7 +5,7 @@ feature: Opportunities
 source-git-commit: 13d2f4bbd1f9d3886f89f80df0e76093f2afdf13
 workflow-type: tm+mt
 source-wordcount: '1906'
-ht-degree: 94%
+ht-degree: 99%
 
 ---
 
@@ -55,7 +55,7 @@ Edge Optimize 백엔드에 대한 요청에는 다음 헤더를 설정해야 합
 Edge Optimize용 Cloudflare 작업자를 설정하는 방법에는 두 가지가 있습니다.
 
 * [**옵션 1: Cloudflare에 배포(권장)**](#option-1-deploy-to-cloudflare) — 새 작업자를 자동으로 만들고 필요한 환경 변수 및 암호를 묻는 메시지를 표시합니다. 이 도메인에 대한 기존 Cloudflare 작업자가 없는 경우 이 옵션을 사용합니다.
-* [**옵션 2: 수동 설정**](#option-2-manual-setup) — 작업자를 직접 만들고 구성하는 단계별 지침을 따릅니다. 기존 Cloudflare Worker가 이미 도메인에 구성되어 있는 경우 이 옵션을 사용합니다. 기존 작업자에 Edge 최적화 코드를 병합해야 합니다([2단계: 작업자 코드 추가](#option-2-manual-setup) 참조). 또는 배포보다 전체 제어를 선호하는 경우 이 옵션을 사용합니다.
+* [**옵션 2: 수동 설정**](#option-2-manual-setup) — 작업자를 직접 만들고 구성하는 단계별 지침을 따릅니다. 도메인에 이미 기존 Cloudflare 작업자가 구성되어 있거나 Edge Optimize 코드를 기존 작업자에 병합해야 하는 경우([2단계: 작업자 코드 추가](#option-2-manual-setup) 참조), 배포에 대한 완전한 제어를 선호하는 경우 이 옵션을 사용합니다.
 
 선택한 옵션에 관계없이 작업자를 도메인에 수동으로 연결해야 합니다 — [단계: 도메인에 경로 추가](#add-a-route-to-your-domain)를 참조하십시오.
 
@@ -109,7 +109,7 @@ Edge Optimize용 Cloudflare 작업자를 설정하는 방법에는 두 가지가
 
 **2단계: 작업자 코드 추가**
 
-작업자를 만든 후 **코드 편집**&#x200B;을 클릭하고 기본 코드를 다음으로 바꿉니다. 기존 Cloudflare Worker가 있는 경우 완전히 대체하지 않고 아래 코드를 기존 작업자 코드와 병합하십시오.
+작업자를 만든 후 **코드 편집**&#x200B;을 클릭하고 기본 코드를 다음으로 바꿉니다. 이미 기존 Cloudflare 작업자가 있는 경우, 코드를 완전히 대체하지 말고 아래 코드를 기존 작업자 코드와 병합합니다.
 
 ```javascript
 /**
