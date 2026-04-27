@@ -3,9 +3,9 @@ title: Optimize at Edge - Akamai(BYOCDN)
 description: LLM Optimizer의 Optimize at Edge를 위해 Akamai BYOCDN을 구성하는 방법에 대해 알아봅니다.
 feature: Opportunities
 source-git-commit: 13d2f4bbd1f9d3886f89f80df0e76093f2afdf13
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '809'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 

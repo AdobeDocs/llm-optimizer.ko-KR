@@ -3,9 +3,9 @@ title: Optimize at Edge - CloudFront(BYOCDN)
 description: LLM Optimizer의 Optimize at Edge를 위해 CloudFront BYOCDN을 구성하는 방법에 대해 알아봅니다.
 feature: Opportunities
 source-git-commit: 13d2f4bbd1f9d3886f89f80df0e76093f2afdf13
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2207'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -230,10 +230,10 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 2. 설명을 추가합니다.
 
-3. **게시**&#x200B;를 클릭합니다.
+3. **게시**를 클릭합니다.
    ![Lambda 게시](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
 
-4. **함수 ARN**&#x200B;을 복사하거나 기록하십시오. 다음 단계에서 이 정보가 필요합니다.
+4. **함수 ARN**을 복사하거나 기록하십시오. 다음 단계에서 이 정보가 필요합니다.
    ![Lambda ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
 
 **5단계: 함수 및 캐시 정책을 동작과 연결**
