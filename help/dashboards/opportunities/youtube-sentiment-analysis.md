@@ -2,9 +2,9 @@
 title: YouTube 감정 분석
 description: LLM Optimizer이 YouTube 비디오 및 주석을 분석하여 AI 검색 결과에서 브랜드의 인식과 가시성을 개선하는 권장 사항을 표시하는 방법을 알아봅니다.
 feature: Opportunities
-source-git-commit: 101a0582a5112c7fdf1871a938b773b7159a9d4c
+source-git-commit: 91fcd44f97e996fa7eb712928aba5dda250ea55b
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1255'
 ht-degree: 1%
 
 ---
