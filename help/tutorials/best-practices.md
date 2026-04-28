@@ -2,8 +2,8 @@
 title: LLM Optimizer 모범 사례
 description: AI 검색에서 브랜드 가시성을 높이기 위한 LLM 최적화 모범 사례를 살펴보십시오. 콘텐츠 벤치마크 및 최적화에 대한 인사이트.
 feature: Best Practices, Agentic Traffic, Brand Presence
-source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
-workflow-type: ht
+source-git-commit: c449e2eb728648285413390ce7dce973380597cc
+workflow-type: tm+mt
 source-wordcount: '1718'
 ht-degree: 100%
 
@@ -86,7 +86,7 @@ LLM의 가시성은 브랜드가 AI 생성 응답에 얼마나 자주, 얼마나
 
 >[!TIP]
 >
->LLM Optimizer는 [기회](/help/dashboards/opportunities.md) 대시보드에서 온사이트 및 오프사이트 최적화 기회를 제안합니다. 이러한 기회는 사이트에 따라 다릅니다. 이러한 제안 중 상당수는 LLM Optimizer를 사용하여 사이트에 직접 배포할 수 있습니다.
+>LLM Optimizer는 [기회](/help/dashboards/opportunities-overview.md) 대시보드에서 온사이트 및 오프사이트 최적화 기회를 제안합니다. 이러한 기회는 사이트에 따라 다릅니다. 이러한 제안 중 상당수는 LLM Optimizer를 사용하여 사이트에 직접 배포할 수 있습니다.
 
 다음은 몇 가지 최적화 모범 사례입니다.
 
@@ -108,7 +108,7 @@ LLM의 가시성은 브랜드가 AI 생성 응답에 얼마나 자주, 얼마나
 
 4. 모니터링 및 반복
 
-   * [기회 대시보드](/help/dashboards/opportunities.md)를 사용하여 권장 사항을 식별하고 조치합니다.
+   * [기회 대시보드](/help/dashboards/opportunities-overview.md)를 사용하여 권장 사항을 식별하고 조치합니다.
    * 가시성 점수, 감정 및 인용 빈도를 추적합니다.
    * 다른 사람들의 활동(경쟁 업체 포함)과 프롬프트 트렌드에 따라 조정합니다.
 
@@ -118,7 +118,7 @@ LLM의 가시성은 브랜드가 AI 생성 응답에 얼마나 자주, 얼마나
 
 >[!TIP]
 >
->LLM Optimizer는 [기회](/help/dashboards/opportunities.md) 대시보드에서 온사이트 및 오프사이트 최적화 기회를 제안합니다. 이러한 기회는 사이트에 따라 다릅니다. 이러한 제안 중 상당수는 LLM Optimizer를 사용하여 사이트에 직접 배포할 수 있습니다.
+>LLM Optimizer는 [기회](/help/dashboards/opportunities-overview.md) 대시보드에서 온사이트 및 오프사이트 최적화 기회를 제안합니다. 이러한 기회는 사이트에 따라 다릅니다. 이러한 제안 중 상당수는 LLM Optimizer를 사용하여 사이트에 직접 배포할 수 있습니다.
 
 
 주요 오프사이트 채널:
@@ -170,7 +170,7 @@ LLM의 가시성은 브랜드가 AI 생성 응답에 얼마나 자주, 얼마나
    * 기여도 기능을 사용하여 가시성 향상을 트래픽, 참여 및 전환과 연결합니다. Adobe LLM Optimizer의 기여도 기능은 가시성 지표(언급, 인용, 감정)의 개선을 사이트 트래픽, 사용자 참여도, 전환과 같은 실제 비즈니스 결과와 연결할 수 있습니다. 이는 최적화 노력에 대한 ROI를 입증합니다.
    * 에이전틱 및 참조 트래픽의 변화를 추적하여 최적화 ROI를 검증합니다.
 1. 콘텐츠 개선
-   * LLM Optimizer의 [기회 대시보드](/help/dashboards/opportunities.md)를 사용하여 사이트를 식별하고 특히 권장되는 즉각적인 변경을 수행할 수 있습니다. [기회](/help/dashboards/opportunities.md)를 참조하십시오(그런 다음 결과 측정). 기회 섹션을 정기적으로 검토하고 제공된 권장 사항에 대해 조치를 취합니다.
+   * LLM Optimizer의 [기회 대시보드](/help/dashboards/opportunities-overview.md)를 사용하여 사이트를 식별하고 특히 권장되는 즉각적인 변경을 수행할 수 있습니다. [기회](/help/dashboards/opportunities-overview.md)를 참조하십시오(그런 다음 결과 측정). 기회 섹션을 정기적으로 검토하고 제공된 권장 사항에 대해 조치를 취합니다.
    * 가시성이 떨어지는 페이지의 우선순위를 지정합니다.
    * 웹 사이트 및 기타 콘텐츠를 업데이트하여 타기팅하려는 프롬프트와 더 관련성을 높입니다.
    * 사람이 흔히 묻는 질문에 답하는 FAQ를 페이지에 추가합니다.

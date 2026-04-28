@@ -2,7 +2,7 @@
 title: Optimize at Edge
 description: CDN 에지에서 작성 변경 없이 LLM Optimizer로 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 96bb7d73c8cdd2151df12030bbf28723857c78e1
+source-git-commit: 34e90bc95aa1d2ffabe8fd06c2c548491dd5c5b7
 workflow-type: tm+mt
 source-wordcount: '2315'
 ht-degree: 99%
@@ -32,7 +32,7 @@ Optimize at Edge는 마케팅, SEO, 콘텐츠 및 디지털 전략 팀의 비즈
 
 ### Optimize at Edge에서 어떤 기회가 지원됩니까?
 
-에이전틱 웹 경험을 향상시킬 수 있는 기회는 Optimize at Edge를 통해 지원됩니다. [기회 대시보드](/help/dashboards/opportunities.md) 페이지와 현재 페이지의 기회 섹션에서 각 기회에 대해 자세히 알아봅니다.
+에이전틱 웹 경험을 향상시킬 수 있는 기회는 Optimize at Edge를 통해 지원됩니다. [기회 대시보드](/help/dashboards/opportunities-overview.md) 페이지와 현재 페이지의 기회 섹션에서 각 기회에 대해 자세히 알아봅니다.
 
 ## 온보딩
 
