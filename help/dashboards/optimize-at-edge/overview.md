@@ -2,7 +2,7 @@
 title: Optimize at Edge
 description: CDN 에지에서 작성 변경 없이 LLM Optimizer로 최적화를 제공하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 96bb7d73c8cdd2151df12030bbf28723857c78e1
+source-git-commit: 34e90bc95aa1d2ffabe8fd06c2c548491dd5c5b7
 workflow-type: tm+mt
 source-wordcount: '2315'
 ht-degree: 99%
@@ -32,7 +32,7 @@ Optimize at Edge는 마케팅, SEO, 콘텐츠 및 디지털 전략 팀의 비즈
 
 ### Optimize at Edge에서 어떤 기회가 지원됩니까?
 
-에이전틱 웹 경험을 향상시킬 수 있는 기회는 Optimize at Edge를 통해 지원됩니다. [기회 대시보드](/help/dashboards/opportunities.md) 페이지와 현재 페이지의 기회 섹션에서 각 기회에 대해 자세히 알아봅니다.
+에이전틱 웹 경험을 향상시킬 수 있는 기회는 Optimize at Edge를 통해 지원됩니다. [기회 대시보드](/help/dashboards/opportunities-overview.md) 페이지와 현재 페이지의 기회 섹션에서 각 기회에 대해 자세히 알아봅니다.
 
 ## 온보딩
 
@@ -41,7 +41,7 @@ Optimize at Edge는 마케팅, SEO, 콘텐츠 및 디지털 전략 팀의 비즈
 다음 단계를 따라 LLM Optimizer 계정에서 온보딩 프로세스를 시작합니다.
 
 1. **고객 구성** 대시보드에서 **CDN 구성** 탭을 선택합니다.
-1. **CDN 온보딩**&#x200B;을 클릭합니다.
+1. **CDN 온보딩**을 클릭합니다.
    ![CDN 구성 탭](/help/overview/assets/cc-cdn.png)
 1. AEM Cloud Service 관리 Fastly 고객의 경우, 라우팅 설정은 셀프서비스이며 LLM Optimizer UI에서 직접 완료할 수 있습니다. 다른 CDN 공급자를 사용하는 고객의 경우 IT/CDN 팀이 필요한 설정 및 사전 요구 사항을 완료해야 합니다. 추가 지침은 아래에 제공된 CDN 안내서 예시를 참조하십시오.
 
@@ -128,7 +128,7 @@ IT/CDN 팀에 대한 요구 사항:
 
 각 기회마다 에지에서 최적화를 미리 보고, 편집하고, 배포하고, 라이브를 보고, 롤백할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477991/?captions=kor&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### 미리보기
 
@@ -186,7 +186,7 @@ The CDN is where the optimized version of the page is assembled and delivered to
 
 Q: 콘텐츠가 소스에서 업데이트되면 어떻게 됩니까?
 
-기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 버전의 페이지를 제공합니다. 그러나 **콘텐츠 가시성 복구**&#x200B;를 위해 소스가 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하도록 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하기 때문입니다. **LLM 친화 요약 추가**&#x200B;와 같은 콘텐츠 기회를 위해 LLM Optimizer는 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 에이전트가 볼 수 있는 페이지와 사람이 볼 수 있는 페이지 간의 콘텐츠 이동을 방지하기 위해 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정합니다.
+기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 버전의 페이지를 제공합니다. 그러나 **콘텐츠 가시성 복구**&#x200B;를 위해 소스가 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하도록 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하기 때문입니다. **LLM 친화 요약 추가**와 같은 콘텐츠 기회를 위해 LLM Optimizer는 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 에이전트가 볼 수 있는 페이지와 사람이 볼 수 있는 페이지 간의 콘텐츠 이동을 방지하기 위해 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정합니다.
 <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 질문. Optimize at Edge는 Adobe Edge Delivery Service(EDS)를 사용하는 사이트에만 적용됩니까?

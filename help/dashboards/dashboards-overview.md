@@ -2,10 +2,10 @@
 title: 대시보드 개요
 description: 문서 개요입니다.
 feature: Onboarding
-source-git-commit: 945537c3139e5a2038858e6121172e1a1a10ddf4
-workflow-type: ht
+source-git-commit: c449e2eb728648285413390ce7dce973380597cc
+workflow-type: tm+mt
 source-wordcount: '262'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 
@@ -43,7 +43,7 @@ CARDS
   {description= Lets you enable cross-functional teamwork by allowing you to invite colleagues into a shared workspace.}
   {target=_blank}
   {cta=Learn more}
-* ./opportunities.md
+* ./opportunities-overview.md
   {title= Opportunities dashboard}
   {image= /help/assets/overview/opportunities-card.png}
   {description= Surfaces and prioritizes actionable insights that improve brand visibility and citation performance across AI-powered search platforms}
@@ -161,7 +161,7 @@ CARDS
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./opportunities.md" title="기회 대시보드" target="_blank" rel="referrer">
+                    <a href="./opportunities-overview.md" title="기회 대시보드" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="/help/assets/overview/opportunities-card.png" alt="기회 대시보드"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -170,11 +170,11 @@ CARDS
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./opportunities.md" target="_blank" rel="referrer" title="기회 대시보드">기회 대시보드</a>
+                        <a href="./opportunities-overview.md" target="_blank" rel="referrer" title="기회 대시보드">기회 대시보드</a>
                     </p>
                     <p class="is-size-6">AI 기반 검색 플랫폼 전반에서 브랜드 가시성과 인용 성능을 향상시키는 실행 가능한 인사이트를 제공하고 우선순위를 정합니다.</p>
                 </div>
-                <a href="./opportunities.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="./opportunities-overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
                 </a>
             </div>
