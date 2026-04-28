@@ -2,10 +2,10 @@
 user-guide-title: LLM Optimizer
 breadcrumb-title: LLM Optimizer
 user-guide-description: Adobe LLM Optimizer를 통해 브랜드를 성장시키십시오. 언급을 추적하고, 인사이트를 발견하며, AI 기반 검색을 주도하십시오. 가시성을 제어하고, 지금 최적화를 시작하십시오!
-source-git-commit: 5e033e9cef05efaf96a6c71ebeae71c533ddd605
+source-git-commit: 96bb7d73c8cdd2151df12030bbf28723857c78e1
 workflow-type: tm+mt
-source-wordcount: '113'
-ht-degree: 96%
+source-wordcount: '135'
+ht-degree: 85%
 
 ---
 
@@ -24,7 +24,15 @@ ht-degree: 96%
    + [에이전틱 트래픽](/help/dashboards/agentic-traffic.md)
    + [참조 트래픽](/help/dashboards/referral-traffic.md)
    + [URL 관리자](/help/dashboards/url-inspector.md)
-   + [기회](/help/dashboards/opportunities.md)
+   + 기회{#opportunities}
+      + [기회](/help/dashboards/opportunities.md)
+      + [에이전트 트래픽 오류](/help/dashboards/opportunities/agentic-traffic-errors.md)
+      + [robots.txt에 의해 트래픽 차단됨](/help/dashboards/opportunities/traffic-blocked-by-robots.md)
+      + [콘텐츠 가시성 복구](/help/dashboards/opportunities/recover-content-visibility.md)
+      + [Wikipedia 분석](/help/dashboards/opportunities/wikipedia-analysis.md)
+      + [YouTube 감정 분석](/help/dashboards/opportunities/youtube-sentiment-analysis.md)
+      + [Reddit 감정 분석](/help/dashboards/opportunities/reddit-sentiment-analysis.md)
+      + [인용된 감정 분석](/help/dashboards/opportunities/cited-sentiment-analysis.md)
    + [고객 구성](/help/dashboards/customer-configuration.md)
    + [공동 작업](/help/dashboards/collaboration.md)
 + BYOCDN 로그 전달{#log-forwarding}
