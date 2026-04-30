@@ -2,13 +2,18 @@
 title: 카테고리, 주제, 프롬프트 등에 대한 모범 사례
 description: 맞춤형 브랜드 모니터링 및 전략적 콘텐츠 분석을 위한 경쟁 업체를 포함하여 카테고리, 주제, 프롬프트 및 기타 브랜드를 추적하도록 구성하여 LLM 인사이트를 최적화합니다.
 feature: Best Practices, Customer Configuration
-source-git-commit: 625807b8905f741aa89d551483d89cca2ef91873
+TQID: https://experienceleague.adobe.com/-nss61v0gCCKDKx4TaT5L-ImXVGQx-lyc9ha7u556d8
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: c0713b97-4af8-4c41-b742-5afcc6ced468id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: c898dfb2-0885-42fb-b2af-b2d756752646id: e69d5a42-0217-4ca5-9396-a9a826a170da
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: addf009e-030a-4310-8534-776a3e62ed48id: b5520579-b31f-4df7-9281-f0d9f91e2edcid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f8667931-f646-4dd3-af2a-b9d0cb8098ad
+autotag-review: '2026-04-30T17:25:43.100Z'
+source-git-commit: 733c693f35c5b023681962cc5089492b95645b28
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: 1530
 ht-degree: 93%
 
 ---
-
 
 # 추적할 카테고리, 주제, 프롬프트 등을 구성하는 모범 사례
 
@@ -43,7 +48,7 @@ ht-degree: 93%
 업계 프롬프트 라이브러리를 사용하려면:
 
 1. **고객 구성** 대시보드로 이동합니다.
-1. LLM Optimizer에서 라이브러리 파일을 다운로드하려면 **프롬프트 라이브러리 다운로드**&#x200B;를 선택합니다.
+1. LLM Optimizer에서 라이브러리 파일을 다운로드하려면 **프롬프트 라이브러리 다운로드**를 선택합니다.
    ![업계 프롬프트 라이브러리 다운로드](/help/assets/best-practices/customer-configuration-prompts-library.png)
 1. 각 탭에서 브랜드 산업에 대해 제안된 **주제** 및 **프롬프트**&#x200B;를 검토하고 가장 관련성이 높은 옵션을 선택합니다.
 1. **고객 여정 단계 열**&#x200B;을 검토하여 고객 라이프사이클 전반에 걸친 프롬프트 옵션을 확인합니다(예: 검색에서 보존으로 전환). 단계 프롬프트의 초기 단계/최상위는 우선순위가 높지만 뒤에 것은 유지를 촉진하고 고객 지원을 활성화하는 등의 옵션을 고려합니다.
@@ -104,7 +109,7 @@ LLM 도구의 AI 검색 및 프롬프트 행동에 대한 고객 트렌드:
 >[!IMPORTANT]
 >
 > * 한 가지 접근법을 선택하고 그것을 고수합니다.
-> * 계정/브랜드당 **하나**&#x200B;의 카테고리 모델만 가질 수 있습니다. **SBU**&#x200B;와(과) **URL_DIR**&#x200B;을(를) 동시에 섞지 마십시오.
+> * 계정/브랜드당 **하나**&#x200B;의 카테고리 모델만 가질 수 있습니다. **SBU**&#x200B;와(과) **URL_DIR**을(를) 동시에 섞지 마십시오.
 <!--Can you mix Product/Service with these?-->
 
 예:
