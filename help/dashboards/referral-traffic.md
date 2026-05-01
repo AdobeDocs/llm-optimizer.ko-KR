@@ -3,9 +3,9 @@ title: 참조 트래픽
 description: 참조 트래픽 대시보드를 사용하여 외부 플랫폼, AI 인용 및 참조 링크에서 방문자가 사이트에 도달하는 방식을 알아봅니다.
 feature: Referral Traffic
 source-git-commit: 82bfbea9375fe7f3cd7f27dfdf0adcab6489731d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '734'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -27,17 +27,17 @@ ht-degree: 88%
 * [상위 참조 URL](#top-referrals)
 * [참조 트래픽 세부 정보](#traffic-details)
 
-[브랜드 중심 참조 트래픽](/help/overview/quick-start.md#brand-centric-experience)을 사용하는 경우 **경험**(으)로 이동하여 LLM 참조 트래픽 인사이트를 확인할 사이트를 선택하십시오.
+[브랜드 중심 환경](/help/overview/quick-start.md#brand-centric-experience)을 사용 중인 경우 **참조 트래픽**&#x200B;으로 이동하여 LLM 참조 트래픽 인사이트를 확인할 사이트를 선택하십시오.
 
-![참조 트래픽 — 사이트 선택기(브랜드 중심 경험)](/help/assets/brand-centric-experience/referral-traffic-dashboard.png)
+![참조 트래픽 — 사이트 선택기(브랜드 중심 환경)](/help/assets/brand-centric-experience/referral-traffic-dashboard.png)
 
 ## 설정 {#setup}
 
 처음 로그인하면 참조 트래픽 대시보드가 비어 있을 수 있습니다. 데이터를 보려면 CDN 로그 전달을 구성해야 합니다.
 
-[브랜드 중심 환경](/help/overview/quick-start.md#brand-centric-experience)을 사용하는 고객의 경우 **브랜드 관리**(으)로 이동하고 **CDN** 레이블을 클릭하여 CDN 로그 전달 정보를 추가할 수 있습니다.
+[브랜드 중심 환경](/help/overview/quick-start.md#brand-centric-experience)을 사용 중인 고객의 경우 **브랜드 관리**&#x200B;로 이동하고 **CDN** 레이블을 클릭하여 CDN 로그 전달 정보를 추가할 수 있습니다.
 
-**고객 구성(클래식 경험):** **구성으로 이동**&#x200B;을 선택하여 [CDN 로그 전달](/help/dashboards/customer-configuration.md#cdn-configuration)을 구성합니다.
+**고객 구성(클래식 환경):** **구성으로 이동**&#x200B;을 선택하여 [CDN 로그 전달](/help/dashboards/customer-configuration.md#cdn-configuration)을 구성합니다.
 
 ![참조 설정](/help/dashboards/assets/referral-setup1.png)
 

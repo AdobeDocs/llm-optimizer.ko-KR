@@ -3,9 +3,9 @@ title: 에이전틱 트래픽
 description: 에이전틱 트래픽 대시보드를 사용하여 AI 에이전트가 사이트와 상호작용하는 방법을 알아봅니다.
 feature: Agentic Traffic
 source-git-commit: 82bfbea9375fe7f3cd7f27dfdf0adcab6489731d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1407'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 94%
 * [상단 및 하단 증가 항목](#top-bottom-movers)
 * [사용자 에이전트 및 URL 성능 분석](#user-url-performance)
 
-[브랜드 중심 경험](/help/overview/quick-start.md#brand-centric-experience)에 있는 경우 **에이전트 트래픽**(으)로 이동하여 에이전트 트래픽 인사이트를 볼 사이트를 선택하십시오.
+[브랜드 중심 환경](/help/overview/quick-start.md#brand-centric-experience)을 사용 중인 경우 **에이전틱 트래픽**&#x200B;으로 이동하여 에이전틱 트래픽 인사이트를 확인할 사이트를 선택하십시오.
 
-![에이전트 트래픽 — 사이트 선택기(브랜드 중심 경험)](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
+![에이전틱 트래픽 — 사이트 선택기(브랜드 중심 환경)](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
 
 ## CDN 로그 전달 {#cdn-setup}
 
@@ -58,9 +58,9 @@ ht-degree: 94%
 
 활성화되면 로그가 수집되고 대시보드는 총 에이전트 상호작용, 성공률, 시장별 히트 수, 사용자 에이전트 분석, URL 수준 성능과 같은 지표로 채워집니다.
 
-### 브랜드 중심 경험
+### 브랜드 중심 환경
 
-[브랜드 중심 환경](/help/overview/quick-start.md#brand-centric-experience)에 있는 경우 **브랜드 관리**(으)로 이동하고 **CDN** 레이블을 클릭하여 CDN 로그 전달 정보를 추가할 수 있습니다.
+[브랜드 중심 환경](/help/overview/quick-start.md#brand-centric-experience)을 사용 중인 경우 **브랜드 관리**&#x200B;로 이동하고 **CDN** 레이블을 클릭하여 CDN 로그 전달 정보를 추가할 수 있습니다.
 
 ![브랜드 관리 — CDN 로그 전달](/help/assets/brand-centric-experience/brands-management-cdn.png)
 
