@@ -5,7 +5,7 @@ user-guide-description: Adobe LLM Optimizer를 통해 브랜드를 성장시키�
 source-git-commit: b9e18081cd364b35a5375975cad949b7037bfaaf
 workflow-type: tm+mt
 source-wordcount: '161'
-ht-degree: 74%
+ht-degree: 77%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 74%
    + [기타(수동 업로드)](/help/overview/log-forwarding/other.md)
 + 추가 리소스{#resources}
    + Optimize at Edge{#optimize-at-edge}
-      + [Edge에서 최적화 개요](/help/dashboards/optimize-at-edge/overview.md)
+      + [Optimize at Edge 개요](/help/dashboards/optimize-at-edge/overview.md)
       + [API 키 검색](/help/dashboards/optimize-at-edge/retrieve-api-keys.md)
       + [AEM Cloud Service Managed CDN(Fastly)](/help/dashboards/optimize-at-edge/aemcs-managed-cdn.md)
       + [Fastly(BYOCDN)](/help/dashboards/optimize-at-edge/fastly-byocdn.md)
