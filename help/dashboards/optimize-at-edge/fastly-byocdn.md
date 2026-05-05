@@ -2,10 +2,10 @@
 title: Optimize at Edge - Fastly(BYOCDN)
 description: LLM Optimizer의 Optimize at Edge를 위해 Fastly BYOCDN을 구성하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 13d2f4bbd1f9d3886f89f80df0e76093f2afdf13
-workflow-type: ht
-source-wordcount: '348'
-ht-degree: 100%
+source-git-commit: 0c5ab87db0856dcce4be4ab34b9725b9bef788dd
+workflow-type: tm+mt
+source-wordcount: '349'
+ht-degree: 99%
 
 ---
 
@@ -26,7 +26,7 @@ Fastly VCL 규칙을 설정하기 전에 다음을 확인하십시오.
 
 다음 세 가지 VCL 스니펫을 Fastly 서비스에 추가합니다. 이러한 스니펫은 Edge Optimize로의 라우팅 에이전틱 요청, 캐시 키 분리, 그리고 기본 원본으로의 장애 조치를 처리합니다.
 
-![Fastly VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
+![빠른 백엔드 구성](/help/assets/optimize-at-edge/fastly-backend-config.png)
 
 ![VCL 스니펫 추가](/help/assets/optimize-at-edge/add-vcl-snippets.png)
 
@@ -46,6 +46,7 @@ if (!req.http.x-edgeoptimize-request
   set req.http.x-edgeoptimize-api-key = "<YOUR API KEY>"; # required for identifying the client
   set req.http.x-edgeoptimize-fetcher-key = "<YOUR FETCHER KEY>"; # Optional (required only in case of WAF)
   set req.backend = F_EDGE_OPTIMIZE;
+  return(lookup);
 }
 ```
 
@@ -63,8 +64,11 @@ if (req.http.x-edgeoptimize-config) {
 ```
 if (req.http.x-edgeoptimize-config && resp.status >= 400) {
   set req.http.x-edgeoptimize-request = "failover";
-  set req.backend = F_Default_Origin;
   restart;
+}
+
+if (req.http.x-edgeoptimize-config) {
+  return(deliver);
 }
 
 if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failover") {
