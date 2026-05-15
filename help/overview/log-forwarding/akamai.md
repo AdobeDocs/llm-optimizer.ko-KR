@@ -2,10 +2,16 @@
 title: 로그 전달 - Akamai
 description: LLM Optimizer의 에이전틱 트래픽 데이터 수집을 위해 Akamai에서 Adobe의 S3 버킷으로 CDN 로그를 전달하는 방법에 대해 알아봅니다.
 feature: Agentic Traffic
-source-git-commit: b590cd14ba7d64e56a6c972fd6090e2df9de58f6
-workflow-type: ht
-source-wordcount: '595'
-ht-degree: 100%
+autotag-review: '2026-05-15T17:35:22.816Z'
+TQID: 'https://experienceleague.adobe.com/cO-qqOveWFee1-QnVSlzmO-n383sptHl59Ni2qQcvAU'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+workflow-type: tm+mt
+source-wordcount: 595
+ht-degree: 83%
 
 ---
 
@@ -57,17 +63,17 @@ Akamai 컨트롤 패널 [https://control.akamai.com/](https://control.akamai.com
 * **로그 정보**
 reqTimeSec -> 요청 시간
 * **지역 데이터**
-country -> 국가/지역
+국가 -> 국가/지역
 * **메시지 교환 데이터**
 reqHost -> 요청 호스트
 reqPath -> 요청 경로
 queryStr -> 쿼리 문자열
-reqMethod -> 요청 방법
-ua -> 사용자-에이전트
+reqMethod -> Request 메서드
+ua -> 사용자 에이전트
 statusCode -> HTTP 상태 코드
-rspContentType -> 응답 콘텐츠-유형
+rspContentType -> Response Content-Type
 * **요청 헤더 데이터**
-referer -> 레퍼러
+referer -> Referer
 * **네트워크 성능 데이터**
 timeToFirstByte -> 첫 번째 바이트까지의 시간
 
@@ -78,11 +84,11 @@ Akamai 데이터 세트 필드(ID 포함)는 다음과 같습니다.
 1011, # reqHost -> 요청 호스트
 1013, # reqPath -> 요청 경로
 2009, # queryStr -> 쿼리 문자열
-1012, # reqMethod -> 요청 방법
-1017, # ua -> 사용자-에이전트
+1012, # reqMethod -> 요청 메서드
+1017, # ua -> 사용자 에이전트
 1008, # statusCode -> HTTP 상태 코드
-1032, # referer -> 레퍼러
-1016, # rspContentType -> 응답 콘텐츠-유형
+1032, # referer -> Referer
+1016, # rspContentType -> 응답 Content-Type
 2025 # timeToFirstByte -> 첫 번째 바이트까지의 시간
 
 ## 4단계: 대상 구성 {#step-4}

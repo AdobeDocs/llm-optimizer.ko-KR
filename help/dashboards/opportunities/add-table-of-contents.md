@@ -2,9 +2,15 @@
 title: 목차 추가
 description: LLM Optimizer이 AI 에이전트에 대한 명확한 탐색 구조가 없는 트래픽 상위 페이지를 식별하는 방법 및 Edge에서 최적화를 사용하여 목차를 검토하고 배포하는 방법에 대해 알아봅니다.
 feature: Opportunities
-source-git-commit: 36a6836f86b6d31cc4bf4682e881bd127edf66e4
+autotag-review: '2026-05-15T17:29:21.334Z'
+TQID: 'https://experienceleague.adobe.com/A-Oxmmn-Cb4l9-iVx1TAKxvBTEOxRIAnRe1w1PqF6OI'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: c0713b97-4af8-4c41-b742-5afcc6ced468
+subfeature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: 655
 ht-degree: 0%
 
 ---
