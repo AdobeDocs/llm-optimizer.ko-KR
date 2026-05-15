@@ -3,9 +3,15 @@ title: LLM Optimizer 기본 사항
 description: Adobe LLM Optimizer가 AI 기반 검색에서 브랜드 가시성을 높이는 방법에 대해 알아봅니다. 언급, 인용 및 인사이트를 추적합니다. 참여도와 영향력을 개선하기 위해 지금 최적화를 시작하십시오.
 autotag-review: '2026-05-15T17:53:03.904Z'
 TQID: 'https://experienceleague.adobe.com/AI6oPtSezIqw3TBl-mUYH1clgJ-TQ-4z4KSjbN2Qr50'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558id: c0713b97-4af8-4c41-b742-5afcc6ced468
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
 source-git-commit: 564171851fdccee43afd233da143d66182464889
 workflow-type: tm+mt
 source-wordcount: 508
