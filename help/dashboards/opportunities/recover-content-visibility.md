@@ -2,9 +2,20 @@
 title: 콘텐츠 가시성 복구
 description: LLM Optimizer이 AI 에이전트에서 중요한 콘텐츠가 숨겨져 있는 페이지를 식별하는 방법과 에지 기반 최적화를 사용하여 해당 가시성을 복구하는 방법을 알아봅니다.
 feature: Opportunities
-source-git-commit: fd3c1b5ab75b54a93be06460ba15b382e74d8e3a
+autotag-review: '2026-05-15T17:56:37.098Z'
+TQID: 'https://experienceleague.adobe.com/rHqJL4RrJr1ghsy4fhXe-JLDrWruNSZgVhXQeRN-iyA'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+subfeature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 564171851fdccee43afd233da143d66182464889
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: 928
 ht-degree: 1%
 
 ---

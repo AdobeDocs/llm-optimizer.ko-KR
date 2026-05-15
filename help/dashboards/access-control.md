@@ -2,9 +2,19 @@
 title: 액세스 제어
 description: Adobe LLM Optimizer에서 제품 할당 사용자와 조직 사용자가 어떻게 다른지, UI에서 읽기 전용 사용자에게 표시되는 내용, Adobe Admin Console에서 관리자가 액세스를 할당하는 방법에 대해 알아봅니다.
 feature: Customer Configuration
-source-git-commit: 3b792a8ca7efd4b6d6764d2e83f9b0c103a56558
-workflow-type: ht
-source-wordcount: '618'
+autotag-review: '2026-05-15T17:26:43.837Z'
+TQID: 'https://experienceleague.adobe.com/hJpQQpuHBRMdKT5oKA9z0Y8H3d3p6To-n2hWKrXgZsQ'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: b704f6a0-b2fb-4df0-9177-9753751004f5
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+workflow-type: tm+mt
+source-wordcount: 618
 ht-degree: 100%
 
 ---
