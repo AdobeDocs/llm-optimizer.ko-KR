@@ -13,7 +13,7 @@ subfeature_v2:
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 2217
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -49,7 +49,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
    |--------|-------|
    | `x-edgeoptimize-api-key` | API 키 |
    | `x-forwarded-host` | `www.example.com` |
-   | `x-edgeoptimize-fetcher-key` | 페처 키(WAF 허용 목록에 추가의 경우에만 필요) |
+   | `x-edgeoptimize-fetcher-key` | Fetcher 키(WAF 허용 목록에 추가의 경우에만 필요) |
 
    `www.example.com`을 실제 웹 사이트 도메인으로 바꾸고 `Your API key`를 Adobe 담당자가 제공한 Edge Optimize API 키로 바꿉니다.
 
@@ -71,8 +71,8 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
    게시하기 전에 코드에서 다음 값을 사용자 정의합니다.
 
-   * `YOUR_DEFAULT_ORIGIN` — 기존 기본 원본 이름으로 대체합니다(CloudFront > 배포 > [배포] > 원본 탭에서 확인).
-   * `TARGETED_PATHS` — `null`을 모든 HTML 페이지를 타기팅하도록 설정하거나 특정 경로의 배열(예: `['/', '/products', '/about']`)로 설정합니다.
+   * `YOUR_DEFAULT_ORIGIN` - 기존 기본 원본 이름으로 대체합니다(CloudFront > 배포 > [배포] > 원본 탭에서 확인).
+   * `TARGETED_PATHS` - `null`을 모든 HTML 페이지를 타기팅하도록 설정하거나 특정 경로의 배열(예: `['/', '/products', '/about']`)로 설정합니다.
 
 4. **변경 내용 저장** > **함수 게시**&#x200B;를 클릭합니다.
 
@@ -239,10 +239,10 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 2. 설명을 추가합니다.
 
-3. **게시**&#x200B;를 클릭합니다.
+3. **게시**를 클릭합니다.
    ![Lambda 게시](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
 
-4. **함수 ARN**&#x200B;을 복사하거나 기록하십시오. 다음 단계에서 이 정보가 필요합니다.
+4. **함수 ARN**을 복사하거나 기록하십시오. 다음 단계에서 이 정보가 필요합니다.
    ![Lambda ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
 
 **5단계: 함수 및 캐시 정책을 동작과 연결**
@@ -303,7 +303,7 @@ curl -svo /dev/null https://www.example.com/page.html \
 
 | 헤더 | 봇 트래픽(최적화됨) | 사람 트래픽(영향을 받지 않음) |
 |---|---|---|
-| `x-edgeoptimize-request-id` | 있음 — 고유한 요청 ID가 포함되어 있습니다. | 없음 |
+| `x-edgeoptimize-request-id` | 있음 - 고유한 요청 ID가 포함되어 있습니다. | 없음 |
 | `x-edgeoptimize-fo` | 장애 조치가 발생한 경우에만 표시됩니다(값: `1`). | 없음 |
 
 {{verify-routing-status-in-ui}}
@@ -336,9 +336,9 @@ curl -svo /dev/null https://www.example.com/page.html \
 1. 이름이 `/aws/lambda/us-east-1.edgeoptimize-origin`인 로그 그룹을 찾습니다.
 2. 최신 로그 스트림을 엽니다.
 3. 에이전틱 요청의 경우 다음과 같은 토픽이 표시됩니다.
-   * `Calling Edge Optimize Origin for agentic requests` — 기본 경로
-   * `Calling Default Origin in case of failover for agentic requests` — 장애 조치 경로
-   * `Failover Triggered for agentic requests` — 원본-응답 장애 조치 감지
+   * `Calling Edge Optimize Origin for agentic requests` - 기본 경로입니다.
+   * `Calling Default Origin in case of failover for agentic requests` - 장애 조치 경로입니다.
+   * `Failover Triggered for agentic requests` - 원본-응답 장애 조치 감지입니다.
 
 로그 그룹이 없으면 4단계에서 IAM 권한이 올바르게 업데이트되었는지 확인합니다. 요청을 제공한 에지 위치가 예상과 다를 수 있으므로 근처의 다른 AWS 지역도 확인하십시오.
 
@@ -358,8 +358,8 @@ Lambda@Edge 함수(`edgeoptimize-origin`)는 CloudFront 동작의 원본 요청 
 
 **Lambda@Edge 중단을 감지하는 방법**
 
-* **AWS 서비스 상태 대시보드** — [AWS 서비스 상태 대시보드](https://health.aws.amazon.com/health/status)에서 **Amazon CloudFront** 또는 **AWS Lambda**&#x200B;에 영향을 주는 활성 인시던트를 확인하십시오. 여기에 보고된 전역 또는 지역 중단은 구성이 아닌 AWS 인프라 측에 문제가 있는지 확인하는 가장 빠른 방법입니다.
-* **Lambda@Edge 오류** — **AWS Console > CloudFront > 모니터링 > [내 배포]**&#x200B;로 이동합니다. **Lambda@Edge 오류** 탭을 열고 **실행 오류** 그래프에서 실행 오류를 확인합니다. 이 값이 높으면 Lambda@Edge가 다운될 수 있습니다.
+* **AWS 서비스 상태 대시보드** - [AWS 서비스 상태 대시보드](https://health.aws.amazon.com/health/status)에서 **Amazon CloudFront** 또는 **AWS Lambda**&#x200B;에 영향을 주는 활성 인시던트를 확인하십시오. 여기에 보고된 전역 또는 지역 중단은 구성이 아닌 AWS 인프라 측에 문제가 있는지 확인하는 가장 빠른 방법입니다.
+* **Lambda@Edge 오류** - **AWS Console > CloudFront > 모니터링 > [내 배포]**&#x200B;로 이동합니다. **Lambda@Edge 오류** 탭을 열고 **실행 오류** 그래프에서 실행 오류를 확인합니다. 이 값이 높으면 Lambda@Edge가 다운될 수 있습니다.
 
 **Lambda@Edge 함수 분리**
 
