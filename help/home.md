@@ -17,15 +17,15 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 autotag-review: '2026-04-30T18:10:07.393Z'
 source-git-commit: 733c693f35c5b023681962cc5089492b95645b28
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 374
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
 # Adobe LLM Optimizer
 
-Adobe LLM Optimizer는 생성형 엔진 최적화를 위한 생성형 AI 우선 애플리케이션으로, 브랜드가 AI 기반 검색 환경에서 가시성, 정확성 및 영향력을 강화할 수 있도록 설계되었습니다. AI 생성 응답에서 브랜드 존재감에 대한 인사이트를 제공하고, 규범적인 콘텐츠 추천을 제공하며, 최적화 수정 사항을 자동화합니다.
+Adobe LLM Optimizer는 생성형 엔진 최적화를 위한 생성형 AI 중심 애플리케이션으로, 브랜드가 AI 기반 검색 환경에서 가시성, 정확성 및 영향력을 강화할 수 있도록 설계되었습니다. AI 생성 응답에서 브랜드 존재감에 대한 인사이트를 제공하고, 규범적인 콘텐츠 추천을 제공하며, 최적화 수정 사항을 자동화합니다.
 
 ## LLM Optimizer 시작하기
 
