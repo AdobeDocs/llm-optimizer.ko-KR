@@ -8,7 +8,7 @@ type: Documentation
 description: LLM Optimizer 설명서입니다.
 mini-toc-levels: 2
 feature-set: LLM Optimizer
-git-repo: https://github.com/AdobeDocs/llm-optimizer.en
+git-repo: https://github.com/AdobeDocs/llm-optimizer.ko-KR
 index: true
 recommendations: noDisplay
 source-git-commit: b65bab0594197fbb302e527e6347e4083c663a80
