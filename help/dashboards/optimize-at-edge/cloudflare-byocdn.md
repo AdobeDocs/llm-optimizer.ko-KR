@@ -10,10 +10,10 @@ feature_v2:
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
 subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+source-git-commit: f1c0ad79ff4e71515da0b0d86632a558b0e99661
 workflow-type: tm+mt
-source-wordcount: 1906
-ht-degree: 100%
+source-wordcount: 1915
+ht-degree: 97%
 
 ---
 
@@ -117,179 +117,9 @@ Edge Optimize용 Cloudflare 작업자를 설정하는 방법에는 두 가지가
 
 **2단계: 작업자 코드 추가**
 
-작업자를 만든 후 **코드 편집**&#x200B;을 클릭하고 기본 코드를 다음으로 바꿉니다. 이미 기존 Cloudflare 작업자가 있는 경우, 코드를 완전히 대체하지 말고 아래 코드를 기존 작업자 코드와 병합합니다.
-
-```javascript
-/**
- * Edge Optimize BYOCDN - Cloudflare Worker
- *
- * This worker routes requests from agentic bots (AI/LLM user agents) to the
- * Edge Optimize backend service for optimized content delivery.
- *
- * Features:
- * - Routes agentic bot traffic to Edge Optimize backend
- * - Failover to origin on Edge Optimize errors (any 4XX or 5XX errors)
- * - Loop protection to prevent infinite redirects
- * - Human visitors and SEO bots are served from the origin as usual
- */
-
-// List of agentic bot user agents to route to Edge Optimize
-const AGENTIC_BOTS = [
-  'AdobeEdgeOptimize-AI',
-  'ChatGPT-User',
-  'GPTBot',
-  'OAI-SearchBot',
-  'PerplexityBot',
-  'Perplexity-User'
-];
-
-// Targeted paths for Edge Optimize routing
-// Set to null to route all HTML pages, or specify an array of paths
-const TARGETED_PATHS = null; // e.g., ['/', '/page.html', '/products']
-
-// Failover configuration
-// Failover on any 4XX client error or 5XX server error from Edge Optimize
-const FAILOVER_ON_4XX = true; // Failover on any 4XX error (400-499)
-const FAILOVER_ON_5XX = true; // Failover on any 5XX error (500-599)
-
-export default {
-  async fetch(request, env, ctx) {
-    return await handleRequest(request, env, ctx);
-  },
-};
-
-async function handleRequest(request, env, ctx) {
-  const url = new URL(request.url);
-  const userAgent = request.headers.get("user-agent")?.toLowerCase() || "";
-
-  // Check if request is already processed (loop protection)
-  const isEdgeOptimizeRequest = !!request.headers.get("x-edgeoptimize-request");
-
-  // Construct the original path and query string
-  const pathAndQuery = `${url.pathname}${url.search}`;
-
-  // Check if the path matches HTML pages (no extension or .html extension)
-  const isHtmlPage = /(?:\/[^./]+|\.html|\/)$/.test(url.pathname);
-
-  // Check if path is in targeted paths (if specified)
-  const isTargetedPath = TARGETED_PATHS === null
-    ? isHtmlPage
-    : (isHtmlPage && TARGETED_PATHS.includes(url.pathname));
-
-  // Check if user agent is an agentic bot
-  const isAgenticBot = AGENTIC_BOTS.some((ua) => userAgent.includes(ua.toLowerCase()));
-
-  // Route to Edge Optimize if:
-  // 1. Request is NOT already from Edge Optimize (prevents infinite loops)
-  // 2. User agent matches one of the agentic bots
-  // 3. Path is targeted for optimization
-  if (!isEdgeOptimizeRequest && isAgenticBot && isTargetedPath) {
-
-    // Build the Edge Optimize request URL
-    const edgeOptimizeURL = `https://live.edgeoptimize.net${pathAndQuery}`;
-
-    // Clone and modify headers for the Edge Optimize request
-    const edgeOptimizeHeaders = new Headers(request.headers);
-
-    // Remove any existing Edge Optimize headers for security
-    edgeOptimizeHeaders.delete("x-edgeoptimize-api-key");
-    edgeOptimizeHeaders.delete("x-edgeoptimize-url");
-    edgeOptimizeHeaders.delete("x-edgeoptimize-config");
-    edgeOptimizeHeaders.delete("x-edgeoptimize-fetcher-key"); // Optional (required only in case of WAF)
-
-    // x-forwarded-host: The original site domain
-    // Use environment variable if set, otherwise use the request host
-    edgeOptimizeHeaders.set("x-forwarded-host", env.EDGE_OPTIMIZE_TARGET_HOST ?? url.host);
-
-    // x-edgeoptimize-api-key: Your Adobe-provided API key
-    edgeOptimizeHeaders.set("x-edgeoptimize-api-key", env.EDGE_OPTIMIZE_API_KEY);
-
-    // x-edgeoptimize-url: The original request URL path and query
-    edgeOptimizeHeaders.set("x-edgeoptimize-url", pathAndQuery);
-
-    // x-edgeoptimize-config: Configuration for cache key differentiation
-    edgeOptimizeHeaders.set("x-edgeoptimize-config", "LLMCLIENT=TRUE;");
-
-    // edgeOptimizeHeaders.set("x-edgeoptimize-fetcher-key", "<YOUR FETCHER KEY>"); // Optional (required only in case of WAF)
-
-    try {
-      // Send request to Edge Optimize backend
-      const edgeOptimizeResponse = await fetch(new Request(edgeOptimizeURL, {
-        headers: edgeOptimizeHeaders,
-        redirect: "manual", // Preserve redirect responses from Edge Optimize
-      }), {
-        cf: {
-          cacheEverything: true, // Enable caching based on origin's cache-control headers
-        },
-      });
-
-      // Check if we need to failover to origin
-      const status = edgeOptimizeResponse.status;
-      const is4xxError = FAILOVER_ON_4XX && status >= 400 && status < 500;
-      const is5xxError = FAILOVER_ON_5XX && status >= 500 && status < 600;
-
-      if (is4xxError || is5xxError) {
-        console.log(`Edge Optimize returned ${status}, failing over to origin`);
-        return await failoverToOrigin(request, env, url);
-      }
-
-      // Return the Edge Optimize response
-      return edgeOptimizeResponse;
-
-    } catch (error) {
-      // Network error or timeout - failover to origin
-      console.log(`Edge Optimize request failed: ${error.message}, failing over to origin`);
-      return await failoverToOrigin(request, env, url);
-    }
-  }
-
-  // For all other requests (human users, SEO bots), pass through unchanged
-  return fetch(request);
-}
-
-/**
- * Failover to origin server when Edge Optimize returns an error
- * @param {Request} request - The original request
- * @param {Object} env - Environment variables
- * @param {URL} url - Parsed URL object
- */
-async function failoverToOrigin(request, env, url) {
-  // Build origin URL
-  const originURL = `${url.protocol}//${env.EDGE_OPTIMIZE_TARGET_HOST}${url.pathname}${url.search}`;
-
-  // Prepare headers - clean Edge Optimize headers and add loop protection
-  const originHeaders = new Headers(request.headers);
-  originHeaders.set("Host", env.EDGE_OPTIMIZE_TARGET_HOST);
-  originHeaders.delete("x-edgeoptimize-api-key");
-  originHeaders.delete("x-edgeoptimize-url");
-  originHeaders.delete("x-edgeoptimize-config");
-  originHeaders.delete("x-forwarded-host");
-  originHeaders.set("x-edgeoptimize-request", "fo");
-
-  // Create and send origin request
-  const originRequest = new Request(originURL, {
-    method: request.method,
-    headers: originHeaders,
-    body: request.body,
-    redirect: "manual",
-  });
-
-  const originResponse = await fetch(originRequest);
-
-  // Add failover marker header to response
-  const modifiedResponse = new Response(originResponse.body, {
-    status: originResponse.status,
-    statusText: originResponse.statusText,
-    headers: originResponse.headers,
-  });
-  modifiedResponse.headers.set("x-edgeoptimize-fo", "1");
-  return modifiedResponse;
-}
-```
+작업자를 만든 후 **코드 편집**&#x200B;을 클릭하고 기본 코드를 [worker.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudflare/worker.js)의 코드로 바꿉니다. 기존 Cloudflare Worker가 있는 경우 코드를 완전히 대체하지 않고 기존 작업자 코드와 병합합니다.
 
 작업자를 게시하려면 **저장 및 배포**&#x200B;를 클릭합니다.
-
-![Cloudflare 작업자 코드 편집기](/help/assets/optimize-at-edge/cloudflare-worker-editor.png)
 
 **3 단계: 환경 변수 및 암호 구성**
 
@@ -478,7 +308,7 @@ curl -svo /dev/null https://www.example.com/page.html \
 
 | 헤더 | 봇 트래픽(최적화됨) | 사람 트래픽(영향을 받지 않음) |
 |---|---|---|
-| `x-edgeoptimize-request-id` | 있음 — 고유한 요청 ID가 포함되어 있습니다. | 없음 |
+| `x-edgeoptimize-request-id` | 있음 - 고유한 요청 ID가 포함되어 있습니다. | 없음 |
 | `x-edgeoptimize-fo` | 장애 조치가 발생한 경우에만 표시됩니다(값: `1`). | 없음 |
 
 {{verify-routing-status-in-ui}}
