@@ -4,16 +4,13 @@ description: LLM Optimizer의 Optimize at Edge를 위해 Cloudflare BYOCDN을 �
 feature: Opportunities
 autotag-review: '2026-05-15T17:40:49.847Z'
 TQID: 'https://experienceleague.adobe.com/HkaDwdHRGZJnip-1Bp-4Z-ovwcBPxFUSDqeLUVNu0zo'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-source-git-commit: f1c0ad79ff4e71515da0b0d86632a558b0e99661
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+source-git-commit: c5a8f033aac85913b56a40bb1560537da04847f2
 workflow-type: tm+mt
-source-wordcount: 1915
-ht-degree: 97%
+source-wordcount: 1916
+ht-degree: 96%
 
 ---
 
@@ -24,7 +21,7 @@ ht-degree: 97%
 
 **사전 요구 사항**
 
-Cloudflare 작업자 라우팅 규칙을 설정하기 전에 다음을 확인하십시오.
+Cloudflare Worker 라우팅 규칙을 설정하기 전에 다음을 확인하십시오.
 
 * 도메인에서 작업자가 활성화된 Cloudflare 계정
 * Cloudflare에서 도메인에 대한 DNS 설정 액세스
