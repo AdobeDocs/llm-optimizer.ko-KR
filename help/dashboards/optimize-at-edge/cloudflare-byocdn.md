@@ -10,9 +10,9 @@ feature_v2:
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
 subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-source-git-commit: 3237a5fdff501eaee29b678c8c2698b95469a125
+source-git-commit: 5a903ec2b6976e7997c45848265d022ca67bed9d
 workflow-type: tm+mt
-source-wordcount: 1916
+source-wordcount: 1919
 ht-degree: 96%
 
 ---
@@ -117,7 +117,7 @@ Edge Optimize용 Cloudflare 작업자를 설정하는 방법에는 두 가지가
 
 **2단계: 작업자 코드 추가**
 
-작업자를 만든 후 **코드 편집**&#x200B;을 클릭하고 기본 코드를 [worker.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudflare/worker.js)의 코드로 바꿉니다. 기존 Cloudflare Worker가 있는 경우 코드를 완전히 대체하지 않고 기존 작업자 코드와 병합합니다.
+작업자를 만든 후 **코드 편집**&#x200B;을 클릭하고 기본 코드를 [worker.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudflare/automation/src/worker.js)의 코드로 바꿉니다. 기존 Cloudflare Worker가 있는 경우 코드를 완전히 대체하지 않고 기존 작업자 코드와 병합합니다.
 
 작업자를 게시하려면 **저장 및 배포**&#x200B;를 클릭합니다.
 

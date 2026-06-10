@@ -10,10 +10,10 @@ feature_v2:
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
 subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+source-git-commit: 5a903ec2b6976e7997c45848265d022ca67bed9d
 workflow-type: tm+mt
-source-wordcount: 2217
-ht-degree: 100%
+source-wordcount: 2204
+ht-degree: 96%
 
 ---
 
@@ -67,7 +67,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
    * **이름:** `edgeoptimize-routing`
    * **런타임:** `cloudfront-js-2.0`
 
-3. 기본 코드를 [viewer-request.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/cloudfront-function/viewer-request.js)의 코드로 바꿉니다.
+3. 기본 코드를 [viewer-request.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudfront/cloudfront-function/viewer-request.js)의 코드로 바꿉니다.
 
    게시하기 전에 코드에서 다음 값을 사용자 정의합니다.
 
@@ -120,7 +120,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 2. **편집**&#x200B;을 클릭합니다.
 
-3. **최소 TTL**&#x200B;을 `0`으로 설정하는 것이 좋습니다. 현재 최소 TTL이 이미 매우 짧은 경우 변경할 필요가 없습니다.
+3. **최소 TTL**&#x200B;을(를) `0`(으)로 설정하는 것이 좋습니다. 그러나 현재 최소 TTL이 이미 매우 짧은 경우 변경할 필요가 없습니다.
    ![캐시 정책 TTL 설정](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
 
 4. **캐시 키 설정** > **헤더**&#x200B;에서 기존 포함과 함께 `x-edgeoptimize-config` 및 `x-edgeoptimize-url`을 추가합니다.
@@ -195,7 +195,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 4. **함수 만들기**&#x200B;를 클릭합니다.
 
-5. 코드 편집기에서 기본 코드를 [origin-request-response.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/origin-request-response.js)의 코드로 바꿉니다.
+5. 코드 편집기에서 기본 코드를 [origin-request-response.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudfront/lambda/origin-request-response.js)의 코드로 바꿉니다.
 
 6. 코드를 저장하려면 **배포**&#x200B;를 클릭합니다.
 
@@ -209,7 +209,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 1. **신뢰 정책 편집**&#x200B;을 클릭합니다.
 
-2. 정책을 [trust-policy.json](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/trust-policy.json)의 내용으로 바꿉니다.
+2. 정책을 [trust-policy.json](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudfront/lambda/trust-policy.json)의 내용으로 바꿉니다.
 
 3. **정책 업데이트**&#x200B;를 클릭합니다.
 
@@ -224,7 +224,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 1. **편집**&#x200B;을 클릭합니다.
 
-2. 정책을 [cloudwatch-policy.json](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/cloudwatch-policy.json)의 내용으로 바꿉니다.
+2. 정책을 [cloudwatch-policy.json](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudfront/lambda/cloudwatch-policy.json)의 내용으로 바꿉니다.
 
    JSON에서 `ACCOUNT_ID`를 실제 AWS 계정 ID(AWS 콘솔의 우측 상단에서 확인)로 바꾸고, `FUNCTION_NAME`을 Lambda 함수 이름(예: `edgeoptimize-origin`)으로 바꿉니다.
 
@@ -239,10 +239,10 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 2. 설명을 추가합니다.
 
-3. **게시**를 클릭합니다.
+3. **게시**&#x200B;를 클릭합니다.
    ![Lambda 게시](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
 
-4. **함수 ARN**을 복사하거나 기록하십시오. 다음 단계에서 이 정보가 필요합니다.
+4. **함수 ARN**&#x200B;을 복사하거나 기록하십시오. 다음 단계에서 이 정보가 필요합니다.
    ![Lambda ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
 
 **5단계: 함수 및 캐시 정책을 동작과 연결**
