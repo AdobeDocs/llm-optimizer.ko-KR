@@ -12,10 +12,10 @@ subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+source-git-commit: 57c429630874b7304472f16b8c23ba9c6cff44fc
 workflow-type: tm+mt
-source-wordcount: 595
-ht-degree: 83%
+source-wordcount: 612
+ht-degree: 81%
 
 ---
 
@@ -71,7 +71,7 @@ reqTimeSec -> 요청 시간
 * **메시지 교환 데이터**
 reqHost -> 요청 호스트
 reqPath -> 요청 경로
-queryStr -> 쿼리 문자열
+queryStr -> 쿼리 문자열(선택 사항)
 reqMethod -> Request 메서드
 ua -> 사용자 에이전트
 statusCode -> HTTP 상태 코드
@@ -81,13 +81,17 @@ referer -> Referer
 * **네트워크 성능 데이터**
 timeToFirstByte -> 첫 번째 바이트까지의 시간
 
+>[!NOTE]
+>
+>`queryStr` 매개 변수는 선택 사항입니다. 쿼리 문자열에 PII 정보가 포함된 경우 생략할 수 있습니다.
+
 Akamai 데이터 세트 필드(ID 포함)는 다음과 같습니다.
 
 1100, # reqTimeSec -> 요청 시간
 2012년, # 국가 -> 국가/지역
 1011, # reqHost -> 요청 호스트
 1013, # reqPath -> 요청 경로
-2009, # queryStr -> 쿼리 문자열
+2009, # queryStr -> 쿼리 문자열(선택 사항)
 1012, # reqMethod -> 요청 메서드
 1017, # ua -> 사용자 에이전트
 1008, # statusCode -> HTTP 상태 코드
