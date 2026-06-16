@@ -10,10 +10,10 @@ feature_v2:
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
 subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-source-git-commit: 5a903ec2b6976e7997c45848265d022ca67bed9d
+source-git-commit: 7097550211d1570d6ff65ab980f9a160f8d2a9e0
 workflow-type: tm+mt
-source-wordcount: 2204
-ht-degree: 96%
+source-wordcount: 2343
+ht-degree: 91%
 
 ---
 
@@ -232,6 +232,27 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 >[!WARNING]
 >ARN의 지역은 `*`이어야 합니다. Lambda@Edge는 뷰어에 가장 가까운 에지 위치에서 실행되므로 로그가 에지 위치의 지역(예: `ap-south-1`, `eu-west-1`)에 있는 CloudWatch에 기록되며 지역이 반드시 `us-east-1`일 필요는 없습니다. 로그 그룹은 지역 접두사가 있는 이름 `/aws/lambda/us-east-1.FUNCTION_NAME`을(를) 사용합니다. 여기서 `us-east-1`은 항상 함수의 홈 지역입니다.
+
+**CloudWatch 로그 링크 수정**
+
+기본적으로 Lambda 콘솔의 **CloudWatch 로그 보기** 바로 가기는 `us-east-1`의 `/aws/lambda/FUNCTION_NAME`에 연결됩니다. Lambda@Edge에 대한 잘못된 로그 그룹입니다. 링크가 올바른 경로를 가리키도록 사용자 지정 로그 그룹을 구성합니다.
+
+**탐색:** AWS 콘솔 > Lambda > [함수] > 구성 > 모니터링 및 작업 도구
+
+1. **편집**&#x200B;을 클릭합니다.
+
+2. **CloudWatch 로그 그룹**&#x200B;에서 **사용자 지정**&#x200B;을(를) 선택합니다.
+
+3. 사용자 지정 로그 그룹 이름을 `/aws/lambda/us-east-1.edgeoptimize-origin`(으)로 설정합니다.
+
+4. **권한**&#x200B;에서 **필요한 권한 추가** 확인란을 그대로 둡니다. **선택 취소됨**.
+
+   ![람다 사용자 지정 로그 그룹 구성](/help/assets/optimize-at-edge/cloudfront-lambda-custom-log-group.png)
+
+5. **저장**&#x200B;을 클릭합니다.
+
+>[!NOTE]
+>이 수정 후에도 **CloudWatch 로그 보기** 링크가 올바른 로그 그룹 이름을 열지만 잘못된 지역에 있는 경우 데이터가 표시되지 않을 수 있습니다. Lambda@Edge 로그는 `us-east-1`이(가) 아니라 요청을 제공한 에지 영역(예: `eu-west-1`, `ap-south-1`)에 작성되었습니다. 로그를 보려면 CloudWatch에서 올바른 영역으로 전환해야 합니다.
 
 **버전 게시**
 
