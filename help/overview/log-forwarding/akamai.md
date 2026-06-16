@@ -12,10 +12,10 @@ subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 57c429630874b7304472f16b8c23ba9c6cff44fc
+source-git-commit: 76d1b915d41771580544d3d87732092cfecda6d5
 workflow-type: tm+mt
 source-wordcount: 612
-ht-degree: 81%
+ht-degree: 78%
 
 ---
 
@@ -58,7 +58,7 @@ Akamai 컨트롤 패널 [https://control.akamai.com/](https://control.akamai.com
 
 ## 3단계: 데이터 매개변수 선택 {#step-3}
 
-스트림을 만든 후 Akamai 컨트롤 패널에서 [다음]을 클릭하여 **데이터 세트** 탭으로 계속합니다. 공식 Akamai 설명서의 단계에 따라 [데이터 매개변수](https://techdocs.akamai.com/datastream2/docs/choose-data-parameters)를 선택합니다. LLM Optimizer 구성의 다음 필드가 필요합니다.
+스트림을 만든 후 Akamai 제어판에서 **다음**&#x200B;을 클릭하여 **데이터 집합** 탭을 계속 진행합니다. 공식 Akamai 설명서의 단계에 따라 [데이터 매개변수](https://techdocs.akamai.com/datastream2/docs/choose-data-parameters)를 선택합니다. LLM Optimizer 구성의 다음 필드가 필요합니다.
 
 ![LLMO 구성 필드](/help/overview/assets/log-forwarding/akamai/akamai-llmo-config-fields.png)
 
