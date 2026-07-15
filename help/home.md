@@ -1,24 +1,15 @@
 ---
 title: Adobe LLM Optimizer
 description: Adobe LLM Optimizer를 통해 브랜드를 성장시키십시오. 언급을 추적하고, 인사이트를 발견하며, AI 기반 검색을 주도하십시오. 가시성을 제어하고, 지금 최적화를 시작하십시오!
-TQID: https://experienceleague.adobe.com/ACuRLzs9s5fVE0HdY0ZPUIavO5-sqi-yLiBc64Cb8wc
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: b70f186a-2ef9-43ce-b452-25fa1d91bcda
-  - id: c898dfb2-0885-42fb-b2af-b2d756752646
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-autotag-review: '2026-04-30T18:10:07.393Z'
-source-git-commit: 733c693f35c5b023681962cc5089492b95645b28
-workflow-type: ht
-source-wordcount: 374
+autotag-review: '2026-07-15T17:53:08.251Z'
+TQID: 'https://experienceleague.adobe.com/75QCJ6I-rVCzPHJgzuRrgSC8EG-zwyx7TgAEoADZVqQ'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3aid: a080bb92-ba2a-4e53-ba60-f5184d1a9e9a
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+workflow-type: tm+mt
+source-wordcount: 682
 ht-degree: 100%
 
 ---
@@ -142,7 +133,7 @@ CARDS
   {description= Learn how LLM Optimizer can help you drive brand authority in AI search and discovery.}
   {target=_blank}
   {cta=Learn more}
-* https://business.adobe.com/kr/products/llm-optimizer.html
+* https://business.adobe.com/products/llm-optimizer.html
   {title = Explore the capabilities of the Adobe LLM Optimizer}
   {image = /help/assets/overview/business-adobe.png}
   {target=_blank}
@@ -201,7 +192,7 @@ CARDS
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://business.adobe.com/kr/products/llm-optimizer.html" title="Adobe LLM Optimizer의 기능 탐색" target="_blank" rel="referrer">
+                    <a href="https://business.adobe.com/products/llm-optimizer.html" title="Adobe LLM Optimizer의 기능 탐색" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="/help/assets/overview/business-adobe.png" alt="Adobe LLM Optimizer의 기능 탐색"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -210,11 +201,11 @@ CARDS
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://business.adobe.com/kr/products/llm-optimizer.html" target="_blank" rel="referrer" title="Adobe LLM Optimizer의 기능 탐색">Adobe LLM Optimizer의 기능 탐색</a>
+                        <a href="https://business.adobe.com/products/llm-optimizer.html" target="_blank" rel="referrer" title="Adobe LLM Optimizer의 기능 탐색">Adobe LLM Optimizer의 기능 탐색</a>
                     </p>
                     <p class="is-size-6">Adobe LLM Optimizer을 사용하여 AI 검색 결과에서 브랜드의 존재감을 다져보십시오. GEO 인사이트를 얻고, LLM 전반의 가시성을 높이며, 측정 가능한 트래픽 증가를 유도하십시오.</p>
                 </div>
-                <a href="https://business.adobe.com/kr/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://business.adobe.com/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">자세히 알아보기</span>
                 </a>
             </div>

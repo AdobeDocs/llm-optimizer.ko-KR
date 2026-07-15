@@ -2,18 +2,14 @@
 title: 콘텐츠 가시성 복구
 description: LLM Optimizer가 AI 에이전트에서 중요한 콘텐츠가 숨겨져 있는 페이지를 식별하는 방법과 에지 기반 최적화를 사용하여 해당 가시성을 복구하는 방법에 대해 알아봅니다.
 feature: Opportunities
-autotag-review: '2026-05-15T17:56:37.098Z'
-TQID: 'https://experienceleague.adobe.com/rHqJL4RrJr1ghsy4fhXe-JLDrWruNSZgVhXQeRN-iyA'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2:
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 564171851fdccee43afd233da143d66182464889
+autotag-review: '2026-07-15T18:06:12.342Z'
+TQID: 'https://experienceleague.adobe.com/ILtulZHGNjX0Qes77aNZMe-Fs66BLryK3kHcORZ58A8'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2: id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 928
 ht-degree: 100%

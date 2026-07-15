@@ -2,17 +2,14 @@
 title: 관련 FAQ 추가
 description: LLM Optimizer가 AI 에이전트에 대한 구조화된 Q&A 콘텐츠가 부족한 트래픽이 많은 페이지를 식별하는 방법과 Optimize at Edge를 통해 AI 생성 FAQ를 검토하고 배포하는 방법에 대해 알아봅니다.
 feature: Opportunities
-autotag-review: '2026-05-15T17:28:53.611Z'
-TQID: 'https://experienceleague.adobe.com/491jK6SRnc2yJ4Uw9UzK71W3nsTWDhxt3lW0Sy8-3NQ'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2:
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+autotag-review: '2026-07-15T16:47:24.291Z'
+TQID: 'https://experienceleague.adobe.com/ObmJKEvR9-ovzugCtAsRkcUBemcsMw6cNwizkuKYPcc'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2: id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 742
 ht-degree: 100%
