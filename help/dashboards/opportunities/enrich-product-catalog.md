@@ -2,17 +2,20 @@
 title: 제품 카탈로그 보강
 description: LLM Optimizer가 Adobe Commerce에서 제공하는 AI 생성 내러티브 보강 기능을 사용하여 일반적이거나 기술적으로 밀도가 높은 설명이 있는 제품을 식별하는 방법과 개선 방법에 대해 알아봅니다.
 feature: Opportunities
-autotag-review: '2026-05-15T17:45:51.619Z'
-TQID: 'https://experienceleague.adobe.com/5ihGQ8L-37uWsZSDo4TVCUPBPqsqqQ5waGbH3VKPIig'
+autotag-review: '2026-07-15T17:49:49.047Z'
+TQID: 'https://experienceleague.adobe.com/icskl9CwYYRbnFNXWLflduAD9Eba1y4xtXTKaebh-hs'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+subfeature_v2:
+  - id: a6256a78-8814-462c-9627-86699b39cee1
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 564171851fdccee43afd233da143d66182464889
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 1266
 ht-degree: 100%

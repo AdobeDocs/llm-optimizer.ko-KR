@@ -2,22 +2,24 @@
 title: 브랜드 존재감
 description: AI 생성 응답 수준에서 브랜드가 어떻게 인식되는지 이해하기 위해 브랜드 존재감 대시보드를 사용하는 방법에 대해 알아봅니다.
 feature: Brand Presence
-autotag-review: '2026-05-15T17:37:11.161Z'
-TQID: 'https://experienceleague.adobe.com/sDPtwR-uMfeIYp5K93gzYF27qYgLHBwhyajj9hGVB7Q'
+autotag-review: '2026-07-15T17:44:10.254Z'
+TQID: 'https://experienceleague.adobe.com/XBRLNcs-1flf9qdYI93NAwqusTP8i8-1ulTfz-iLD-4'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
   - id: ab7fdb62-bd53-4cfd-8c2c-169f7e47f20e
+subfeature_v2:
+  - id: f718ad75-b1df-4dc1-89bf-0c3167e83b33
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
-source-wordcount: 1346
-ht-degree: 100%
+source-wordcount: 1335
+ht-degree: 99%
 
 ---
 
@@ -26,7 +28,11 @@ ht-degree: 100%
 
 브랜드 존재감 대시보드는 AI 생성 응답 수준에서 브랜드가 인식되는 방식에 대한 자세한 개요를 제공합니다. 브랜드가 언급되는 위치, 빈도 및 컨텍스트를 보여 줍니다. 대시보드를 사용하여 가시성을 측정하고 인용을 추적하며 감정 트렌드를 탐색할 수 있습니다. 대시보드는 여러 섹션으로 나뉘어 있으며, 각각 다른 인사이트를 제공합니다. 표시된 데이터를 세분화하는 데 도움이 되는 사용자 정의 가능 필터도 있습니다.
 
-![브랜드 존재감 개요](/help/dashboards/assets/brand-main.png)
+**브랜드 존재감**(으)로 이동합니다. 브랜드 드롭다운 목록에서 분석할 브랜드를 선택하거나 **모든 브랜드**&#x200B;를 선택하여 전체 브랜드 집합에 대한 가시성을 검토하십시오.
+
+![브랜드 선택기가 포함된 브랜드 존재감(브랜드 중심 환경)](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
+
+<!-- ![Brand Presence overview](/help/dashboards/assets/brand-main.png)-->
 
 이 페이지는 다음 사항을 자세히 설명합니다.
 
@@ -35,10 +41,6 @@ ht-degree: 100%
 * [기타 비교](##others-comparison)
 * [감정 트렌드](#sentiment-trend)
 * [데이터 인사이트](#data-insights)
-
-[브랜드 중심 환경](/help/overview/quick-start.md#brand-centric-experience)을 사용 중인 경우 **브랜드 존재감**&#x200B;으로 이동하십시오. 브랜드 드롭다운 목록에서 분석할 브랜드를 선택하거나 **모든 브랜드**&#x200B;를 선택하여 전체 브랜드 집합에 대한 가시성을 검토하십시오.
-
-![브랜드 선택기가 포함된 브랜드 존재감(브랜드 중심 환경)](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
 
 ## 필터 {#filters}
 

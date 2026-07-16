@@ -2,32 +2,34 @@
 title: 에이전틱 트래픽
 description: 에이전틱 트래픽 대시보드를 사용하여 AI 에이전트가 사이트와 상호작용하는 방법을 알아봅니다.
 feature: Agentic Traffic
-autotag-review: '2026-05-15T17:33:15.711Z'
-TQID: 'https://experienceleague.adobe.com/3dWNUxcquDVip4Gg1WMYfwv8MUSbZYWqJYnkQ3aZkmc'
+autotag-review: '2026-07-15T17:38:14.233Z'
+TQID: 'https://experienceleague.adobe.com/4pvsCwqZXkX7xOJWqKge6rkJYaAq27cSjLeTxaA4ysM'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
   - id: e0828736-236a-487b-a478-5a635455eadc
 subfeature_v2:
   - id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
-source-wordcount: 1407
-ht-degree: 100%
+source-wordcount: 1254
+ht-degree: 97%
 
 ---
 
 
 # 에이전틱 트래픽 {#agentic-traffic}
 
-에이전틱 트래픽 대시보드는 AI 에이전트(크롤러 및 챗봇)가 사이트와 상호작용하는 방법을 보여 줍니다. 이 보기를 사용하면 총 요청 수와 일반적인 성능 관련 지표를 추적할 수 있습니다. 시장, 카테고리, 페이지, 에이전트 간 트래픽 분포도 확인할 수 있습니다. 이 대시보드에서 사용되는 데이터는 CDN 로그에서 가져온 것이므로 지표를 표시하려면 **CDN 로그 전달**&#x200B;을 구성해야 합니다. 표시된 데이터를 세분화하는 데 도움이 되는 사용자 정의 가능 필터도 있습니다.
+에이전틱 트래픽 대시보드는 AI 에이전트(크롤러 및 챗봇)가 사이트와 상호작용하는 방법을 보여 줍니다. 이 보기를 사용하면 총 요청 수와 일반적인 성능 관련 지표를 추적할 수 있습니다. 시장, 카테고리, 페이지, 에이전트 간 트래픽 분포도 확인할 수 있습니다. 이 대시보드에서 사용되는 데이터는 CDN 로그에서 가져온 것이므로 지표를 표시하려면 **CDN 로그 전달**&#x200B;을 구성해야 합니다. 표시된 데이터를 세분화하는 데 도움이 되는 사용자 정의 가능 필터도 있습니다. **Agentic Traffic**(으)로 이동하여 Agentic Traffic Insights를 보려는 사이트를 선택하십시오.
 
-![트래픽 분포](/help/dashboards/assets/ag-main.png)
+![에이전틱 트래픽 — 사이트 선택기(브랜드 중심 환경)](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
+
+<!-- ![Traffic Distribution](/help/dashboards/assets/ag-main.png)-->
 
 이 페이지는 다음 사항을 자세히 설명합니다.
 
@@ -38,44 +40,15 @@ ht-degree: 100%
 * [상단 및 하단 증가 항목](#top-bottom-movers)
 * [사용자 에이전트 및 URL 성능 분석](#user-url-performance)
 
-[브랜드 중심 환경](/help/overview/quick-start.md#brand-centric-experience)을 사용 중인 경우 **에이전틱 트래픽**&#x200B;으로 이동하여 에이전틱 트래픽 인사이트를 확인할 사이트를 선택하십시오.
-
-![에이전틱 트래픽 — 사이트 선택기(브랜드 중심 환경)](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
-
 ## CDN 로그 전달 {#cdn-setup}
 
 **CDN 로그 전달**&#x200B;이 없으면 에이전틱 트래픽 대시보드가 비어 있습니다. 에이전틱 상호작용을 보려면 **CDN 로그 전달**&#x200B;을 구성해야 합니다.
 
-### 고객 구성(클래식 탐색)
-
-처음 로그인하면 아래 이미지에 표시된 것과 같은 메시지가 표시됩니다.
-
-![CDN 설정](/help/dashboards/assets/ag-log-forward1.png)
-
-**구성으로 이동**&#x200B;을 선택하면 [고객 구성 대시보드](/help/dashboards/customer-configuration.md)의 **CDN 구성** 탭으로 자동으로 이동합니다.
-
-![온보딩 CDN 설정](/help/dashboards/assets/ag-log-forward2.png)
-
-이 탭에서 **온보딩 CDN**&#x200B;을 선택합니다. CDN 공급자 창이 표시됩니다.
-
-<!-- [CDN Provider](/help/dashboards/assets/ag-log-forward3.png)-->
-**CDN 공급자 온보딩** 창에서:
-
-1. CDN 공급자(예: Akamai, Adobe 관리 Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare 또는 기타)를 선택합니다.
-2. 로그 전달을 사용하려면 **온보딩**&#x200B;을 클릭합니다.
-
-**기타**&#x200B;를 선택하는 경우 llmo-now@adobe.com에 도움을 요청해야 합니다.
-
->[!NOTE]
->고객 관리 CDN(BYOCDN) 사용 시 로그 전달에 대한 자세한 내용은 [BYOCDN 로그 전달 개요](/help/overview/log-forwarding/log-forwarding-overview.md)를 참조하십시오
-
-활성화되면 로그가 수집되고 대시보드는 총 에이전트 상호작용, 성공률, 시장별 히트 수, 사용자 에이전트 분석, URL 수준 성능과 같은 지표로 채워집니다.
-
-### 브랜드 중심 환경
-
-[브랜드 중심 환경](/help/overview/quick-start.md#brand-centric-experience)을 사용 중인 경우 **브랜드 관리**&#x200B;로 이동하고 **CDN** 레이블을 클릭하여 CDN 로그 전달 정보를 추가할 수 있습니다.
+**브랜드 관리**(으)로 이동하고 **CDN** 레이블을 클릭하여 CDN 로그 전달 정보를 추가할 수 있습니다.
 
 ![브랜드 관리 — CDN 로그 전달](/help/assets/brand-centric-experience/brands-management-cdn.png)
+
+고객 관리 CDN(BYOCDN) 사용 시 로그 전달에 대한 자세한 내용은 [BYOCDN 로그 전달 개요](/help/overview/log-forwarding/log-forwarding-overview.md)를 참조하십시오
 
 LLM Optimizer는 CDN 로그에서 필드의 하위 집합을 처리합니다. 원시 로그 필드 이름은 CDN 공급자에 따라 다르지만 정규화되어 다음과 같이 표시됩니다.
 

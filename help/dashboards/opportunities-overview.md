@@ -2,21 +2,26 @@
 title: 최적화 기회
 description: 기회 대시보드를 사용하여 브랜드 가시성을 높이기 위해 사이트를 개선할 수 있는 방법을 자동으로 감지하는 방법에 대해 알아봅니다.
 feature: Opportunities
-autotag-review: '2026-05-15T17:53:48.623Z'
-TQID: 'https://experienceleague.adobe.com/FAbQhzuyT-kIitIaoVQ47dam-TpN-deU5Vbo1nmK5CA'
+autotag-review: '2026-07-15T18:08:26.657Z'
+TQID: 'https://experienceleague.adobe.com/nEVOXJiQZIqfs2Q-tpA3DeiBNwpZAjhMSyIVuNlACdM'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2:
+  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+  - id: a6256a78-8814-462c-9627-86699b39cee1
+  - id: e0ec491f-fe51-42b6-801c-1c0dfcc0e64f
+  - id: fe92ae96-fc87-4fea-96a0-adc06310d4f4
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 564171851fdccee43afd233da143d66182464889
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
-source-wordcount: 1227
+source-wordcount: 1225
 ht-degree: 100%
 
 ---
@@ -28,7 +33,7 @@ ht-degree: 100%
 
 이러한 최적화에는 페이지 내 수정(구조화된 콘텐츠, 표준 또는 요약 추가), 기술 조정(AI 크롤러 차단 해제 또는 오류 해결), 권한 있는 서드파티 사이트의 콘텐츠에 영향을 주는 작업이 포함됩니다. 이러한 최적화 기회를 해결하면 브랜드가 정확하게 표현되고 생성형 응답에서 인용될 가능성이 높아집니다.
 
-![최적화 기회](/help/dashboards/assets/oport.png)
+<!--![Optimization opportunities](/help/dashboards/assets/oport.png)-->
 
 ## 기회 대시보드
 

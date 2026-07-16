@@ -2,18 +2,23 @@
 title: 로그 전달 - Cloudflare
 description: LLM Optimizer의 에이전틱 트래픽 데이터 수집을 위해 Cloudflare에서 Adobe의 S3 버킷으로 CDN 로그를 전달하는 방법에 대해 알아봅니다.
 feature: Agentic Traffic
-autotag-review: '2026-05-15T17:41:23.688Z'
-TQID: 'https://experienceleague.adobe.com/AfhcMa7tZ3L-4qCbNKiblInALmHaKxWLtL-O-Hkvc-U'
+autotag-review: '2026-07-15T17:45:52.167Z'
+TQID: 'https://experienceleague.adobe.com/6D7Xe-ysQOSsNMONyart2HaTfdyQR64l0r3AeFNsOpI'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
+  - id: e0828736-236a-487b-a478-5a635455eadc
 subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+  - id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 381
 ht-degree: 100%
