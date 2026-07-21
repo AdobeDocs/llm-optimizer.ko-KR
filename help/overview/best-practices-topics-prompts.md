@@ -4,58 +4,37 @@ description: 맞춤형 브랜드 모니터링 및 전략적 콘텐츠 분석을 
 feature: Best Practices, Customer Configuration
 autotag-review: '2026-07-15T17:42:20.391Z'
 TQID: 'https://experienceleague.adobe.com/nnLohajbU-fogbmBfGE5PUzdsoTJ5fjwW-ruVTjOWtM'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: c898dfb2-0885-42fb-b2af-b2d756752646
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2:
-  - id: e69d5a42-0217-4ca5-9396-a9a826a170da
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: addf009e-030a-4310-8534-776a3e62ed48
-  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f8667931-f646-4dd3-af2a-b9d0cb8098ad
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: c898dfb2-0885-42fb-b2af-b2d756752646id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: e69d5a42-0217-4ca5-9396-a9a826a170da
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: addf009e-030a-4310-8534-776a3e62ed48id: b5520579-b31f-4df7-9281-f0d9f91e2edcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d00e9f03-e50b-4162-b143-0c0817c937c2id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f8667931-f646-4dd3-af2a-b9d0cb8098ad
+source-git-commit: 74484901cba1f054070673f2d706b26b6360aacb
 workflow-type: tm+mt
-source-wordcount: 1537
-ht-degree: 100%
+source-wordcount: 1482
+ht-degree: 77%
 
 ---
 
-# 추적할 카테고리, 주제, 프롬프트 등을 구성하는 모범 사례
+# 추적할 카테고리, 주제, 프롬프트 및 기타 브랜드를 구성하는 우수 사례
 
-이 섹션에서는 카테고리, 주제, 프롬프트 등을 추적할 방법을 결정하는 모범 사례를 설명합니다. 또한 Adobe가 업계 전문가들과 함께 광범위한 연구를 통해 개발한 업계 프롬프트 라이브러리에 대한 정보도 포함되어 있습니다.
+이 섹션에서는 추적할 카테고리, 주제, 프롬프트 및 기타 브랜드를 설정하는 방법을 결정하는 모범 사례에 대해 설명합니다. 또한 Adobe가 업계 전문가들과 함께 광범위한 연구를 통해 개발한 업계 프롬프트 라이브러리에 대한 정보도 포함되어 있습니다.
 
-이것은 중요한 첫 단계입니다. 이제 결정하는 사항에 따라 정보가 비즈니스 상황에 맞게 조정됩니다. 향후 카테고리에 대한 변경 사항이 있으면 내역 데이터를 재설정합니다.
+이 구성은 중요한 첫 단계입니다. 이제 결정하는 사항에 따라 정보가 비즈니스 상황에 맞게 조정됩니다. 향후 카테고리에 대한 변경 사항이 있으면 내역 데이터를 재설정합니다.
 
-[[!UICONTROL 고객 구성]](/help/dashboards/customer-configuration.md) 대시보드에서 LLM Optimizer 플랫폼 내 브랜드를 모니터링하고 분석하는 방법을 정의할 수 있습니다. 대시보드 사용 방법에 대한 자세한 내용은 [[!UICONTROL 고객 구성]](/help/dashboards/customer-configuration.md)을 참조하십시오.
+[[!UICONTROL 브랜드 관리]](/help/dashboards/customer-configuration.md) 대시보드에서는 LLM 최적화 도구 플랫폼 내에서 브랜드를 모니터링하고 분석하는 방법을 정의할 수 있습니다.
 
-![고객 구성 창](/help/assets/best-practices/customer-configuration-best-practices.png)
+여기에서 카테고리(예: 비즈니스 단위 또는 제품 라인)를 사용자 정의하고, 다른 브랜드를 추적하고, 브랜드 언급 별칭을 추가하여 프롬프트 전체에서 브랜드의 모든 변형을 캡처할 수 있습니다. 이 설정으로 플랫폼이 비즈니스 컨텍스트에 대한 인사이트를 맞춤화하여 정확한 가시성, 트래픽 및 기회 분석이 가능합니다.
 
-[!UICONTROL 고객 구성] 대시보드에서 카테고리(예: 비즈니스 단위 또는 제품 라인)를 사용자 정의하고, 다른 브랜드를 추적하며, 브랜드 언급 별칭을 추가하여 프롬프트 간에 브랜드의 모든 변형을 캡처할 수 있습니다. 이 설정으로 플랫폼이 비즈니스 컨텍스트에 대한 인사이트를 맞춤화하여 정확한 가시성, 트래픽 및 기회 분석이 가능합니다.
+기본적으로 각 조직은 하나의 활성 브랜드와 선택할 추가 제안 브랜드로 시작합니다.
 
-## 브랜드 중심 환경
+![브랜드 관리 - 앱 탐색(브랜드 중심 경험)](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
-기본적으로 신규 고객은 온보딩 기반 설정이 적용된 집중적인 브랜드 우선 인터페이스에서 시작합니다. 이 새로운 인터페이스에서 각 조직은 활성 브랜드 한 개와 선택 가능한 추가 제안 브랜드로 시작합니다. 기존 LLM Optimizer 고객은 점차 이 브랜드 중심 환경으로 전환됩니다.
+![브랜드 관리 - 구성 개요](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
-브랜드 중심 환경을 사용 중인 경우 **브랜드 관리**&#x200B;에서 브랜드를 모니터링하고 분석하는 방법을 정의할 수 있습니다.
+특정 브랜드에 대한 주제 및 프롬프트를 설정하려면 **프롬프트 라이브러리** 대시보드를 사용하십시오.
 
-![브랜드 관리 — 앱 탐색(브랜드 중심 환경)](/help/assets/brand-centric-experience/llmo-app-shell.png)
-
-![브랜드 관리 — 구성 개요](/help/assets/brand-centric-experience/brands-management-configuration.png)
-
-특정 브랜드에 대한 주제와 프롬프트를 설정하려면 **프롬프트 관리**&#x200B;를 사용하십시오.
+<!-- Add link to Prompt Library page when available-->
 
 ![프롬프트 관리](/help/assets/brand-centric-experience/prompts-management.png)
 
@@ -65,12 +44,13 @@ ht-degree: 100%
 
 업계 프롬프트 라이브러리를 사용하려면:
 
-1. **고객 구성** 대시보드로 이동합니다.
-1. LLM Optimizer에서 라이브러리 파일을 다운로드하려면 **프롬프트 라이브러리 다운로드**를 선택합니다.
-   ![업계 프롬프트 라이브러리 다운로드](/help/assets/best-practices/customer-configuration-prompts-library.png)
+1. **프롬프트 라이브러리** 대시보드로 이동합니다.
+1. LLM Optimizer에서 라이브러리 파일을 다운로드하려면 **프롬프트 라이브러리 다운로드**&#x200B;를 선택하십시오.
 1. 각 탭에서 브랜드 산업에 대해 제안된 **주제** 및 **프롬프트**&#x200B;를 검토하고 가장 관련성이 높은 옵션을 선택합니다.
 1. **고객 여정 단계 열**&#x200B;을 검토하여 고객 라이프사이클 전반에 걸친 프롬프트 옵션을 확인합니다(예: 검색에서 보존으로 전환). 단계 프롬프트의 초기 단계/최상위는 우선순위가 높지만 뒤에 것은 유지를 촉진하고 고객 지원을 활성화하는 등의 옵션을 고려합니다.
 1. Adobe LLM Optimizer에 주제와 프롬프트를 업로드하기 전에 필요에 따라 주제나 프롬프트를 수정하여 목표와 목적을 가장 잘 지원합니다(예: 브랜드/제품 이름 추가, 온브랜드 용어 추가). 프롬프트는 제공된 *.csv* 템플릿을 사용하여 수동으로 또는 일괄 업로드를 통해 LLM Optimizer에 추가할 수 있습니다.
+
+<!--![Industry prompt library download](/help/assets/best-practices/download-prompts.png) - add screenshot to steps-->
 
 >[!TIP]
 >
@@ -86,11 +66,11 @@ ht-degree: 100%
 
 업계 전반에 걸쳐 고객이 검색한 상위 주제:
 
-* **자동:** 자동 문제 해결, 차량 및 금융/임대 비교입니다.
+* **자동:** 차량 및 금융/임대 비교, 자동 문제 해결
 * **금융 서비스:** 금융 상품 조사입니다.
-* **헬스 케어:** 증상 또는 건강 문제 조회, 치료 옵션 비교, 실험실 결과 또는 의학 용어 이해입니다.
-* **통신:** 계획, 계약 조건 및 프로모션 비교, 로컬 지역의 서비스 확인입니다.
-* **여행:** 여행 준비, 여행 조사 및 예약입니다.
+* **의료 서비스:** 증상 또는 건강 문제 조회, 치료 옵션 비교, 랩 결과 또는 의학 용어 이해
+* **통신:** 계획, 계약 조건 및 프로모션과 지역 서비스 확인 비교
+* **AirlineTravel:** 여행 준비 및 여행 조사 및 예약
 
 LLM 도구의 AI 검색 및 프롬프트 행동에 대한 고객 트렌드:
 
@@ -122,12 +102,15 @@ LLM 도구의 AI 검색 및 프롬프트 행동에 대한 고객 트렌드:
 * *웹/콘텐츠 소유자*&#x200B;인 경우 **URL_DIR** 방법을 선택합니다.
 * *머천다이징/오퍼 관리자*&#x200B;인 경우 **제품/서비스 카테고리** 방법을 선택합니다.
 
-![LLM Optimizer에서 카테고리 추가](/help/assets/best-practices/add-category.png)
+<!--How do you pick a region? Or is that handled differently?-->
+
+![LLM Optimizer에서 카테고리 추가](/help/assets/best-practices/create-category1.png)
 
 >[!IMPORTANT]
 >
 > * 한 가지 접근법을 선택하고 그것을 고수합니다.
-> * 계정/브랜드당 **하나**&#x200B;의 카테고리 모델만 가질 수 있습니다. **SBU**&#x200B;와 **URL_DIR**을 동시에 사용하지 마십시오.
+> * 계정/브랜드당 **하나**&#x200B;의 카테고리 모델만 가질 수 있습니다. **SBU**&#x200B;와 **URL_DIR**&#x200B;을 동시에 사용하지 마십시오.
+
 <!--Can you mix Product/Service with these?-->
 
 예:
@@ -158,13 +141,14 @@ LLM 도구의 AI 검색 및 프롬프트 행동에 대한 고객 트렌드:
 * 지원 담당자
 * 기업/뉴스(정말 필요한 경우)
 
-![LLM Optimizer에서 주제 추가](/help/assets/best-practices/add-topic.png)
+![LLM Optimizer에서 주제 추가](/help/assets/best-practices/add-new-topic1.png)
 
 목록을 만들 때는 다음 사항을 고려합니다.
 
-* 편집기가 프롬프트 텍스트에서 5초 내에 주제를 이해할 수 있습니까? 그렇지 않은 경우 이름을 바꾸거나 단순화합니다.
+* 프롬프트 텍스트에서 5초 후에 주제를 이해할 수 있습니까? 그렇지 않은 경우 이름을 바꾸거나 단순화합니다.
 * 다른 팀이 다른 주제에 대한 수정 사항을 소유합니까? 그렇다면 유용한 주제를 골랐습니다.
-  <!-- Last bullet point does not make sense. Clarification needed. Also not sure what is meant by "editor"?-->
+
+<!-- Last bullet point does not make sense. Clarification needed. Also not sure what is meant by "editor"?-->
 
 몇 가지 추가 유용한 힌트:
 
@@ -174,7 +158,7 @@ LLM 도구의 AI 검색 및 프롬프트 행동에 대한 고객 트렌드:
 >[!IMPORTANT]
 >
 > * 주제를 조직적이지 않고 의도 중심으로 유지합니다.
-> * **[!UICONTROL 브랜드]** 탭에서 이 주제에 대해 필터링할 수 있으므로 브랜드/비브랜드/지리적 카테고리/필터를 추가하지 마십시오.
+> * **[!UICONTROL 브랜드 존재감]** 대시보드에서 브랜드/비브랜드/지리적 범주/필터를 특별히 필터링할 수 있으므로 추가하지 마십시오.
 > * 주제는 여러 카테고리에 걸쳐 분산되어 있습니다. 각 카테고리에 고유한 주제를 정의할 수 **없습니다**.
 > * 단일 프롬프트는 여러 주제나 카테고리에 존재할 수 **있습니다**.
 
@@ -197,11 +181,11 @@ LLM 도구의 AI 검색 및 프롬프트 행동에 대한 고객 트렌드:
 
 ## 다른 브랜드 추적에 대한 모범 사례
 
-다른 브랜드 추적을 통해 비즈니스에 중요한 프롬프트와 주제에 대한 LLM 응답의 가시성과 언급을 모니터링할 수 있습니다.
+다른 브랜드를 추적하면 비즈니스에 중요한 프롬프트 및 주제에 대한 LLM 응답의 가시성 및 언급을 모니터링할 수 있습니다.
 
-[!UICONTROL **다른 브랜드 추적**] 탭을 사용하면 경쟁 업체를 포함한 다른 업체를 추가하여 특정 프롬프트와 주제에 대한 가시성을 추적할 수 있습니다.
+[!UICONTROL **추적할 다른 브랜드**]&#x200B;은(는) **브랜드 관리** > **시장 추적**&#x200B;에서 사용할 수 있으며, 경쟁사를 포함하여 다른 브랜드를 추가하여 특정 프롬프트 및 주제에 대한 가시성을 추적할 수 있습니다.
 
-다른 브랜드를 추적하면 다양한 지역과 카테고리에서 브랜드와 함께 다른 브랜드가 얼마나 자주 언급되는지 확인할 수 있으며, 가시성을 브랜드와 비교할 수 있습니다.
+추적할 다른 브랜드와 함께 다른 지역 및 카테고리에서 브랜드와 함께 다른 브랜드가 언급되는 빈도를 확인하고 가시성을 고유한 브랜드와 비교할 수 있습니다.
 
 >[!TIP]
 >
@@ -209,6 +193,7 @@ LLM 도구의 AI 검색 및 프롬프트 행동에 대한 고객 트렌드:
 
 ## 자세히 알아보기
 
-* [고객 구성 대시보드](/help/dashboards/customer-configuration.md)에서 카테고리, 주제, 프롬프트 및 기타 추적을 구성할 수 있습니다.
+* [브랜드 관리](/help/dashboards/customer-configuration.md)에서 추적할 범주 및 기타 브랜드를 구성합니다.
+* [프롬프트 라이브러리](/help/dashboards/customer-configuration.md)에서 항목 및 프롬프트를 구성할 수 있습니다.
 * [LLM Optimizer 모범 사례](/help/tutorials/best-practices.md)에서는 LLM 최적화에 대한 모범 사례를 설명합니다.
 
