@@ -4,24 +4,15 @@ description: LLM Optimizer의 Optimize at Edge를 위해 Fastly BYOCDN을 구성
 feature: Opportunities
 autotag-review: '2026-07-15T17:50:43.991Z'
 TQID: 'https://experienceleague.adobe.com/Ueis3UcuGZz19FUJavq44dF3q3Irz2Ri4s7JTCB-H80'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3aid: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
 workflow-type: tm+mt
 source-wordcount: 350
-ht-degree: 96%
+ht-degree: 92%
 
 ---
 
@@ -38,7 +29,7 @@ Fastly VCL 규칙을 설정하기 전에 다음을 확인하십시오.
 * LLM Optimizer UI에서 검색한 Edge Optimize API 키 단계는 [API 키 검색](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)을 참조하십시오.
 * (선택 사항) 스테이징 라우팅을 테스트하려면 [스테이징 API 키](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)를 참조하십시오.
 
-**구성**
+## 구성
 
 다음 세 가지 VCL 스니펫을 Fastly 서비스에 추가합니다. 이러한 스니펫은 Edge Optimize로의 라우팅 에이전틱 요청, 캐시 키 분리, 그리고 기본 원본으로의 장애 조치를 처리합니다.
 
@@ -46,7 +37,7 @@ Fastly VCL 규칙을 설정하기 전에 다음을 확인하십시오.
 
 ![VCL 스니펫 추가](/help/assets/optimize-at-edge/add-vcl-snippets.png)
 
-**vcl_recv 스니펫**
+### vcl_recv 코드 조각
 
 ```
 unset req.http.x-edgeoptimize-url;
@@ -66,7 +57,7 @@ if (!req.http.x-edgeoptimize-request
 }
 ```
 
-**vcl_hash 스니펫**
+### vcl_hash 코드 조각
 
 ```
 if (req.http.x-edgeoptimize-config) {
@@ -75,7 +66,7 @@ if (req.http.x-edgeoptimize-config) {
 }
 ```
 
-**vcl_deliver 스니펫**
+### vcl_deliver 코드 조각
 
 ```
 if (req.http.x-edgeoptimize-config && resp.status >= 400) {
@@ -92,7 +83,7 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 }
 ```
 
-**장애 조치(Failover)**
+### 페일오버
 
 `vcl_deliver` 스니펫은 장애 조치를 자동으로 처리합니다. Edge Optimize가 `4XX` 또는 `5XX` 오류를 반환하는 경우 요청이 다시 시작되고 기본 원본으로 다시 라우팅되어 최종 사용자가 응답을 계속 수신합니다. 장애 조치(Failover) 응답에는 `x-edgeoptimize-fo: 1` 헤더가 포함됩니다.
 
@@ -102,11 +93,11 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 | Edge Optimize는 `4XX` 또는 `5XX`를 반환합니다. | 요청이 다시 시작되고 기본 원본에서 제공됩니다. |
 | 장애 조치(Failover) 응답 | 헤더 `x-edgeoptimize-fo: 1`를 포함합니다. |
 
-**방화벽 규칙을 통해 Edge에서 최적화 허용(선택 사항)**
+## 방화벽 규칙을 통해 Edge에서 최적화 허용(선택 사항)
 
 {{waf-allowlist-setup}}
 
-**설정 확인**
+## 설정 확인
 
 설정을 완료한 후 봇 트래픽이 Edge Optimize로 라우팅되고 있으며 사람 트래픽이 영향을 받지 않는지 확인합니다.
 
