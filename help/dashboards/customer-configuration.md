@@ -20,10 +20,10 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
   - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+source-git-commit: 72cc645997dbd5ae0442fefad73fe6a4e7ffe050
 workflow-type: tm+mt
-source-wordcount: 3935
-ht-degree: 57%
+source-wordcount: 3923
+ht-degree: 56%
 
 ---
 
@@ -48,9 +48,9 @@ LLM Optimizer가 다양한 시장과 경쟁 환경에서 브랜드 존재감을 
 
 [브랜드 중심 환경](/help/overview/quick-start.md#brand-centric-experience)을 사용 중인 경우 **브랜드 관리**&#x200B;로 이동하여 브랜드, 브랜드 별칭을 설정 및 구성하고 추적할 경쟁 업체를 정의하십시오. **브랜드 관리**&#x200B;는 또한 Google Search Console, Adobe Analytics, CDN 로그 전달과 같이 브랜드와 연결된 URL과 관련이 있는 통합을 구성하는 데 사용됩니다. 이 작업은 GSC, CDN 등 해당 탭을 클릭하여 수행할 수 있습니다.
 
-![브랜드 관리 — 앱 탐색(브랜드 중심 환경)](/help/assets/brand-centric-experience/llmo-app-shell.png)
+![브랜드 관리 - 앱 탐색(브랜드 중심 경험)](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
-![브랜드 관리 — 구성 개요(브랜드 중심 환경)](/help/assets/brand-centric-experience/brands-management-configuration.png)
+![브랜드 관리 - 구성 개요(브랜드 중심 경험)](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
 >[!IMPORTANT]
 >
@@ -225,7 +225,7 @@ Google Search Console 계정을 LLM Optimizer와 통합한 후 Search Console에
 1. Google Search Console 탭에서 Search Console에서 가져온 토픽 및 프롬프트 목록을 검토합니다.
    ![프롬프트 목록](/help/dashboards/assets/prompts-list.png)
 1. 원하는 토픽/프롬프트 카테고리를 클릭하여 목록을 확장합니다.
-1. **추가** 버튼을 사용하여 목록에 있는 프롬프트를 추가합니다. **모두 추가**&#x200B;를 사용하여 프롬프트 및 카테고리를 일괄 추가할 수도 있습니다.
+1. **추가** 단추를 사용하여 목록에서 프롬프트를 추가하십시오. **모두 추가**&#x200B;를 사용하여 프롬프트 및 범주를 일괄 추가할 수도 있습니다.
    ![프롬프트 추가](/help/dashboards/assets/add-prompts.png)
 1. 선택 사항이 만족스러우면 알림 메시지에서 **저장**&#x200B;을 클릭합니다.
 
