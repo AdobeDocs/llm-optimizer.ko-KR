@@ -20,10 +20,10 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
 workflow-type: tm+mt
 source-wordcount: 1919
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 
@@ -41,11 +41,11 @@ Cloudflare Worker 라우팅 규칙을 설정하기 전에 다음을 확인하십
 * LLM Optimizer UI에서 검색한 Edge Optimize API 키 단계는 [API 키 검색](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)을 참조하십시오.
 * (선택 사항) 스테이징 라우팅을 테스트하려면 [스테이징 API 키](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)를 참조하십시오.
 
-**라우팅 작동 방식**
+## 라우팅 작동 방식
 
 올바르게 구성되면 에이전틱 사용자 에이전트의 도메인 요청(예: `www.example.com/page.html`)이 Cloudflare 작업자에 의해 이전되어 Edge Optimize 백엔드로 라우팅됩니다. 백엔드 요청에 필수 헤더가 포함됩니다.
 
-**백엔드 요청 테스트**
+### 백엔드 요청 테스트
 
 Edge Optimize 백엔드에 직접 요청하여 라우팅을 확인할 수 있습니다.
 
@@ -57,7 +57,7 @@ curl -svo /dev/null https://live.edgeoptimize.net/page.html \
   -H 'x-edgeoptimize-config: LLMCLIENT=TRUE;'
 ```
 
-**필수 헤더**
+### 필수 헤더
 
 Edge Optimize 백엔드에 대한 요청에는 다음 헤더를 설정해야 합니다.
 
@@ -85,13 +85,13 @@ Edge Optimize용 Cloudflare 작업자를 설정하는 방법에는 두 가지가
 >
 >도메인에 기존 Cloudflare 작업자가 **없는**&#x200B;경우에만 이 옵션을 사용합니다. 이미 작업자가 있는 경우 [옵션 2: 수동 설정](#option-2-manual-setup)을 사용하여 기존 작업자에게 Edge Optimize 라우팅 논리를 추가합니다.
 
-**1단계: 작업자 배포**
+### 1단계: 작업자 배포
 
 아래 버튼을 클릭하여 Edge Optimize 작업자를 Cloudflare 계정에 배포합니다.
 
 [![Cloudflare에 배포](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/adobe/llmo-code-samples/tree/main/optimize-at-edge/cloudflare/automation)
 
-**2단계: 배포 양식 작성**
+### 2단계: 배포 양식 작성
 
 버튼을 클릭하면 작업자 설정 페이지가 열립니다. 다음과 같이 양식을 입력합니다.
 
@@ -115,7 +115,7 @@ Edge Optimize용 Cloudflare 작업자를 설정하는 방법에는 두 가지가
 
 다음 단계에 따라 작업자를 수동으로 만들고 구성합니다.
 
-**1단계: Cloudflare 작업자 만들기**
+### 1단계: Cloudflare Worker 생성
 
 1. Cloudflare 대시보드에 로그인합니다.
 2. 사이드바에서 **작업자 및 페이지**&#x200B;로 이동합니다.
@@ -125,13 +125,13 @@ Edge Optimize용 Cloudflare 작업자를 설정하는 방법에는 두 가지가
 
 ![Cloudflare 작업자 대시보드](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
 
-**2단계: 작업자 코드 추가**
+### 2단계: 작업자 코드 추가
 
 작업자를 만든 후 **코드 편집**&#x200B;을 클릭하고 기본 코드를 [worker.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudflare/automation/src/worker.js)의 코드로 바꿉니다. 기존 Cloudflare Worker가 있는 경우 코드를 완전히 대체하지 않고 기존 작업자 코드와 병합합니다.
 
 작업자를 게시하려면 **저장 및 배포**&#x200B;를 클릭합니다.
 
-**3 단계: 환경 변수 및 암호 구성**
+### 3단계: 환경 변수 및 암호 구성
 
 환경 변수는 API 키와 같은 민감한 구성을 안전하게 저장합니다.
 
@@ -167,7 +167,7 @@ Edge Optimize용 Cloudflare 작업자를 설정하는 방법에는 두 가지가
 
 ![Cloudflare 작업자 경로](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
 
-**장애 조치 비헤이비어 확인**
+### 페일오버 동작 확인
 
 Edge Optimize를 사용할 수 없거나 오류를 반환하는 경우 작업자가 자동으로 원본으로 장애 조치합니다. 장애 조치(Failover) 응답에는 `x-edgeoptimize-fo` 헤더가 포함됩니다.
 
@@ -178,7 +178,7 @@ Edge Optimize를 사용할 수 없거나 오류를 반환하는 경우 작업자
 
 Cloudflare 작업자 로그에서 장애 조치 이벤트를 모니터링하여 문제를 해결할 수 있습니다.
 
-**작업자 논리 이해**
+### 작업자 논리 이해
 
 Cloudflare 작업자는 다음과 같은 논리를 구현합니다.
 
@@ -200,11 +200,11 @@ Cloudflare 작업자는 다음과 같은 논리를 구현합니다.
 
 7. **리디렉션 처리:** `redirect: "manual"` 옵션을 사용하면 작업자가 따르지 않고 Edge Optimize에서 리디렉션 응답을 클라이언트에게 전달할 수 있습니다.
 
-**구성 사용자 정의**
+## 구성 사용자 정의
 
 코드 상단의 구성 상수를 수정하여 작업자 비헤이비어를 사용자 정의할 수 있습니다.
 
-**에이전틱 봇 목록**
+### 무발생 보트 목록
 
 사용자 에이전트를 추가하거나 제거하려면 `AGENTIC_BOTS` 배열을 수정합니다.
 
@@ -223,7 +223,7 @@ const AGENTIC_BOTS = [
 ];
 ```
 
-**타기팅된 경로**
+### 타겟팅된 경로
 
 기본적으로 모든 HTML 페이지는 Edge Optimize로 라우팅됩니다. 특정 경로로 라우팅을 제한하려면 `TARGETED_PATHS` 배열을 수정합니다.
 
@@ -235,7 +235,7 @@ const TARGETED_PATHS = null;
 const TARGETED_PATHS = ['/', '/page.html', '/products', '/about-us'];
 ```
 
-**장애 조치(Failover) 구성**
+### 페일오버 구성
 
 기본적으로 작업자는 Edge Optimize에서 4XX 또는 5XX 오류가 발생하면 장애 조치됩니다. 다음 비헤이비어를 사용자 정의합니다.
 
@@ -253,7 +253,7 @@ const FAILOVER_ON_4XX = false;
 const FAILOVER_ON_5XX = false;
 ```
 
-**중요 고려 사항**
+### 중요한 고려 사항
 
 * **장애 조치(Failover) 비헤이비어:** Edge Optimize가 오류(4XX 또는 5XX 상태 코드)를 반환하거나 네트워크 오류로 인해 요청이 실패하는 경우 작업자가 자동으로 원본에 장애 조치됩니다. 장애 조치에서 `EDGE_OPTIMIZE_TARGET_HOST`를 원본 도메인으로 사용합니다(Fastly의 `F_Default_Origin` 또는 CloudFront의 `Default_Origin`과 유사). 장애 조치(Failover) 응답에는 모니터링 및 디버깅에 사용할 수 있는 `x-edgeoptimize-fo: 1` 헤더가 포함됩니다.
 
@@ -265,7 +265,7 @@ const FAILOVER_ON_5XX = false;
 
 * **로깅:** Cloudflare 작업자 로깅을 활성화하여 요청을 모니터링하고 문제를 해결합니다. 실시간 로그를 확인하려면 **작업자** > **내 작업자** > **로그**&#x200B;로 이동합니다. 작업자는 디버깅을 위해 장애 조치 이벤트를 기록합니다.
 
-**문제 해결**
+## 문제 해결
 
 | 문제 | 가능한 원인 | 솔루션 |
 |-------|----------------|----------|
@@ -280,11 +280,11 @@ const FAILOVER_ON_5XX = false;
 | 잘못된 호스트로 인해 요청 실패 | `EDGE_OPTIMIZE_TARGET_HOST`에 프로토콜(예: `https://`)이 포함되어 있습니다. | 프로토콜 없이 도메인 이름만 사용합니다(예: `https://example.com`이 아닌 `example.com`). |
 | 장애 조치 중 530 오류 | Cloudflare가 원본에 연결할 수 없거나 장애 조치 요청에 잘못된 헤더가 있습니다. | 장애 조치 기능이 Edge Optimize 헤더를 제거하는지 확인합니다. 원본을 액세스할 수 있고 DNS가 올바르게 구성되어 있는지 확인합니다. |
 
-**방화벽 규칙을 통해 Edge에서 최적화 허용(선택 사항)**
+## 방화벽 규칙을 통해 Edge에서 최적화 허용(선택 사항)
 
 {{waf-allowlist-setup}}
 
-**설정 확인**
+## 설정 확인
 
 설정을 완료한 후 봇 트래픽이 Edge Optimize로 라우팅되고 있으며 사람 트래픽이 영향을 받지 않는지 확인합니다.
 
