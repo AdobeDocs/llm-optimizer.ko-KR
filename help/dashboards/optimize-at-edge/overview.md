@@ -24,10 +24,10 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: e9001ce2-5245-4a8e-8601-dd958009072f
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+source-git-commit: 7df9f2722df2f532efe7f05e84c49e9f5a63b58b
 workflow-type: tm+mt
-source-wordcount: 3147
-ht-degree: 99%
+source-wordcount: 2941
+ht-degree: 98%
 
 ---
 
@@ -97,6 +97,7 @@ IT/CDN 팀에 대한 요구 사항:
 | Cloudflare(BYOCDN) | 자체 CDN 가져오기 | [설정 안내서 보기](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md) |
 | CloudFront(BYOCDN) | 자체 CDN 가져오기 | [설정 안내서 보기](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
 | Azure 전면 도어(BYOCDN) | 자체 CDN 가져오기 | [설정 안내서 보기](/help/dashboards/optimize-at-edge/azure-front-door-byocdn.md) |
+| Apache HTTP 서버 | 자체 CDN 가져오기 | [설정 안내서 보기](/help/dashboards/optimize-at-edge/apache-http-server.md) |
 
 >[!NOTE]
 >
@@ -130,8 +131,8 @@ IT/CDN 팀에 대한 요구 사항:
 
 ### 콘텐츠 가시성 복구
 
-이 기회는 클라이언트측 렌더링으로 인해 AI 에이전트용 주요 콘텐츠가 숨겨져 있는 페이지를 표시합니다. 식별된 각 페이지마다 AI 에이전트 보기에서 누락된 콘텐츠가 정확히 표시되고, 가시성 격차를 강조 표시하며, 숨겨진 콘텐츠를 복구하기 위해 변경 사항을 직접 적용할 수 있습니다. 이 기회를 Optimize at Edge와 함께 배포하면 사전 렌더링된 AI 최적화 버전의 페이지가 LLM 사용자 에이전트에게 제공되므로 Javascript를 실행하지 않고도 전체 컨텍스트에 액세스할 수 있습니다.
-이렇게 하면 AI 에이전트가 페이지를 먼저 완전히 볼 수 있습니다. 사전 렌더링된 HTML 위에 추가 개선 사항이 적용됩니다.
+이 영업 기회는 클라이언트측 렌더링으로 인해 AI 에이전트용 주요 콘텐츠가 숨겨져 있는 페이지에 플래그를 지정합니다. 식별된 각 페이지에 대해 AI 에이전트 보기에서 누락된 콘텐츠를 정확하게 보여 주고, 가시성 차이를 강조 표시하며, 숨겨진 콘텐츠를 복구하기 위해 변경 사항을 직접 적용할 수 있도록 합니다. Edge에서 최적화를 사용하여 이 영업 기회를 배포하면 사전 렌더링된 AI 최적화 버전의 페이지가 LLM 사용자 에이전트에게 제공되어 Javascript를 실행하지 않고도 전체 컨텍스트에 액세스할 수 있습니다.
+이렇게 하면 페이지가 AI 에이전트에게 처음으로 완전히 표시됩니다. 추가 개선 사항은 사전 렌더링된 HTML 위에 적용됩니다.
 
 >[!IMPORTANT]
 >이 사전 렌더링 기능은 Optimize at Edge와 함께 배포하면 아래에 제시된 모든 기회에 자동으로 적용되어 AI 에이전트가 페이지를 완전히 볼 수 있도록 합니다.
@@ -240,7 +241,7 @@ The CDN is where the optimized version of the page is assembled and delivered to
 
 Q: 콘텐츠가 소스에서 업데이트되면 어떻게 됩니까?
 
-기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 버전의 페이지를 제공합니다. 그러나 **콘텐츠 가시성 복구**&#x200B;를 위해 소스가 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하도록 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하기 때문입니다. **LLM 친화 요약 추가**&#x200B;와 같은 콘텐츠 기회를 위해 LLM Optimizer는 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 에이전트가 볼 수 있는 페이지와 사람이 볼 수 있는 페이지 간의 콘텐츠 이동을 방지하기 위해 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정합니다.
+기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 페이지 버전을 제공합니다. 그러나 소스가 **콘텐츠 가시성 복구**&#x200B;에 대해 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하여 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하기 때문입니다. **LLM 친화적 요약 추가**&#x200B;와 같은 콘텐츠 기회에 대해 LLM Optimizer은 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정하여 에이전트가 표시하는 페이지와 사람이 표시하는 페이지 사이의 콘텐츠 드리프트를 방지합니다.
 <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 질문. Optimize at Edge는 Adobe Edge Delivery Service(EDS)를 사용하는 사이트에만 적용됩니까?
