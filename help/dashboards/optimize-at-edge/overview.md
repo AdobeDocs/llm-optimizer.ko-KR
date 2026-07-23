@@ -4,11 +4,26 @@ description: CDN 에지에서 작성 변경 없이 LLM Optimizer로 최적화를
 feature: Opportunities
 autotag-review: '2026-07-15T18:10:00.249Z'
 TQID: 'https://experienceleague.adobe.com/nRq5punuSnNb4XXIJzkO1NGF66tsyN1rdt-O9dd8tmU'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-subfeature_v2: id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021id: a6256a78-8814-462c-9627-86699b39cee1id: e0ec491f-fe51-42b6-801c-1c0dfcc0e64fid: fe92ae96-fc87-4fea-96a0-adc06310d4f4
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: e9001ce2-5245-4a8e-8601-dd958009072fid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2:
+  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+  - id: a6256a78-8814-462c-9627-86699b39cee1
+  - id: e0ec491f-fe51-42b6-801c-1c0dfcc0e64f
+  - id: fe92ae96-fc87-4fea-96a0-adc06310d4f4
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: e9001ce2-5245-4a8e-8601-dd958009072f
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7df9f2722df2f532efe7f05e84c49e9f5a63b58b
 workflow-type: tm+mt
 source-wordcount: 2941
@@ -48,7 +63,7 @@ Optimize at Edge는 마케팅, SEO, 콘텐츠 및 디지털 전략 팀의 비즈
 다음 단계를 따라 LLM Optimizer 계정에서 온보딩 프로세스를 시작합니다.
 
 1. **고객 구성** 대시보드에서 **CDN 구성** 탭을 선택합니다.
-1. **CDN 온보딩**을 클릭합니다.
+1. **CDN 온보딩**&#x200B;을 클릭합니다.
    ![CDN 구성 탭](/help/overview/assets/cc-cdn.png)
 1. AEM Cloud Service 관리 Fastly 고객의 경우, 라우팅 설정은 셀프서비스이며 LLM Optimizer UI에서 직접 완료할 수 있습니다. 다른 CDN 공급자를 사용하는 고객의 경우 IT/CDN 팀이 필요한 설정 및 사전 요구 사항을 완료해야 합니다. 추가 지침은 아래에 제공된 CDN 안내서 예시를 참조하십시오.
 
@@ -226,7 +241,7 @@ The CDN is where the optimized version of the page is assembled and delivered to
 
 Q: 콘텐츠가 소스에서 업데이트되면 어떻게 됩니까?
 
-기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 페이지 버전을 제공합니다. 그러나 소스가 **콘텐츠 가시성 복구**&#x200B;에 대해 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하여 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하기 때문입니다. **LLM 친화적 요약 추가**와 같은 콘텐츠 기회에 대해 LLM Optimizer은 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정하여 에이전트가 표시하는 페이지와 사람이 표시하는 페이지 사이의 콘텐츠 드리프트를 방지합니다.
+기본 소스 페이지가 변경되지 않는 한 캐시에서 최적화된 페이지 버전을 제공합니다. 그러나 소스가 **콘텐츠 가시성 복구**&#x200B;에 대해 변경되면 시스템이 자동으로 새로 고침되므로 AI 에이전트는 항상 최신 콘텐츠를 수신합니다. 이는 낮은 캐시 TTL(Time to Live) 설정(분 단위)을 사용하여 사이트의 모든 콘텐츠 업데이트가 해당 창 내에서 새로운 최적화를 트리거하기 때문입니다. **LLM 친화적 요약 추가**&#x200B;와 같은 콘텐츠 기회에 대해 LLM Optimizer은 소스 페이지에서 변경 사항을 모니터링합니다. 변경 사항이 감지되면 최적화를 일시 중지하고 사람이 검토할 수 있도록 플래그를 지정하여 에이전트가 표시하는 페이지와 사람이 표시하는 페이지 사이의 콘텐츠 드리프트를 방지합니다.
 <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 질문. Optimize at Edge는 Adobe Edge Delivery Service(EDS)를 사용하는 사이트에만 적용됩니까?

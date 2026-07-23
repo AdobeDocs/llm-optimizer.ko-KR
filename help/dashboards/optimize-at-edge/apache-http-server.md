@@ -2,9 +2,12 @@
 title: Edge에서 최적화 - Apache HTTP 서버
 description: LLM Optimizer의 Edge에서 최적화하기 위해 Apache HTTP Server(자체 호스팅 역방향 프록시) BYOCDN을 구성하는 방법에 대해 알아봅니다.
 feature: Opportunities
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
 source-git-commit: d7e723161836027dcdde931378f5d0f776a1ecfc
 workflow-type: tm+mt
 source-wordcount: 585
