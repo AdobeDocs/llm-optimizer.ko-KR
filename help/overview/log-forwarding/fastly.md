@@ -4,24 +4,15 @@ description: LLM Optimizer의 에이전틱 트래픽 데이터 수집을 위해 
 feature: Agentic Traffic
 autotag-review: '2026-07-15T17:51:11.580Z'
 TQID: 'https://experienceleague.adobe.com/HPUxzfbvA4DtdNmjgTMvVVv-WqtjPcAUeZmg8JdvL-s'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 381
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -66,7 +57,7 @@ LLM Optimizer 페이지([https://llmo.now/](https://llmo.now/))로 이동합니�
 | **로그 형식** | 아래의 **로그 형식 문자열** 섹션에 표시된 로그 형식 문자열을 사용합니다. |
 | **타임스탬프 형식** | `%Y-%m-%dT%H:%M:%S.000` |
 | **버킷 이름** | LLM Optimizer 구성 페이지에서 **버킷 이름**&#x200B;을 복사합니다. ![버킷 이름](/help/overview/assets/log-forwarding/fastly/fastly-bucket-name.png) |
-| **도메인** | LLM Optimizer 구성 페이지에서 **도메인 이름**&#x200B;을(를) 복사합니다. ![도메인 이름](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
+| **도메인** | LLM Optimizer 구성 페이지에서 **도메인 이름**&#x200B;을 복사합니다. ![도메인 이름](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
 | **액세스 방법** | **사용자 자격 증명** |
 | **사용자 자격 증명** | LLM Optimizer 구성 페이지에서 **액세스 키** 및 **암호 키**&#x200B;를 복사합니다. ![액세스 키](/help/overview/assets/log-forwarding/common/access-keys.png) |
 | **기간** | `300` |
@@ -85,7 +76,7 @@ LLM Optimizer 페이지([https://llmo.now/](https://llmo.now/))로 이동합니�
 
 | 필드 | 설명 |
 | --- | --- |
-| **경로** | LLM Optimizer 구성 페이지에서 **경로**&#x200B;을(를) 복사합니다. ![경로](/help/overview/assets/log-forwarding/fastly/fastly-path.png) |
+| **경로** | LLM Optimizer 구성 페이지에서 **경로**&#x200B;를 복사합니다. ![경로](/help/overview/assets/log-forwarding/fastly/fastly-path.png) |
 | **로그 라인 형식 선택** | 비어 있음 |
 | **압축** | Gzip |
 | **중복 수준** | 표준 |

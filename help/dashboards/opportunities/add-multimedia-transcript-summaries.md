@@ -4,22 +4,14 @@ description: LLM Optimizer가 컴퓨터에서 읽을 수 있는 텍스트 없이
 feature: Opportunities
 autotag-review: '2026-07-15T16:47:13.112Z'
 TQID: 'https://experienceleague.adobe.com/lsMTVS4cFaGnhZonULQE4MB31bMdkzxoKA62o4IBcz0'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-subfeature_v2:
-  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2: id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
-source-wordcount: 775
+workflow-type: ht
+source-wordcount: 769
 ht-degree: 100%
 
 ---
@@ -51,8 +43,8 @@ LLM Optimizer는 구성 및 페이지 구조를 기반으로 임베드된 미디
 
 각 페이지에 대해 다음 항목이 있습니다.
 
-**멀티미디어 요약** - 비디오 콘텐츠에서 파생된 구조화된 요약.
-**미리보기** - 이전 및 이후 페이지 비교.
+**멀티미디어 요약** – 비디오 콘텐츠에서 추출한 구조화된 요약.
+**미리보기** – 페이지 전후 비교.
 
 ![현재 제안에 대한 제안이 있는 URL, 콘텐츠 패치가 있는 확장된 행, 구현 세부 정보 및 이론적 근거](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-expand.png)
 

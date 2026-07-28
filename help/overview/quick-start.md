@@ -4,24 +4,15 @@ description: 브랜드 이름과 도메인을 온보딩하고, Experience Hub �
 feature: Quickstart, Onboarding
 autotag-review: '2026-07-15T18:07:16.514Z'
 TQID: 'https://experienceleague.adobe.com/Hp5j1st4fkfiBVKTTL-eHQX6Ovmw61-2hX2g1T8Ui8Y'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: a080bb92-ba2a-4e53-ba60-f5184d1a9e9a
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: a080bb92-ba2a-4e53-ba60-f5184d1a9e9aid: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d00e9f03-e50b-4162-b143-0c0817c937c2id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 1201
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +25,7 @@ LLM Optimizer를 시작하려면 온보딩 프로세스를 완료하십시오. �
 
 ## 브랜드 중심 환경 {#brand-centric-experience}
 
-기본적으로 고객은 온보딩 기반 설정을 통해 집중적인 브랜드 우선 인터페이스에서 시작합니다. 이 인터페이스에서 각 조직은 하나의 활성 브랜드와 선택할 추가 제안 브랜드로 시작합니다. <!--Existing LLM Optimizer customers will shift to this Brand Centric experience gradually.-->
+기본적으로 고객은 온보딩 기반 설정이 적용된 집중적인 브랜드 우선 인터페이스에서 시작합니다. 이 인터페이스에서 각 조직은 활성 브랜드 한 개와 선택 가능한 추가 제안 브랜드로 시작합니다<!--Existing LLM Optimizer customers will shift to this Brand Centric experience gradually.-->. 
 
 ## 온보딩 개요
 
@@ -68,7 +59,7 @@ AEM Cloud 고객으로서 체험판을 활성화하려면 다음 중 하나를 �
 
 ![LLM Optimizer 체험판](/help/overview/assets/llm-trial.png)
 
-#### Adobe Analytics 및 Adobe Customer Journey Analytics
+#### Adobe Analytics와 Adobe Customer Journey Analytics 비교
 
 Adobe Analytics 및 Adobe Customer Journey Analytics 고객의 경우 Experience Cloud 홈 페이지에 배너가 표시됩니다.
 
@@ -83,7 +74,7 @@ Adobe Analytics 및 Adobe Customer Journey Analytics 고객의 경우 Experience
 
 >[!NOTE]
 >
-> * **무료 체험판:** AEM Cloud 및 Adobe Analytics/Customer Journey Analytics 고객은 LLM Optimizer 무료 체험판을 사용할 수 있습니다.
+> * **무료 체험판:** AEM Cloud 및 Adobe Analytics/Customer Journey Analytics 고객은 LLM Optimizer의 무료 체험판 버전을 사용할 수 있습니다.
 > * **2026년 4월 1일 또는 그 이후에 체험판을 활성화하는 고객**&#x200B;은 최대 100개의 프롬프트 및 1개의 도메인을 사용할 수 있으며, 단일 기회 유형에 대해 최대 10개의 URL에 최적화를 배포할 수 있습니다.
 > * **2026년 4월 1일 이전에 체험판을 활성화한 고객**&#x200B;은 기존 약관에 따라 최대 200개의 프롬프트에 계속 액세스할 수 있습니다.
 >
@@ -146,7 +137,7 @@ Edge에서 최적화를 배포하는 기능도 사용할 수 있습니다. 자�
 
 도메인이 온보딩된 후 온보딩 중에 자동으로 생성된 프롬프트를 바탕으로 브랜드 존재감 보기에서 초기 인사이트를 확인할 수 있습니다. 사용자 정의 카테고리, 주제 및 프롬프트를 설정하면 LLM Optimizer가 입력한 프롬프트에 대해 자동으로 브랜드 존재감 분석을 트리거하여 24시간 이내에 결과를 확인할 수 있습니다.
 
-**브랜드 존재감**(으)로 이동하여 브랜드 드롭다운을 사용할 브랜드 존재감을 보려는 브랜드를 선택합니다. 이 환경에서는 브랜드 가시성을 **모든 브랜드** 수준에서 확인할 수도 있습니다.
+**브랜드 존재감**&#x200B;으로 이동한 후 브랜드 드롭다운 메뉴를 사용하여 브랜드 존재감을 확인할 브랜드를 선택합니다.이 환경에서는 브랜드 가시성을 **모든 브랜드** 수준에서 확인할 수도 있습니다.
 
 ## 4단계: CDN 로그 전달에 대한 정보 제공 {#step-4}
 
@@ -154,7 +145,7 @@ Edge에서 최적화를 배포하는 기능도 사용할 수 있습니다. 자�
 
 ### CDN 로그 전달
 
-**브랜드 관리**&#x200B;에서 CDN 로그 전달 정보를 다음과 같이 추가할 수 있습니다. **브랜드 관리**&#x200B;를 열고 **CDN** 레이블을 클릭합니다.
+다음과 같이 **브랜드 관리** 에서 CDN 로그 전달 정보를 추가할 수 있습니다.  **브랜드 관리**&#x200B;를 열고 **CDN** 레이블을 클릭합니다.
 
 ![브랜드 관리 — CDN 로그 전달](/help/assets/brand-centric-experience/brands-management-cdn.png)
 
@@ -164,7 +155,7 @@ Edge에서 최적화를 배포하는 기능도 사용할 수 있습니다. 자�
 
 ## 5단계: 대시보드 탐색 및 조치
 
-CDN 로그 전달에 대한 정보를 제공하면 탐색 섹션에서 왼쪽에 있는 원하는 대시보드에 액세스할 수 있습니다.
+CDN 로그 전달을 위한 정보를 제공하면 왼쪽에 있는 탐색 섹션에서 원하는 대시보드에 액세스할 수 있습니다.
 
 * [브랜드 존재감](/help/dashboards/brand-presence.md) 대시보드를 보고 다른 브랜드와 비교하여 가시성 점수를 확인하고 성과를 추적합니다.
 * CDN 로그 전달이 구성된 경우 [에이전틱](/help/dashboards/agentic-traffic.md) 및 [참조 트래픽](/help/dashboards/referral-traffic.md) 대시보드를 탐색합니다.

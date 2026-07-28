@@ -4,21 +4,14 @@ description: LLM Optimizer에서 AI 에이전트가 해석하기 어려운 밀�
 feature: Opportunities
 autotag-review: '2026-07-15T18:04:55.581Z'
 TQID: 'https://experienceleague.adobe.com/uMK9qeAGMNrtvR0TYbeg8SIOKlwKf4L5NIE9ZgsJaUw'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-subfeature_v2:
-  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2: id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
-source-wordcount: 785
+workflow-type: ht
+source-wordcount: 776
 ht-degree: 100%
 
 ---
@@ -44,8 +37,8 @@ ht-degree: 100%
 
 LLM Optimizer는 높은 에이전틱 트래픽을 수신하는 페이지와 콘텐츠 점수가 가독성 임계값 미만인 페이지를 식별한 다음 사본 재작성을 제안합니다. 각 페이지에 대해 다음 항목이 있습니다.
 
-**향상된 텍스트** - 페이지에 이미 있는 내용에 기반을 둔 단순화된 콘텐츠입니다.
-**미리보기** - 에이전틱 트래픽에 대한 이전 및 이후 비교입니다.
+**향상된 텍스트** - 페이지에 이미 있는 내용에 근거하여 간소화된 콘텐츠.
+**미리보기** - 에이전틱 트래픽에 대한 전후 비교.
 
 영향을 받는 URL은 **현재 제안** 탭의 **제안이 있는 URL** 테이블에 표시되며 행을 확장하여 각 권장 사항을 검사할 수 있습니다.
 

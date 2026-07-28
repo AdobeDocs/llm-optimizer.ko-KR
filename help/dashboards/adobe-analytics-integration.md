@@ -4,23 +4,15 @@ description: Adobe Analytics를 LLM Optimizer과 연결하여 참조 트래픽 �
 feature: Referral Traffic
 autotag-review: '2026-07-15T16:46:49.693Z'
 TQID: 'https://experienceleague.adobe.com/H0p8HV2bf1KuKYqF1ByAF2BpGlb4YScsWDQU5mMkTRY'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2:
-  - id: e69d5a42-0217-4ca5-9396-a9a826a170da
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: e69d5a42-0217-4ca5-9396-a9a826a170da
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 950
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -93,13 +85,13 @@ LLM Optimizer는 분석 데이터를 AI 가시성 인사이트와 연결하여 �
 >
 >데이터 채우기 작업은 완료되는 데 몇 시간이 소요될 수 있습니다.
 
-## 비즈니스 효과 활용 보기
+## 비즈니스 영향 활용 사례 보기
 
-AI 가시성은 이 이야기의 일부일 뿐입니다. 최적화 노력이 비즈니스 결과를 이끌어내고 있는지 파악하려면 방문자가 사이트에 도착한 후 어떻게 되는지 알아야 합니다.
+AI 가시성은 이야기의 일부일 뿐입니다. 최적화 노력이 비즈니스 결과를 이끌어내고 있는지 파악하려면 방문자가 사이트에 도착한 후 어떤 일이 일어나는지 알아야 합니다.
 
-이 비디오에서는 LLM Optimizer과 Adobe Analytics을 결합하여 AI 참조 트래픽이 참여, 전환 및 매출로 변환되는 방법을 보여 주는 **비즈니스 영향** 보기를 소개합니다. 이를 통해 AI 존재의 진정한 가치를 측정할 수 있습니다.
+이 비디오에서는 LLM Optimizer를 Adobe Analytics와 결합하여 AI 참조 트래픽이 참여, 전환 및 매출로 전환되는 방식을 보여주는 **비즈니스 영향** 보기를 소개합니다. 이를 통해 AI 존재의 진정한 가치를 측정할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3492510/?captions=kor&learn=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3492503/?learn=on){transcript=true}
 
 ## 작동 방식 {#how-it-works}
 

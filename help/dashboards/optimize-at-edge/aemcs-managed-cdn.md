@@ -4,26 +4,14 @@ description: LLM Optimizer에서 Optimize at Edge를 위해 AEM Cloud Service Ma
 feature: Opportunities
 autotag-review: '2026-07-15T16:49:32.275Z'
 TQID: 'https://experienceleague.adobe.com/2-IzfF1iTEzW-gpqPA-t3mffRuhMxaKi1Dp0A62IZ9U'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e0828736-236a-487b-a478-5a635455eadc
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e0828736-236a-487b-a478-5a635455eadcid: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
-source-wordcount: 836
+workflow-type: ht
+source-wordcount: 815
 ht-degree: 100%
 
 ---
@@ -37,9 +25,9 @@ ht-degree: 100%
 
 이 기능에 액세스하려면:
 
-- 유료 고객은 **Adobe LLM Optimizer 사용자** IMS 제품 프로필에 액세스할 수 있어야 합니다. 액세스 권한을 요청하려면 조직의 관리자에게 문의하십시오.
+- 유료 고객은 **Adobe LLM Optimizer 사용자** IMS 제품 프로필에 대한 액세스 권한이 있어야 합니다. 액세스 권한을 요청하려면 조직 관리자에게 문의하십시오.
   ![제품 프로필에 사용자 추가](/help/assets/optimize-at-edge/cs-fastly-user-product-profiles.png)
-- 체험판 고객은 **LLMO 관리자** IMS 그룹의 속해 있어야 합니다. 그룹이 존재하지 않는 경우 조직의 관리자가 그룹을 만들고 사용자를 추가할 수 있습니다.
+- 체험판 사용 고객은 **LLMO 관리자** IMS 그룹에 속해야 합니다. 그룹이 없는 경우에는 조직의 관리자가 그룹을 생성하고 고객을 추가할 수 있습니다.
   ![LLMO 관리자 IMS 그룹 만들기](/help/assets/optimize-at-edge/cs-fastly-create-ims-group.png)
 
 >[!NOTE]

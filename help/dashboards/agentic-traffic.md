@@ -4,28 +4,22 @@ description: 에이전틱 트래픽 대시보드를 사용하여 AI 에이전트
 feature: Agentic Traffic
 autotag-review: '2026-07-15T17:38:14.233Z'
 TQID: 'https://experienceleague.adobe.com/4pvsCwqZXkX7xOJWqKge6rkJYaAq27cSjLeTxaA4ysM'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 1254
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
 
 # 에이전틱 트래픽 {#agentic-traffic}
 
-에이전틱 트래픽 대시보드는 AI 에이전트(크롤러 및 챗봇)가 사이트와 상호작용하는 방법을 보여 줍니다. 이 보기를 사용하면 총 요청 수와 일반적인 성능 관련 지표를 추적할 수 있습니다. 시장, 카테고리, 페이지, 에이전트 간 트래픽 분포도 확인할 수 있습니다. 이 대시보드에서 사용되는 데이터는 CDN 로그에서 가져온 것이므로 지표를 표시하려면 **CDN 로그 전달**&#x200B;을 구성해야 합니다. 표시된 데이터를 세분화하는 데 도움이 되는 사용자 정의 가능 필터도 있습니다. **Agentic Traffic**(으)로 이동하여 Agentic Traffic Insights를 보려는 사이트를 선택하십시오.
+에이전틱 트래픽 대시보드는 AI 에이전트(크롤러 및 챗봇)가 사이트와 상호작용하는 방법을 보여 줍니다. 이 보기를 사용하면 총 요청 수와 일반적인 성능 관련 지표를 추적할 수 있습니다. 시장, 카테고리, 페이지, 에이전트 간 트래픽 분포도 확인할 수 있습니다. 이 대시보드에서 사용되는 데이터는 CDN 로그에서 가져온 것이므로 지표를 표시하려면 **CDN 로그 전달**&#x200B;을 구성해야 합니다. 표시된 데이터를 세분화하는 데 도움이 되는 사용자 정의 가능 필터도 있습니다. **에이전틱 트래픽**&#x200B;으로 이동하여 에이전틱 트래픽 인사이트를 볼 사이트를 선택합니다.
 
 ![에이전틱 트래픽 — 사이트 선택기(브랜드 중심 환경)](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
 
@@ -44,7 +38,7 @@ ht-degree: 97%
 
 **CDN 로그 전달**&#x200B;이 없으면 에이전틱 트래픽 대시보드가 비어 있습니다. 에이전틱 상호작용을 보려면 **CDN 로그 전달**&#x200B;을 구성해야 합니다.
 
-**브랜드 관리**(으)로 이동하고 **CDN** 레이블을 클릭하여 CDN 로그 전달 정보를 추가할 수 있습니다.
+**브랜드 관리**&#x200B;로 이동한 후 **CDN** 레이블을 클릭하여 CDN 로그 전달 정보를 추가할 수 있습니다.
 
 ![브랜드 관리 — CDN 로그 전달](/help/assets/brand-centric-experience/brands-management-cdn.png)
 

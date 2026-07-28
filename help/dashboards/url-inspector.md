@@ -4,28 +4,22 @@ description: URL 관리자를 사용하여 도메인의 특정 페이지가 AI �
 feature: URL Inspector
 autotag-review: '2026-07-15T18:01:06.691Z'
 TQID: 'https://experienceleague.adobe.com/fD1LpXh53O8SCV-c1VHXr1CxX8UWdUt9rIVk0OA2dro'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: aedaee53-dfb4-4ab4-9d23-fa6188148769
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: aedaee53-dfb4-4ab4-9d23-fa6188148769
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 710
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
 
 # URL 관리자
 
-URL 관리자를 사용하면 도메인의 특정 페이지가 AI 검색에서 어떻게 작동하는지 분석할 수 있습니다. URL 수준에서 가시성, 에이전틱 트래픽, 참조 데이터를 결합하여 인용되는 URL과 응답에 표시되는 빈도를 세부적으로 볼 수 있습니다. **URL 검사기**(으)로 이동하여 인사이트를 보려는 사이트를 선택합니다.
+URL 관리자를 사용하면 도메인의 특정 페이지가 AI 검색에서 어떻게 작동하는지 분석할 수 있습니다. URL 수준에서 가시성, 에이전틱 트래픽, 참조 데이터를 결합하여 인용되는 URL과 응답에 표시되는 빈도를 세부적으로 볼 수 있습니다. **URL 관리자** 로 이동하여 인사이트를 볼 사이트를 선택합니다.
 
 ![URL 관리자](/help/dashboards/assets/url-insp.png)
 

@@ -4,24 +4,13 @@ description: 지원되지 않는 CDN 공급자를 사용할 때 LLM Optimizer에
 feature: Agentic Traffic
 autotag-review: '2026-07-15T18:08:55.588Z'
 TQID: 'https://experienceleague.adobe.com/tuB95AJnFbB4O0o2BYHiRP-W0RTxzMeMLNg-5OjF-8s'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e0828736-236a-487b-a478-5a635455eadc
-  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-  - id: dd952468-5202-43af-a365-6e0d2e67a703
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e0828736-236a-487b-a478-5a635455eadcid: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: dd952468-5202-43af-a365-6e0d2e67a703id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 670
 ht-degree: 100%
 
@@ -102,10 +91,10 @@ ht-degree: 100%
 
 - 필드 이름은 **정확히** 일치해야 합니다(대/소문자 및 맞춤법).
 - 다음과 같이 데이터 유형이 정확해야 합니다.
-   - **타임스탬프**&#x200B;는 **ISO 8601** 형식의 문자열이어야 합니다. UNIX 유사 타임스탬프가 작동하지 않을 수 있습니다.
-   - **response_status**&#x200B;는 정수여야 합니다.
-   - **time_to_first_byte**&#x200B;는 정수여야 하며 밀리초를 사용해야 합니다.
-   - 문자열은 유효한 JSON 문자열이어야 합니다.
+  - **타임스탬프**&#x200B;는 **ISO 8601** 형식의 문자열이어야 합니다. UNIX 유사 타임스탬프가 작동하지 않을 수 있습니다.
+  - **response_status**&#x200B;는 정수여야 합니다.
+  - **time_to_first_byte**&#x200B;는 정수여야 하며 밀리초를 사용해야 합니다.
+  - 문자열은 유효한 JSON 문자열이어야 합니다.
 - 잘못된 JSON 또는 누락되거나 잘못된 필드는 로그를 건너뛰거나 구문 분석에 실패하여 보고서에서 데이터가 누락될 수 있습니다.
 
 ### 위치 및 처리 주기 업로드 {#upload-location}
