@@ -4,25 +4,15 @@ description: LLM Optimizer의 Optimize at Edge를 위해 CloudFront BYOCDN을 �
 feature: Opportunities
 autotag-review: '2026-07-15T17:46:25.674Z'
 TQID: 'https://experienceleague.adobe.com/yIEUTzlnvOX-WBf276KQcAN8sGYDpZNVibJt024VMWU'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3aid: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
 workflow-type: tm+mt
 source-wordcount: 2343
-ht-degree: 86%
+ht-degree: 95%
 
 ---
 
@@ -129,7 +119,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 2. **편집**&#x200B;을 클릭합니다.
 
-3. **최소 TTL**&#x200B;을(를) `0`(으)로 설정하는 것이 좋습니다. 그러나 현재 최소 TTL이 이미 매우 짧은 경우 변경할 필요가 없습니다.
+3. **최소 TTL**&#x200B;을 `0`으로 설정하는 것이 좋습니다. 하지만 현재 최소 TTL이 이미 매우 짧다면 변경할 필요가 없을 수도 있습니다.
    ![캐시 정책 TTL 설정](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
 
 4. **캐시 키 설정** > **헤더**&#x200B;에서 기존 포함과 함께 `x-edgeoptimize-config` 및 `x-edgeoptimize-url`을 추가합니다.
@@ -240,28 +230,28 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 3. **변경 내용 저장**&#x200B;을 클릭합니다.
 
 >[!WARNING]
->ARN의 지역은 `*`이어야 합니다. Lambda@Edge는 뷰어에 가장 가까운 에지 위치에서 실행되므로 로그가 에지 위치의 지역(예: `ap-south-1`, `eu-west-1`)에 있는 CloudWatch에 기록되며 지역이 반드시 `us-east-1`일 필요는 없습니다. 로그 그룹은 지역 접두사가 있는 이름 `/aws/lambda/us-east-1.FUNCTION_NAME`을(를) 사용합니다. 여기서 `us-east-1`은 항상 함수의 홈 지역입니다.
+>ARN의 지역은 `*`이어야 합니다. Lambda@Edge는 뷰어에 가장 가까운 에지 위치에서 실행되므로 로그가 에지 위치의 지역(예: `ap-south-1`, `eu-west-1`)에 있는 CloudWatch에 기록되며 지역이 반드시 `us-east-1`일 필요는 없습니다. 로그 그룹은 지역 접두사가 있는 이름 `/aws/lambda/us-east-1.FUNCTION_NAME`을 사용합니다. 여기서 `us-east-1`은 항상 함수의 홈 지역입니다.
 
 ### CloudWatch 로그 링크 수정
 
-기본적으로 Lambda 콘솔의 **CloudWatch 로그 보기** 바로 가기는 `us-east-1`의 `/aws/lambda/FUNCTION_NAME`에 연결됩니다. Lambda@Edge에 대한 잘못된 로그 그룹입니다. 링크가 올바른 경로를 가리키도록 사용자 지정 로그 그룹을 구성합니다.
+기본적으로 Lambda 콘솔의 **CloudWatch 로그 보기** 바로 가기는 Lambda@Edge에 대한 잘못된 로그 그룹인 `us-east-1`의 `/aws/lambda/FUNCTION_NAME`에 연결됩니다. 링크가 올바른 경로를 가리키도록 사용자 정의 로그 그룹을 구성합니다.
 
-**탐색:** AWS 콘솔 > Lambda > [함수] > 구성 > 모니터링 및 작업 도구
+**탐색:** AWS 콘솔 > Lambda > [사용자 함수] > 구성 > 모니터링 및 작업 도구
 
 1. **편집**&#x200B;을 클릭합니다.
 
-2. **CloudWatch 로그 그룹**&#x200B;에서 **사용자 지정**&#x200B;을(를) 선택합니다.
+2. **CloudWatch 로그 그룹**&#x200B;에서 **사용자 정의**&#x200B;를 선택합니다.
 
-3. 사용자 지정 로그 그룹 이름을 `/aws/lambda/us-east-1.edgeoptimize-origin`(으)로 설정합니다.
+3. 사용자 정의 로그 그룹 이름을 `/aws/lambda/us-east-1.edgeoptimize-origin`으로 설정합니다.
 
-4. **권한**&#x200B;에서 **필요한 권한 추가** 확인란을 그대로 둡니다. **선택 취소됨**.
+4. **권한**&#x200B;에서 **필요한 권한 추가** 확인란을 **선택 해제**&#x200B;로 둡니다.
 
-   ![람다 사용자 지정 로그 그룹 구성](/help/assets/optimize-at-edge/cloudfront-lambda-custom-log-group.png)
+   ![Lambda 사용자 정의 로그 그룹 구성](/help/assets/optimize-at-edge/cloudfront-lambda-custom-log-group.png)
 
 5. **저장**&#x200B;을 클릭합니다.
 
 >[!NOTE]
->이 수정 후에도 **CloudWatch 로그 보기** 링크가 올바른 로그 그룹 이름을 열지만 잘못된 지역에 있는 경우 데이터가 표시되지 않을 수 있습니다. Lambda@Edge 로그는 `us-east-1`이(가) 아니라 요청을 제공한 에지 영역(예: `eu-west-1`, `ap-south-1`)에 작성되었습니다. 로그를 보려면 CloudWatch에서 올바른 영역으로 전환해야 합니다.
+>수정한 후에는 **CloudWatch 로그 보기** 링크가 올바른 로그 그룹 이름을 열지만, 사용자가 잘못된 지역에 있는 경우에는 데이터가 표시되지 않을 수 있습니다. Lambda@Edge 로그는 `us-east-1`이 아니라 요청을 처리한 엣지 영역(예: `eu-west-1`, `ap-south-1`)에 기록됩니다. 로그를 보려면 CloudWatch에서 올바른 영역으로 전환해야 합니다.
 
 ### 버전 게시
 
@@ -269,10 +259,10 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 2. 설명을 추가합니다.
 
-3. **게시**&#x200B;를 클릭합니다.
+3. **게시**를 클릭합니다.
    ![Lambda 게시](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
 
-4. **함수 ARN**&#x200B;을 복사하거나 기록하십시오. 다음 단계에서 이 정보가 필요합니다.
+4. **함수 ARN**을 복사하거나 기록하십시오. 다음 단계에서 이 정보가 필요합니다.
    ![Lambda ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
 
 ## 5단계: 기능 및 캐시 정책을 비헤이비어와 연결
@@ -294,7 +284,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 4. **변경 내용 저장**&#x200B;을 클릭합니다.
 
-## 방화벽 규칙을 통해 Edge에서 최적화 허용(선택 사항)
+## 방화벽 규칙을 통해 Optimize at Edge 허용(선택 사항)
 
 {{waf-allowlist-setup}}
 
