@@ -4,11 +4,22 @@ description: 고객 구성을 사용하여 LLM Optimizer 플랫폼 내에서 브
 feature: Customer Configuration
 autotag-review: '2026-07-15T17:48:20.742Z'
 TQID: 'https://experienceleague.adobe.com/BvaFF-pMzojy1TNZvCQQRbcT5c5AQ75OqjclmDi14Z0'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: c898dfb2-0885-42fb-b2af-b2d756752646id: d1956731-2adb-4bb7-8301-2b239254ac72id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-subfeature_v2: id: e69d5a42-0217-4ca5-9396-a9a826a170da
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: c898dfb2-0885-42fb-b2af-b2d756752646
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+subfeature_v2:
+  - id: e69d5a42-0217-4ca5-9396-a9a826a170da
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
 source-git-commit: 72cc645997dbd5ae0442fefad73fe6a4e7ffe050
 workflow-type: tm+mt
 source-wordcount: 3923
@@ -198,7 +209,7 @@ Google Search Console 쿼리를 LLM Optimizer과 통합하고 사용하려면 �
 이 기능을 사용하려면 먼저 Google Search Console 계정을 LLM Optimizer와 통합해야 합니다.
 
 1. **고객 구성** 대시보드(클래식 탐색) 또는 **브랜드 관리**(브랜드 중심 환경)를 연 다음, Google Search Console 통합(브랜드 중심 환경의 GSC 태그)으로 이동합니다.
-1. Google Search Console 탭으로 이동하여 **계정 연결**을 클릭합니다.
+1. Google Search Console 탭으로 이동하여 **계정 연결**&#x200B;을 클릭합니다.
    ![Google Search Console](/help/dashboards/assets/google-console.png)
 1. 원하는 Search Console 속성에 액세스할 수 있는 Google 계정으로 로그인합니다.
    ![Google 계정](/help/dashboards/assets/google-account.png)
@@ -214,7 +225,7 @@ Google Search Console 계정을 LLM Optimizer와 통합한 후 Search Console에
 1. Google Search Console 탭에서 Search Console에서 가져온 토픽 및 프롬프트 목록을 검토합니다.
    ![프롬프트 목록](/help/dashboards/assets/prompts-list.png)
 1. 원하는 토픽/프롬프트 카테고리를 클릭하여 목록을 확장합니다.
-1. 목록에서 프롬프트를 추가하려면  **추가** 버튼을 사용하십시오.  **모두 추가**를 사용하여 프롬프트와 카테고리를 일괄 추가할 수도 있습니다.
+1. 목록에서 프롬프트를 추가하려면  **추가** 버튼을 사용하십시오.  **모두 추가**&#x200B;를 사용하여 프롬프트와 카테고리를 일괄 추가할 수도 있습니다.
    ![프롬프트 추가](/help/dashboards/assets/add-prompts.png)
 1. 선택 사항이 만족스러우면 알림 메시지에서 **저장**&#x200B;을 클릭합니다.
 
