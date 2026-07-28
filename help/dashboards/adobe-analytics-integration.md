@@ -99,7 +99,7 @@ AI 가시성은 이야기의 일부일 뿐입니다. 최적화 노력이 비즈�
 
 이 비디오에서는 LLM Optimizer를 Adobe Analytics와 결합하여 AI 참조 트래픽이 참여, 전환 및 매출로 전환되는 방식을 보여주는 **비즈니스 영향** 보기를 소개합니다. 이를 통해 AI 존재의 진정한 가치를 측정할 수 있습니다.
 
->[!VIDEO](https://video.tv.adobe.com/v/3492503/?learn=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3492510/?captions=kor&learn=on){transcript=true}
 
 ## 작동 방식 {#how-it-works}
 
