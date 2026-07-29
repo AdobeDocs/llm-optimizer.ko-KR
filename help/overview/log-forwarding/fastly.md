@@ -19,9 +19,9 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 381
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -66,7 +66,7 @@ LLM Optimizer 페이지([https://llmo.now/](https://llmo.now/))로 이동합니�
 | **로그 형식** | 아래의 **로그 형식 문자열** 섹션에 표시된 로그 형식 문자열을 사용합니다. |
 | **타임스탬프 형식** | `%Y-%m-%dT%H:%M:%S.000` |
 | **버킷 이름** | LLM Optimizer 구성 페이지에서 **버킷 이름**&#x200B;을 복사합니다. ![버킷 이름](/help/overview/assets/log-forwarding/fastly/fastly-bucket-name.png) |
-| **도메인** | LLM Optimizer 구성 페이지에서 **도메인 이름**&#x200B;을(를) 복사합니다. ![도메인 이름](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
+| **도메인** | LLM Optimizer 구성 페이지에서 **도메인 이름**&#x200B;을 복사합니다. ![도메인 이름](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
 | **액세스 방법** | **사용자 자격 증명** |
 | **사용자 자격 증명** | LLM Optimizer 구성 페이지에서 **액세스 키** 및 **암호 키**&#x200B;를 복사합니다. ![액세스 키](/help/overview/assets/log-forwarding/common/access-keys.png) |
 | **기간** | `300` |
@@ -85,7 +85,7 @@ LLM Optimizer 페이지([https://llmo.now/](https://llmo.now/))로 이동합니�
 
 | 필드 | 설명 |
 | --- | --- |
-| **경로** | LLM Optimizer 구성 페이지에서 **경로**&#x200B;을(를) 복사합니다. ![경로](/help/overview/assets/log-forwarding/fastly/fastly-path.png) |
+| **경로** | LLM Optimizer 구성 페이지에서 **경로**&#x200B;를 복사합니다. ![경로](/help/overview/assets/log-forwarding/fastly/fastly-path.png) |
 | **로그 라인 형식 선택** | 비어 있음 |
 | **압축** | Gzip |
 | **중복 수준** | 표준 |

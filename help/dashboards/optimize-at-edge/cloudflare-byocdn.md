@@ -23,7 +23,7 @@ topic_v2:
 source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
 workflow-type: tm+mt
 source-wordcount: 1919
-ht-degree: 93%
+ht-degree: 96%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 93%
 
 **사전 요구 사항**
 
-Cloudflare Worker 라우팅 규칙을 설정하기 전에 다음을 확인하십시오.
+Cloudflare 작업자 라우팅 규칙을 설정하기 전에 다음을 확인하십시오.
 
 * 도메인에서 작업자가 활성화된 Cloudflare 계정
 * Cloudflare에서 도메인에 대한 DNS 설정 액세스
@@ -127,7 +127,7 @@ Edge Optimize용 Cloudflare 작업자를 설정하는 방법에는 두 가지가
 
 ### 2단계: 작업자 코드 추가
 
-작업자를 만든 후 **코드 편집**&#x200B;을 클릭하고 기본 코드를 [worker.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudflare/automation/src/worker.js)의 코드로 바꿉니다. 기존 Cloudflare Worker가 있는 경우 코드를 완전히 대체하지 않고 기존 작업자 코드와 병합합니다.
+작업자를 만든 후 **코드 편집**&#x200B;을 클릭하고 기본 코드를 [worker.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudflare/automation/src/worker.js)의 코드로 바꿉니다. 이미 기존 Cloudflare 작업자가 있는 경우, 코드를 완전히 대체하지 말고 기존 작업자 코드와 병합합니다.
 
 작업자를 게시하려면 **저장 및 배포**&#x200B;를 클릭합니다.
 
@@ -280,7 +280,7 @@ const FAILOVER_ON_5XX = false;
 | 잘못된 호스트로 인해 요청 실패 | `EDGE_OPTIMIZE_TARGET_HOST`에 프로토콜(예: `https://`)이 포함되어 있습니다. | 프로토콜 없이 도메인 이름만 사용합니다(예: `https://example.com`이 아닌 `example.com`). |
 | 장애 조치 중 530 오류 | Cloudflare가 원본에 연결할 수 없거나 장애 조치 요청에 잘못된 헤더가 있습니다. | 장애 조치 기능이 Edge Optimize 헤더를 제거하는지 확인합니다. 원본을 액세스할 수 있고 DNS가 올바르게 구성되어 있는지 확인합니다. |
 
-## 방화벽 규칙을 통해 Edge에서 최적화 허용(선택 사항)
+## 방화벽 규칙을 통해 Optimize at Edge 허용(선택 사항)
 
 {{waf-allowlist-setup}}
 

@@ -22,8 +22,8 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
-source-wordcount: 836
+workflow-type: ht
+source-wordcount: 815
 ht-degree: 100%
 
 ---
@@ -37,9 +37,9 @@ ht-degree: 100%
 
 이 기능에 액세스하려면:
 
-- 유료 고객은 **Adobe LLM Optimizer 사용자** IMS 제품 프로필에 액세스할 수 있어야 합니다. 액세스 권한을 요청하려면 조직의 관리자에게 문의하십시오.
+- 유료 고객은 **Adobe LLM Optimizer 사용자** IMS 제품 프로필에 대한 액세스 권한이 있어야 합니다. 액세스 권한을 요청하려면 조직 관리자에게 문의하십시오.
   ![제품 프로필에 사용자 추가](/help/assets/optimize-at-edge/cs-fastly-user-product-profiles.png)
-- 체험판 고객은 **LLMO 관리자** IMS 그룹의 속해 있어야 합니다. 그룹이 존재하지 않는 경우 조직의 관리자가 그룹을 만들고 사용자를 추가할 수 있습니다.
+- 체험판 사용 고객은 **LLMO 관리자** IMS 그룹에 속해야 합니다. 그룹이 없는 경우에는 조직의 관리자가 그룹을 생성하고 고객을 추가할 수 있습니다.
   ![LLMO 관리자 IMS 그룹 만들기](/help/assets/optimize-at-edge/cs-fastly-create-ims-group.png)
 
 >[!NOTE]

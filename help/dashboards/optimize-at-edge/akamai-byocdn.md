@@ -21,7 +21,7 @@ topic_v2:
 source-git-commit: 4f0c6d398e2aab337485b7e26cf6f2aba56375fd
 workflow-type: tm+mt
 source-wordcount: 795
-ht-degree: 70%
+ht-degree: 93%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 70%
 
 **사전 요구 사항**
 
-Akamai 속성 관리자 규칙을 설정하기 전에 다음을 확인하십시오.
+Akamai Property Manager 규칙을 설정하기 전에 다음을 확인하십시오.
 
 * 도메인에 대한 Akamai Property Manager 액세스
 * LLM Optimizer UI에서 검색한 Edge Optimize API 키 단계는 [API 키 검색](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)을 참조하십시오.
@@ -93,7 +93,7 @@ Akamai 속성 관리자 규칙을 설정하기 전에 다음을 확인하십시�
 
 ![수신 요청 헤더 수정](/help/assets/optimize-at-edge/akamai-step5-request.png)
 
-## 방화벽 규칙을 통해 Edge에서 최적화 허용(선택 사항)
+## 방화벽 규칙을 통해 Optimize at Edge 허용(선택 사항)
 
 {{waf-allowlist-setup}}
 
@@ -119,18 +119,18 @@ Akamai 속성 관리자 규칙을 설정하기 전에 다음을 확인하십시�
 
 ## &#x200B;9. 사이트 페일오버
 
-사이트 페일오버 구성에는 기본 Optimize at Edge 라우팅 규칙 내의 페일오버 동작과 폴백이 발생할 때 응답 헤더를 추가하는 형제 규칙의 두 가지 부분이 있습니다.
+사이트 장애 조치 구성에는 기본 Optimize at Edge 라우팅 규칙 내의 장애 조치 동작 그리고 대체가 발생할 때 응답 헤더를 추가하는 형제 규칙 등 두 부분이 있습니다.
 
 ### 9a. 사이트 페일오버 동작 구성
 
-기본 Optimize at Edge 라우팅 규칙 내에서 **사이트 장애 조치(failover) 동작**&#x200B;이라는 자식 규칙을 만듭니다. **모두 일치**(으)로 설정하고 다음 기준을 추가하십시오.
+기본 Optimize at Edge 라우팅 규칙 내부에 **사이트 장애 조치 동작**&#x200B;이라는 하위 규칙을 생성합니다. **모두 일치**&#x200B;로 설정하고 다음 기준을 추가하십시오.
 
 * **응답 상태 코드**&#x200B;의 범위는 `400`에서 `599`까지입니다.
-* **원본 시간 제한**&#x200B;은(는) `Yes`입니다.
+* **원본 시간 제한**&#x200B;은 `Yes`입니다.
 
 ![사이트 장애 조치(Failover)](/help/assets/optimize-at-edge/akamai-step9-failover.png)
 
-![사이트 장애 조치(failover) 동작 구성](/help/assets/optimize-at-edge/akamai-step9-failover-settings.png)
+![사이트 장애 조치 동작 구성](/help/assets/optimize-at-edge/akamai-step9-failover-settings.png)
 
 ### 9b. 장애 조치(failover) 응답 헤더 규칙 구성
 
@@ -145,18 +145,18 @@ Akamai 속성 관리자 규칙을 설정하기 전에 다음을 확인하십시�
 >   EdgeOptimize Failover - Test Header      ← sibling of routing child
 >```
 >
->형제 규칙은 Akamai가 원래 호스트 이름에 대해 실패한 요청을 다시 만들 때 평가됩니다. 라우팅 규칙의 API 키 기준은 해당 요청이 Edge 최적화로 다시 전송되지 않도록 합니다.
+>형제 규칙은 Akamai가 원래 호스트 이름에 대해 실패한 요청을 다시 만들 때 평가됩니다. 라우팅 규칙에 대한 API-키 기준은 해당 요청이 Edge Optimize로 다시 전송되지 않게 합니다.
 >
 >또한 동일한 요청에 대해 원본, 캐싱 비헤이비어 또는 캐시 ID를 변경하는 향후 매칭 규칙에 의해 **Edge 라우팅에서 최적화** 규칙이 재정의되지 않도록 하십시오. 다른 매칭 규칙이 이들 비헤이비어를 재설정하면 Edge 라우팅 또는 캐싱에서 최적화가 예상대로 작동하지 않을 수 있습니다.
 
-![장애 조치(failover) 응답 헤더 규칙 구성](/help/assets/optimize-at-edge/akamai-step9-failover-header.png)
+![장애 조치 응답 헤더 규칙 구성](/help/assets/optimize-at-edge/akamai-step9-failover-header.png)
 
-사이트 페일오버는 Edge Optimize가 오류를 반환하거나 시간 초과를 반환하는 경우 방문자가 여전히 사이트의 일반적인 응답을 받도록 Akamai가 원래 호스트 이름에 대한 요청을 다시 생성하도록 합니다.
+사이트 장애 조치는 Edge Optimize가 오류를 반환하거나 제한 시간을 초과하는 경우에도 Akamai가 원래 호스트 이름에 대한 요청을 다시 생성하여 방문자가 여전히 사이트의 정상적인 응답을 받을 수 있게 합니다.
 
 | 시나리오 | 비헤이비어 |
 | --- | --- |
-| Edge Optimize는 `2XX` 또는 `3XX`를 반환합니다. | 최적화된 응답이 제공됩니다. `x-edgeoptimize-request-id`이(가) 있습니다. |
-| Edge 최적화는 `4XX`-`5XX`을(를) 반환하거나 원본 시간이 초과됩니다. | 요청이 원래 호스트 이름에 대해 다시 생성됩니다. 응답에는 `x-edgeoptimize-fo: true`이(가) 포함됩니다. |
+| Edge Optimize는 `2XX` 또는 `3XX`를 반환합니다. | 최적화된 응답이 제공됩니다. `x-edgeoptimize-request-id`가 있습니다. |
+| Edge Optimize가 `4XX`–`5XX`를 반환하거나 원본이 제한 시간을 초과합니다. | 원래 호스트 이름에 대한 요청이 다시 생성됩니다. 응답에는 `x-edgeoptimize-fo: true`가 포함됩니다. |
 
 ## 설정 확인
 

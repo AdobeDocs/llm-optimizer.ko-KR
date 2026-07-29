@@ -21,7 +21,7 @@ topic_v2:
 source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
 workflow-type: tm+mt
 source-wordcount: 350
-ht-degree: 92%
+ht-degree: 98%
 
 ---
 
@@ -42,7 +42,7 @@ Fastly VCL 규칙을 설정하기 전에 다음을 확인하십시오.
 
 다음 세 가지 VCL 스니펫을 Fastly 서비스에 추가합니다. 이러한 스니펫은 Edge Optimize로의 라우팅 에이전틱 요청, 캐시 키 분리, 그리고 기본 원본으로의 장애 조치를 처리합니다.
 
-![빠른 백엔드 구성](/help/assets/optimize-at-edge/fastly-backend-config.png)
+![Fastly 백엔드 구성](/help/assets/optimize-at-edge/fastly-backend-config.png)
 
 ![VCL 스니펫 추가](/help/assets/optimize-at-edge/add-vcl-snippets.png)
 
@@ -102,7 +102,7 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 | Edge Optimize는 `4XX` 또는 `5XX`를 반환합니다. | 요청이 다시 시작되고 기본 원본에서 제공됩니다. |
 | 장애 조치(Failover) 응답 | 헤더 `x-edgeoptimize-fo: 1`를 포함합니다. |
 
-## 방화벽 규칙을 통해 Edge에서 최적화 허용(선택 사항)
+## 방화벽 규칙을 통해 Optimize at Edge 허용(선택 사항)
 
 {{waf-allowlist-setup}}
 

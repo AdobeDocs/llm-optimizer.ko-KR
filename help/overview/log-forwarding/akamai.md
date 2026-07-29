@@ -19,9 +19,9 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 612
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -64,7 +64,7 @@ Akamai 컨트롤 패널 [https://control.akamai.com/](https://control.akamai.com
 
 ## 3단계: 데이터 매개변수 선택 {#step-3}
 
-스트림을 만든 후 Akamai 제어판에서 **다음**&#x200B;을 클릭하여 **데이터 집합** 탭을 계속 진행합니다. 공식 Akamai 설명서의 단계에 따라 [데이터 매개변수](https://techdocs.akamai.com/datastream2/docs/choose-data-parameters)를 선택합니다. LLM Optimizer 구성의 다음 필드가 필요합니다.
+스트림을 만든 후 Akamai 컨트롤 패널에서 **다음**&#x200B;을 클릭하여 **데이터 세트** 탭으로 계속합니다. 공식 Akamai 설명서의 단계에 따라 [데이터 매개변수](https://techdocs.akamai.com/datastream2/docs/choose-data-parameters)를 선택합니다. LLM Optimizer 구성의 다음 필드가 필요합니다.
 
 ![LLMO 구성 필드](/help/overview/assets/log-forwarding/akamai/akamai-llmo-config-fields.png)
 
@@ -73,37 +73,37 @@ Akamai 컨트롤 패널 [https://control.akamai.com/](https://control.akamai.com
 * **로그 정보**
 reqTimeSec -> 요청 시간
 * **지역 데이터**
-국가 -> 국가/지역
+country -> 국가/지역
 * **메시지 교환 데이터**
 reqHost -> 요청 호스트
 reqPath -> 요청 경로
 queryStr -> 쿼리 문자열(선택 사항)
-reqMethod -> Request 메서드
-ua -> 사용자 에이전트
+reqMethod -> 요청 방법
+ua -> 사용자-에이전트
 statusCode -> HTTP 상태 코드
-rspContentType -> Response Content-Type
+rspContentType -> 응답 콘텐츠-유형
 * **요청 헤더 데이터**
-referer -> Referer
+referer -> 레퍼러
 * **네트워크 성능 데이터**
-timeToFirstByte -> 첫 번째 바이트까지의 시간
+timeToFirstByte -> 첫 번째 바이트까지 걸리는 시간
 
 >[!NOTE]
 >
->`queryStr` 매개 변수는 선택 사항입니다. 쿼리 문자열에 PII 정보가 포함된 경우 생략할 수 있습니다.
+>`queryStr` 매개변수는 선택 사항입니다. 쿼리 문자열에 PII 정보가 포함된 경우 생략할 수 있습니다.
 
 Akamai 데이터 세트 필드(ID 포함)는 다음과 같습니다.
 
 1100, # reqTimeSec -> 요청 시간
-2012년, # 국가 -> 국가/지역
+2012, # country -> 국가/지역
 1011, # reqHost -> 요청 호스트
 1013, # reqPath -> 요청 경로
 2009, # queryStr -> 쿼리 문자열(선택 사항)
-1012, # reqMethod -> 요청 메서드
-1017, # ua -> 사용자 에이전트
+1012, # reqMethod -> 요청 방법
+1017, # ua -> 사용자-에이전트
 1008, # statusCode -> HTTP 상태 코드
-1032, # referer -> Referer
-1016, # rspContentType -> 응답 Content-Type
-2025 # timeToFirstByte -> 첫 번째 바이트까지의 시간
+1032, # referer -> 레퍼러
+1016, # rspContentType -> 응답 콘텐츠-유형
+2025  # timeToFirstByte -> 첫 번째 바이트까지 걸리는 시간
 
 ## 4단계: 대상 구성 {#step-4}
 

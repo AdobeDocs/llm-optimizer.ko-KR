@@ -17,9 +17,9 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 716
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -28,12 +28,12 @@ ht-degree: 86%
 
 참조 트래픽은 외부 플랫폼, AI 인용 및 참조 링크에서 방문자가 사이트에 도달하는 방식을 보여 줍니다. 외부 웹 사이트 및 플랫폼에서 트래픽 소스, 참조 패턴 및 전환 지표를 추적하고 분석합니다. 이렇게 하면 가장 많은 트래픽이 발생하는 소스, 지역 및 페이지를 이해할 수 있습니다. <!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.--> 표시된 데이터를 세분화하는 데 도움이 되는 사용자 정의 가능 필터도 있습니다.
 
-**참조 트래픽**(으)로 이동하여 LLM 참조 트래픽 인사이트를 보려는 사이트를 선택하십시오.
+**참조 트래픽** 으로 이동하여 LLM 참조 트래픽 인사이트를 볼 사이트를 선택합니다.
 
 ![참조 트래픽 — 사이트 선택기(브랜드 중심 환경)](/help/assets/brand-centric-experience/referral-traffic-dashboard.png)
 
 >[!NOTE]
->기본적으로 이 대시보드는 **CDN 로그**&#x200B;에서 트래픽 인사이트를 빌드합니다. 조직에서 유료 오퍼를 사용하는 경우 **Adobe Analytics** 또는 **Google Analytics 4**(GA4)에 연결하여 AI 기반 검색 및 사이트 참여를 측정하는 데이터를 추가할 수 있습니다. 이 데이터는 **비즈니스 영향** 탭에서 사용할 수 있습니다. Adobe Analytics 또는 GA4에 통합하지 않으면 탭이 채워지지 않습니다. 자세한 내용은 [Adobe Analytics 통합](/help/dashboards/adobe-analytics-integration.md) 또는 [Google Analytics 통합](/help/dashboards/google-analytics-integration.md)을 참조하십시오.
+>기본적으로 이 대시보드는 **CDN 로그**&#x200B;에서 트래픽 인사이트를 빌드합니다. 조직에서 유료 오퍼를 사용하는 경우 **Adobe Analytics** 또는 **Google Analytics 4**(GA4)를 연결하여 AI 기반 검색 및 사이트 참여를 측정하는 데이터를 추가할 수 있습니다. 이 데이터는 **비즈니스 영향** 탭에서 사용할 수 있습니다. Adobe Analytics 또는 GA4에 통합되지 않으면 탭이 채워지지 않습니다. 자세한 내용은 [Adobe Analytics 통합](/help/dashboards/adobe-analytics-integration.md) 또는 [Google Analytics 통합](/help/dashboards/google-analytics-integration.md)을 참조하십시오.
 
 <!-- ![Referral Page](/help/dashboards/assets/referral-traffic.png)-->
 
@@ -49,7 +49,7 @@ ht-degree: 86%
 
 처음 로그인하면 참조 트래픽 대시보드가 비어 있을 수 있습니다. 데이터를 보려면 CDN 로그 전달을 구성해야 합니다.
 
-**브랜드 관리**(으)로 이동하고 **CDN** 레이블을 클릭하여 CDN 로그 전달 정보를 추가할 수 있습니다.
+**브랜드 관리**&#x200B;로 이동한 후 **CDN** 레이블을 클릭하여 CDN 로그 전달 정보를 추가할 수 있습니다.
 
 <!-- **Customer Configuration (classic experience):** Configure [CDN log forwarding](/help/dashboards/customer-configuration.md#cdn-configuration) by selecting **Go To Configuration**.-->
 

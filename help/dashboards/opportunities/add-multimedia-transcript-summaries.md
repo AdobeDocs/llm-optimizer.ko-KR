@@ -18,8 +18,8 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
-source-wordcount: 775
+workflow-type: ht
+source-wordcount: 769
 ht-degree: 100%
 
 ---
@@ -51,8 +51,8 @@ LLM Optimizer는 구성 및 페이지 구조를 기반으로 임베드된 미디
 
 각 페이지에 대해 다음 항목이 있습니다.
 
-**멀티미디어 요약** - 비디오 콘텐츠에서 파생된 구조화된 요약.
-**미리보기** - 이전 및 이후 페이지 비교.
+**멀티미디어 요약** – 비디오 콘텐츠에서 추출한 구조화된 요약.
+**미리보기** – 페이지 전후 비교.
 
 ![현재 제안에 대한 제안이 있는 URL, 콘텐츠 패치가 있는 확장된 행, 구현 세부 정보 및 이론적 근거](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-expand.png)
 

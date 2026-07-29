@@ -17,7 +17,7 @@ topic_v2:
 source-git-commit: 6b0e86f1373c3b1d85d67bd8222459acfc3620dc
 workflow-type: tm+mt
 source-wordcount: 485
-ht-degree: 88%
+ht-degree: 95%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 88%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3492476/?captions=kor&learn=on){transcript=true}
 
-이 페이지에서는 도구 사용을 시작하기 전에 Adobe LLM Optimizer에 대해 알아야 할 모든 사항에 대해 간략히 설명합니다.
+이 페이지에서는 도구 사용을 시작하기 전에 Adobe LLM Optimizer에 대해 알아야 할 모든 사항을 설명합니다.
 
 * [Adobe LLM Optimizer란 무엇입니까?](#what-is-adobe-llm-optimizer)
 * [LLM Optimizer 기능이란 무엇입니까?](#what-are-llm-optimizer-capabilities)
@@ -69,11 +69,11 @@ LLM 최적화는 점점 더 중요해지고 있습니다.
 
 Adobe LLM Optimizer을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 
-**브랜드 가시성 측정** - AI 기반 검색 결과에서 브랜드가 언급되는 시기, 위치 및 빈도를 추적합니다. 추측에 머물지 않고 시간이 지남에 따라 벤치마킹할 수 있는 명확한 가시성 점수를 사용하십시오. [브랜드 존재감 대시보드](/help/dashboards/brand-presence.md)를 참조하세요.
-**다른 사용자 벤치마크** - 브랜드가 일반 엔진의 경쟁자를 포함하여 다른 사용자와 어떻게 비교되는지 확인하십시오. 언급 점유율 격차를 파악하고 경쟁 우위를 파악합니다. [브랜드 존재감 대시보드](/help/dashboards/brand-presence.md)를 참조하세요.
-**실행 가능한 기회 발견** - 언급 및 인용을 직접 늘리는 콘텐츠 기회(예: FAQ, 추상화, 스키마) 및 기술 기회(크롤링 가능성, 색인화 문제)를 정확하게 파악합니다. [기회 대시보드](/help/dashboards/opportunities-overview.md)를 참조하세요.
-**AI로 인한 트래픽 영향 추적** - 소유한 속성에 대한 에이전트 트래픽(AI 도우미의) 및 참조 트래픽(인용의 사용자 클릭)을 모니터링합니다. 지역 가시성을 실제 참여와 연계합니다. [에이전트 트래픽 대시보드](/help/dashboards/agentic-traffic.md) 및 [참조 트래픽 대시보드](/help/dashboards/referral-traffic.md)를 참조하십시오.
-**Team Collaboration을 사용하도록 설정** - 대시보드를 공유하고, 소유자에게 프롬프트 또는 범주를 할당하고, 마케팅, SEO(검색 엔진 최적화) 및 커뮤니케이션 기능 전반에서 가시성 목표를 추적하도록 합니다. [Collaboration 대시보드](/help/dashboards/collaboration.md)를 참조하세요.
+**브랜드 가시성 측정** - AI 기반 검색 결과에서 브랜드가 언급되는 시기, 위치 및 빈도를 추적합니다. 시간이 지남에 따라 벤치마크할 수 있는 명확한 가시성 점수로 추측을 넘어서십시오. [브랜드 존재감 대시보드](/help/dashboards/brand-presence.md)를 참조하십시오.
+**다른 브랜드 벤치마크** - 브랜드가 생성형 엔진의 경쟁 업체 등 다른 브랜드들과 어떻게 경쟁하는지 확인합니다. 언급 점유율 격차를 파악하고 경쟁 우위를 확인합니다. [브랜드 존재감 대시보드](/help/dashboards/brand-presence.md)를 참조하십시오.
+**실행 가능한 기회 발견** - 언급 및 인용을 직접 향상시키는 콘텐츠 기회(예: FAQ, 추상화, 스키마) 및 기술 기회(크롤링 가능성, 색인화 문제)를 정확하게 파악합니다. [기회 대시보드](/help/dashboards/opportunities-overview.md)를 참조하십시오.
+**AI의 트래픽 영향 추적** - 소유한 속성에 대한 (AI 어시스턴트의) 에이전틱 트래픽 및 참조 트래픽(인용을 통한 사용자 클릭)을 모니터링합니다. 지역 가시성을 실제 참여와 연계합니다. [에이전틱 트래픽 대시보드](/help/dashboards/agentic-traffic.md) 및 [참조 트래픽 대시보드](/help/dashboards/referral-traffic.md)를 참조하십시오.
+**팀 공동 작업 활성화** - 대시보드를 공유하고, 프롬프트 또는 카테고리에 대한 소유자를 할당하고, 마케팅, 검색 엔진 최적화(SEO) 및 커뮤니케이션 기능 전반에서 가시성 목표를 추적하도록 합니다. [공동 작업 대시보드](/help/dashboards/collaboration.md)를 참조하십시오.
 
 ## 자세히 알아보기
 

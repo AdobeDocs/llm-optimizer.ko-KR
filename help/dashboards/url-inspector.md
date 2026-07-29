@@ -16,16 +16,16 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 710
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
 
 # URL 관리자
 
-URL 관리자를 사용하면 도메인의 특정 페이지가 AI 검색에서 어떻게 작동하는지 분석할 수 있습니다. URL 수준에서 가시성, 에이전틱 트래픽, 참조 데이터를 결합하여 인용되는 URL과 응답에 표시되는 빈도를 세부적으로 볼 수 있습니다. **URL 검사기**(으)로 이동하여 인사이트를 보려는 사이트를 선택합니다.
+URL 관리자를 사용하면 도메인의 특정 페이지가 AI 검색에서 어떻게 작동하는지 분석할 수 있습니다. URL 수준에서 가시성, 에이전틱 트래픽, 참조 데이터를 결합하여 인용되는 URL과 응답에 표시되는 빈도를 세부적으로 볼 수 있습니다. **URL 관리자** 로 이동하여 인사이트를 볼 사이트를 선택합니다.
 
 ![URL 관리자](/help/dashboards/assets/url-insp.png)
 

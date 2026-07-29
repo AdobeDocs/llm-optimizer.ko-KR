@@ -21,7 +21,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 670
 ht-degree: 100%
 
@@ -102,10 +102,10 @@ ht-degree: 100%
 
 - 필드 이름은 **정확히** 일치해야 합니다(대/소문자 및 맞춤법).
 - 다음과 같이 데이터 유형이 정확해야 합니다.
-   - **타임스탬프**&#x200B;는 **ISO 8601** 형식의 문자열이어야 합니다. UNIX 유사 타임스탬프가 작동하지 않을 수 있습니다.
-   - **response_status**&#x200B;는 정수여야 합니다.
-   - **time_to_first_byte**&#x200B;는 정수여야 하며 밀리초를 사용해야 합니다.
-   - 문자열은 유효한 JSON 문자열이어야 합니다.
+  - **타임스탬프**&#x200B;는 **ISO 8601** 형식의 문자열이어야 합니다. UNIX 유사 타임스탬프가 작동하지 않을 수 있습니다.
+  - **response_status**&#x200B;는 정수여야 합니다.
+  - **time_to_first_byte**&#x200B;는 정수여야 하며 밀리초를 사용해야 합니다.
+  - 문자열은 유효한 JSON 문자열이어야 합니다.
 - 잘못된 JSON 또는 누락되거나 잘못된 필드는 로그를 건너뛰거나 구문 분석에 실패하여 보고서에서 데이터가 누락될 수 있습니다.
 
 ### 위치 및 처리 주기 업로드 {#upload-location}

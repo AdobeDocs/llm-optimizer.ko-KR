@@ -5,7 +5,7 @@ user-guide-description: Adobe LLM Optimizer를 통해 브랜드를 성장시키�
 source-git-commit: d7e723161836027dcdde931378f5d0f776a1ecfc
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 95%
     + [Akamai(BYOCDN)](/help/dashboards/optimize-at-edge/akamai-byocdn.md)
     + [Cloudflare(BYOCDN)](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md)
     + [CloudFront(BYOCDN)](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md)
-    + [Azure 전면 도어(BYOCDN)](/help/dashboards/optimize-at-edge/azure-front-door-byocdn.md)
+    + [Azure Front Door(BYOCDN)](/help/dashboards/optimize-at-edge/azure-front-door-byocdn.md)
     + [Apache HTTP 서버](/help/dashboards/optimize-at-edge/apache-http-server.md)
   + [액세스 제어](/help/dashboards/access-control.md)
   + [Adobe Analytics 통합](/help/dashboards/adobe-analytics-integration.md)
