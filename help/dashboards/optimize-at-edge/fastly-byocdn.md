@@ -19,9 +19,9 @@ role_v2:
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 350
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +46,7 @@ Fastly VCL 규칙을 설정하기 전에 다음을 확인하십시오.
 
 ![VCL 스니펫 추가](/help/assets/optimize-at-edge/add-vcl-snippets.png)
 
-### vcl_recv 코드 조각
+### vcl_recv 스니펫
 
 ```
 unset req.http.x-edgeoptimize-url;
@@ -66,7 +66,7 @@ if (!req.http.x-edgeoptimize-request
 }
 ```
 
-### vcl_hash 코드 조각
+### vcl_hash 스니펫
 
 ```
 if (req.http.x-edgeoptimize-config) {
@@ -75,7 +75,7 @@ if (req.http.x-edgeoptimize-config) {
 }
 ```
 
-### vcl_deliver 코드 조각
+### vcl_deliver 스니펫
 
 ```
 if (req.http.x-edgeoptimize-config && resp.status >= 400) {

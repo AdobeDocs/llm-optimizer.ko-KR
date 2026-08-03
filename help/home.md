@@ -19,9 +19,9 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 6b0e86f1373c3b1d85d67bd8222459acfc3620dc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 364
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -157,8 +157,8 @@ CARDS
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./overview/best-practices-topics-prompts.md" title="카테고리, 주제, 프롬프트 설정 및 기타 브랜드 추적에 대한 우수 사례" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/best-practices/add-new-topic1.png" alt="카테고리, 주제, 프롬프트 설정 및 기타 브랜드 추적에 대한 우수 사례"
+                    <a href="./overview/best-practices-topics-prompts.md" title="카테고리, 주제, 프롬프트 및 기타 브랜드 추적 설정 모범 사례" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/best-practices/add-new-topic1.png" alt="카테고리, 주제, 프롬프트 및 기타 브랜드 추적 설정 모범 사례"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -166,7 +166,7 @@ CARDS
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" title="카테고리, 주제, 프롬프트 설정 및 기타 브랜드 추적에 대한 우수 사례">카테고리, 주제, 프롬프트 및 다른 브랜드 추적을 설정하는 우수 사례</a>
+                        <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" title="카테고리, 주제, 프롬프트 및 기타 브랜드 추적 설정 모범 사례">카테고리, 주제, 프롬프트 및 기타 브랜드 추적 설정 모범 사례</a>
                     </p>
                     <p class="is-size-6">맞춤형 브랜드 모니터링 및 전략적 콘텐츠 분석을 위해 LLM Optimizer를 구성하는 방법에 대해 알아봅니다.</p>
                 </div>

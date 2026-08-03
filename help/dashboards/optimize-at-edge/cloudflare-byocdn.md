@@ -21,9 +21,9 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 1919
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -115,7 +115,7 @@ Edge Optimize용 Cloudflare 작업자를 설정하는 방법에는 두 가지가
 
 다음 단계에 따라 작업자를 수동으로 만들고 구성합니다.
 
-### 1단계: Cloudflare Worker 생성
+### 1단계: Cloudflare 작업자 만들기
 
 1. Cloudflare 대시보드에 로그인합니다.
 2. 사이드바에서 **작업자 및 페이지**&#x200B;로 이동합니다.
@@ -131,7 +131,7 @@ Edge Optimize용 Cloudflare 작업자를 설정하는 방법에는 두 가지가
 
 작업자를 게시하려면 **저장 및 배포**&#x200B;를 클릭합니다.
 
-### 3단계: 환경 변수 및 암호 구성
+### 3 단계: 환경 변수 및 암호 구성
 
 환경 변수는 API 키와 같은 민감한 구성을 안전하게 저장합니다.
 
@@ -167,7 +167,7 @@ Edge Optimize용 Cloudflare 작업자를 설정하는 방법에는 두 가지가
 
 ![Cloudflare 작업자 경로](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
 
-### 페일오버 동작 확인
+### 장애 조치 비헤이비어 확인
 
 Edge Optimize를 사용할 수 없거나 오류를 반환하는 경우 작업자가 자동으로 원본으로 장애 조치합니다. 장애 조치(Failover) 응답에는 `x-edgeoptimize-fo` 헤더가 포함됩니다.
 
@@ -204,7 +204,7 @@ Cloudflare 작업자는 다음과 같은 논리를 구현합니다.
 
 코드 상단의 구성 상수를 수정하여 작업자 비헤이비어를 사용자 정의할 수 있습니다.
 
-### 무발생 보트 목록
+### 에이전틱 봇 목록
 
 사용자 에이전트를 추가하거나 제거하려면 `AGENTIC_BOTS` 배열을 수정합니다.
 
@@ -223,7 +223,7 @@ const AGENTIC_BOTS = [
 ];
 ```
 
-### 타겟팅된 경로
+### 타기팅된 경로
 
 기본적으로 모든 HTML 페이지는 Edge Optimize로 라우팅됩니다. 특정 경로로 라우팅을 제한하려면 `TARGETED_PATHS` 배열을 수정합니다.
 
@@ -235,7 +235,7 @@ const TARGETED_PATHS = null;
 const TARGETED_PATHS = ['/', '/page.html', '/products', '/about-us'];
 ```
 
-### 페일오버 구성
+### 장애 조치(Failover) 구성
 
 기본적으로 작업자는 Edge Optimize에서 4XX 또는 5XX 오류가 발생하면 장애 조치됩니다. 다음 비헤이비어를 사용자 정의합니다.
 
@@ -253,7 +253,7 @@ const FAILOVER_ON_4XX = false;
 const FAILOVER_ON_5XX = false;
 ```
 
-### 중요한 고려 사항
+### 중요 고려 사항
 
 * **장애 조치(Failover) 비헤이비어:** Edge Optimize가 오류(4XX 또는 5XX 상태 코드)를 반환하거나 네트워크 오류로 인해 요청이 실패하는 경우 작업자가 자동으로 원본에 장애 조치됩니다. 장애 조치에서 `EDGE_OPTIMIZE_TARGET_HOST`를 원본 도메인으로 사용합니다(Fastly의 `F_Default_Origin` 또는 CloudFront의 `Default_Origin`과 유사). 장애 조치(Failover) 응답에는 모니터링 및 디버깅에 사용할 수 있는 `x-edgeoptimize-fo: 1` 헤더가 포함됩니다.
 

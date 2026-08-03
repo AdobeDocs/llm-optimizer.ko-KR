@@ -15,9 +15,9 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
 source-git-commit: 6b0e86f1373c3b1d85d67bd8222459acfc3620dc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 485
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -81,7 +81,7 @@ Adobe LLM Optimizer을 사용하여 다음과 같은 작업을 수행할 수 있
 
 * [빠른 시작](/help/overview/quick-start.md)을 통해 빠르게 시작하고 실행할 수 있습니다.
 * [대시보드 개요](/help/dashboards/dashboards-overview.md)는 LLM Optimizer에서 사용할 수 있는 모든 대시보드를 설명합니다.
-* [추적할 카테고리, 주제, 프롬프트 및 기타 브랜드를 구성하는 우수 사례](/help/overview/best-practices-topics-prompts.md)에는 LLM Optimizer 설정에 필요한 정보가 포함되어 있습니다.
+* [카테고리, 주제, 프롬프트, 기타 추적할 브랜드 등을 구성하는 모범 사례](/help/overview/best-practices-topics-prompts.md)에는 LLM Optimizer 설정에 필요한 정보가 포함되어 있습니다.
 * [모범 사례](/help/tutorials/best-practices.md)를 통해 LLM 최적화에 대한 모범 사례를 찾아 AI 검색에서 브랜드 가시성을 높일 수 있습니다.
 
 
