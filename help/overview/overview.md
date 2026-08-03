@@ -4,27 +4,20 @@ description: Adobe LLM Optimizer가 AI 기반 검색에서 브랜드 가시성�
 feature: Onboarding
 autotag-review: '2026-07-15T18:10:25.350Z'
 TQID: 'https://experienceleague.adobe.com/C-54mDBaDgmIWPOrLhkeUHlK1cXMbX0kRNrJZTC--4c'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: c898dfb2-0885-42fb-b2af-b2d756752646
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-  - id: a080bb92-ba2a-4e53-ba60-f5184d1a9e9a
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: c898dfb2-0885-42fb-b2af-b2d756752646id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: a080bb92-ba2a-4e53-ba60-f5184d1a9e9a
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
 source-git-commit: 6b0e86f1373c3b1d85d67bd8222459acfc3620dc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 485
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 
 # LLM Optimizer 개요
 
->[!VIDEO](https://video.tv.adobe.com/v/3492476/?captions=kor&learn=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3492471/?learn=on){transcript=true}
 
 이 페이지에서는 도구 사용을 시작하기 전에 Adobe LLM Optimizer에 대해 알아야 할 모든 사항을 설명합니다.
 
@@ -81,7 +74,7 @@ Adobe LLM Optimizer을 사용하여 다음과 같은 작업을 수행할 수 있
 
 * [빠른 시작](/help/overview/quick-start.md)을 통해 빠르게 시작하고 실행할 수 있습니다.
 * [대시보드 개요](/help/dashboards/dashboards-overview.md)는 LLM Optimizer에서 사용할 수 있는 모든 대시보드를 설명합니다.
-* [추적할 카테고리, 주제, 프롬프트 및 기타 브랜드를 구성하는 우수 사례](/help/overview/best-practices-topics-prompts.md)에는 LLM Optimizer 설정에 필요한 정보가 포함되어 있습니다.
+* [카테고리, 주제, 프롬프트, 기타 추적할 브랜드 등을 구성하는 모범 사례](/help/overview/best-practices-topics-prompts.md)에는 LLM Optimizer 설정에 필요한 정보가 포함되어 있습니다.
 * [모범 사례](/help/tutorials/best-practices.md)를 통해 LLM 최적화에 대한 모범 사례를 찾아 AI 검색에서 브랜드 가시성을 높일 수 있습니다.
 
 

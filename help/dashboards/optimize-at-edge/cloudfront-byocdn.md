@@ -4,25 +4,15 @@ description: LLM Optimizer의 Optimize at Edge를 위해 CloudFront BYOCDN을 �
 feature: Opportunities
 autotag-review: '2026-07-15T17:46:25.674Z'
 TQID: 'https://experienceleague.adobe.com/yIEUTzlnvOX-WBf276KQcAN8sGYDpZNVibJt024VMWU'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3aid: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 2343
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +30,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 * LLM Optimizer UI에서 검색한 Edge Optimize API 키 단계는 [API 키 검색](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)을 참조하십시오.
 * (선택 사항) 스테이징 라우팅을 테스트하려면 [스테이징 API 키](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)를 참조하십시오.
 
-## 1단계: Edge 만들기 오리진 최적화
+## 1단계: Edge 최적화 원본 만들기
 
 **탐색:** AWS Console > CloudFront > 배포 > [내 배포] > 원본 탭
 
@@ -66,7 +56,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 ![Cloudfront 원본 만들기](/help/assets/optimize-at-edge/cloudfront-origin-creation.png)
 
-## 2단계: 뷰어 요청 기능 만들기
+## 2단계: 뷰어 요청 함수 만들기
 
 **탐색:** AWS Console > CloudFront > 함수
 
@@ -98,7 +88,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 * **시나리오 B(사용자 정의 정책):** 사용자 또는 팀이 만든 정책 이름(AWS 제공 정책이 아님)으로 선택한 **캐시 정책**&#x200B;이 표시됩니다.
 * **시나리오 C(관리 정책):** `CachingOptimized`, `CachingDisabled` 또는 `CachingOptimizedForUncompressedObjects`와 같이 AWS에서 제공한 이름으로 선택한 **캐시 정책**&#x200B;이 표시되며, 해당 정책은 편집할 수 없습니다.
 
-### 시나리오 A: 레거시 캐시 설정
+### 시나리오 A: 기존 캐시 설정
 
 동작이 레거시 캐시 설정을 사용하는 경우:
 
@@ -119,7 +109,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 4. **변경 내용 저장**&#x200B;을 클릭합니다.
 
-### 시나리오 B: 사용자 지정 캐시 정책을 사용하는 비레거시
+### 시나리오 B: 사용자 정의 캐시 정책을 사용하는 비레거시
 
 동작이 이미 사용자 정의 캐시 정책(AWS 관리 정책이 아닌 사용자가 만든 정책)을 사용하는 경우:
 
@@ -137,7 +127,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 5. **변경 내용 저장**&#x200B;을 클릭합니다.
 
-### 시나리오 C: 관리(AWS) 캐시 정책을 사용하는 비레거시
+### 시나리오 C: 관리(AWS) 캐시 정책이 있는 비레거시
 
 동작이 AWS 관리 캐시 정책(예: `CachingOptimized`)을 사용하는 경우 편집할 수 없습니다. 따라서 기존 관리 정책 설정을 복제하고 상위에 Edge Optimize 헤더를 추가하는 새 사용자 정의 캐시 정책을 만들어야 합니다.
 
@@ -185,7 +175,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
    3. 드롭다운에서 `edgeoptimize-cache`를 선택합니다.
    4. **변경 내용 저장**&#x200B;을 클릭합니다.
 
-## 4단계: Lambda@Edge 함수 만들기 (원본 요청 및 응답)
+## 4단계: Lambda@Edge 함수 만들기(원본 요청 및 응답)
 
 >[!IMPORTANT]
 >Lambda@Edge 함수&#x200B;**는 `us-east-1`(버지니아 북부) 지역**&#x200B;에서 만들어야 합니다. 이는 AWS 요구 사항입니다. 함수를 `us-east-1`에서 만들더라도 AWS가 이 함수를 전 세계의 모든 CloudFront 에지 위치에 자동 복제하므로 뷰어에 가장 가까운 에지 로케이션에서 함수가 실행됩니다. 계속하기 전에 본인이 AWS Console에서 `us-east-1` 지역에 있는지 확인하십시오.
@@ -210,7 +200,7 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 7. **구성** > **권한**(예: `edgeoptimize-origin-role-xxxxx`)에 표시된 **실행 역할 이름**&#x200B;을 참고하십시오. 다음 단계에서 이 작업이 필요합니다.
 
-### 실행 역할의 트러스트 정책 업데이트
+### 실행 역할의 신뢰 정책 업데이트
 
 자동 생성된 역할은 `lambda.amazonaws.com`만 신뢰합니다. Lambda@Edge의 경우 `edgelambda.amazonaws.com`도 추가해야 합니다.
 
@@ -269,13 +259,13 @@ CloudFront 구성을 설정하기 전에 다음이 있는지 확인하십시오.
 
 2. 설명을 추가합니다.
 
-3. **게시**&#x200B;를 클릭합니다.
+3. **게시**를 클릭합니다.
    ![Lambda 게시](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
 
-4. **함수 ARN**&#x200B;을 복사하거나 기록하십시오. 다음 단계에서 이 정보가 필요합니다.
+4. **함수 ARN**을 복사하거나 기록하십시오. 다음 단계에서 이 정보가 필요합니다.
    ![Lambda ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
 
-## 5단계: 기능 및 캐시 정책을 비헤이비어와 연결
+## 5단계: 함수 및 캐시 정책을 동작과 연결
 
 **탐색:** AWS Console > CloudFront > 배포 > [내 배포] > 동작
 
@@ -382,11 +372,11 @@ curl -svo /dev/null https://www.example.com/page.html \
 | 캐시가 `cache-control: no-store`를 준수하지 않음 | 최소 TTL이 너무 높을 수 있음 | 캐시 정책에서 최소 TTL을 `0`으로 설정합니다(3단계). 최소 TTL이 이미 매우 짧은 경우 TTL이 문제가 아닐 수 있습니다. |
 | 설정 후 중단된 일반(비에이전틱) 트래픽 | 캐시 정책 구성 오류 | 새 캐시 정책을 만든 경우(시나리오 C) 원래 관리 정책에서 모든 설정을 복제했는지 확인합니다. |
 
-## Edge에서 최적화 비활성화 및 다시 활성화
+## Edge에서 Optimize 비활성화 및 다시 재활성화
 
 Lambda@Edge 함수(`edgeoptimize-origin`)는 CloudFront 동작의 원본 요청 및 원본 응답 이벤트와 연결되어 있습니다. 이 서비스는 사람 및 에이전틱을 막론하고 해당 동작을 통과하는 모든 요청에 인라인으로 실행되기 때문에 Lambda@Edge 작동 중단은 에이전틱 요청뿐만 아니라 모든 실시간 트래픽에 영향을 미칩니다. Lambda@Edge 중단을 감지하면 함수 연결을 즉시 제거하여 일반 트래픽 흐름을 기본 원본으로 복원하십시오.
 
-### Lambda@Edge 작동 중단을 감지하는 방법
+### Lambda@Edge 중단을 감지하는 방법
 
 * **AWS 서비스 상태 대시보드** - [AWS 서비스 상태 대시보드](https://health.aws.amazon.com/health/status)에서 **Amazon CloudFront** 또는 **AWS Lambda**&#x200B;에 영향을 주는 활성 인시던트를 확인하십시오. 여기에 보고된 전역 또는 지역 중단은 구성이 아닌 AWS 인프라 측에 문제가 있는지 확인하는 가장 빠른 방법입니다.
 * **Lambda@Edge 오류** - **AWS Console > CloudFront > 모니터링 > [내 배포]**&#x200B;로 이동합니다. **Lambda@Edge 오류** 탭을 열고 **실행 오류** 그래프에서 실행 오류를 확인합니다. 이 값이 높으면 Lambda@Edge가 다운될 수 있습니다.
@@ -415,7 +405,7 @@ Lambda@Edge 함수(`edgeoptimize-origin`)는 CloudFront 동작의 원본 요청 
 
 배포되면 모든 트래픽이 기본 원본으로 바로 이동합니다. 구성이 삭제되지 않으므로 Lambda 함수와 해당 연결은 언제든지 복원할 수 있습니다.
 
-### Lambda@Edge 함수 다시 첨부
+### Lambda@Edge 함수 재연결
 
 **탐색:** AWS Console > CloudFront > 배포 > [내 배포] > 동작
 

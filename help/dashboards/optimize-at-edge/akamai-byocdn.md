@@ -4,24 +4,15 @@ description: LLM Optimizer의 Optimize at Edge를 위해 Akamai BYOCDN을 구성
 feature: Opportunities
 autotag-review: '2026-07-15T17:40:02.356Z'
 TQID: 'https://experienceleague.adobe.com/XlHpXbtxqPl-XQQKWeQc3rbsizCT7U0TF1bQkyv0iM8'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3aid: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 4f0c6d398e2aab337485b7e26cf6f2aba56375fd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 795
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -117,11 +108,11 @@ Akamai Property Manager 규칙을 설정하기 전에 다음을 확인하십시�
 
 ![발신 요청 헤더 수정](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 
-## &#x200B;9. 사이트 페일오버
+## &#x200B;9. 사이트 장애 조치(Failover)
 
 사이트 장애 조치 구성에는 기본 Optimize at Edge 라우팅 규칙 내의 장애 조치 동작 그리고 대체가 발생할 때 응답 헤더를 추가하는 형제 규칙 등 두 부분이 있습니다.
 
-### 9a. 사이트 페일오버 동작 구성
+### 9a. 사이트 장애 조치 동작 구성
 
 기본 Optimize at Edge 라우팅 규칙 내부에 **사이트 장애 조치 동작**&#x200B;이라는 하위 규칙을 생성합니다. **모두 일치**&#x200B;로 설정하고 다음 기준을 추가하십시오.
 
@@ -132,7 +123,7 @@ Akamai Property Manager 규칙을 설정하기 전에 다음을 확인하십시�
 
 ![사이트 장애 조치 동작 구성](/help/assets/optimize-at-edge/akamai-step9-failover-settings.png)
 
-### 9b. 장애 조치(failover) 응답 헤더 규칙 구성
+### 9b. 장애 조치 응답 헤더 규칙 구성
 
 >[!IMPORTANT]
 >
